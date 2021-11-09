@@ -1,0 +1,20 @@
+--- a/ext/standard/url_scanner_ex.c
++++ b/ext/standard/url_scanner_ex.c
+@@ -881,7 +881,7 @@
+ 		goto yy76;
+ 	}
+ 	if (yych <= '!') goto yy80;
+-	if (yych >= '#') goto yy61;
++	if ((yych < 35)) goto yy61;
+ 	++YYCURSOR;
+ 	if (yybm[0+(yych = *YYCURSOR)] & 8) {
+ 		goto yy66;
+@@ -952,7 +952,7 @@
+ 		smart_str_appendl(&ctx->result, "", 0);
+ 	}
+ 	smart_str_0(&ctx->result);
+-	if (!(do_flush == 0)) {
++	if (!(do_flush != 0)) {
+ 		smart_str_appendl(&ctx->result, ctx->buf.c, ctx->buf.len);
+ 		*newlen += ctx->buf.len;
+ 		smart_str_free(&ctx->buf);

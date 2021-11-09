@@ -1,0 +1,127 @@
+[repair] benchmark: manybugs
+[repair] subject: libtiff
+[repair] version: 2010-12-13-96a5fb4-bdba15c
+[repair] search: guided
+[fetch] benchmark: manybugs
+[fetch] subject: libtiff
+[fetch] version: 2010-12-13-96a5fb4-bdba15c
+[fetch] archive: libtiff-bug-2010-12-13-96a5fb4-bdba15c.tar.gz
+[fetch] directory: libtiff-bug-2010-12-13-96a5fb4-bdba15c
+[fetch] preparing source code
+[fetch] golden_directory: libtiff-fix-2010-12-13-96a5fb4-bdba15c
+[fetch] clean-source libtiff-bug-2010-12-13-96a5fb4-bdba15c
+[fetch] /angelix-experiments/libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/configure
+[fetch] make clean
+[fetch] clean-source libtiff-fix-2010-12-13-96a5fb4-bdba15c
+[fetch] restore-buggy libtiff-bug-2010-12-13-96a5fb4-bdba15c
+[fetch] /angelix-experiments/libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/configure
+[fetch] make clean
+[fetch] buggy: tools/tiffcrop.c
+[fetch] buggy_preprocessed: libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiffcrop.c
+[fetch] buggy_version: 96a5fb4
+[fetch] buggy_original: libtiff-bug-2010-12-13-96a5fb4-bdba15c/diffs/tools/tiffcrop.c-96a5fb4
+[fetch] restore-correct libtiff-fix-2010-12-13-96a5fb4-bdba15c
+[fetch] restored libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiffcrop.c with libtiff-fix-2010-12-13-96a5fb4-bdba15c/diffs/tools/tiffcrop.c-bdba15c
+[fetch] fetch done
+[repair] options:  --ignore-lines --quiet --all-suspicious --group-size 1 --test-timeout 60 --defect
+if-conditions
+loop-conditions
+--angelic-search-strategy
+guided
+--search-max-trials
+100
+--max-same-cost-iter
+20
+--one-bit-flip-prob
+0.5
+--mcmc-beta
+0.8
+--penalty1
+4
+--penalty2
+2
+--default-max-cost
+300000000
+--initial-tests
+1
+--suspicious
+60
+[repair-libtiff] options:  --ignore-lines --quiet --all-suspicious --group-size 1 --test-timeout 60 --defect if-conditions loop-conditions --angelic-search-strategy guided --search-max-trials 100 --max-same-cost-iter 20 --one-bit-flip-prob 0.5 --mcmc-beta 0.8 --penalty1 4 --penalty2 2 --default-max-cost 300000000 --initial-tests 1 --suspicious 60
+sed: -e expression #1, char 166: unknown option to `s'
+sed: -e expression #1, char 122: unknown option to `s'
+[repair-libtiff] instrument libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+sed: -e expression #1, char 166: unknown option to `s'
+sed: -e expression #1, char 122: unknown option to `s'
+[repair-libtiff] instrument libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+WARNING  testing         ANGELIX_RUN is not executed by test 1
+WARNING  testing         ANGELIX_RUN is not executed by test 2
+WARNING  testing         ANGELIX_RUN is not executed by test 3
+WARNING  testing         ANGELIX_RUN is not executed by test 4
+WARNING  testing         ANGELIX_RUN is not executed by test 5
+WARNING  testing         ANGELIX_RUN is not executed by test 6
+WARNING  testing         ANGELIX_RUN is not executed by test 7
+WARNING  testing         ANGELIX_RUN is not executed by test 8
+WARNING  testing         ANGELIX_RUN is not executed by test 9
+WARNING  testing         ANGELIX_RUN is not executed by test 10
+WARNING  testing         ANGELIX_RUN is not executed by test 11
+WARNING  testing         ANGELIX_RUN is not executed by test 12
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+WARNING  testing         ANGELIX_RUN is not executed by test 14
+WARNING  testing         ANGELIX_RUN is not executed by test 15
+WARNING  testing         ANGELIX_RUN is not executed by test 16
+WARNING  testing         ANGELIX_RUN is not executed by test 17
+WARNING  testing         ANGELIX_RUN is not executed by test 18
+WARNING  testing         ANGELIX_RUN is not executed by test 19
+WARNING  testing         ANGELIX_RUN is not executed by test 20
+WARNING  testing         ANGELIX_RUN is not executed by test 21
+WARNING  testing         ANGELIX_RUN is not executed by test 24
+WARNING  testing         ANGELIX_RUN is not executed by test 25
+WARNING  testing         ANGELIX_RUN is not executed by test 26
+WARNING  testing         ANGELIX_RUN is not executed by test 27
+WARNING  testing         ANGELIX_RUN is not executed by test 29
+WARNING  testing         ANGELIX_RUN is not executed by test 30
+WARNING  testing         ANGELIX_RUN is not executed by test 31
+WARNING  testing         ANGELIX_RUN is not executed by test 32
+WARNING  testing         ANGELIX_RUN is not executed by test 33
+WARNING  testing         ANGELIX_RUN is not executed by test 34
+WARNING  testing         ANGELIX_RUN is not executed by test 35
+WARNING  testing         ANGELIX_RUN is not executed by test 36
+WARNING  testing         ANGELIX_RUN is not executed by test 37
+WARNING  testing         ANGELIX_RUN is not executed by test 38
+WARNING  testing         ANGELIX_RUN is not executed by test 42
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+WARNING  testing         ANGELIX_RUN is not executed by test 51
+WARNING  testing         ANGELIX_RUN is not executed by test 52
+WARNING  testing         ANGELIX_RUN is not executed by test 53
+WARNING  testing         ANGELIX_RUN is not executed by test 54
+WARNING  testing         ANGELIX_RUN is not executed by test 55
+WARNING  testing         ANGELIX_RUN is not executed by test 56
+WARNING  testing         ANGELIX_RUN is not executed by test 57
+WARNING  testing         ANGELIX_RUN is not executed by test 58
+WARNING  testing         ANGELIX_RUN is not executed by test 59
+WARNING  testing         ANGELIX_RUN is not executed by test 60
+WARNING  testing         ANGELIX_RUN is not executed by test 61
+WARNING  testing         ANGELIX_RUN is not executed by test 62
+WARNING  testing         ANGELIX_RUN is not executed by test 63
+WARNING  testing         ANGELIX_RUN is not executed by test 64
+WARNING  testing         ANGELIX_RUN is not executed by test 65
+WARNING  testing         ANGELIX_RUN is not executed by test 66
+WARNING  testing         ANGELIX_RUN is not executed by test 67
+WARNING  testing         ANGELIX_RUN is not executed by test 68
+WARNING  testing         ANGELIX_RUN is not executed by test 69
+WARNING  testing         ANGELIX_RUN is not executed by test 70
+WARNING  testing         ANGELIX_RUN is not executed by test 71
+WARNING  testing         ANGELIX_RUN is not executed by test 72
+WARNING  testing         ANGELIX_RUN is not executed by test 73
+WARNING  testing         ANGELIX_RUN is not executed by test 74
+WARNING  testing         ANGELIX_RUN is not executed by test 75
+WARNING  testing         ANGELIX_RUN is not executed by test 76
+WARNING  testing         ANGELIX_RUN is not executed by test 77
+WARNING  testing         ANGELIX_RUN is not executed by test 78
+WARNING  pymc3           Only 100 samples in chain.
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+WARNING  guided_infer    DD failed (ebits)
+SUCCESS

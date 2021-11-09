@@ -1,0 +1,50 @@
+#!/bin/bash
+set -euo pipefail
+
+debug () {
+    local msg=$1
+    echo "[configure-gmp] $msg"
+}
+
+# replaces within "$3" lines starting from the only occurrence of symbol "$2" in file "$1"
+replace-in-range () {
+    local file="$1"
+    local symbol="$2"
+    local length="$3"
+    local original="$4"
+    local replacement="$5"
+
+    local begin=$(grep -n "$symbol" "$file" | cut -d : -f 1 | head -n 1)
+    debug "begin $begin"
+    if [[ -z ${begin} ]]; then
+        debug "skip to instrument $file"
+    else
+        debug "instrument $file"
+        local end=$(( begin + length ))
+        cp $file $file.org
+        sed -i "$begin,$end{s/$original/$replacement/;}" "$file"
+    fi
+}
+
+# Main #############################################################
+
+rm -f configure
+autoconf
+replace-in-range configure "^# The archiver" 3 \
+                 "AR=\$lt_AR" \
+                 "AR=llvm-ld"
+replace-in-range configure "^# The archiver" 3 \
+                 "AR_FLAGS=\$lt_AR_FLAGS" \
+                 "AR_FLAGS=-r"
+replace-in-range configure "^# Commands used to build an old-style archive" 2 \
+                 "old_archive_cmds=\$lt_old_archive_cmds" \
+                 "old_archive_cmds=\"\\\\\$AR \\\\\$AR_FLAGS -o \\\\\\\\\\\\\$oldlib \\\\\\\\\\\\\$oldobjs\""
+./configure --disable-shared --enable-static --disable-fft --disable-mpbsd --disable-cxx --disable-fast-install --disable-minithres &> configure.log
+
+sed -i 's/^#define HAVE_NATIVE.*$//g' config.h
+
+for file in "divrem_1" "divrem_2" "lshift" "rshift" "add_n" "submul_1" "sub_n" "mul_1" "redc_1" "sqr_basecase" "mul_basecase" "addmul_1" "mod_1_4";
+do
+    rm -f mpn/$file.asm
+    cp mpn/generic/$file.c mpn/$file.c
+done

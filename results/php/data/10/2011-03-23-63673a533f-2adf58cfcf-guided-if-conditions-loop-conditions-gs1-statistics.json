@@ -1,0 +1,209 @@
+{
+  "file": "/angelix-experiments/.angelix/statistics.json",
+  "src": "php-bug-2011-03-23-63673a533f-2adf58cfcf/php",
+  "buggy": "ext/date/php_date.c",
+  "patch_found": true,
+  "patch_file": "php-2021-Sep17-170916.patch",
+  "config": {
+    "initial_tests": 2,
+    "all_tests": false,
+    "max_z3_trials": 2,
+    "defect": [
+      "if-conditions",
+      "loop-conditions"
+    ],
+    "test_timeout": null,
+    "single_group": false,
+    "group_size": 1,
+    "group_by_score": false,
+    "localize_from_bottom": false,
+    "suspicious": 20,
+    "localization": "jaccard",
+    "ignore_trivial": false,
+    "path_solving_timeout": 60000,
+    "timeout": 14400,
+    "max_angelic_paths": null,
+    "klee_max_forks": null,
+    "klee_max_depth": null,
+    "klee_search": null,
+    "klee_timeout": null,
+    "klee_out_dir_timeout": 60,
+    "klee_solver_timeout": null,
+    "klee_debug": false,
+    "klee_ignore_errors": false,
+    "ignore_trans_errors": false,
+    "ignore_infer_errors": false,
+    "skip_validating_angelic_path": false,
+    "use_nsynth": false,
+    "use_osynth": false,
+    "use_gcc": true,
+    "keep_positive_behavior": false,
+    "synthesis_timeout": 30000,
+    "synthesis_levels": [
+      "variables"
+    ],
+    "synthesis_global_vars": false,
+    "synthesis_func_params": false,
+    "synthesis_used_vars": true,
+    "synthesis_ptr_vars": true,
+    "synthesis_bool_only": false,
+    "empty_env_exps": false,
+    "exclude_member_exp": false,
+    "generate_all": false,
+    "init_uninit_vars": false,
+    "verbose": false,
+    "build_before_instr": false,
+    "instr_printf": null,
+    "mute_config_message": false,
+    "mute_build_message": false,
+    "mute_test_message": false,
+    "show_test_message": false,
+    "show_oracle_contents": false,
+    "show_syn_message": false,
+    "mute_warning": false,
+    "show_suspicious_locations": true,
+    "invalid_localization": false,
+    "angelic_search_strategy": "guided",
+    "step_method": "metropolis",
+    "compilation_db_file": null,
+    "keep_angelix_dir": false,
+    "skip_configure": false,
+    "skip_build": false,
+    "gobble_klee_message": false,
+    "lines": [
+      3774
+    ],
+    "search_max_trials": 100,
+    "max_same_cost_iter": 20,
+    "mcmc_beta": 0.8,
+    "one_bit_flip_prob": 0.5,
+    "chunk_bits": 32,
+    "max_bits": 100,
+    "max_resample": 3,
+    "block_expand_factor": 2,
+    "inc_fix": false,
+    "fixed_bv_len": false,
+    "default_max_cost": 300000000.0,
+    "error_cost": "10000000",
+    "warning_cost": "5000000",
+    "max_syn_attempts": 2,
+    "max_repair_attempts": 2,
+    "penalty1": "4",
+    "penalty2": "2",
+    "parallel_testing": false,
+    "all_suspicious": false,
+    "mutate": 0,
+    "epsilon": 1.0,
+    "always_accept": false,
+    "random_cost": false,
+    "max_random_cost": 0.0,
+    "skip_dd": false,
+    "finish_after_fault_localize": false,
+    "default_susp_score": 0.5,
+    "additional_susp_locs": null,
+    "default_non_zero_cost": "300000000",
+    "timeout_cost": "1"
+  },
+  "time": {
+    "testing": 55.540974855422974,
+    "compilation": 213.2430579662323,
+    "klee": 0,
+    "synthesis": 1.1140458583831787,
+    "solving": 0,
+    "inference": 2.6001062393188477,
+    "dd": 0.1671431064605713,
+    "total": 182.27214574813843
+  },
+  "iterations": {
+    "synthesis": [
+      {
+        "tests": 2,
+        "level": "variables",
+        "time": 1.1140458583831787
+      }
+    ],
+    "guided": [
+      {
+        "locations": [
+          [
+            "I",
+            [
+              2288,
+              6,
+              2288,
+              6
+            ]
+          ]
+        ],
+        "test": "29",
+        "time": {
+          "mcmc": 2.053365707397461,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            74.0
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3784,
+              6,
+              3784,
+              20
+            ]
+          ]
+        ],
+        "test": "29",
+        "time": {
+          "mcmc": 0.37959742546081543,
+          "dd": 0.1671431064605713
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            74.0,
+            0
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      }
+    ],
+    "symbolic": [],
+    "random": []
+  }
+}

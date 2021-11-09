@@ -1,0 +1,1857 @@
+[repair] benchmark: manybugs
+[repair] subject: gzip
+[repair] version: 2009-10-09-1a085b1446-118a107f2d
+[repair] search: symbolic
+[fetch] benchmark: manybugs
+[fetch] subject: gzip
+[fetch] version: 2009-10-09-1a085b1446-118a107f2d
+[fetch] archive: gzip-bug-2009-10-09-1a085b1446-118a107f2d.tar.gz
+[fetch] directory: gzip-bug-2009-10-09-1a085b1446-118a107f2d
+[fetch] preparing source code
+[fetch] golden_directory: gzip-fix-2009-10-09-1a085b1446-118a107f2d
+[fetch] clean-source gzip-bug-2009-10-09-1a085b1446-118a107f2d
+[fetch] /angelix-experiments/gzip-bug-2009-10-09-1a085b1446-118a107f2d/gzip/configure
+[fetch] make -j 72 clean
+[fetch] clean-source gzip-fix-2009-10-09-1a085b1446-118a107f2d
+[fetch] restore-buggy gzip-bug-2009-10-09-1a085b1446-118a107f2d
+[fetch] /angelix-experiments/gzip-fix-2009-10-09-1a085b1446-118a107f2d/gzip/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: gzip.c
+[fetch] buggy_version: 1a085b1446
+[fetch] buggy_preprocessed: gzip-bug-2009-10-09-1a085b1446-118a107f2d/gzip/gzip.c
+[fetch] buggy_original: gzip-bug-2009-10-09-1a085b1446-118a107f2d/diffs/gzip.c-1a085b1446
+[fetch] cp gzip-bug-2009-10-09-1a085b1446-118a107f2d/diffs/gzip.c-1a085b1446 gzip-bug-2009-10-09-1a085b1446-118a107f2d/gzip/gzip.c
+[fetch] restore-correct gzip-fix-2009-10-09-1a085b1446-118a107f2d
+[fetch] restore-correct entered
+[fetch] cp gzip-fix-2009-10-09-1a085b1446-118a107f2d/diffs/gzip.c-118a107f2d gzip-fix-2009-10-09-1a085b1446-118a107f2d/gzip/gzip.c
+[fetch] restored gzip-fix-2009-10-09-1a085b1446-118a107f2d/gzip/gzip.c with gzip-fix-2009-10-09-1a085b1446-118a107f2d/diffs/gzip.c-118a107f2d
+[fetch] fetch done
+[repair] [repair] options: --symbolic --log
+DEBUG
+--angelic-search-strategy
+symbolic
+--klee-max-forks
+200
+--test-timeout
+60
+--suspicious
+20
+--all-tests
+--ignore-trans-errors
+--klee-solver-timeout
+100
+--klee-timeout
+7200
+--klee-ignore-errors
+--klee-search
+dfs  --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+[repair-gzip] options:  --log DEBUG --angelic-search-strategy symbolic --klee-max-forks 200 --test-timeout 60 --suspicious 20 --all-tests --ignore-trans-errors --klee-solver-timeout 100 --klee-timeout 7200 --klee-ignore-errors --klee-search dfs --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+[repair-gzip] cleaning gzip-bug-2009-10-09-1a085b1446-118a107f2d/gzip ...
+[repair-gzip] cleaning gzip-fix-2009-10-09-1a085b1446-118a107f2d/gzip ...
+DEBUG    repair          tests: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']
+INFO     repair          copy gzip-bug-2009-10-09-1a085b1446-118a107f2d/gzip to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     project         building json compilation database from validation source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: bear /angelix-experiments/.aux/gzip/build
+DEBUG    repair          start to measure time
+INFO     testing         running test '1' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 1
+INFO     testing         output code: 1
+INFO     testing         running test '2' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 2
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 2
+INFO     testing         output code: 1
+INFO     testing         running test '3' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 4
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 5
+INFO     testing         output code: 1
+INFO     testing         running test '6' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 10
+INFO     testing         output code: 0
+INFO     testing         running test '11' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 11
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 11
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 12
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 12
+INFO     testing         output code: 1
+INFO     testing         running test '13' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 13
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 13
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     project         building golden source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     testing         running test '1' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 1
+INFO     testing         output code: 1
+INFO     testing         running test '2' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 2
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 2
+INFO     testing         output code: 1
+INFO     testing         running test '5' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 5
+INFO     testing         output code: 1
+INFO     testing         running test '7' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 1
+INFO     testing         running test '9' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 0
+INFO     testing         running test '11' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 11
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 11
+INFO     testing         output code: 1
+INFO     testing         running test '12' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 12
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 12
+INFO     testing         output code: 1
+INFO     testing         running test '13' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 13
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 13
+INFO     testing         output code: 1
+WARNING  repair          excluding test 1 because it fails in golden version
+WARNING  repair          excluding test 2 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 7 because it fails in golden version
+WARNING  repair          excluding test 11 because it fails in golden version
+WARNING  repair          excluding test 12 because it fails in golden version
+WARNING  repair          excluding test 13 because it fails in golden version
+INFO     repair          positive: ['3', '4', '6', '8', '10']
+INFO     repair          negative: ['9']
+INFO     project         configuring frontend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting repairable of frontend source
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_USED_VARIABLES=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/frontend
+DEBUG    transformation  trans cmd: instrument-repairable gzip.c
+INFO     project         building frontend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '3' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/3
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/3
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/4
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/4
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 4
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 4
+DEBUG    repair          remove 4 from repair test suite (not instrumented)
+INFO     testing         running test '6' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/6
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/6
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     testing         running test '8' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/8
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/8
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     testing         running test '10' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/10
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/10
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 10
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 10
+DEBUG    repair          remove 10 from repair test suite (not instrumented)
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/9
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     project         building golden source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     testing         running test '9' of golden source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/9
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 9
+INFO     repair          repair test suite: ['3', '6', '8', '9']
+INFO     repair          validation test suite: ['3', '4', '6', '8', '9', '10']
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/3
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/4
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/6
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/8
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/10
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/9
+DEBUG    localization    executed_positive: {('A', (536, 32, 536, 32), '1'): 2, ('A', (798, 15, 798, 15), '0'): 2, ('A', (1279, 20, 1279, 20)): 0, ('A', (710, 14, 710, 14), '1'): 1, ('A', (1862, 8, 1862, 8), '-1'): 1, ('A', (1834, 15, 1834, 15), '1'): 3, ('A', (657, 15, 657, 15), '0'): 2, ('A', (539, 18, 539, 25), '3'): 1, ('A', (539, 18, 539, 25)): 0, ('A', (539, 18, 539, 25), '1'): 1, ('A', (1280, 19, 1280, 19), '0'): 2, ('A', (537, 32, 537, 32), '1'): 2, ('A', (536, 32, 536, 32), '0'): 2, ('A', (511, 25, 511, 25)): 0, ('A', (1810, 17, 1810, 17)): 0, ('A', (798, 15, 798, 15)): 0, ('A', (1275, 12, 1275, 12)): 0, ('A', (1279, 20, 1279, 20), '0'): 2, ('A', (1804, 18, 1804, 18), '0'): 3, ('A', (539, 18, 539, 25), '0'): 2, ('A', (1804, 18, 1804, 18)): 0, ('A', (1834, 15, 1834, 15)): 0, ('A', (1862, 8, 1862, 8)): 0, ('A', (537, 32, 537, 32)): 0, ('A', (536, 32, 536, 32)): 0, ('A', (656, 17, 656, 17), '1'): 2, ('A', (1275, 12, 1275, 12), '0'): 2, ('A', (1810, 17, 1810, 17), '1'): 3, ('A', (830, 43, 830, 44), '0'): 2, ('A', (1280, 19, 1280, 19)): 0, ('A', (830, 43, 830, 44)): 0, ('A', (537, 32, 537, 32), '0'): 2}
+DEBUG    localization    executed_negative: {('A', (536, 32, 536, 32), '1'): 0, ('A', (798, 15, 798, 15), '0'): 0, ('A', (1279, 20, 1279, 20)): 1, ('A', (710, 14, 710, 14), '1'): 0, ('A', (1862, 8, 1862, 8), '-1'): 0, ('A', (1834, 15, 1834, 15), '1'): 0, ('A', (657, 15, 657, 15), '0'): 0, ('A', (539, 18, 539, 25), '3'): 0, ('A', (539, 18, 539, 25)): 1, ('A', (539, 18, 539, 25), '1'): 0, ('A', (1280, 19, 1280, 19), '0'): 0, ('A', (537, 32, 537, 32), '1'): 0, ('A', (536, 32, 536, 32), '0'): 0, ('A', (511, 25, 511, 25)): 1, ('A', (1810, 17, 1810, 17)): 1, ('A', (798, 15, 798, 15)): 1, ('A', (1275, 12, 1275, 12)): 1, ('A', (1279, 20, 1279, 20), '0'): 0, ('A', (1804, 18, 1804, 18), '0'): 0, ('A', (539, 18, 539, 25), '0'): 0, ('A', (1804, 18, 1804, 18)): 1, ('A', (1834, 15, 1834, 15)): 1, ('A', (1862, 8, 1862, 8)): 1, ('A', (537, 32, 537, 32)): 1, ('A', (536, 32, 536, 32)): 1, ('A', (656, 17, 656, 17), '1'): 0, ('A', (1275, 12, 1275, 12), '0'): 0, ('A', (1810, 17, 1810, 17), '1'): 0, ('A', (830, 43, 830, 44), '0'): 0, ('A', (1280, 19, 1280, 19)): 1, ('A', (830, 43, 830, 44)): 1, ('A', (537, 32, 537, 32), '0'): 0}
+DEBUG    localization    total_passing: 5
+DEBUG    localization    total_failing: 1
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (536, 32, 536, 32), '1'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (798, 15, 798, 15), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (1279, 20, 1279, 20)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (710, 14, 710, 14), '1'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (1862, 8, 1862, 8), '-1'), 0.0)
+DEBUG    localization    executed_positive: 3
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (1834, 15, 1834, 15), '1'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (657, 15, 657, 15), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (539, 18, 539, 25), '3'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (539, 18, 539, 25)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (539, 18, 539, 25), '1'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (1280, 19, 1280, 19), '0'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (537, 32, 537, 32), '1'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (536, 32, 536, 32), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (511, 25, 511, 25)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (1810, 17, 1810, 17)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (798, 15, 798, 15)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (1275, 12, 1275, 12)), 1.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (1279, 20, 1279, 20), '0'), 0.0)
+DEBUG    localization    executed_positive: 3
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (1804, 18, 1804, 18), '0'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (539, 18, 539, 25), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (1804, 18, 1804, 18)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (1834, 15, 1834, 15)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (1862, 8, 1862, 8)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (537, 32, 537, 32)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (536, 32, 536, 32)), 1.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (656, 17, 656, 17), '1'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (1275, 12, 1275, 12), '0'), 0.0)
+DEBUG    localization    executed_positive: 3
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (1810, 17, 1810, 17), '1'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (830, 43, 830, 44), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (1280, 19, 1280, 19)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('A', (830, 43, 830, 44)), 1.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('A', (537, 32, 537, 32), '0'), 0.0)
+DEBUG    localization    ranking: [(('A', (1279, 20, 1279, 20)), 1.0), (('A', (539, 18, 539, 25)), 1.0), (('A', (511, 25, 511, 25)), 1.0), (('A', (1810, 17, 1810, 17)), 1.0), (('A', (798, 15, 798, 15)), 1.0), (('A', (1275, 12, 1275, 12)), 1.0), (('A', (1804, 18, 1804, 18)), 1.0), (('A', (1834, 15, 1834, 15)), 1.0), (('A', (1862, 8, 1862, 8)), 1.0), (('A', (537, 32, 537, 32)), 1.0), (('A', (536, 32, 536, 32)), 1.0), (('A', (1280, 19, 1280, 19)), 1.0), (('A', (830, 43, 830, 44)), 1.0), (('A', (536, 32, 536, 32), '1'), 0.0), (('A', (798, 15, 798, 15), '0'), 0.0), (('A', (710, 14, 710, 14), '1'), 0.0), (('A', (1862, 8, 1862, 8), '-1'), 0.0), (('A', (1834, 15, 1834, 15), '1'), 0.0), (('A', (657, 15, 657, 15), '0'), 0.0), (('A', (539, 18, 539, 25), '3'), 0.0), (('A', (539, 18, 539, 25), '1'), 0.0), (('A', (1280, 19, 1280, 19), '0'), 0.0), (('A', (537, 32, 537, 32), '1'), 0.0), (('A', (536, 32, 536, 32), '0'), 0.0), (('A', (1279, 20, 1279, 20), '0'), 0.0), (('A', (1804, 18, 1804, 18), '0'), 0.0), (('A', (539, 18, 539, 25), '0'), 0.0), (('A', (656, 17, 656, 17), '1'), 0.0), (('A', (1275, 12, 1275, 12), '0'), 0.0), (('A', (1810, 17, 1810, 17), '1'), 0.0), (('A', (830, 43, 830, 44), '0'), 0.0), (('A', (537, 32, 537, 32), '0'), 0.0)]
+INFO     localization    (loc, score) = (('A', (1279, 20, 1279, 20)), 1.0)
+INFO     localization    (loc, score) = (('A', (539, 18, 539, 25)), 1.0)
+INFO     localization    (loc, score) = (('A', (511, 25, 511, 25)), 1.0)
+INFO     localization    (loc, score) = (('A', (1810, 17, 1810, 17)), 1.0)
+INFO     localization    (loc, score) = (('A', (798, 15, 798, 15)), 1.0)
+INFO     localization    (loc, score) = (('A', (1275, 12, 1275, 12)), 1.0)
+INFO     localization    (loc, score) = (('A', (1804, 18, 1804, 18)), 1.0)
+INFO     localization    (loc, score) = (('A', (1834, 15, 1834, 15)), 1.0)
+INFO     localization    (loc, score) = (('A', (1862, 8, 1862, 8)), 1.0)
+INFO     localization    (loc, score) = (('A', (537, 32, 537, 32)), 1.0)
+INFO     localization    (loc, score) = (('A', (536, 32, 536, 32)), 1.0)
+INFO     localization    (loc, score) = (('A', (1280, 19, 1280, 19)), 1.0)
+INFO     localization    (loc, score) = (('A', (830, 43, 830, 44)), 1.0)
+INFO     localization    (loc, score) = (('A', (536, 32, 536, 32), '1'), 0.0)
+INFO     localization    (loc, score) = (('A', (798, 15, 798, 15), '0'), 0.0)
+INFO     localization    (loc, score) = (('A', (710, 14, 710, 14), '1'), 0.0)
+INFO     localization    (loc, score) = (('A', (1862, 8, 1862, 8), '-1'), 0.0)
+INFO     localization    (loc, score) = (('A', (1834, 15, 1834, 15), '1'), 0.0)
+INFO     localization    (loc, score) = (('A', (657, 15, 657, 15), '0'), 0.0)
+INFO     localization    (loc, score) = (('A', (539, 18, 539, 25), '3'), 0.0)
+INFO     localization    (loc, score) = (('A', (539, 18, 539, 25), '1'), 0.0)
+INFO     localization    (loc, score) = (('A', (1280, 19, 1280, 19), '0'), 0.0)
+INFO     localization    (loc, score) = (('A', (537, 32, 537, 32), '1'), 0.0)
+INFO     localization    (loc, score) = (('A', (536, 32, 536, 32), '0'), 0.0)
+INFO     localization    (loc, score) = (('A', (1279, 20, 1279, 20), '0'), 0.0)
+INFO     localization    (loc, score) = (('A', (1804, 18, 1804, 18), '0'), 0.0)
+INFO     localization    (loc, score) = (('A', (539, 18, 539, 25), '0'), 0.0)
+INFO     localization    (loc, score) = (('A', (656, 17, 656, 17), '1'), 0.0)
+INFO     localization    (loc, score) = (('A', (1275, 12, 1275, 12), '0'), 0.0)
+INFO     localization    (loc, score) = (('A', (1810, 17, 1810, 17), '1'), 0.0)
+INFO     localization    (loc, score) = (('A', (830, 43, 830, 44), '0'), 0.0)
+INFO     localization    (loc, score) = (('A', (537, 32, 537, 32), '0'), 0.0)
+DEBUG    localization    top: [(('A', (511, 25, 511, 25)), 1.0), (('A', (536, 32, 536, 32)), 1.0), (('A', (536, 32, 536, 32), '1'), 0.0), (('A', (537, 32, 537, 32)), 1.0), (('A', (539, 18, 539, 25)), 1.0), (('A', (539, 18, 539, 25), '3'), 0.0), (('A', (657, 15, 657, 15), '0'), 0.0), (('A', (710, 14, 710, 14), '1'), 0.0), (('A', (798, 15, 798, 15)), 1.0), (('A', (798, 15, 798, 15), '0'), 0.0), (('A', (830, 43, 830, 44)), 1.0), (('A', (1275, 12, 1275, 12)), 1.0), (('A', (1279, 20, 1279, 20)), 1.0), (('A', (1280, 19, 1280, 19)), 1.0), (('A', (1804, 18, 1804, 18)), 1.0), (('A', (1810, 17, 1810, 17)), 1.0), (('A', (1834, 15, 1834, 15)), 1.0), (('A', (1834, 15, 1834, 15), '1'), 0.0), (('A', (1862, 8, 1862, 8)), 1.0), (('A', (1862, 8, 1862, 8), '-1'), 0.0)]
+INFO     localization    group 1: [('A', (511, 25, 511, 25))] (1.0)
+INFO     localization    group 2: [('A', (536, 32, 536, 32))] (1.0)
+INFO     localization    group 3: [('A', (537, 32, 537, 32))] (1.0)
+INFO     localization    group 4: [('A', (539, 18, 539, 25))] (1.0)
+INFO     localization    group 5: [('A', (798, 15, 798, 15))] (1.0)
+INFO     localization    group 6: [('A', (830, 43, 830, 44))] (1.0)
+INFO     localization    group 7: [('A', (1275, 12, 1275, 12))] (1.0)
+INFO     localization    group 8: [('A', (1279, 20, 1279, 20))] (1.0)
+INFO     localization    group 9: [('A', (1280, 19, 1280, 19))] (1.0)
+INFO     localization    group 10: [('A', (1804, 18, 1804, 18))] (1.0)
+INFO     localization    group 11: [('A', (1810, 17, 1810, 17))] (1.0)
+INFO     localization    group 12: [('A', (1834, 15, 1834, 15))] (1.0)
+INFO     localization    group 13: [('A', (1862, 8, 1862, 8))] (1.0)
+INFO     localization    group 14: [('A', (536, 32, 536, 32), '1')] (0.0)
+INFO     localization    group 15: [('A', (539, 18, 539, 25), '3')] (0.0)
+INFO     localization    group 16: [('A', (657, 15, 657, 15), '0')] (0.0)
+INFO     localization    group 17: [('A', (710, 14, 710, 14), '1')] (0.0)
+INFO     localization    group 18: [('A', (798, 15, 798, 15), '0')] (0.0)
+INFO     localization    group 19: [('A', (1834, 15, 1834, 15), '1')] (0.0)
+INFO     localization    group 20: [('A', (1862, 8, 1862, 8), '-1')] (0.0)
+INFO     localization    selected expressions [('A', (511, 25, 511, 25))] with group score 1.0 
+INFO     localization    selected expressions [('A', (536, 32, 536, 32))] with group score 1.0 
+INFO     localization    selected expressions [('A', (537, 32, 537, 32))] with group score 1.0 
+INFO     localization    selected expressions [('A', (539, 18, 539, 25))] with group score 1.0 
+INFO     localization    selected expressions [('A', (798, 15, 798, 15))] with group score 1.0 
+INFO     localization    selected expressions [('A', (830, 43, 830, 44))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1275, 12, 1275, 12))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1279, 20, 1279, 20))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1280, 19, 1280, 19))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1804, 18, 1804, 18))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1810, 17, 1810, 17))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1834, 15, 1834, 15))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1862, 8, 1862, 8))] with group score 1.0 
+INFO     localization    selected expressions [('A', (536, 32, 536, 32), '1')] with group score 0.0 
+INFO     localization    selected expressions [('A', (539, 18, 539, 25), '3')] with group score 0.0 
+INFO     localization    selected expressions [('A', (657, 15, 657, 15), '0')] with group score 0.0 
+INFO     localization    selected expressions [('A', (710, 14, 710, 14), '1')] with group score 0.0 
+INFO     localization    selected expressions [('A', (798, 15, 798, 15), '0')] with group score 0.0 
+INFO     localization    selected expressions [('A', (1834, 15, 1834, 15), '1')] with group score 0.0 
+INFO     localization    selected expressions [('A', (1862, 8, 1862, 8), '-1')] with group score 0.0 
+DEBUG    localization    groups: [[('A', (511, 25, 511, 25))], [('A', (536, 32, 536, 32))], [('A', (537, 32, 537, 32))], [('A', (539, 18, 539, 25))], [('A', (798, 15, 798, 15))], [('A', (830, 43, 830, 44))], [('A', (1275, 12, 1275, 12))], [('A', (1279, 20, 1279, 20))], [('A', (1280, 19, 1280, 19))], [('A', (1804, 18, 1804, 18))], [('A', (1810, 17, 1810, 17))], [('A', (1834, 15, 1834, 15))], [('A', (1862, 8, 1862, 8))], [('A', (536, 32, 536, 32), '1')], [('A', (539, 18, 539, 25), '3')], [('A', (657, 15, 657, 15), '0')], [('A', (710, 14, 710, 14), '1')], [('A', (798, 15, 798, 15), '0')], [('A', (1834, 15, 1834, 15), '1')], [('A', (1862, 8, 1862, 8), '-1')]]
+INFO     repair          considering suspicious locations [('A', (511, 25, 511, 25))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpvkybnlkg/suspicious
+DEBUG    transformation  locations: [('A', (511, 25, 511, 25))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpvkybnlkg/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(511, 25, 511, 25): ('int', 1, ['verbose', 'z_len', 'proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (511, 25, 511, 25)[0]: angelic = 0
+DEBUG    sym_infer       angelic_path: {(511, 25, 511, 25): [(0, None, {'verbose': 1, 'z_len': 3, 'proglen': 15})]}
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/9
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       spurious angelic path
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(511, 25, 511, 25): ('int', 1, ['verbose', 'z_len', 'proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       found 0 angelic paths for test '9'
+INFO     repair          considering suspicious locations [('A', (536, 32, 536, 32))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmp3rellq9h/suspicious
+DEBUG    transformation  locations: [('A', (536, 32, 536, 32))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmp3rellq9h/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(536, 32, 536, 32): ('int', 1, ['z_len', 'decompress', 'proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (536, 32, 536, 32)[0]: angelic = 16843009
+DEBUG    sym_infer       angelic_path: {(536, 32, 536, 32): [(16843009, None, {'z_len': 3, 'decompress': 1, 'proglen': 15})]}
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/9
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       spurious angelic path
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(536, 32, 536, 32): ('int', 1, ['z_len', 'decompress', 'proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       found 0 angelic paths for test '9'
+INFO     repair          considering suspicious locations [('A', (537, 32, 537, 32))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmp1ihuzher/suspicious
+DEBUG    transformation  locations: [('A', (537, 32, 537, 32))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmp1ihuzher/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '9'
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/3
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(537, 32, 537, 32): ('int', 1, ['z_len', 'decompress', 'proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (537, 32, 537, 32)[0]: angelic = 0
+DEBUG    sym_infer       angelic_path: {(537, 32, 537, 32): [(0, None, {'z_len': 3, 'decompress': 1, 'proglen': 15})]}
+INFO     testing         running test '3' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/3
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 0
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(537, 32, 537, 32): ('int', 1, ['z_len', 'decompress', 'proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       found 1 angelic paths for test '3'
+INFO     sym_infer       inferring specification for test '6' through KLEE
+INFO     testing         running test '6' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/6
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '6'
+INFO     sym_infer       inferring specification for test '8' through KLEE
+INFO     testing         running test '8' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/8
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '8'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_1/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_1/patch', '/angelix-experiments/.angelix/syn/syn_1/config.json']
+DEBUG    synthesis       synthesis output: FAIL
+INFO     synthesis       synthesis failed
+INFO     synthesis       synthesizing patch with component level 'integer-constants'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_1/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_1/patch', '/angelix-experiments/.angelix/syn/syn_1/config.json']
+DEBUG    synthesis       synthesis output: SUCCESS
+INFO     synthesis       fixing expression (537, 32, 537, 32): decompress ---> 0
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     testing         running test '3' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 4
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     testing         running test '8' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 10
+INFO     testing         output code: 0
+WARNING  repair          generated invalid fix (tests ['9'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_2/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_2/patch', '/angelix-experiments/.angelix/syn/syn_2/config.json']
+DEBUG    synthesis       synthesis output: FAIL
+INFO     synthesis       synthesis failed
+INFO     synthesis       synthesizing patch with component level 'integer-constants'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_2/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_2/patch', '/angelix-experiments/.angelix/syn/syn_2/config.json']
+DEBUG    synthesis       synthesis output: SUCCESS
+INFO     synthesis       fixing expression (537, 32, 537, 32): decompress ---> 0
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     testing         running test '3' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 4
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     testing         running test '8' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 10
+INFO     testing         output code: 0
+WARNING  repair          generated invalid fix (tests ['9'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('A', (539, 18, 539, 25))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmphmr4pud6/suspicious
+DEBUG    transformation  locations: [('A', (539, 18, 539, 25))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmphmr4pud6/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(539, 18, 539, 25): ('int', 1, ['z_len', 'argc', 'proglen', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (539, 18, 539, 25)[0]: angelic = 16843009
+DEBUG    sym_infer       angelic_path: {(539, 18, 539, 25): [(16843009, None, {'z_len': 3, 'argc': 5, 'proglen': 15, 'optind': 4})]}
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/9
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       spurious angelic path
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(539, 18, 539, 25): ('int', 1, ['z_len', 'argc', 'proglen', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       found 0 angelic paths for test '9'
+INFO     repair          considering suspicious locations [('A', (798, 15, 798, 15))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpi9rk8iyn/suspicious
+DEBUG    transformation  locations: [('A', (798, 15, 798, 15))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpi9rk8iyn/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(798, 15, 798, 15): ('int', 1, ['ifd', 'ifile_size'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (798, 15, 798, 15)[0]: angelic = 16843009
+DEBUG    sym_infer       angelic_path: {(798, 15, 798, 15): [(16843009, None, {'ifd': 3, 'ifile_size': 23})]}
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/9
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       spurious angelic path
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(798, 15, 798, 15): ('int', 1, ['ifd', 'ifile_size'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       found 0 angelic paths for test '9'
+INFO     repair          considering suspicious locations [('A', (830, 43, 830, 44))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpwly4fn5o/suspicious
+DEBUG    transformation  locations: [('A', (830, 43, 830, 44))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpwly4fn5o/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '9'
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/3
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '3'
+INFO     sym_infer       inferring specification for test '6' through KLEE
+INFO     testing         running test '6' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/6
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '6'
+INFO     sym_infer       inferring specification for test '8' through KLEE
+INFO     testing         running test '8' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/8
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '8'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_3/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_3/patch', '/angelix-experiments/.angelix/syn/syn_3/config.json']
+DEBUG    synthesis       synthesis output: SUCCESS
+WARNING  synthesis       patch contains no changes
+INFO     repair          cannot synthesize fix
+INFO     repair          considering suspicious locations [('A', (1275, 12, 1275, 12))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpvdo6u_hi/suspicious
+DEBUG    transformation  locations: [('A', (1275, 12, 1275, 12))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpvdo6u_hi/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '9'
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/3
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '3'
+INFO     sym_infer       inferring specification for test '6' through KLEE
+INFO     testing         running test '6' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/6
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '6'
+INFO     sym_infer       inferring specification for test '8' through KLEE
+INFO     testing         running test '8' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/8
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '8'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_4/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_4/patch', '/angelix-experiments/.angelix/syn/syn_4/config.json']
+DEBUG    synthesis       synthesis output: SUCCESS
+WARNING  synthesis       patch contains no changes
+INFO     repair          cannot synthesize fix
+INFO     repair          considering suspicious locations [('A', (1279, 20, 1279, 20))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmp72uzwwfi/suspicious
+DEBUG    transformation  locations: [('A', (1279, 20, 1279, 20))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmp72uzwwfi/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '9'
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/3
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '3'
+INFO     sym_infer       inferring specification for test '6' through KLEE
+INFO     testing         running test '6' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/6
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '6'
+INFO     sym_infer       inferring specification for test '8' through KLEE
+INFO     testing         running test '8' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/8
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '8'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_5/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_5/patch', '/angelix-experiments/.angelix/syn/syn_5/config.json']
+DEBUG    synthesis       synthesis output: SUCCESS
+WARNING  synthesis       patch contains no changes
+INFO     repair          cannot synthesize fix
+INFO     repair          considering suspicious locations [('A', (1280, 19, 1280, 19))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmph6l_8bp4/suspicious
+DEBUG    transformation  locations: [('A', (1280, 19, 1280, 19))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmph6l_8bp4/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(1280, 19, 1280, 19): ('int', 1, ['header_bytes', 'part_nb', 'method'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (1280, 19, 1280, 19)[0]: angelic = 0
+DEBUG    sym_infer       angelic_path: {(1280, 19, 1280, 19): [(0, None, {'header_bytes': 0, 'part_nb': 1, 'method': -1})]}
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/9
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       spurious angelic path
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(1280, 19, 1280, 19): ('int', 1, ['header_bytes', 'part_nb', 'method'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       found 0 angelic paths for test '9'
+INFO     repair          considering suspicious locations [('A', (1804, 18, 1804, 18))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpw41cs1qe/suspicious
+DEBUG    transformation  locations: [('A', (1804, 18, 1804, 18))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpw41cs1qe/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '9'
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/3
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '3'
+INFO     sym_infer       inferring specification for test '6' through KLEE
+INFO     testing         running test '6' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/6
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '6'
+INFO     sym_infer       inferring specification for test '8' through KLEE
+INFO     testing         running test '8' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/8
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '8'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_6/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_6/patch', '/angelix-experiments/.angelix/syn/syn_6/config.json']
+DEBUG    synthesis       synthesis output: SUCCESS
+WARNING  synthesis       patch contains no changes
+INFO     repair          cannot synthesize fix
+INFO     repair          considering suspicious locations [('A', (1810, 17, 1810, 17))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpazrtsw0o/suspicious
+DEBUG    transformation  locations: [('A', (1810, 17, 1810, 17))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpazrtsw0o/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '9'
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/3
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '3'
+INFO     sym_infer       inferring specification for test '6' through KLEE
+INFO     testing         running test '6' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/6
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '6'
+INFO     sym_infer       inferring specification for test '8' through KLEE
+INFO     testing         running test '8' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/8
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '8'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_7/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_7/patch', '/angelix-experiments/.angelix/syn/syn_7/config.json']
+DEBUG    synthesis       synthesis output: SUCCESS
+WARNING  synthesis       patch contains no changes
+INFO     repair          cannot synthesize fix
+INFO     repair          considering suspicious locations [('A', (1834, 15, 1834, 15))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpmznynrgy/suspicious
+DEBUG    transformation  locations: [('A', (1834, 15, 1834, 15))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpmznynrgy/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '9'
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/3
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '3'
+INFO     sym_infer       inferring specification for test '6' through KLEE
+INFO     testing         running test '6' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/6
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '6'
+INFO     sym_infer       inferring specification for test '8' through KLEE
+INFO     testing         running test '8' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/8
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       angelic_path: {}
+INFO     sym_infer       found 1 angelic paths for test '8'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_8/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_8/patch', '/angelix-experiments/.angelix/syn/syn_8/config.json']
+DEBUG    synthesis       synthesis output: SUCCESS
+WARNING  synthesis       patch contains no changes
+INFO     repair          cannot synthesize fix
+INFO     repair          considering suspicious locations [('A', (1862, 8, 1862, 8))]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpp34z9zg3/suspicious
+DEBUG    transformation  locations: [('A', (1862, 8, 1862, 8))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpp34z9zg3/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000003.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000004.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000005.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000006.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000007.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(1862, 8, 1862, 8): ('int', 1, ['remove_ofname_fd'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (1862, 8, 1862, 8)[0]: angelic = -2147483648
+DEBUG    sym_infer       angelic_path: {(1862, 8, 1862, 8): [(-2147483648, None, {'remove_ofname_fd': 4})]}
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/9
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       spurious angelic path
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(1862, 8, 1862, 8): ('int', 1, ['remove_ofname_fd'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000003.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(1862, 8, 1862, 8): ('int', 1, ['remove_ofname_fd'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000004.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(1862, 8, 1862, 8): ('int', 1, ['remove_ofname_fd'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000005.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(1862, 8, 1862, 8): ('int', 1, ['remove_ofname_fd'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000006.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(1862, 8, 1862, 8): ('int', 1, ['remove_ofname_fd'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000007.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(1862, 8, 1862, 8): ('int', 1, ['remove_ofname_fd'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       found 0 angelic paths for test '9'
+INFO     repair          considering suspicious locations [('A', (536, 32, 536, 32), '1')]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpy777cyks/suspicious
+DEBUG    transformation  locations: [('A', (536, 32, 536, 32), '1')]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpy777cyks/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(536, 32, 536, 32): ('int', 1, ['z_len', 'decompress', 'proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (536, 32, 536, 32)[0]: angelic = 16843009
+DEBUG    sym_infer       angelic_path: {(536, 32, 536, 32): [(16843009, None, {'z_len': 3, 'decompress': 1, 'proglen': 15})]}
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/9
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+INFO     sym_infer       spurious angelic path
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(536, 32, 536, 32): ('int', 1, ['z_len', 'decompress', 'proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       found 0 angelic paths for test '9'
+INFO     repair          considering suspicious locations [('A', (539, 18, 539, 25), '3')]
+INFO     reduction       all failing tests: ['9']
+INFO     reduction       selected 4 tests
+INFO     reduction       selected passing tests: ['3', '6', '8']
+INFO     reduction       selected failing tests: ['9']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpl4ix_ov1/suspicious
+DEBUG    transformation  locations: [('A', (539, 18, 539, 25), '3')]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpl4ix_ov1/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     repair          failed to generate patch (timeout)
+TIMEOUT

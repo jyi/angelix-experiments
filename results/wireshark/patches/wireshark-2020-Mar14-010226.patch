@@ -1,0 +1,11 @@
+--- a/dumpcap.c
++++ b/dumpcap.c
+@@ -4171,7 +4171,7 @@
+      * "-S" requires no interface to be selected; it gives statistics
+      * for all interfaces.
+      */
+-    if (print_statistics) {
++    if (1) {
+         status = print_statistics_loop(machine_readable);
+         exit_main(status);
+     }

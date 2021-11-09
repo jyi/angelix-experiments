@@ -1,0 +1,304 @@
+#!/bin/bash
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+usage="Usage: ./repair-wireshark VERSION"
+
+if [[ $# > 0 ]]; then
+    version="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+# parse options
+skip_instrument=0
+strat=""
+options=""
+while :; do
+    if [[ $# > 0 ]]; then
+        case $1 in
+            --skip-instrument)
+                skip_instrument=1
+                shift
+                ;;
+            --guided)
+                strat="guided"
+                shift
+                ;;
+            --symbolic)
+                strat="symbolic"
+                shift
+                ;;
+            --random)
+                strat="random"
+                shift
+                ;;
+            --*)
+                options="$options $1"
+                shift
+                ;;
+            *)
+                if [[ $1 =~ ^[a-zA-Z0-9.\-]+$ ]]; then
+                    options="$options $1"
+                    shift
+                else
+                    # Default case: No more options, so break out of the loop.
+                    break
+                fi
+        esac
+    else
+        break
+    fi
+done
+
+echo "[repair-wireshark] options: $options"
+
+bug_dir="wireshark-bug-${version}"
+fix_dir="wireshark-fix-${version}"
+notgolden=0
+golden=1
+
+# Common functions -------------------------------------------------------------
+
+# replaces within "$3" lines starting from the only occurrence of symbol "$2" in file "$1"
+replace-in-range () {
+    local file="$1"
+    local symbol="$2"
+    local length="$3"
+    local original="$4"
+    local replacement="$5"
+
+    local begin=$(grep -n "$symbol" "$file" | cut -d : -f 1)
+    local end=$(( begin + length ))
+
+    sed -i "$begin,$end{s/$original/$replacement/;}" "$file"
+}
+
+add-header () {
+    local file="$1"
+    sed -i '1s/^/#ifndef ANGELIX_OUTPUT\n/' "$file"
+    sed -i '2s/^/#define ANGELIX_OUTPUT(type, expr, id) expr\n/' "$file"
+    sed -i '3s/^/#define ANGELIX_REACHABLE(id)\n/' "$file"
+    sed -i '4s/^/#define ANGELIX_EXPR(dc, type, expr, bl, bc, el, ec, env_ids, env_vals, env_size) expr\n/' $file
+    sed -i '5s/^/#endif\n/' "$file"
+}
+
+# Wireshark --------------------------------------------------------------------
+
+if [ "$version" == "37112-37111" ]; then
+    wireshark_test_suite="$(seq 1 50) 6000 6001 6002 6003 6004 6005 6006 6007 6008 6009 6011 6012 6013 6014"  # some tests after 50 don't terminate
+elif [ "$version" == "37284-37285" ] || [ "$version" == "37172-37171" ]; then
+     wireshark_test_suite="$(seq 1 42) $(seq 44 50) 6000 6001 6002 6003 6004 6005 6006 6007 6008 6009 6011 6012 6013 6014"  # some tests after 50 don't terminate
+else
+    wireshark_test_suite="$(seq 1 50) 6000 6001 6002 6003 6004 6005 6006 6008 6009 6010 6011 6012 6013 6014"  # some tests after 50 don't terminate
+fi
+
+GLIB_DIR="$PWD/glib-2.30.0"
+LIBPCAP_DIR="$PWD/libpcap-1.9.1"
+
+
+build-glib-bitcode() {
+    restore_original "$PWD/.aux/wireshark/glib-2.30.0/glib/gtypes.h"
+    cp "$PWD/.aux/wireshark/glib-2.30.0/glib/gtypes.h" "$GLIB_DIR/glib/"
+
+    restore_original "$PWD/.aux/wireshark/glib-2.30.0/glib/gbacktrace.h"
+    cp "$PWD/.aux/wireshark/glib-2.30.0/glib/gbacktrace.h" "$GLIB_DIR/glib/"
+
+    configure="$PWD/.aux/wireshark/configure-glib"
+    build="$PWD/.aux/wireshark/compile-glib-bitcode"
+    (cd $GLIB_DIR && make clean -j ${NUM_OF_CPU} && "$configure" && "$build")
+}
+
+build-libpcap-bitcode() {
+    for file in $LIBPCAP_DIR/portability.h $LIBPCAP_DIR/missing/strlcpy.c $LIBPCAP_DIR/missing/strlcat.c
+    do
+        restore_original $file
+        sed -i 's/char \* restrict/char */g' $file
+    done
+
+    local makefile_in=$LIBPCAP_DIR/Makefile.in
+    restore_original $makefile_in
+    sed -i 's/$(AR) rc/llvm-ld -r -o/g' $makefile_in
+    sed -i 's/$(RANLIB) $@//g' $makefile_in
+
+    pushd $LIBPCAP_DIR &> /dev/null
+    ./configure --disable-shared --disable-rdma
+    make clean -j ${NUM_OF_CPU}
+    make CC='angelix-compiler --klee' -j ${NUM_OF_CPU}
+    popd &> /dev/null
+}
+
+restore_original () {
+    local src="$1"
+    if [ -e $src.org ]; then
+        # echo "[repair-wireshark] restore $src"
+        cp $src.org $src
+    else
+        # echo "[repair-wireshark] prepare the org file for $src"
+        cp $src $src.org
+    fi
+}
+
+instrument () {
+    local directory="$1"
+    local version="$2"
+    local is_golden="$3"
+
+    local run_tests_script=$(readlink -f "$directory/wireshark-run-tests.sh")
+    restore_original $run_tests_script
+    sed -i 's/\$DUT /$ANGELIX_RUN $DUT /g' "$run_tests_script"
+    # this is not a binary:
+    # sed -i 's/\$TSHARK -i invalid_interface/$ANGELIX_RUN $TSHARK -i invalid_interface/' "$run_tests_script"
+    chmod u+x "$run_tests_script"
+
+    local reassemble_test="$directory/wireshark/epan/reassemble_test.c"
+    restore_original $reassemble_test
+    sed -i 's|for(i=0; i < sizeof(tests)/sizeof(tests\[0\]); i++ )|i=atoi(getenv("WIRESHARK60_SUBTEST"));|' "$reassemble_test"
+    replace-in-range "$reassemble_test" 'test_fragment_add_seq_check_1(void)' 60 '}' 'ANGELIX_REACHABLE("pass60");}'
+    add-header "$reassemble_test"
+
+    # due to unsupported constructs:
+    if [ "$version" == "37112-37111" ]; then
+        local reassemble="$directory/wireshark/epan/reassemble.c"
+        restore_original $reassemble
+        local line=$(grep -n "*reassembled_table != NULL" "$reassemble" | cut -d : -f 1)
+        sed -i $line'iGHashTable* x = *reassembled_table;' "$reassemble"
+        sed -i 's/*reassembled_table != NULL/x != 0/' "$reassemble"
+
+        sed -i 's/if(key)/if(key != 0)/g' "$reassemble"
+
+        add-header "$reassemble"
+    fi
+
+    # due to unsupported constructs:
+    local dumpcap="$directory/wireshark/dumpcap.c"
+    restore_original $dumpcap
+    sed -i 's/!(log_level & G_LOG_LEVEL_MASK & ~(G_LOG_LEVEL_DEBUG|G_LOG_LEVEL_INFO))/!(log_level \&\& (G_LOG_LEVEL_MASK != 0) \&\& !(G_LOG_LEVEL_DEBUG != 0 || G_LOG_LEVEL_INFO != 0))/g' "$dumpcap"
+    replace-in-range "$dumpcap" 'defined(DEBUG_DUMPCAP) || defined(DEBUG_CHILD_DUMPCAP)' 15 return 'ANGELIX_REACHABLE("dumpcaperror"); exit(1); return'
+    sed -i 's/global_capture_opts.ifaces->len/1/g' "$dumpcap"
+    sed -i 's/interface_opts = g_array_index(global_capture_opts.ifaces, interface_options, j);//' "$dumpcap"
+    sed -i 's/"Interface: %s", interface_opts.name/"Interface: %s", "invalid_interface"/' "$dumpcap"
+    add-header "$dumpcap"
+    #    sed -i 's/exit_main(status);//g' "$dumpcap"
+    #    sed -i 's/exit_main(1);//g' "$dumpcap"
+
+    if [ "$version" == "37284-37285" ]; then
+        local dumpcap="$directory/wireshark/dumpcap.c"
+        local dcfdline=$(grep -n "FD_ZERO" $dumpcap | cut -d : -f 1)
+        sed -i $dcfdline'i#define FD_ZERO(p) memset((char *)(p), 0, sizeof(*(p)))' $dumpcap  # for some reason does not work without it
+        sed -i $dcfdline'i#undef FD_ZERO' $dumpcap
+    fi
+    ./.aux/wireshark/fix-fd-zero $dumpcap
+
+    if [ "$version" != "37112-37111" ]; then
+        local tshark="$directory/wireshark/tshark.c"
+        restore_original $tshark
+        ./.aux/wireshark/fix-fd-zero $tshark
+
+        local capture_sync="$directory/wireshark/capture_sync.c"
+        restore_original $capture_sync
+        local fdline=$(grep -n "FD_ZERO" $capture_sync | cut -d : -f 1)
+        sed -i $fdline'i#define FD_ZERO(p) memset((char *)(p), 0, sizeof(*(p)))' $capture_sync  # for some reason does not work without it
+        sed -i $fdline'i#undef FD_ZERO' $capture_sync
+        ./.aux/wireshark/fix-fd-zero $capture_sync
+    fi
+
+    local makefile_am="$directory/wireshark/Makefile.am"
+    restore_original $makefile_am
+    cat <<EOF >> $makefile_am
+
+\$(top_srcdir)/configure:  \$(am__configure_deps)
+        \$(am__cd) \$(srcdir) && \$(AUTOCONF) && sed -i 's/^CC=\$\$lt_compiler/# CC=/g' \$(top_srcdir)/configure
+EOF
+
+    # local proto_h="$directory/wireshark/epan/proto.h"
+    # restore_original $proto_h
+    # sed -i 's/{ if(\!(expression)) \_asm/\/\/ &/' $proto_h
+}
+
+repair-wireshark () {
+    local directory="$1"
+    local golden_directory="$2"
+    local src="$directory/wireshark"
+    local golden="$golden_directory/wireshark"
+    for file in $(cat "$directory/bugged-program.txt")
+    do
+        local buggy=$file
+        break
+    done
+    local run_tests_script="/angelix-experiments/.aux/wireshark/wireshark-run-tests.sh"
+
+    export ANGELIX_COMPILER_CUSTOM_KLEE_LINK="$GLIB_DIR/glib/.libs/libglib-2.0.a $GLIB_DIR/gmodule/.libs/libgmodule-2.0.a $GLIB_DIR/gthread/.libs/libgthread-2.0.a $LIBPCAP_DIR/libpcap.a"
+    export CC=gcc
+
+    configure="$PWD/.aux/wireshark/configure-$version"
+    if ! [ -f $configure ]; then
+        configure="$PWD/.aux/wireshark/configure"
+    fi
+
+    make="$PWD/.aux/wireshark/wireshark-make"
+
+    echo "[repair-wireshark] wireshark_test_suite: ${wireshark_test_suite}"
+    oracle="$PWD/.aux/wireshark/wireshark-oracle"
+    echo "[repair-wireshark] angelix $src $buggy $oracle $wireshark_test_suite --golden $golden --build $make --configure $configure $options"
+    angelix "$src" "$buggy" $oracle $wireshark_test_suite \
+            --golden "$golden" \
+            --build $make \
+            --configure "$configure" \
+            $options
+}
+
+clean () {
+    local dir=$1/wireshark
+    local configure="$PWD/.aux/wireshark/configure-$version"
+    if ! [ -f $configure ]; then
+        configure="$PWD/.aux/wireshark/configure"
+    fi
+
+    echo "[repair-wireshark] cleaning $dir ..."
+    pushd $dir &> /dev/null
+    $configure &> /dev/null
+    make -j $NUM_OF_CPU clean &> /dev/null
+    popd &> /dev/null
+}
+
+# Main -------------------------------------------------------------------------
+
+instrument "$bug_dir" $version $notgolden
+instrument "$fix_dir" $version $golden
+
+if [ ! -f "$GLIB_DIR/COMPILED" ]; then
+    build-glib-bitcode
+    touch "$GLIB_DIR/COMPILED"
+fi
+
+if [ ! -f "$LIBPCAP_DIR/COMPILED" ]; then
+    build-libpcap-bitcode
+    touch "$LIBPCAP_DIR/COMPILED"
+fi
+
+echo "[repair-wireshark] strat: $strat"
+if [ "$version" == "37112-37111" ] && [ $strat == "guided" ]; then
+    reassemble_buggy="$bug_dir/wireshark/epan/reassemble.c"
+    restore_original $reassemble_buggy
+    cp $PWD/.aux/wireshark/37112-37111/buggy/epan/reassemble.c $reassemble_buggy
+fi
+
+if [ "$version" == "37172-37171" ] && [ $strat == "symbolic" ]; then
+    dumpcap_fixed="$fix_dir/wireshark/dumpcap.c"
+    restore_original $dumpcap_fixed
+    cp $PWD/.aux/wireshark/37172-37171/golden/dumpcap.c $dumpcap_fixed
+
+    dumpcap_buggy="$bug_dir/wireshark/dumpcap.c"
+    restore_original $dumpcap_buggy
+    cp $PWD/.aux/wireshark/37172-37171/buggy/dumpcap.c $dumpcap_buggy
+fi
+
+
+clean "$bug_dir"
+clean "$fix_dir"
+
+repair-wireshark "$bug_dir" "$fix_dir"

@@ -1,0 +1,32 @@
+{
+  "2": [
+    [
+      {
+        "context": [
+          {
+            "name": "w",
+            "value": 2
+          },
+          {
+            "name": "dir->tdir_count_1",
+            "value": 3
+          },
+          {
+            "name": "dir->tdir_count",
+            "value": 3
+          },
+          {
+            "name": "cc",
+            "value": 6
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "976-6-976-67",
+        "instId": 0
+      }
+    ]
+  ]
+}

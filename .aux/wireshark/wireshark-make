@@ -1,0 +1,13 @@
+#!/bin/bash
+make clean -j ${NUM_OF_CPU} &> /dev/null
+rm -f epan/reassemble_test
+rm -f .libs/dumpcap
+# export PATH="/angelix-experiments/.aux/wireshark/compiler/":$PATH
+if make -e --trace VERBOSE=1 -j ${NUM_OF_CPU} &> build1.log; then
+    echo "Build succeeded"
+else
+    echo "Retry"
+    make -e --trace VERBOSE=1 -j ${NUM_OF_CPU} &> build2.log
+fi
+# cd epan
+# make -e reassemble_test

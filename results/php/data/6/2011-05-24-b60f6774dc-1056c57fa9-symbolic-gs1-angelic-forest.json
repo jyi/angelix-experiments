@@ -1,0 +1,24 @@
+{
+  "2": [
+    [
+      {
+        "context": [
+          {
+            "name": "ctx",
+            "value": 1021979072
+          },
+          {
+            "name": "ctx->buf.len",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "1004-7-1004-26",
+        "instId": 0
+      }
+    ]
+  ]
+}

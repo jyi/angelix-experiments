@@ -1,0 +1,194 @@
+[repair] benchmark: manybugs
+[repair] subject: libtiff
+[repair] version: 2006-03-03-eec4c06-ee65c74
+[repair] search: symbolic
+[fetch] benchmark: manybugs
+[fetch] subject: libtiff
+[fetch] version: 2006-03-03-eec4c06-ee65c74
+[fetch] archive: libtiff-bug-2006-03-03-eec4c06-ee65c74.tar.gz
+[fetch] directory: libtiff-bug-2006-03-03-eec4c06-ee65c74
+[fetch] preparing source code
+[fetch] golden_directory: libtiff-fix-2006-03-03-eec4c06-ee65c74
+[fetch] clean-source libtiff-bug-2006-03-03-eec4c06-ee65c74
+[fetch] /angelix-experiments/libtiff-bug-2006-03-03-eec4c06-ee65c74/libtiff/configure
+[fetch] make clean
+[fetch] clean-source libtiff-fix-2006-03-03-eec4c06-ee65c74
+[fetch] restore-buggy libtiff-bug-2006-03-03-eec4c06-ee65c74
+[fetch] /angelix-experiments/libtiff-fix-2006-03-03-eec4c06-ee65c74/libtiff/configure
+[fetch] make clean
+[fetch] buggy: libtiff/tif_dirread.c
+[fetch] buggy_preprocessed: libtiff-bug-2006-03-03-eec4c06-ee65c74/libtiff/libtiff/tif_dirread.c
+[fetch] buggy_version: eec4c06
+[fetch] buggy_original: libtiff-bug-2006-03-03-eec4c06-ee65c74/diffs/libtiff/tif_dirread.c-eec4c06
+[fetch] restore-correct libtiff-fix-2006-03-03-eec4c06-ee65c74
+[fetch] restored libtiff-fix-2006-03-03-eec4c06-ee65c74/libtiff/libtiff/tif_dirread.c with libtiff-fix-2006-03-03-eec4c06-ee65c74/diffs/libtiff/tif_dirread.c-ee65c74
+[fetch] fetch done
+[repair] options: --angelic-search-strategy
+symbolic
+--defect
+if-conditions
+loop-conditions
+--klee-max-forks
+500
+--klee-solver-timeout
+100
+--suspicious
+40
+--initial-tests
+1  --ignore-lines --quiet --all-suspicious --group-size 1 --test-timeout 60
+[repair-libtiff] options:  --angelic-search-strategy symbolic --defect if-conditions loop-conditions --klee-max-forks 500 --klee-solver-timeout 100 --suspicious 40 --initial-tests 1 --ignore-lines --quiet --all-suspicious --group-size 1 --test-timeout 60
+[repair-libtiff] instrument libtiff-bug-2006-03-03-eec4c06-ee65c74/libtiff/test/Makefile.in
+[repair-libtiff] instrument libtiff-bug-2006-03-03-eec4c06-ee65c74/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2006-03-03-eec4c06-ee65c74/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2006-03-03-eec4c06-ee65c74/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2006-03-03-eec4c06-ee65c74/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2006-03-03-eec4c06-ee65c74/libtiff/test/Makefile.in
+[repair-libtiff] instrument libtiff-fix-2006-03-03-eec4c06-ee65c74/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2006-03-03-eec4c06-ee65c74/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2006-03-03-eec4c06-ee65c74/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2006-03-03-eec4c06-ee65c74/libtiff/tools/tiff2pdf.c
+WARNING  testing         ANGELIX_RUN is not executed by test 6
+WARNING  testing         ANGELIX_RUN is not executed by test 7
+WARNING  testing         ANGELIX_RUN is not executed by test 8
+WARNING  testing         ANGELIX_RUN is not executed by test 9
+WARNING  testing         ANGELIX_RUN is not executed by test 10
+WARNING  testing         ANGELIX_RUN is not executed by test 11
+WARNING  testing         ANGELIX_RUN is not executed by test 12
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+WARNING  testing         ANGELIX_RUN is not executed by test 14
+WARNING  testing         ANGELIX_RUN is not executed by test 15
+WARNING  testing         ANGELIX_RUN is not executed by test 16
+WARNING  testing         ANGELIX_RUN is not executed by test 17
+WARNING  testing         ANGELIX_RUN is not executed by test 19
+WARNING  testing         ANGELIX_RUN is not executed by test 20
+WARNING  testing         ANGELIX_RUN is not executed by test 21
+WARNING  testing         ANGELIX_RUN is not executed by test 24
+WARNING  testing         ANGELIX_RUN is not executed by test 25
+WARNING  testing         ANGELIX_RUN is not executed by test 26
+WARNING  testing         ANGELIX_RUN is not executed by test 27
+WARNING  testing         ANGELIX_RUN is not executed by test 69
+WARNING  testing         ANGELIX_RUN is not executed by test 70
+WARNING  testing         ANGELIX_RUN is not executed by test 71
+WARNING  testing         ANGELIX_RUN is not executed by test 72
+WARNING  testing         ANGELIX_RUN is not executed by test 73
+WARNING  testing         ANGELIX_RUN is not executed by test 74
+WARNING  testing         ANGELIX_RUN is not executed by test 75
+WARNING  testing         ANGELIX_RUN is not executed by test 76
+WARNING  testing         ANGELIX_RUN is not executed by test 77
+WARNING  testing         ANGELIX_RUN is not executed by test 78
+WARNING  testing         ANGELIX_RUN is not executed by test 1
+WARNING  testing         ANGELIX_RUN is not executed by test 1
+WARNING  testing         ANGELIX_RUN is not executed by test 5
+WARNING  testing         ANGELIX_RUN is not executed by test 5
+WARNING  testing         ANGELIX_RUN is not executed by test 18
+WARNING  testing         ANGELIX_RUN is not executed by test 18
+WARNING  testing         ANGELIX_RUN is not executed by test 29
+WARNING  testing         ANGELIX_RUN is not executed by test 29
+WARNING  testing         ANGELIX_RUN is not executed by test 30
+WARNING  testing         ANGELIX_RUN is not executed by test 30
+WARNING  testing         ANGELIX_RUN is not executed by test 31
+WARNING  testing         ANGELIX_RUN is not executed by test 31
+WARNING  testing         ANGELIX_RUN is not executed by test 32
+WARNING  testing         ANGELIX_RUN is not executed by test 32
+WARNING  testing         ANGELIX_RUN is not executed by test 33
+WARNING  testing         ANGELIX_RUN is not executed by test 33
+WARNING  testing         ANGELIX_RUN is not executed by test 34
+WARNING  testing         ANGELIX_RUN is not executed by test 34
+WARNING  testing         ANGELIX_RUN is not executed by test 35
+WARNING  testing         ANGELIX_RUN is not executed by test 35
+WARNING  testing         ANGELIX_RUN is not executed by test 36
+WARNING  testing         ANGELIX_RUN is not executed by test 36
+WARNING  testing         ANGELIX_RUN is not executed by test 37
+WARNING  testing         ANGELIX_RUN is not executed by test 37
+WARNING  testing         ANGELIX_RUN is not executed by test 38
+WARNING  testing         ANGELIX_RUN is not executed by test 38
+WARNING  testing         ANGELIX_RUN is not executed by test 42
+WARNING  testing         ANGELIX_RUN is not executed by test 42
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+WARNING  testing         ANGELIX_RUN is not executed by test 51
+WARNING  testing         ANGELIX_RUN is not executed by test 51
+WARNING  testing         ANGELIX_RUN is not executed by test 52
+WARNING  testing         ANGELIX_RUN is not executed by test 52
+WARNING  testing         ANGELIX_RUN is not executed by test 53
+WARNING  testing         ANGELIX_RUN is not executed by test 53
+WARNING  testing         ANGELIX_RUN is not executed by test 54
+WARNING  testing         ANGELIX_RUN is not executed by test 54
+WARNING  testing         ANGELIX_RUN is not executed by test 55
+WARNING  testing         ANGELIX_RUN is not executed by test 55
+WARNING  testing         ANGELIX_RUN is not executed by test 56
+WARNING  testing         ANGELIX_RUN is not executed by test 56
+WARNING  testing         ANGELIX_RUN is not executed by test 57
+WARNING  testing         ANGELIX_RUN is not executed by test 57
+WARNING  testing         ANGELIX_RUN is not executed by test 58
+WARNING  testing         ANGELIX_RUN is not executed by test 58
+WARNING  testing         ANGELIX_RUN is not executed by test 59
+WARNING  testing         ANGELIX_RUN is not executed by test 59
+WARNING  testing         ANGELIX_RUN is not executed by test 60
+WARNING  testing         ANGELIX_RUN is not executed by test 60
+WARNING  testing         ANGELIX_RUN is not executed by test 61
+WARNING  testing         ANGELIX_RUN is not executed by test 61
+WARNING  testing         ANGELIX_RUN is not executed by test 62
+WARNING  testing         ANGELIX_RUN is not executed by test 62
+WARNING  testing         ANGELIX_RUN is not executed by test 63
+WARNING  testing         ANGELIX_RUN is not executed by test 63
+WARNING  testing         ANGELIX_RUN is not executed by test 64
+WARNING  testing         ANGELIX_RUN is not executed by test 64
+WARNING  testing         ANGELIX_RUN is not executed by test 65
+WARNING  testing         ANGELIX_RUN is not executed by test 65
+WARNING  testing         ANGELIX_RUN is not executed by test 66
+WARNING  testing         ANGELIX_RUN is not executed by test 66
+WARNING  testing         ANGELIX_RUN is not executed by test 67
+WARNING  testing         ANGELIX_RUN is not executed by test 67
+WARNING  testing         ANGELIX_RUN is not executed by test 68
+WARNING  testing         ANGELIX_RUN is not executed by test 68
+WARNING  repair          excluding test 1 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 18 because it fails in golden version
+WARNING  repair          excluding test 29 because it fails in golden version
+WARNING  repair          excluding test 30 because it fails in golden version
+WARNING  repair          excluding test 31 because it fails in golden version
+WARNING  repair          excluding test 32 because it fails in golden version
+WARNING  repair          excluding test 33 because it fails in golden version
+WARNING  repair          excluding test 34 because it fails in golden version
+WARNING  repair          excluding test 35 because it fails in golden version
+WARNING  repair          excluding test 36 because it fails in golden version
+WARNING  repair          excluding test 37 because it fails in golden version
+WARNING  repair          excluding test 38 because it fails in golden version
+WARNING  repair          excluding test 39 because it fails in golden version
+WARNING  repair          excluding test 40 because it fails in golden version
+WARNING  repair          excluding test 41 because it fails in golden version
+WARNING  repair          excluding test 42 because it fails in golden version
+WARNING  repair          excluding test 43 because it fails in golden version
+WARNING  repair          excluding test 44 because it fails in golden version
+WARNING  repair          excluding test 45 because it fails in golden version
+WARNING  repair          excluding test 46 because it fails in golden version
+WARNING  repair          excluding test 47 because it fails in golden version
+WARNING  repair          excluding test 48 because it fails in golden version
+WARNING  repair          excluding test 49 because it fails in golden version
+WARNING  repair          excluding test 50 because it fails in golden version
+WARNING  repair          excluding test 51 because it fails in golden version
+WARNING  repair          excluding test 52 because it fails in golden version
+WARNING  repair          excluding test 53 because it fails in golden version
+WARNING  repair          excluding test 54 because it fails in golden version
+WARNING  repair          excluding test 55 because it fails in golden version
+WARNING  repair          excluding test 56 because it fails in golden version
+WARNING  repair          excluding test 57 because it fails in golden version
+WARNING  repair          excluding test 58 because it fails in golden version
+WARNING  repair          excluding test 59 because it fails in golden version
+WARNING  repair          excluding test 60 because it fails in golden version
+WARNING  repair          excluding test 61 because it fails in golden version
+WARNING  repair          excluding test 62 because it fails in golden version
+WARNING  repair          excluding test 63 because it fails in golden version
+WARNING  repair          excluding test 64 because it fails in golden version
+WARNING  repair          excluding test 65 because it fails in golden version
+WARNING  repair          excluding test 66 because it fails in golden version
+WARNING  repair          excluding test 67 because it fails in golden version
+WARNING  repair          excluding test 68 because it fails in golden version
+WARNING  synthesis       timeout when synthesizing fix
+WARNING  synthesis       timeout when synthesizing fix
+WARNING  synthesis       timeout when synthesizing fix
+WARNING  synthesis       timeout when synthesizing fix
+WARNING  synthesis       timeout when synthesizing fix
+WARNING  synthesis       timeout when synthesizing fix
+SUCCESS

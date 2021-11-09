@@ -1,0 +1,18 @@
+--- a/ext/standard/string.c
++++ b/ext/standard/string.c
+@@ -5259,13 +5259,13 @@
+ 		RETURN_FALSE;
+ 	}
+ 
+-	if (len > s1_len - offset) {
++	if ((len < (s1_len - offset))) {
+ 		len = s1_len - offset;
+ 	}
+ 
+ 	cmp_len = (uint) (len ? len : MAX(s2_len, (s1_len - offset)));
+ 
+-	if (!cs) {
++	if (cs) {
+ 		RETURN_LONG(ANGELIX_OUTPUT(int, zend_binary_strncmp(s1 + offset, (s1_len - offset), s2, s2_len, cmp_len), "substr_compare_out"));
+ 	} else {
+ 		RETURN_LONG(ANGELIX_OUTPUT(int, zend_binary_strncasecmp(s1 + offset, (s1_len - offset), s2, s2_len, cmp_len), "substr_compare_out"));

@@ -1,0 +1,32 @@
+{
+  "49": [
+    [
+      {
+        "context": [
+          {
+            "name": "start",
+            "value": -1414812757
+          },
+          {
+            "name": "good_args",
+            "value": 2
+          },
+          {
+            "name": "i",
+            "value": 0
+          },
+          {
+            "name": "opt_ptr",
+            "value": 196385202
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "2006-21-2006-59",
+        "instId": 0
+      }
+    ]
+  ]
+}

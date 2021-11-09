@@ -1,0 +1,230 @@
+{
+  "7": [
+    [
+      {
+        "context": [
+          {
+            "name": "z_len",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 15
+          },
+          {
+            "name": "argc",
+            "value": 6
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 5
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "context": [
+          {
+            "name": "z_len",
+            "value": 3
+          },
+          {
+            "name": "proglen",
+            "value": 15
+          },
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      }
+    ]
+  ],
+  "5": [
+    [
+      {
+        "context": [
+          {
+            "name": "z_len",
+            "value": 3
+          },
+          {
+            "name": "proglen",
+            "value": 15
+          },
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      }
+    ]
+  ],
+  "6": [
+    [
+      {
+        "context": [
+          {
+            "name": "z_len",
+            "value": 3
+          },
+          {
+            "name": "proglen",
+            "value": 15
+          },
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      }
+    ]
+  ],
+  "8": [
+    [
+      {
+        "context": [
+          {
+            "name": "z_len",
+            "value": 3
+          },
+          {
+            "name": "proglen",
+            "value": 15
+          },
+          {
+            "name": "argc",
+            "value": 5
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      }
+    ]
+  ],
+  "9": [
+    [
+      {
+        "context": [
+          {
+            "name": "z_len",
+            "value": 3
+          },
+          {
+            "name": "proglen",
+            "value": 15
+          },
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      }
+    ]
+  ]
+}

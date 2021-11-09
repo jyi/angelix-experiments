@@ -1,0 +1,11 @@
+--- a/inflate.c
++++ b/inflate.c
+@@ -545,7 +545,7 @@
+     NEEDBITS((unsigned)bl)
+     if ((e = (t = tl + ((unsigned)b & ml))->e) > 16)
+       do {
+-        if (e == 99)
++        if ((99 == 99))
+           return 1;
+         DUMPBITS(t->b)
+         e -= 16;

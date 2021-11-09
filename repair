@@ -1,0 +1,228 @@
+#!/bin/bash
+
+# set -euo pipefail
+
+# Usage: ./repair SUBJECT VERSION
+#
+# Top script for executing repair
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+usage="Usage: ./repair BENCHMARK SUBJECT VERSION [options]"
+
+if [[ $# > 0 ]]; then
+    benchmark="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+if [[ $# > 0 ]]; then
+    subject="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+if [[ $# > 0 ]]; then
+    version="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+# parse options
+skip_fetch=0
+debug=0
+options=""
+search=""
+while :; do
+    if [[ $# > 0 ]]; then
+        case $1 in
+            --skip-fetch)
+                skip_fetch=1
+                shift
+                ;;
+            --symbolic)
+                search="symbolic"
+                shift
+                ;;
+            --guided)
+                search="guided"
+                shift
+                ;;
+            --random)
+                search="random"
+                shift
+                ;;
+            --randomcost)
+                search="randomcost"
+                shift
+                ;;
+            --debug)
+                debug=1
+                shift
+                ;;
+            --*)
+                options="$options $1"
+                shift
+                ;;
+            *)
+                if [[ $1 =~ ^[a-zA-Z0-9/.\-]+$ ]]; then
+                    options="$options $1"
+                    shift
+                else
+                    # Default case: No more options, so break out of the loop.
+                    break
+                fi
+        esac
+    else
+        break
+    fi
+done
+
+debug () {
+    local msg="$1"
+    echo "[repair] $msg"
+}
+
+debug "benchmark: $benchmark"
+debug "subject: $subject"
+debug "version: $version"
+debug "search: $search"
+
+if [[ $search == "symbolic" ]]; then
+    options_file=options-symbolic.json
+elif [[ $search == "guided" ]]; then
+    options_file=options-guided.json
+elif [[ $search == "randomcost" ]]; then
+    options_file=options-random-cost.json
+elif [[ $search == "random" ]]; then
+    options_file=options-random.json
+fi
+
+echo "[repair] debug: $debug"
+if [[ $debug == 1 ]]; then
+    options="--debug $options"
+fi
+
+case $subject in
+    libtiff)
+        if [[ ${skip_fetch} == 0 ]]; then
+            rm -rf ${subject}-*-${version}
+            debug "./fetch $subject $benchmark $version"
+            ./fetch $subject $benchmark $version
+        fi
+
+        subj_options=`./get-options $subject $version $options_file`
+        if ! [ $? -eq 0 ]; then
+            echo "[repair] get-options faiiled"
+            exit 1
+        fi
+        options="$subj_options $options"
+        if [[ $search == "symbolic" ]]; then
+            options="--symbolic $options"
+        elif [[ $search == "guided" ]]; then
+            options="--guided $options"
+        elif [[ $search == "random" ]]; then
+            options="--random $options"
+        fi
+        debug "[repair] options: $options"
+        ./repair-$subject $version $options
+        ;;
+    wireshark)
+        if [[ ${skip_fetch} == 0 ]]; then
+            rm -rf ${subject}-*-${version}
+            ./fetch $subject $benchmark $version --skip-configure --skip-build
+        fi
+
+        subj_options=`./get-options $subject $version $options_file`
+        if ! [ $? -eq 0 ]; then
+            echo "[repair] get-options faiiled"
+            exit 1
+        fi
+        options="$subj_options $options"
+        if [[ $search == "symbolic" ]]; then
+            options="--symbolic $options"
+        elif [[ $search == "guided" ]]; then
+            options="--guided $options"
+        elif [[ $search == "random" ]]; then
+            options="--random $options"
+        fi
+        debug "[repair] options: $options"
+        ./repair-$subject $version $options
+        ;;
+    gzip)
+        if [[ ${skip_fetch} == 0 ]]; then
+            rm -rf ${subject}-*-${version}
+            ./fetch $subject $benchmark $version
+        fi
+
+        subj_options=`./get-options $subject $version $options_file`
+        if ! [ $? -eq 0 ]; then
+            echo "[repair] get-options faiiled"
+            exit 1
+        fi
+        options="$subj_options $options"
+        if [[ $search == "symbolic" ]]; then
+            options="--symbolic $options"
+        elif [[ $search == "guided" ]]; then
+            options="--guided $options"
+        elif [[ $search == "random" ]]; then
+            options="--random $options"
+        fi
+        debug "[repair] options: $options"
+        ./repair-$subject $version $options
+        ;;
+    php)
+        if [[ ${skip_fetch} == 0 ]]; then
+            rm -rf ${subject}-*-${version}
+            debug "./fetch $subject $benchmark $version"
+            ./fetch $subject $benchmark $version
+        fi
+        subj_options=`./get-options $subject $version $options_file`
+        if ! [ $? -eq 0 ]; then
+            echo "[repair] get-options faiiled"
+            exit 1
+        fi
+        options="$subj_options $options"
+        debug "[repair] options: $options"
+        ./repair-$subject $version $options
+        ;;
+    gmp)
+        if [[ ${skip_fetch} == 0 ]]; then
+            rm -rf ${subject}-*-${version}
+            ./fetch $subject $benchmark $version
+        fi
+
+        subj_options=`./get-options $subject $version $options_file`
+        if ! [ $? -eq 0 ]; then
+            echo "[repair] get-options faiiled"
+            exit 1
+        fi
+        options="$subj_options $options"
+        if [[ $search == "symbolic" ]]; then
+            options="--symbolic $options"
+        elif [[ $search == "guided" ]]; then
+            options="--guided $options"
+        elif [[ $search == "random" ]]; then
+            options="--random $options"
+        fi
+        debug "[repair] options: $options"
+        ./repair-$subject $version $options
+        ;;
+    openssl)
+        if [[ ${skip_fetch} == 0 ]]; then
+            rm -rf ${subject}-${version}
+            ./fetch $subject $version
+        fi
+        ./repair-heartbleed `./get-options $subject $version $options_file`
+        ;;
+    *)
+        echo 'Wrong subject name'
+        exit 1
+        ;;
+esac

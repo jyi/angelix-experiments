@@ -1,0 +1,11 @@
+--- a/epan/reassemble.c
++++ b/epan/reassemble.c
+@@ -294,7 +294,7 @@
+ 
+ 	for (fd_head = value; fd_head != NULL; fd_head = tmp_fd) {
+ 		tmp_fd=fd_head->next;
+-		if(fd_head->data && !(fd_head->flags&FD_NOT_MALLOCED)) {
++		if(0 && !(fd_head->flags&FD_NOT_MALLOCED)) {
+ 			g_free(fd_head->data);
+ 
+ 			/*

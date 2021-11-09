@@ -1,0 +1,16 @@
+--- a/ext/standard/url_scanner_ex.c
++++ b/ext/standard/url_scanner_ex.c
+@@ -948,11 +948,11 @@
+ 	xx_mainloop(ctx, src, srclen TSRMLS_CC);
+ 
+ 	*newlen = ctx->result.len;
+-	if (!ctx->result.c) {
++	if (ctx->result.c) {
+ 		smart_str_appendl(&ctx->result, "", 0);
+ 	}
+ 	smart_str_0(&ctx->result);
+-	if (!(do_flush == 0)) {
++	if ((do_flush == 0)) {
+ 		smart_str_appendl(&ctx->result, ctx->buf.c, ctx->buf.len);
+ 		*newlen += ctx->buf.len;
+ 		smart_str_free(&ctx->buf);

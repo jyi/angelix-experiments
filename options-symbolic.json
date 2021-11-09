@@ -1,0 +1,765 @@
+{
+    "wireshark": {
+        "37172-37171": [
+            "--ignore-lines",
+            "--lines", "4106",
+            "--skip-validating-angelic-path",
+            "--test-timeout", "1",
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--ignore-trans-errors",
+            "--ignore-infer-errors",
+            "--klee-max-forks", "200",
+            "--group-size", "1",
+            "--initial-tests", "1",
+            "--klee-solver-timeout", "100",
+            "--klee-search", "dfs",
+            "--klee-timeout", "7200",
+            "--mute-warning",
+            "--forced-to-use-bool",
+            "--ignore-unmatched-execution",
+            "--use-gcc"
+        ],
+        "37112-37111": [
+            "--log", "DEBUG",
+            "--synthesis-ptr-vars",
+            "--exclude-member-exp",
+            "--ignore-trans-errors",
+            "--ignore-infer-errors",
+            "--skip-validating-angelic-path",
+            "--test-timeout", "60",
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--ignore-trans-errors",
+            "--klee-max-forks", "200",
+            "--group-size", "1",
+            "--initial-tests", "1",
+            "--mute-warning",
+            "--klee-search", "dfs",
+            "--klee-timeout", "7200",
+            "--use-frontend-for-test"
+        ],
+        "37172-37173": [
+            "--log", "DEBUG",
+            "--test-timeout", "1",
+            "--skip-validating-angelic-path",
+            "--test-timeout", "60",
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--ignore-trans-errors",
+            "--ignore-infer-errors",
+            "--klee-max-forks", "200",
+            "--klee-solver-timeout", "100",
+            "--klee-search", "dfs",
+            "--klee-timeout", "7200",
+            "--mute-warning",
+            "--use-gcc"
+        ],
+        "37284-37285": [
+            "--skip-validating-angelic-path",
+            "--test-timeout", "60",
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--ignore-trans-errors",
+            "--ignore-infer-errors",
+            "--klee-max-forks", "200",
+            "--group-size", "1",
+            "--initial-tests", "1",
+            "--klee-solver-timeout", "100",
+            "--klee-search", "dfs",
+            "--klee-timeout", "7200"
+        ],
+
+        "37122-37123": [
+            "--log", "DEBUG",
+            "--skip-validating-angelic-path",
+            "--angelic-search-strategy", "symbolic",
+            "--ignore-trans-errors",
+            "--ignore-infer-errors",
+            "--klee-max-forks", "200",
+            "--group-size", "1",
+            "--initial-tests", "1",
+            "--klee-solver-timeout", "100",
+            "--klee-search", "dfs",
+            "--mute-warning",
+            "--suspicious", "40",
+            "--klee-timeout", "7200"
+        ]
+
+    },
+
+    "php": {
+        "307931-307934": [
+            "--synthesis-levels", "extended-logic",
+            "--synthesis-ptr-vars",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--lines", "911"
+        ],
+        "2011-02-01-01745fa657-1f49902999": [
+            "--angelic-search-strategy", "symbolic",
+            "--synthesis-ptr-vars",
+            "--klee-max-forks", "100",
+            "--lines", "911"
+        ],
+
+        "308262-308315": [
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "guards",
+            "--synthesis-levels", "variables",
+            "--synthesis-func-params",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--lines", "1265"
+        ],
+        "2011-02-11-f912a2d087-b84967d3e2": [
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--synthesis-func-params",
+            "--klee-max-forks", "100",
+            "--lines", "1265"
+        ],
+
+        "308734-308761": [
+            "--defect", "if-conditions",
+            "--synthesis-levels", "extended-arithmetic",
+            "--klee-search", "dfs",
+            "--klee-max-forks", "200",
+            "--synthesis-timeout", "200000",
+            "--group-size", "1",
+            "--lines", "154"
+        ],
+        "2011-02-27-e65d361fde-1d984a7ffd": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-search", "dfs",
+            "--klee-max-forks", "200",
+            "--lines", "154"
+        ],
+
+        "309111-309159": [
+            "--synthesis-levels", "extended-arithmetic",
+            "--synthesis-func-params",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--suspicious", "32",
+            "--lines", "319"
+        ],
+        "2011-03-11-d890ece3fc-6e74d95f34": [
+            "--log", "DEBUG",
+            "--defect", "if-conditions", "loop-conditions",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-search", "dfs",
+            "--synthesis-func-params",
+            "--use-osynth",
+            "--klee-max-forks", "200",
+            "--klee-timeout", "7200",
+            "--synthesis-func-params",
+            "--use-osynth",
+            "--synthesis-levels", "extended-arithmetic", "alternatives", "integer-constants", "boolean-constants", "variables", "extended-logic", "mixed-conditional",
+            "--lines", "319",
+            "--ignore-lines",
+            "--use-gcc"
+        ],
+
+        "309579-309580": [
+            "--redundant-test",
+            "--synthesis-levels", "extended-logic",
+            "--synthesis-ptr-vars",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--lines", "3774"
+        ],
+        "2011-03-23-63673a533f-2adf58cfcf": [
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--synthesis-ptr-vars",
+            "--klee-max-forks", "100",
+            "--use-gcc",
+            "--initial-tests", "2",
+            "--synthesis-levels", "variables",
+            "--lines", "3774",
+            "--ignore-lines"
+        ],
+
+        "309892-309910": [
+            "--redundant-test",
+            "--defect", "if-conditions",
+            "--synthesis-levels", "mixed-conditional",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--lines", "5262"
+        ],
+        "2011-04-02-70075bc84c-5a8c917c37": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--lines", "5262"
+        ],
+
+        "309688-309716": [
+            "--defect", "if-conditions",
+            "--synthesis-levels", "extended-logic",
+            "--synthesis-ptr-vars",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--lines", "638"
+        ],
+        "2011-03-25-8138f7de40-3acdca4703": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--synthesis-ptr-vars",
+            "--klee-max-forks", "100",
+            "--use-gcc",
+            "--use-nsynth",
+            "--synthesis-levels", "variables",
+            "--synthesis-bool-only",
+            "--lines", "638",
+            "--ignore-lines"
+        ],
+
+        "309986-310009": [
+            "--defect", "if-conditions",
+            "--synthesis-levels", "boolean-constants",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--lines", "129"
+        ],
+
+        "2011-04-06-187eb235fe-2e25ec9eb7": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--lines", "129",
+            "--ignore-lines",
+            "--synthesis-ptr-vars",
+            "--use-nsynth",
+            "--synthesis-levels", "alternatives", "integer-constants", "boolean-constants", "variables", "extended-arithmetic", "extended-logic", "mixed-conditional",
+            "--klee-search", "dfs",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--use-gcc"
+        ],
+
+        "310370-310389": [
+            "--defect", "if-conditions",
+            "--synthesis-ptr-vars", "--synthesis-used-vars",
+            "--synthesis-levels", "extended-logic",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--lines", "216"
+        ],
+        "2011-04-19-11941b3fd2-821d7169d9": [
+            "--angelic-search-strategy", "symbolic",
+            "--synthesis-ptr-vars",
+            "--klee-max-forks", "100",
+            "--lines", "216"
+        ],
+
+        "311346-311348": [
+            "--synthesis-levels", "boolean-constants",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--lines", "1004"
+        ],
+        "2011-05-24-b60f6774dc-1056c57fa9": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-timeout", "7200",
+            "--test-timeout", "60",
+            "--group-size", "1",
+            "--ignore-lines",
+            "--lines", "1004",
+            "--all-suspicious"
+        ],
+        "2011-01-24-a6c0a4e474-1a8b87d2c5": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--test-timeout", "60",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--use-gcc"
+        ],
+        "2011-01-29-147382033a-5bb0a44e06": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--test-timeout", "60",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--use-gcc"
+        ],
+        "2011-02-01-fefe9fc5c7-0927309852": [
+            "--ignore-lines",
+            "--lines", "3407",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--test-timeout", "60",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--klee-ignore-errors",
+            "--use-gcc"
+        ],
+        "2011-02-21-2a6968e43a-ecb9d8019c": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--use-gcc"
+        ],
+        "2011-04-27-53204a26d2-118695a4ea": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--use-gcc"
+        ],
+        "2011-02-14-86efc8e55e-d1d61ce612": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--use-gcc"
+        ],
+        "2011-03-22-0de2e61cab-991ba13174": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--test-timeout", "60",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--use-gcc"
+        ],
+        "2011-02-16-eb0dd2b8ab-9bbc114b59": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--test-timeout", "60",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--use-gcc"
+        ],
+        "2011-02-04-793cfe1376-109b8e99e0": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--test-timeout", "60",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--use-gcc"
+        ],
+        "2011-02-01-1f49902999-f2329f1f4b": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--test-timeout", "60",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--use-gcc"
+        ],
+        "2011-01-30-5bb0a44e06-1e91069eb4": [
+            "--log", "DEBUG",
+            "--lines", "1154",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--use-gcc"
+        ]
+    },
+
+    "gzip": {
+        "2010-02-19-3eb6091d69-884ef6d16c": [
+            "--log", "DEBUG",
+            "--ignore-lines",
+            "--lines", "550",
+            "--all-suspicious",
+            "--group-size", "1",
+            "--klee-max-forks", "200",
+            "--ignore-trivial",
+            "--synthesis-level", "boolean-constants",
+            "--test-timeout", "60",
+            "--klee-solver-timeout", "100",
+            "--klee-search", "dfs",
+            "--all-tests",
+            "--synthesis-bool-only",
+            "--keep-positive-behavior",
+            "--angelic-search-strategy", "symbolic",
+            "--use-gcc"
+        ],
+        "2009-09-26-a1d3d4019d-f17cbd13a1": [
+            "--ignore-lines",
+            "--lines", "653",
+            "--group-size", "1",
+            "--klee-max-forks", "200",
+            "--synthesis-level", "variables",
+            "--use-nsynth",
+            "--synthesis-global-vars",
+            "--test-timeout", "60",
+            "--all-tests",
+            "--ignore-trans-errors",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-solver-timeout", "100",
+            "--klee-search", "dfs"
+        ],
+        "2009-08-16-3fe0caeada-39a362ae9d": [
+            "--ignore-lines",
+            "--lines", "548",
+            "--log", "DEBUG",
+            "--all-suspicious",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "200",
+            "--test-timeout", "60",
+            "--all-tests",
+            "--ignore-trans-errors",
+            "--klee-solver-timeout", "100",
+            "--klee-ignore-errors",
+            "--klee-timeout", "7200"
+        ],
+        "2010-01-30-fc00329e3d-1204630c96": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "200",
+            "--test-timeout", "60",
+            "--all-tests",
+            "--ignore-trans-errors",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--klee-ignore-errors",
+            "--klee-search", "dfs"
+        ],
+        "2009-10-09-1a085b1446-118a107f2d": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "200",
+            "--test-timeout", "60",
+            "--suspicious", "20",
+            "--all-tests",
+            "--ignore-trans-errors",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--klee-ignore-errors",
+            "--klee-search", "dfs"
+        ]
+    },
+
+    "gmp": {
+        "13420-13421": [
+            "--ignore-lines",
+            "--log", "DEBUG",
+            "--lines", "212",
+            "--klee-timeout", "7200",
+            "--skip-validating-angelic-path",
+            "--synthesis-func-params",
+            "--defect", "ptr-assignments",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--initial-test", "1",
+            "--synthesis-levels", "variables",
+            "--ignore-trans-errors",
+            "--synthesis-ptr-vars",
+            "--ignore-infer-errors"
+        ],
+        "14166-14167": [
+            "--log", "DEBUG",
+            "--ignore-lines",
+            "--lines", "59",
+            "--use-nsynth",
+            "--klee-ignore-errors",
+            "--ignore-infer-errors",
+            "--ignore-trans-errors",
+            "--gobble-klee-message",
+            "--test-timeout", "60",
+            "--defect", "assignments",
+            "--group-size", "1",
+            "--synthesis-levels", "variables",
+            "--synthesis-bool-only",
+            "--defect", "assignments",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-search", "dfs",
+            "--klee-timeout 7200"
+        ]
+    },
+
+    "libtiff": {
+        "0661f81-ac6a583": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-search", "dfs",
+            "--klee-timeout", "7200",
+            "--synthesis-levels", "alternatives",
+            "--ignore-trivial",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--defect", "if-conditions", "loop-conditions",
+            "--lines", "346"
+        ],
+        "2007-11-02-371336d-865f7b2": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-timeout", "7200",
+            "--synthesis-levels", "alternatives",
+            "--ignore-trivial",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--defect", "if-conditions", "loop-conditions",
+            "--klee-search", "dfs",
+            "--ignore-unmatched-execution",
+            "--all-suspicious",
+            "--lines", "346",
+            "--ignore-lines",
+            "--ignore-z3-exception"
+        ],
+
+        "0860361d-1ba75257": [
+            "--angelic-search-strategy", "symbolic",
+            "--group-size 1",
+            "--klee-max-forks", "500",
+            "--suspicious", "40",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "100",
+            "--klee-timeout", "7200",
+            "--initial-tests", "1"
+        ],
+        "2006-03-03-eec4c06-ee65c74": [
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--klee-max-forks", "500",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--suspicious", "40",
+            "--initial-tests", "1"
+        ],
+
+        "3af26048-72391804": [
+            "--angelic-search-strategy", "symbolic",
+            "--group-size 1",
+            "--klee-max-forks", "500",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--initial-tests", "1",
+            "--lines", "976"
+        ],
+        "2006-03-03-a72cf60-0a36d7f": [
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--klee-max-forks", "500",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious",
+            "--initial-tests", "1",
+            "--lines", "976"
+        ],
+
+        "4a24508-cc79c2b": [
+            "--angelic-search-strategy", "symbolic",
+            "--group-size", "3",
+            "--initial-tests", "1",
+            "--klee-max-forks", "200",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--klee-timeout", "100",
+            "--all-suspicious"
+        ],
+        "2007-07-19-ce4b7af-7d6e298": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--initial-tests", "1",
+            "--klee-max-forks", "500",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious"
+        ],
+
+        "5b02179-3dfb33b": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "20",
+            "--klee-timeout", "7200",
+            "--group-size", "1",
+            "--synthesis-ptr-vars",
+            "--synthesis-func-params",
+            "--synthesis-used-vars",
+            "--ignore-trivial",
+            "--synthesis-levels", "variables"
+        ],
+        "2009-02-05-764dbba-2e42d63": [
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--test-timeout", "60",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--synthesis-ptr-vars",
+            "--synthesis-func-params",
+            "--synthesis-used-vars",
+            "--ignore-trivial",
+            "--synthesis-levels", "variables",
+            "--klee-search", "dfs"
+        ],
+
+        "829d8c4-036d7bb": [
+            "--angelic-search-strategy", "symbolic",
+            "--group-size", "6",
+            "--initial-tests", "1",
+            "--klee-max-forks", "100",
+            "--klee-timeout", "1200",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--suspicious", "60"
+        ],
+        "2010-12-13-96a5fb4-bdba15c": [
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--test-timeout", "60",
+            "--initial-tests", "1",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--klee-search", "dfs",
+            "--suspicious", "60"
+        ],
+
+        "2010-06-30-1563270-1136bdf": [
+            "--ignore-lines",
+            "--log", "DEBUG",
+            "--lines", "773",
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "assignments",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious"
+        ],
+
+        "d13be72c-ccadf48a": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--group-size", "1",
+            "--ignore-trivial",
+            "--klee-search", "dfs",
+            "--synthesis-levels", "integer-constants",
+            "--klee-timeout", "7200",
+            "--lines", "589"
+        ],
+        "2005-12-21-3b848a7-3edb9cd": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "if-conditions", "loop-conditions",
+            "--test-timeout", "60",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--ignore-trivial",
+            "--klee-search", "dfs",
+            "--synthesis-levels", "integer-constants",
+            "--klee-timeout", "7200",
+            "--lines", "589",
+            "--ignore-lines",
+            "--all-suspicious",
+            "--ignore-unmatched-execution"
+        ],
+
+        "d39db2b-4cd598c": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-timeout", "7200",
+            "--group-size", "1",
+            "--klee-max-forks", "100"
+        ],
+        "2009-08-28-e8a47d4-023b6df": [
+            "--log", "DEBUG",
+            "--defect", "assignments",
+            "--ignore-lines",
+            "--lines", "67",
+            "--klee-timeout", "7200",
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "assignments",
+            "--klee-max-forks", "100",
+            "--klee-timeout", "7200"
+        ],
+
+        "ee2ce5b7-b5691a5a": [
+            "--angelic-search-strategy", "symbolic",
+            "--defect", "assignments",
+            "--all-suspicious",
+            "--group-size", "1",
+            "--klee-timeout", "7200",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "10",
+            "--klee-timeout", "60"
+        ],
+        "2010-11-27-eb326f9-eec7ec0": [
+            "--log", "DEBUG",
+            "--klee-timeout", "7200",
+            "--defect", "assignments",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--all-suspicious",
+            "--klee-search", "dfs"
+        ],
+
+        "2005-12-14-6746b87-0d3d51d": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--all-suspicious"
+        ],
+        "2009-09-03-6406250-6b6496b": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--all-suspicious"
+        ],
+        "2006-02-23-b2ce5d8-207c78a": [
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--all-suspicious"
+        ],
+        "2008-09-05-d59e7df-5f42dba": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious"
+        ],
+        "2006-02-27-6074705-e6d0c32": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious"
+        ],
+        "2007-08-24-827b6bc-22da1d6": [
+            "--log", "DEBUG",
+            "--angelic-search-strategy", "symbolic",
+            "--klee-max-forks", "100",
+            "--klee-solver-timeout", "100",
+            "--klee-timeout", "7200",
+            "--all-suspicious"
+        ]
+    },
+
+    "openssl": {
+        "1.0.1-beta1": [
+            "--synthesis-levels", "extended-arithmetic",
+            "--group-size", "1",
+            "--all-tests",
+            "--synthesis-used-vars",
+            "--klee-ignore-errors",
+            "--klee-timeout", "300",
+            "--synthesis-timeout", "180000"
+        ]
+    }
+}

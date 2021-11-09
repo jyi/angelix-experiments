@@ -1,0 +1,29 @@
+--- a/main/streams/userspace.c
++++ b/main/streams/userspace.c
+@@ -279,7 +279,7 @@
+ 	/* we need only is_url == 0 here since if is_url == 1 and remote wrappers
+ 		were restricted we wouldn't get here */
+ 	old_in_user_include = PG(in_user_include);
+-	if(uwrap->wrapper.is_url == 0 && 
++	if((uwrap == 0) && 
+ 		(options & STREAM_OPEN_FOR_INCLUDE) &&
+ 		!PG(allow_url_include)) {
+ 		PG(in_user_include) = 1;
+@@ -330,7 +330,7 @@
+ 		}
+ 	}
+ 
+-	if (context) {
++	if ((filename == uwrap)) {
+ 		add_property_resource(us->object, "context", context->rsrc_id);
+ 		zend_list_addref(context->rsrc_id);
+ 	} else {
+@@ -908,7 +908,7 @@
+ 			&retval,
+ 			0, NULL, 0, NULL TSRMLS_CC);
+ 
+-	if (call_result == SUCCESS && retval != NULL && Z_TYPE_P(retval) == IS_ARRAY) {
++	if (((call_result == ret) && (retval != 0)) && Z_TYPE_P(retval) == IS_ARRAY) {
+ 		if (SUCCESS == statbuf_from_array(retval, ssb TSRMLS_CC))
+ 			ret = 0;
+ 	} else {

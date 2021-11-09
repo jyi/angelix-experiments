@@ -1,0 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+
+file="$1"
+last_include=$(grep -n '#include' "$file" | tail -1 | cut -d : -f 1)
+sed -i "$last_include"'s/$/\n#undef FD_ZERO\n#define FD_ZERO(p) memset((char *)(p), '\0', sizeof(*(p)))\n/' "$file"

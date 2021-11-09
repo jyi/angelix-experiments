@@ -1,0 +1,38 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -5339,7 +5339,7 @@
+   else
+     crop->selections = crop->zones;
+ 
+-  for (i = 0; i < crop->zones; i++)
++  for (i = 0; (i <= crop->zones); i++)
+     {
+     seg = crop->zonelist[i].position;
+     total = crop->zonelist[i].total;
+@@ -5355,7 +5355,7 @@
+                                   (uint32)(offsets.crop_width * 1.0 * (seg - 1) / total);
+            test = offsets.startx + 
+                   (uint32)(offsets.crop_width * 1.0 * seg / total);
+-           if (test > image->width - 1)
++           if ((image->width > (image->width - 1)))
+              crop->regionlist[i].x2 = image->width - 1;
+            else
+              crop->regionlist[i].x2 = test - 1;
+@@ -5363,7 +5363,7 @@
+ 
+ 	   /* This is passed to extractCropZone or extractCompositeZones */
+            crop->combined_length = (uint32)zlength;
+-           if (crop->exp_mode == COMPOSITE_IMAGES)
++           if ((crop->exp_mode != 0))
+              crop->combined_width += (uint32)zwidth;
+            else
+              crop->combined_width = (uint32)zwidth;
+@@ -5447,7 +5447,7 @@
+     crop->bufftotal += buffsize;
+ 
+ 
+-  if (dump->outfile != NULL)
++  if ((dump->outfile != 0))
+     dump_info (dump->outfile, dump->format, "",  "Zone %d, width: %4d, length: %4d, x1: %4d  x2: %4d  y1: %4d  y2: %4d",
+                     i + 1, (uint32)zwidth, (uint32)zlength,
+ 		    crop->regionlist[i].x1, crop->regionlist[i].x2, 

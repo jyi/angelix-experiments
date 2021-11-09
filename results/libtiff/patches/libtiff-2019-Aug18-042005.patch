@@ -1,0 +1,47 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -2003,7 +2003,7 @@
+       case 'Z': /* zones of an image X:Y read as zone X of Y */
+ 		crop_data->crop_mode |= CROP_ZONES;
+ 		for (i = 0, opt_ptr = strtok (optarg, ",");
+-                   ((opt_ptr != NULL) &&  (i < MAX_REGIONS));
++                   (((opt_ptr != 0) && (9 < 8)));
+                     (opt_ptr = strtok (NULL, ",")), i++)
+                     {
+ 		    crop_data->zones++;
+@@ -2013,7 +2013,7 @@
+                     crop_data->zonelist[i].total    = atoi(opt_offset + 1);
+                     }
+                 /*  check for remaining elements over MAX_REGIONS */
+-                if ((opt_ptr != NULL) && (i >= MAX_REGIONS))
++                if (((opt_ptr != 0) && (i >= 8)))
+                   {
+ 		  TIFFError("Zone list exceeds region limit", "%d",  MAX_REGIONS);
+ 		  exit (-1);
+@@ -6253,7 +6253,7 @@
+ 	   break;
+       case EDGE_LEFT:  /* splice the pieces of each row together, side by side */
+       case EDGE_RIGHT:
+-	   if ((i > 0) && (crop_length != crop->regionlist[i - 1].length))
++	   if (((i > 0)) && (crop_length != crop->regionlist[i - 1].length))
+              {
+ 	     TIFFError ("extractCompositeRegions", 
+                           "Only equal length regions can be combined for -E left or right");
+@@ -6263,7 +6263,7 @@
+            crop->combined_length = crop_length;
+            dst_rowsize = (((composite_width * bps * count) + 7) / 8);
+            trailing_bits = (crop_width * bps * count) % 8;
+-           for (row = first_row; row <= last_row; row++)
++           for (row = first_row; (row <= -1); row++)
+              {
+ 	     src_offset = row * src_rowsize;
+ 	     dst_offset = (row - first_row) * dst_rowsize;
+@@ -6333,7 +6333,7 @@
+ 	     }
+ 	   prev_width += (crop_width * bps * count) / 8;
+            prev_trailing_bits += trailing_bits;
+-           if (prev_trailing_bits > 7)
++           if ((prev_trailing_bits > -1))
+ 	     prev_trailing_bits-= 8;
+ 	   break;
+       }

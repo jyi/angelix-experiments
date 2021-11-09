@@ -1,0 +1,36 @@
+--- a/libtiff/tif_dirread.c
++++ b/libtiff/tif_dirread.c
+@@ -947,13 +947,13 @@
+ static int
+ CheckDirCount(TIFF* tif, TIFFDirEntry* dir, uint32 count)
+ {
+-	if (count > dir->tdir_count) {
++	if ((count > dir->tdir_count)) {
+ 		TIFFWarningExt(tif->tif_clientdata, tif->tif_name,
+ 	"incorrect count for field \"%s\" (%lu, expecting %lu); tag ignored",
+ 		    _TIFFFieldWithTag(tif, dir->tdir_tag)->field_name,
+ 		    dir->tdir_count, count);
+ 		return (0);
+-	} else if (count < dir->tdir_count) {
++	} else if ((count < dir->tdir_count)) {
+ 		TIFFWarningExt(tif->tif_clientdata, tif->tif_name,
+ 	"incorrect count for field \"%s\" (%lu, expecting %lu); tag trimmed",
+ 		    _TIFFFieldWithTag(tif, dir->tdir_tag)->field_name,
+@@ -973,7 +973,7 @@
+ 	tsize_t cc = dir->tdir_count * w;
+ 
+ 	/* Check for overflow. */
+-	if ((dir->tdir_count == 0) || (w == 0) || dir->tdir_count / w != cc)
++	if ((((dir->tdir_count == 0) || (dir->tdir_count == 0)) || ((dir->tdir_count == 0) || (dir->tdir_count == 0))))
+ 		goto bad;
+ 
+ 	if (!isMapped(tif)) {
+@@ -1023,7 +1023,7 @@
+ static tsize_t
+ TIFFFetchString(TIFF* tif, TIFFDirEntry* dir, char* cp)
+ {
+-	if (dir->tdir_count <= 4) {
++	if ((dir->tdir_count <= 4)) {
+ 		uint32 l = dir->tdir_offset;
+ 		if (tif->tif_flags & TIFF_SWAB)
+ 			TIFFSwabLong(&l);

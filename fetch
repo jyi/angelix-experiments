@@ -1,0 +1,259 @@
+#!/bin/bash
+set -euo pipefail
+
+# Usage: ./fetch SUBJECT VERSION
+#
+# Downloads and extract archives if needed, creates two directories:
+# SUBJECT-bug-VERSION and SUBJECT-fix-VERSION
+# where it replaces the buggy file corrupted by genprog
+# with the original buggy and the original correct files accordingly.
+# Removes binaries and VC directories (.git, .svn, etc.)
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+usage="Usage: ./fetch SUBJECT BENCHMARK VERSION"
+
+if [[ $# > 0 ]]; then
+    subject="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+if [[ $# > 0 ]]; then
+    benchmark="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+if [[ $# > 0 ]]; then
+    version="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+# parse options
+skip_buggy=0
+skip_configure=0
+skip_build=0
+options=""
+while :; do
+    if [[ $# > 0 ]]; then
+        case $1 in
+            --skip-buggy)
+                skip_buggy=1
+                shift
+                ;;
+            --skip-configure)
+                skip_configure=1
+                shift
+                ;;
+            --skip-build)
+                skip_build=1
+                shift
+                ;;
+            --*)
+                options="$options $1"
+                shift
+                ;;
+            *)
+                if [[ $1 =~ ^[a-zA-Z0-9.\-]+$ ]]; then
+                    options="$options $1"
+                    shift
+                else
+                    # Default case: No more options, so break out of the loop.
+                    break
+                fi
+        esac
+    else
+        break
+    fi
+done
+
+DOWNLOAD="wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 --tries=5 --continue"
+
+debug () {
+    local msg="$1"
+    echo "[fetch] $msg"
+}
+
+clean-source () {
+    local directory="$1"
+    pushd "$directory/$subject" &> /dev/null
+    find . -name .svn -exec rm -rf {} \; &> /dev/null || true
+    find . -name .git -exec rm -rf {} \; &> /dev/null || true
+    find . -name .hg -exec rm -rf {} \; &> /dev/null || true
+    if [ "$subject" == "wireshark" ]; then
+        ./autogen.sh &> /dev/null || true
+    fi
+
+    if [[ $skip_configure == 0 ]]; then
+        echo "[fetch] $PWD/configure"
+        ./configure --config-cache &> /dev/null || true
+    fi
+
+    if [[ $skip_build == 0 ]]; then
+        echo "[fetch] make -j ${NUM_OF_CPU} clean"
+        make -j $NUM_OF_CPU clean &> /dev/null || true
+        make -j $NUM_OF_CPU distclean &> /dev/null || true
+    fi
+    popd &> /dev/null
+}
+
+restore-buggy () {
+    debug "restore-buggy entered"
+    local directory="$1"
+    for file in $(cat "$directory/bugged-program.txt")
+    do
+        local buggy=$file
+        break
+    done
+    debug "buggy: $buggy"
+    local buggy_preprocessed="$directory/$subject/$buggy"
+    local buggy_version=$(echo "$version" | cut -d "-" -f $buggy_idx)
+    debug "buggy_version: $buggy_version"
+    local buggy_original=$(ls -1 "$directory/diffs/${buggy}-${buggy_version}"*)
+
+    debug "buggy_preprocessed: $buggy_preprocessed"
+    debug "buggy_original: $buggy_original"
+    debug "cp ${buggy_original} ${buggy_preprocessed}"
+    cp "${buggy_original}" "${buggy_preprocessed}"
+}
+
+restore-correct () {
+    debug "restore-correct entered"
+    local directory="$1"
+    for file in $(cat "$directory/bugged-program.txt")
+    do
+        local buggy=$file
+        break
+    done
+    local buggy_preprocessed="$directory/$subject/$buggy"
+    if [ "$subject" == "wireshark" ]; then
+        if [ "$version" == "37172-37173" ]; then
+            local buggy_version=$(echo "$version" | cut -d "-" -f 1)
+            local buggy_original="$directory/diffs/${buggy}-${buggy_version}"
+            cp "$buggy_original" "$buggy_preprocessed"
+            sed -i 's/!(log_level & G_LOG_LEVEL_MASK & ~(G_LOG_LEVEL_DEBUG|G_LOG_LEVEL_INFO))/0/g' "$buggy_preprocessed"
+        else
+            local correct_version=$(echo "$version" | cut -d "-" -f $fix_idx)
+            local correct_original="$directory/diffs/${buggy}-${correct_version}"
+            debug "cp $correct_original $buggy_preprocessed"
+            cp "$correct_original" "$buggy_preprocessed"
+            debug "restored $buggy_preprocessed with $correct_original"
+        fi
+    else
+        local correct_version=$(echo "$version" | cut -d "-" -f $fix_idx)
+        local correct_original=$(ls -1 "$directory/diffs/${buggy}-${correct_version}"*)
+        debug "cp $correct_original $buggy_preprocessed"
+        cp "$correct_original" "$buggy_preprocessed"
+        debug "restored $buggy_preprocessed with $correct_original"
+    fi
+}
+
+debug "benchmark: $benchmark"
+debug "subject: $subject"
+debug "version: $version"
+
+if [ "$subject" == "openssl" ]; then
+    url="http://www.openssl.org/source/"
+    archive="openssl-${version}.tar.gz"
+    directory="openssl-${version}"
+elif [ "$benchmark" == "genprog" ]; then
+    url="http://dijkstra.eecs.umich.edu/genprog/resources/genprog-icse2012-benchmarks/"
+    archive="${subject}-bug-${version}.tar.gz"
+    directory="${subject}-bug-${version}"
+
+    buggy_idx=1
+    fix_idx=2
+elif [ "$benchmark" == "manybugs" ]; then
+    url="https://repairbenchmarks.cs.umass.edu/ManyBugs/scenarios/"
+    archive="${subject}-bug-${version}.tar.gz"
+    directory="${subject}-bug-${version}"
+
+    if [ "$subject" == "wireshark" ] || [ "$subject" == "gmp" ]; then
+        # e.g., 13420-13421
+        buggy_idx=1
+        fix_idx=2
+    else
+        # e.g., 2007-11-02-371336d-865f7b2
+        buggy_idx=4
+        fix_idx=5
+    fi
+else
+    echo "Unknown benchmark $benchmark"
+    exit 1
+fi
+
+debug "archive: $archive"
+debug "directory: $directory"
+
+if ! [[ -d "$directory" ]]; then
+    mkdir -p cache
+    if ! [[ -e "cache/$archive" ]]; then
+        $DOWNLOAD "$url/$archive" --directory-prefix=cache
+    fi
+    tar xf "cache/$archive"
+fi
+
+GLIB_URL="https://download.gimp.org/pub/glib/2.30/"
+GLIB_ARCHIVE="glib-2.30.0.tar.bz2"
+GLIB_DIR="glib-2.30.0"
+
+LIBCAP_URL="https://www.tcpdump.org/release/"
+LIBCAP_ARCHIVE="libpcap-1.9.1.tar.gz"
+LIBCAP_DIR="libcap-1.9.1"
+
+if [ "$subject" == "wireshark" ]; then
+    debug "GLIB_DIR: $GLIB_DIR"
+    if ! [[ -d "$GLIB_DIR" ]]; then
+        mkdir -p cache
+        debug "mkdir -p cache"
+        if ! [[ -e "cache/$GLIB_ARCHIVE" ]]; then
+            debug "download $GLIB_ARCHIVE"
+            $DOWNLOAD "$GLIB_URL/$GLIB_ARCHIVE" --directory-prefix=cache
+        fi
+        tar xf "cache/$GLIB_ARCHIVE"
+        cp $(pwd)/.aux/wireshark/glib-2.30.0/m4macros/* $GLIB_DIR/m4macros/
+        ( cd "$GLIB_DIR" && ./autogen.sh )
+        debug "autogen done"
+    fi
+
+    debug "LIBCAP_DIR: $LIBCAP_DIR"
+    if ! [[ -d "$LIBCAP_DIR" ]]; then
+        mkdir -p cache
+        debug "mkdir -p cache"
+        if ! [[ -e "cache/$LIBCAP_ARCHIVE" ]]; then
+            debug "download $LIBCAP_ARCHIVE"
+            $DOWNLOAD "$LIBCAP_URL/$LIBCAP_ARCHIVE" --directory-prefix=cache
+        fi
+        tar xf "cache/$LIBCAP_ARCHIVE"
+    fi
+fi
+
+if [ "$subject" != "openssl" ]; then
+    echo "[fetch] preparing source code"
+    golden_directory="${subject}-fix-${version}"
+    debug "golden_directory: $golden_directory"
+    if [ ! -d "$golden_directory" ]; then
+        cp -r "$directory" "$golden_directory"
+    fi
+
+    if [[ $skip_buggy == 0 ]]; then
+        echo "[fetch] clean-source $directory"
+        clean-source "$directory"
+        echo "[fetch] clean-source $golden_directory"
+        echo "[fetch] restore-buggy $directory"
+    fi
+    clean-source "$golden_directory" # otherwise, compiler can be detected wrongly
+    restore-buggy "$directory"
+    echo "[fetch] restore-correct $golden_directory"
+    restore-correct "$golden_directory"
+fi
+
+debug "fetch done"

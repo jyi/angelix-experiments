@@ -1,0 +1,247 @@
+[repair] benchmark: manybugs
+[repair] subject: gzip
+[repair] version: 2010-02-19-3eb6091d69-884ef6d16c
+[repair] search: symbolic
+[fetch] benchmark: manybugs
+[fetch] subject: gzip
+[fetch] version: 2010-02-19-3eb6091d69-884ef6d16c
+[fetch] archive: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c.tar.gz
+[fetch] directory: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] preparing source code
+[fetch] golden_directory: gzip-fix-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] clean-source gzip-bug-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] /angelix-experiments/gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip/configure
+[fetch] make -j 72 clean
+[fetch] clean-source gzip-fix-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] restore-buggy gzip-bug-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] /angelix-experiments/gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: gzip.c
+[fetch] buggy_version: 3eb6091d69
+[fetch] buggy_preprocessed: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c
+[fetch] buggy_original: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-3eb6091d69
+[fetch] cp gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-3eb6091d69 gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c
+[fetch] restore-correct gzip-fix-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] restore-correct entered
+[fetch] cp gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-884ef6d16c gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c
+[fetch] restored gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c with gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-884ef6d16c
+[fetch] fetch done
+[repair] [repair] options: --symbolic --group-size
+1
+--klee-max-forks
+200
+--ignore-trivial
+--synthesis-level
+boolean-constants
+--test-timeout
+60
+--klee-solver-timeout
+100
+--klee-search
+dfs
+--all-tests
+--angelic-search-strategy
+symbolic  --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+[repair-gzip] options:  --group-size 1 --klee-max-forks 200 --ignore-trivial --synthesis-level boolean-constants --test-timeout 60 --klee-solver-timeout 100 --klee-search dfs --all-tests --angelic-search-strategy symbolic --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+[repair-gzip] cleaning gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip ...
+[repair-gzip] cleaning gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip ...
+INFO     repair          copy gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 0
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '7' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '11' of golden source
+INFO     testing         output code: 1
+WARNING  repair          excluding test 11 because it fails in golden version
+INFO     repair          positive: ['1', '2', '3', '4', '5', '6', '8', '9', '10', '12', '13']
+INFO     repair          negative: ['7']
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+INFO     project         building frontend source
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '1' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 2
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 4
+INFO     testing         running test '5' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 5
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     testing         running test '9' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 9
+INFO     testing         running test '10' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 10
+INFO     testing         running test '12' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 12
+INFO     testing         running test '13' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '7' of golden source
+INFO     testing         output code: 0
+INFO     repair          repair test suite: ['1', '2', '3', '5', '6', '7', '8', '9']
+INFO     repair          validation test suite: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '12', '13']
+INFO     localization    (loc, score) = (('A', (541, 18, 541, 25)), 1.0)
+INFO     localization    (loc, score) = (('A', (833, 43, 833, 44)), 1.0)
+INFO     localization    (loc, score) = (('A', (833, 43, 833, 44), '0'), 0.0)
+INFO     localization    (loc, score) = (('A', (541, 18, 541, 25), '3'), 0.0)
+INFO     localization    (loc, score) = (('A', (541, 18, 541, 25), '1'), 0.0)
+INFO     localization    (loc, score) = (('A', (541, 18, 541, 25), '0'), 0.0)
+INFO     localization    group 1: [('A', (541, 18, 541, 25))] (1.0)
+INFO     localization    group 2: [('A', (833, 43, 833, 44))] (1.0)
+INFO     localization    group 3: [('A', (541, 18, 541, 25), '3')] (0.0)
+INFO     localization    group 4: [('A', (541, 18, 541, 25), '1')] (0.0)
+INFO     localization    group 5: [('A', (541, 18, 541, 25), '0')] (0.0)
+INFO     localization    group 6: [('A', (833, 43, 833, 44), '0')] (0.0)
+INFO     localization    selected expressions [('A', (541, 18, 541, 25))] with group score 1.0 
+INFO     localization    selected expressions [('A', (833, 43, 833, 44))] with group score 1.0 
+INFO     localization    selected expressions [('A', (541, 18, 541, 25), '3')] with group score 0.0 
+INFO     localization    selected expressions [('A', (541, 18, 541, 25), '1')] with group score 0.0 
+INFO     localization    selected expressions [('A', (541, 18, 541, 25), '0')] with group score 0.0 
+INFO     localization    selected expressions [('A', (833, 43, 833, 44), '0')] with group score 0.0 
+INFO     repair          considering suspicious locations [('A', (541, 18, 541, 25))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          considering suspicious locations [('A', (833, 43, 833, 44))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          considering suspicious locations [('A', (541, 18, 541, 25), '3')]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          considering suspicious locations [('A', (541, 18, 541, 25), '1')]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          considering suspicious locations [('A', (541, 18, 541, 25), '0')]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          considering suspicious locations [('A', (833, 43, 833, 44), '0')]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          no patch generated in 6m 17s
+FAIL

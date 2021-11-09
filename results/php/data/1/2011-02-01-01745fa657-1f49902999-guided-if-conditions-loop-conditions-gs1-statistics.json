@@ -1,0 +1,577 @@
+{
+  "file": "/angelix-experiments/.angelix/statistics.json",
+  "src": "php-bug-2011-02-01-01745fa657-1f49902999/php",
+  "buggy": "main/streams/userspace.c",
+  "patch_found": true,
+  "patch_file": "php-2021-Sep18-034040.patch",
+  "config": {
+    "initial_tests": 1,
+    "all_tests": false,
+    "max_z3_trials": 2,
+    "defect": [
+      "if-conditions",
+      "loop-conditions"
+    ],
+    "test_timeout": null,
+    "single_group": false,
+    "group_size": 1,
+    "group_by_score": false,
+    "localize_from_bottom": false,
+    "suspicious": 20,
+    "localization": "jaccard",
+    "ignore_trivial": false,
+    "path_solving_timeout": 60000,
+    "timeout": 14400,
+    "max_angelic_paths": null,
+    "klee_max_forks": null,
+    "klee_max_depth": null,
+    "klee_search": null,
+    "klee_timeout": null,
+    "klee_out_dir_timeout": 60,
+    "klee_solver_timeout": null,
+    "klee_debug": false,
+    "klee_ignore_errors": false,
+    "ignore_trans_errors": false,
+    "ignore_infer_errors": false,
+    "skip_validating_angelic_path": false,
+    "use_nsynth": false,
+    "use_osynth": false,
+    "use_gcc": true,
+    "keep_positive_behavior": false,
+    "synthesis_timeout": 30000,
+    "synthesis_levels": [
+      "alternatives",
+      "integer-constants",
+      "boolean-constants"
+    ],
+    "synthesis_global_vars": false,
+    "synthesis_func_params": false,
+    "synthesis_used_vars": true,
+    "synthesis_ptr_vars": true,
+    "synthesis_bool_only": false,
+    "empty_env_exps": false,
+    "exclude_member_exp": false,
+    "generate_all": false,
+    "init_uninit_vars": false,
+    "verbose": false,
+    "build_before_instr": false,
+    "instr_printf": null,
+    "mute_config_message": false,
+    "mute_build_message": false,
+    "mute_test_message": false,
+    "show_test_message": false,
+    "show_oracle_contents": false,
+    "show_syn_message": false,
+    "mute_warning": false,
+    "show_suspicious_locations": true,
+    "invalid_localization": false,
+    "angelic_search_strategy": "guided",
+    "step_method": "metropolis",
+    "compilation_db_file": null,
+    "keep_angelix_dir": false,
+    "skip_configure": false,
+    "skip_build": false,
+    "gobble_klee_message": false,
+    "lines": [
+      911
+    ],
+    "search_max_trials": 100,
+    "max_same_cost_iter": 20,
+    "mcmc_beta": 0.8,
+    "one_bit_flip_prob": 0.5,
+    "chunk_bits": 32,
+    "max_bits": 100,
+    "max_resample": 3,
+    "block_expand_factor": 2,
+    "inc_fix": false,
+    "fixed_bv_len": false,
+    "default_max_cost": 300000000.0,
+    "error_cost": "10000000",
+    "warning_cost": "5000000",
+    "max_syn_attempts": 2,
+    "max_repair_attempts": 2,
+    "penalty1": "4",
+    "penalty2": "2",
+    "parallel_testing": false,
+    "all_suspicious": false,
+    "mutate": 0,
+    "epsilon": 1.0,
+    "always_accept": false,
+    "random_cost": false,
+    "max_random_cost": 0.0,
+    "skip_dd": false,
+    "finish_after_fault_localize": false,
+    "default_susp_score": 0.5,
+    "additional_susp_locs": null,
+    "default_non_zero_cost": "300000000",
+    "timeout_cost": "1"
+  },
+  "time": {
+    "testing": 56.860586643218994,
+    "compilation": 233.87441515922546,
+    "klee": 0,
+    "synthesis": 1.1430773735046387,
+    "solving": 0,
+    "inference": 5.844932794570923,
+    "dd": 0.19741463661193848,
+    "total": 201.3069944381714
+  },
+  "iterations": {
+    "synthesis": [
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 1.1430773735046387
+      }
+    ],
+    "guided": [
+      {
+        "locations": [
+          [
+            "I",
+            [
+              278,
+              6,
+              278,
+              42
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 2.1396448612213135,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 5,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            63.128491620112,
+            63.128491620112,
+            63.128491620112,
+            78.0
+          ],
+          "ratio": [
+            1.0,
+            1.0,
+            1.0,
+            6.809398934334866e-06
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              289,
+              5,
+              289,
+              30
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 0.3206017017364502,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            63.128491620112
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              304,
+              6,
+              304,
+              17
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 0.3270845413208008,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 1,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            78.0
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              340,
+              6,
+              340,
+              6
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 0.371776819229126,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            63.128491620112
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              376,
+              6,
+              376,
+              43
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 0.3216829299926758,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            71.232876712329
+          ],
+          "ratio": [
+            0.001528439385263091
+          ],
+          "accepted": [
+            false
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              394,
+              6,
+              394,
+              16
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 0.4456033706665039,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            159.0
+          ],
+          "ratio": [
+            4.907116301102679e-34
+          ],
+          "accepted": [
+            false
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              398,
+              6,
+              398,
+              6
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 0.3277275562286377,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 3,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            63.128491620112,
+            63.128491620112
+          ],
+          "ratio": [
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              739,
+              6,
+              739,
+              6
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 0.3299868106842041,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 1,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            159.0
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              766,
+              6,
+              766,
+              42
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 0.4378647804260254,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 3,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            63.128491620112,
+            159.0
+          ],
+          "ratio": [
+            1.0,
+            4.907116301102679e-34
+          ],
+          "accepted": [
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              771,
+              6,
+              771,
+              6
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 0.3227498531341553,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 1,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            159.0
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              918,
+              6,
+              918,
+              42
+            ]
+          ]
+        ],
+        "test": "62",
+        "time": {
+          "mcmc": 0.3027949333190918,
+          "dd": 0.19741463661193848
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            63.128491620112,
+            0
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      }
+    ],
+    "symbolic": [],
+    "random": []
+  }
+}

@@ -1,0 +1,11 @@
+--- a/Zend/zend_object_handlers.c
++++ b/Zend/zend_object_handlers.c
+@@ -126,7 +126,7 @@
+ 
+ 	zval_ptr_dtor(&member);
+ 
+-	if (retval) {
++	if (0) {
+ 		Z_DELREF_P(retval);
+ 	}
+ 

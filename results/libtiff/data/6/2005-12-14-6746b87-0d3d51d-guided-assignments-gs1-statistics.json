@@ -1,0 +1,384 @@
+{
+  "file": "/angelix-experiments/.angelix/statistics.json",
+  "src": "UNKNOWN",
+  "buggy": "UNKNOWN",
+  "patch_found": false,
+  "patch_file": "UNKNOWN",
+  "config": {
+    "initial_tests": 1,
+    "all_tests": false,
+    "max_z3_trials": 2,
+    "defect": [
+      "assignments"
+    ],
+    "klee_out_dir_timeout": 5,
+    "test_timeout": 60,
+    "single_group": false,
+    "group_size": 1,
+    "group_by_score": false,
+    "localize_from_bottom": false,
+    "suspicious": 30,
+    "localization": "jaccard",
+    "ignore_trivial": false,
+    "path_solving_timeout": 60000,
+    "max_angelic_paths": null,
+    "klee_max_forks": null,
+    "klee_max_depth": null,
+    "klee_search": null,
+    "klee_timeout": 10,
+    "klee_solver_timeout": null,
+    "klee_debug": false,
+    "klee_ignore_errors": false,
+    "ignore_trans_errors": false,
+    "ignore_infer_errors": false,
+    "skip_validating_angelic_path": false,
+    "use_nsynth": false,
+    "use_osynth": false,
+    "synthesis_timeout": 30000,
+    "synthesis_levels": [
+      "alternatives",
+      "integer-constants",
+      "boolean-constants"
+    ],
+    "synthesis_global_vars": false,
+    "synthesis_func_params": false,
+    "synthesis_used_vars": true,
+    "synthesis_ptr_vars": false,
+    "synthesis_bool_only": false,
+    "empty_env_exps": false,
+    "exclude_member_exp": false,
+    "generate_all": false,
+    "init_uninit_vars": false,
+    "redundant_test": false,
+    "verbose": false,
+    "build_before_instr": false,
+    "instr_printf": null,
+    "mute_config_message": false,
+    "mute_build_message": false,
+    "mute_test_message": false,
+    "show_test_message": false,
+    "show_oracle_contents": false,
+    "show_syn_message": false,
+    "mute_warning": false,
+    "show_suspicious_locations": true,
+    "invalid_localization": false,
+    "angelic_search_strategy": "guided",
+    "step_method": "metropolis",
+    "compilation_db_file": null,
+    "keep_angelix_dir": false,
+    "skip_configure": false,
+    "skip_build": false,
+    "gobble_klee_message": false,
+    "lines": null,
+    "search_max_trials": 100,
+    "max_same_cost_iter": 20,
+    "mcmc_beta": 0.8,
+    "one_bit_flip_prob": 0.5,
+    "chunk_bits": 32,
+    "max_resample": 3,
+    "block_expand_factor": 2,
+    "inc_fix": false,
+    "default_max_cost": 300000000.0,
+    "error_cost": "10000000",
+    "warning_cost": "5000000",
+    "max_syn_attempts": 2,
+    "max_repair_attempts": 2,
+    "penalty1": "4",
+    "penalty2": "2",
+    "parallel_testing": false,
+    "all_suspicious": true,
+    "mutate": 0,
+    "epsilon": 1.0,
+    "always_accept": false,
+    "skip_dd": false,
+    "finish_after_fault_localize": false,
+    "default_susp_score": 0.5,
+    "additional_susp_locs": null,
+    "default_non_zero_cost": "300000000",
+    "timeout_cost": "300000000"
+  },
+  "time": {
+    "testing": 122.04028248786926,
+    "compilation": 64.3041501045227,
+    "klee": 6.64863920211792,
+    "synthesis": 6.716795921325684,
+    "solving": 0,
+    "inference": 66.76562666893005,
+    "dd": 0,
+    "total": 779.1425666809082
+  },
+  "iterations": {
+    "synthesis": [
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7358224391937256
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.6892173290252686
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7805256843566895
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7051591873168945
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7266418933868408
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.9308514595031738
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.738433837890625
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7092664241790771
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7008776664733887
+      }
+    ],
+    "guided": [
+      {
+        "locations": [
+          "278-29-278-29"
+        ],
+        "test": "22",
+        "time": {
+          "klee": 8.602591037750244
+        }
+      },
+      {
+        "locations": [
+          "278-29-278-29"
+        ],
+        "test": "22",
+        "time": {
+          "mcmc": 61.624987840652466,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 1,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          "279-34-279-34"
+        ],
+        "test": "22",
+        "time": {
+          "klee": 9.654496192932129
+        }
+      },
+      {
+        "locations": [
+          "279-34-279-34"
+        ],
+        "test": "22",
+        "time": {
+          "mcmc": 60.2837188243866,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 1,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          "280-32-280-32"
+        ],
+        "test": "22",
+        "time": {
+          "klee": 8.651901245117188
+        }
+      },
+      {
+        "locations": [
+          "281-32-281-32"
+        ],
+        "test": "22",
+        "time": {
+          "klee": 60.0240592956543
+        }
+      },
+      {
+        "locations": [
+          "281-32-281-32"
+        ],
+        "test": "22",
+        "time": {
+          "mcmc": 120.90289521217346,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          "282-35-282-35"
+        ],
+        "test": "22",
+        "time": {
+          "klee": 8.601332187652588
+        }
+      },
+      {
+        "locations": [
+          "282-35-282-35"
+        ],
+        "test": "22",
+        "time": {
+          "mcmc": 185.94890332221985,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 3,
+          "sampled": 2,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            300000000.0,
+            0
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          "283-32-283-32"
+        ],
+        "test": "22",
+        "time": {
+          "klee": 9.65625548362732
+        }
+      },
+      {
+        "locations": [
+          "284-33-284-33"
+        ],
+        "test": "22",
+        "time": {
+          "klee": 9.604796648025513
+        }
+      },
+      {
+        "locations": [
+          "285-29-285-29"
+        ],
+        "test": "22",
+        "time": {
+          "klee": 10.607126951217651
+        }
+      },
+      {
+        "locations": [
+          "1520-16-1520-46"
+        ],
+        "test": "22",
+        "time": {
+          "klee": 6.64863920211792
+        }
+      },
+      {
+        "locations": [
+          "1520-16-1520-46"
+        ],
+        "test": "22",
+        "time": {
+          "mcmc": 60.116987466812134,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 1,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      }
+    ],
+    "symbolic": [],
+    "random": []
+  }
+}

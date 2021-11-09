@@ -1,0 +1,11 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -5339,7 +5339,7 @@
+   else
+     crop->selections = crop->zones;
+ 
+-  for (i = 0; i < crop->zones; i++)
++  for (i = 0; (crop->zones < crop->zones); i++)
+     {
+     seg = crop->zonelist[i].position;
+     total = crop->zonelist[i].total;

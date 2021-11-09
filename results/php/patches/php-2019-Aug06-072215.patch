@@ -1,0 +1,38 @@
+--- a/ext/standard/url.c
++++ b/ext/standard/url.c
+@@ -266,7 +266,7 @@
+ 		for(p = e; *p != ':' && p >= s; p--);
+ 	}
+ 
+-	if (p >= s && *p == ':') {
++	if ((p >= s) && *p == ':') {
+ 		if (!ret->port) {
+ 			p++;
+ 			if (e-p > 5) { /* port cannot be longer then 5 characters */
+@@ -297,7 +297,7 @@
+ 	}
+ 	
+ 	/* check if we have a valid host, if we don't reject the string as url */
+-	if ((p-s) < 1) {
++	if (((p - s) < 1)) {
+ 		STR_FREE(ret->scheme);
+ 		STR_FREE(ret->user);
+ 		STR_FREE(ret->pass);
+@@ -308,7 +308,7 @@
+ 	ret->host = estrndup(s, (p-s));
+ 	php_replace_controlchars_ex(ret->host, (p - s));
+ 	
+-	if (e == ue) {
++	if ((e == ue)) {
+ 		return ret;
+ 	}
+ 	
+@@ -316,7 +316,7 @@
+ 	
+ 	nohost:
+ 	
+-	if ((1 != 0) && (p = memchr(s, '?', (ue - s)))) {
++	if ((((length + -49) != 0)) && (p = memchr(s, '?', (ue - s)))) {
+ 		pp = strchr(s, '#');
+ 
+ 		if (pp && pp < p) {

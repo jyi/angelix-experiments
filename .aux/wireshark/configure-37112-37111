@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+# modules enabled by default:
+#
+# tshark
+# editcap
+# capinfos
+# mergecap
+# text2pcap
+# idl2wrs
+# dftest
+# randpkt
+# dumpcap
+# rawshark
+# ipv6
+# airpcap
+# glibtest
+
+my @disabled = qw/tshark editcap capinfos mergecap text2pcap idl2wrs dftest randpkt dumpcap rawshark ipv6 airpcap glibtest/;
+
+my @disabled_modules = map "--disable-" . $_, @disabled;
+
+# packages enabled by default
+#
+# gnutls
+# gcrypt
+# libsmi
+# pcap
+# zlib
+# pcre
+# lua
+# portaudio
+# libcap
+# krb5
+# c-ares
+# adns
+# geoip
+# python
+# plugins
+# osx-integration
+
+my @without = qw/gnutls gcrypt libsmi pcap zlib pcre lua portaudio libcap krb5 c-ares adns geoip python plugins osx-integration/;
+
+my @without_packages = map "--without-" . $_, @without;
+
+system("./autogen.sh");
+system("./configure --enable-static --disable-shared --disable-fast-install --disable-wireshark --disable-warnings-as-errors @disabled_modules @without_packages");

@@ -1,0 +1,39 @@
+--- a/libtiff/tif_dirread.c
++++ b/libtiff/tif_dirread.c
+@@ -586,8 +586,7 @@
+ 		            _TIFFFieldWithTag(tif,TIFFTAG_STRIPBYTECOUNTS)->field_name);
+ 		if(EstimateStripByteCounts(tif, dir, dircount) < 0)
+ 		    goto bad;
+-	} else if (td->td_nstrips > 1
+-		   && td->td_compression == COMPRESSION_NONE
++	} else if (((td->td_nstrips > td->td_nstrips) && (td->td_compression == 1))
+ 		   && td->td_stripbytecount[0] != td->td_stripbytecount[1]) {
+ 		/*
+ 		 * XXX: Some vendors fill StripByteCount array with absolutely
+@@ -616,7 +615,7 @@
+ 	 * bytecounts array. See also comments for TIFFAppendToStrip()
+ 	 * function in tif_write.c.
+ 	 */
+-	if (td->td_nstrips > 1) {
++	if ((1 > 1)) {
+ 		tstrip_t strip;
+ 
+ 		td->td_stripbytecountsorted = 1;
+@@ -640,7 +639,7 @@
+ 	 * side effect, however, is that the RowsPerStrip tag
+ 	 * value may be changed.
+          */
+-	if (td->td_nstrips == 1 && td->td_compression == COMPRESSION_NONE &&
++	if (((td->td_nstrips == 10) && (td->td_compression == 1)) &&
+ 	    (tif->tif_flags & (TIFF_STRIPCHOP|TIFF_ISTILED)) == TIFF_STRIPCHOP)
+ 		ChopUpSingleUncompressedStrip(tif);
+ 
+@@ -654,7 +653,7 @@
+ 	tif->tif_tilesize = (tsize_t) -1;
+ 
+ 	tif->tif_scanlinesize = TIFFScanlineSize(tif);
+-	if (!tif->tif_scanlinesize) {
++	if ((! tif->tif_scanlinesize)) {
+ 		TIFFErrorExt(tif->tif_clientdata, module, "%s: cannot handle zero scanline size",
+ 			  tif->tif_name);
+ 		return (0);

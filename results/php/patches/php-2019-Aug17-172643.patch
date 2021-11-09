@@ -1,0 +1,20 @@
+--- a/Zend/zend_closures.c
++++ b/Zend/zend_closures.c
+@@ -213,7 +213,7 @@
+ 
+ 	zend_object_std_dtor(&closure->std TSRMLS_CC);
+ 
+-	if (closure->func.type == ZEND_USER_FUNCTION) {
++	if ((closure->func.type == 0)) {
+ 		zend_execute_data *ex = EG(current_execute_data);
+ 		while (ex) {
+ 			if (ex->op_array == &closure->func.op_array) {
+@@ -442,7 +442,7 @@
+ 	closure->func.common.scope = scope;
+ 	if (scope) {
+ 		closure->func.common.fn_flags |= ZEND_ACC_PUBLIC;
+-		if (this_ptr && (closure->func.common.fn_flags & ZEND_ACC_STATIC) == 0) {
++		if (!this_ptr && (closure->func.common.fn_flags & ZEND_ACC_STATIC) == 0) {
+ 			closure->this_ptr = this_ptr;
+ 			Z_ADDREF_P(this_ptr);
+ 		} else {

@@ -1,0 +1,2726 @@
+[repair] benchmark: manybugs
+[repair] subject: libtiff
+[repair] version: 2010-11-27-eb326f9-eec7ec0
+[repair] search: symbolic
+[repair] debug: 0
+[repair] ./fetch libtiff manybugs 2010-11-27-eb326f9-eec7ec0
+[fetch] benchmark: manybugs
+[fetch] subject: libtiff
+[fetch] version: 2010-11-27-eb326f9-eec7ec0
+[fetch] archive: libtiff-bug-2010-11-27-eb326f9-eec7ec0.tar.gz
+[fetch] directory: libtiff-bug-2010-11-27-eb326f9-eec7ec0
+[fetch] preparing source code
+[fetch] golden_directory: libtiff-fix-2010-11-27-eb326f9-eec7ec0
+[fetch] clean-source libtiff-bug-2010-11-27-eb326f9-eec7ec0
+[fetch] /angelix-experiments/libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/configure
+[fetch] make -j 72 clean
+[fetch] clean-source libtiff-fix-2010-11-27-eb326f9-eec7ec0
+[fetch] restore-buggy libtiff-bug-2010-11-27-eb326f9-eec7ec0
+[fetch] /angelix-experiments/libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: tools/tiff2pdf.c
+[fetch] buggy_version: eb326f9
+[fetch] buggy_preprocessed: libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[fetch] buggy_original: libtiff-bug-2010-11-27-eb326f9-eec7ec0/diffs/tools/tiff2pdf.c-eb326f9
+[fetch] cp libtiff-bug-2010-11-27-eb326f9-eec7ec0/diffs/tools/tiff2pdf.c-eb326f9 libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[fetch] restore-correct libtiff-fix-2010-11-27-eb326f9-eec7ec0
+[fetch] restore-correct entered
+[fetch] cp libtiff-fix-2010-11-27-eb326f9-eec7ec0/diffs/tools/tiff2pdf.c-eec7ec0 libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[fetch] restored libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c with libtiff-fix-2010-11-27-eb326f9-eec7ec0/diffs/tools/tiff2pdf.c-eec7ec0
+[fetch] fetch done
+[repair] [repair] options: --symbolic --log
+DEBUG
+--klee-timeout
+7200
+--defect
+assignments
+--angelic-search-strategy
+symbolic
+--klee-max-forks
+100
+--klee-solver-timeout
+100
+--all-suspicious
+--klee-search
+dfs  --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+[repair-libtiff] options:  --log DEBUG --klee-timeout 7200 --defect assignments --angelic-search-strategy symbolic --klee-max-forks 100 --klee-solver-timeout 100 --all-suspicious --klee-search dfs --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/ppm2tiff_pbm.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/ppm2tiff_pgm.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/ppm2tiff_ppm.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcp-split.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcp-split-join.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiff2pdf.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-minisblack-1c-16b.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-minisblack-1c-8b.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-minisblack-2c-8b-alpha.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-miniswhite-1c-1b.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-palette-1c-1b.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-palette-1c-4b.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-palette-1c-8b.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-rgb-3c-16b.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-rgb-3c-8b.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extractz14-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/libtiff/tif_dirread.c
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/long_tag.c
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/Makefile.in
+[repair-libtiff] instrument libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/Makefile.in
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/common.sh
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/strip_rw.c
+[repair-libtiff] restore libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcp-split.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/ppm2tiff_pbm.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/ppm2tiff_pgm.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/ppm2tiff_ppm.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcp-split.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcp-split-join.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiff2pdf.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-minisblack-1c-16b.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-minisblack-1c-8b.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-minisblack-2c-8b-alpha.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-miniswhite-1c-1b.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-palette-1c-1b.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-palette-1c-4b.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-palette-1c-8b.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-rgb-3c-16b.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extract-rgb-3c-8b.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcrop-extractz14-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/libtiff/tif_dirread.c
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/long_tag.c
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/Makefile.in
+[repair-libtiff] instrument libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/Makefile.in
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/tools/tiff2pdf.c
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/common.sh
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/strip_rw.c
+[repair-libtiff] restore libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff/test/tiffcp-split.sh
+[repair-libtiff] the assert option not used
+[repair-libtiff] angelix libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff tools/tiff2pdf.c /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78 --golden libtiff-fix-2010-11-27-eb326f9-eec7ec0/libtiff --configure                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile              --build /angelix-experiments/.aux/libtiff/scripts/build-libtiff  --log DEBUG --klee-timeout 7200 --defect assignments --angelic-search-strategy symbolic --klee-max-forks 100 --klee-solver-timeout 100 --all-suspicious --klee-search dfs --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+DEBUG    repair          tests: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78']
+INFO     repair          copy libtiff-bug-2010-11-27-eb326f9-eec7ec0/libtiff to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+DEBUG    project         configure_cmd:                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile             
+INFO     project         building json compilation database from validation source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: bear /angelix-experiments/.aux/libtiff/scripts/build-libtiff
+DEBUG    repair          start to measure time
+INFO     testing         running test '1' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 1
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 2
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 2
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 4
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 5
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 6
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 7
+INFO     testing         output code: 0
+INFO     testing         running test '8' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 8
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 9
+INFO     testing         output code: 0
+INFO     testing         running test '10' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 10
+INFO     testing         output code: 0
+INFO     testing         running test '11' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 11
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 11
+INFO     testing         output code: 0
+INFO     testing         running test '12' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 12
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 12
+INFO     testing         output code: 0
+INFO     testing         running test '13' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 13
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 13
+INFO     testing         output code: 0
+INFO     testing         running test '14' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 14
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 14
+INFO     testing         output code: 0
+INFO     testing         running test '15' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 15
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 15
+INFO     testing         output code: 0
+INFO     testing         running test '16' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 16
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 16
+INFO     testing         output code: 0
+INFO     testing         running test '17' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 17
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 17
+INFO     testing         output code: 0
+INFO     testing         running test '18' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 18
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 18
+INFO     testing         output code: 0
+INFO     testing         running test '19' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 19
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 19
+INFO     testing         output code: 0
+INFO     testing         running test '20' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 20
+INFO     testing         output code: 0
+INFO     testing         running test '21' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 21
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 21
+INFO     testing         output code: 0
+INFO     testing         running test '22' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 22
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 22
+INFO     testing         output code: 0
+INFO     testing         running test '23' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 23
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 23
+INFO     testing         output code: 0
+INFO     testing         running test '24' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 24
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 24
+INFO     testing         output code: 0
+INFO     testing         running test '25' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 25
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 25
+INFO     testing         output code: 0
+INFO     testing         running test '26' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 26
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 26
+INFO     testing         output code: 0
+INFO     testing         running test '27' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 27
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 27
+INFO     testing         output code: 0
+INFO     testing         running test '28' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 1
+INFO     testing         running test '29' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 29
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 29
+INFO     testing         output code: 0
+INFO     testing         running test '30' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 30
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 30
+INFO     testing         output code: 0
+INFO     testing         running test '31' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 31
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 31
+INFO     testing         output code: 0
+INFO     testing         running test '32' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 32
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 32
+INFO     testing         output code: 0
+INFO     testing         running test '33' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 33
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 33
+INFO     testing         output code: 0
+INFO     testing         running test '34' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 34
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 34
+INFO     testing         output code: 0
+INFO     testing         running test '35' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 35
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 35
+INFO     testing         output code: 0
+INFO     testing         running test '36' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 36
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 36
+INFO     testing         output code: 0
+INFO     testing         running test '37' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 37
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 37
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 38
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 38
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 39
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 39
+INFO     testing         output code: 0
+INFO     testing         running test '40' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 40
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 40
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 41
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 41
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 42
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 42
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 43
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 43
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 44
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 44
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 45
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 45
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 46
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 46
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 47
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 47
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 48
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 48
+INFO     testing         output code: 0
+INFO     testing         running test '49' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 49
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 49
+INFO     testing         output code: 1
+INFO     testing         running test '50' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 50
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 50
+INFO     testing         output code: 0
+INFO     testing         running test '51' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 51
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 51
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 52
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 52
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 53
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 53
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 54
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 54
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 55
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 55
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 56
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 56
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 57
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 57
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 58
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 58
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 59
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 59
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 60
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 60
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 61
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 61
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 62
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 62
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 63
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 63
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 64
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 64
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 65
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 65
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 66
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 66
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 67
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 67
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 68
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 68
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 69
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 69
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 70
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 70
+INFO     testing         output code: 0
+INFO     testing         running test '71' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 71
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 71
+INFO     testing         output code: 0
+INFO     testing         running test '72' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 72
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 72
+INFO     testing         output code: 0
+INFO     testing         running test '73' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 73
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 73
+INFO     testing         output code: 0
+INFO     testing         running test '74' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 74
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 74
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 75
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 75
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 76
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 76
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 77
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 77
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 78
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 78
+INFO     testing         output code: 0
+INFO     project         configuring golden source
+DEBUG    project         configure_cmd:                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile             
+INFO     project         building golden source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/libtiff/scripts/build-libtiff
+INFO     testing         running test '28' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 0
+INFO     testing         running test '49' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 49
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 49
+INFO     testing         output code: 1
+WARNING  repair          excluding test 49 because it fails in golden version
+INFO     repair          positive: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78']
+INFO     repair          negative: ['28']
+INFO     project         configuring frontend source
+DEBUG    project         configure_cmd:                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile             
+INFO     transformation  instrumenting repairable of frontend source
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_USED_VARIABLES=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/frontend
+DEBUG    transformation  trans cmd: instrument-repairable tools/tiff2pdf.c
+INFO     project         building frontend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/libtiff/scripts/build-libtiff
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '1' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/1
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/1
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 1
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 1
+DEBUG    repair          remove 1 from repair test suite (not instrumented)
+INFO     testing         running test '2' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/2
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/2
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 2
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 2
+INFO     testing         output code: 0
+INFO     testing         running test '3' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/3
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/3
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/4
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/4
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 4
+INFO     testing         output code: 0
+INFO     testing         running test '5' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/5
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/5
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 5
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 5
+DEBUG    repair          remove 5 from repair test suite (not instrumented)
+INFO     testing         running test '6' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/6
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/6
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 6
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 6
+DEBUG    repair          remove 6 from repair test suite (not instrumented)
+INFO     testing         running test '7' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/7
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/7
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 7
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 7
+DEBUG    repair          remove 7 from repair test suite (not instrumented)
+INFO     testing         running test '8' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/8
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/8
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 8
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 8
+DEBUG    repair          remove 8 from repair test suite (not instrumented)
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/9
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/9
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 9
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 9
+INFO     testing         running test '10' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/10
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/10
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 10
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 10
+INFO     testing         running test '11' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/11
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/11
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 11
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 11
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 11
+INFO     testing         running test '12' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/12
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/12
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 12
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 12
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 12
+DEBUG    repair          remove 12 from repair test suite (not instrumented)
+INFO     testing         running test '13' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/13
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/13
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 13
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 13
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+DEBUG    repair          remove 13 from repair test suite (not instrumented)
+INFO     testing         running test '14' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/14
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/14
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 14
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 14
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 14
+DEBUG    repair          remove 14 from repair test suite (not instrumented)
+INFO     testing         running test '15' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/15
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/15
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 15
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 15
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 15
+DEBUG    repair          remove 15 from repair test suite (not instrumented)
+INFO     testing         running test '16' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/16
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/16
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 16
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 16
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 16
+DEBUG    repair          remove 16 from repair test suite (not instrumented)
+INFO     testing         running test '17' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/17
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/17
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 17
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 17
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 17
+DEBUG    repair          remove 17 from repair test suite (not instrumented)
+INFO     testing         running test '18' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/18
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/18
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 18
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 18
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 18
+DEBUG    repair          remove 18 from repair test suite (not instrumented)
+INFO     testing         running test '19' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/19
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/19
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 19
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 19
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 19
+DEBUG    repair          remove 19 from repair test suite (not instrumented)
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/20
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/20
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 20
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 20
+DEBUG    repair          remove 20 from repair test suite (not instrumented)
+INFO     testing         running test '21' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/21
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/21
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 21
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 21
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 21
+DEBUG    repair          remove 21 from repair test suite (not instrumented)
+INFO     testing         running test '22' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/22
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/22
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 22
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 22
+INFO     testing         output code: 0
+INFO     testing         running test '23' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/23
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/23
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 23
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 23
+INFO     testing         output code: 0
+INFO     testing         running test '24' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/24
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/24
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 24
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 24
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 24
+DEBUG    repair          remove 24 from repair test suite (not instrumented)
+INFO     testing         running test '25' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/25
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/25
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 25
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 25
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 25
+DEBUG    repair          remove 25 from repair test suite (not instrumented)
+INFO     testing         running test '26' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/26
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/26
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 26
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 26
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 26
+DEBUG    repair          remove 26 from repair test suite (not instrumented)
+INFO     testing         running test '27' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/27
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/27
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 27
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 27
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 27
+DEBUG    repair          remove 27 from repair test suite (not instrumented)
+INFO     testing         running test '29' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/29
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/29
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 29
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 29
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 29
+DEBUG    repair          remove 29 from repair test suite (not instrumented)
+INFO     testing         running test '30' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/30
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/30
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 30
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 30
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 30
+DEBUG    repair          remove 30 from repair test suite (not instrumented)
+INFO     testing         running test '31' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/31
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/31
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 31
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 31
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 31
+DEBUG    repair          remove 31 from repair test suite (not instrumented)
+INFO     testing         running test '32' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/32
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/32
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 32
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 32
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 32
+DEBUG    repair          remove 32 from repair test suite (not instrumented)
+INFO     testing         running test '33' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/33
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/33
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 33
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 33
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 33
+DEBUG    repair          remove 33 from repair test suite (not instrumented)
+INFO     testing         running test '34' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/34
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/34
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 34
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 34
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 34
+DEBUG    repair          remove 34 from repair test suite (not instrumented)
+INFO     testing         running test '35' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/35
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/35
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 35
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 35
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 35
+DEBUG    repair          remove 35 from repair test suite (not instrumented)
+INFO     testing         running test '36' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/36
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/36
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 36
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 36
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 36
+DEBUG    repair          remove 36 from repair test suite (not instrumented)
+INFO     testing         running test '37' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/37
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/37
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 37
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 37
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 37
+DEBUG    repair          remove 37 from repair test suite (not instrumented)
+INFO     testing         running test '38' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/38
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/38
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 38
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 38
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 38
+DEBUG    repair          remove 38 from repair test suite (not instrumented)
+INFO     testing         running test '39' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/39
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/39
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 39
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 39
+INFO     testing         output code: 0
+INFO     testing         running test '40' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/40
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/40
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 40
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 40
+INFO     testing         output code: 0
+INFO     testing         running test '41' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/41
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/41
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 41
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 41
+INFO     testing         output code: 0
+INFO     testing         running test '42' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/42
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/42
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 42
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 42
+INFO     testing         output code: 0
+INFO     testing         running test '43' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/43
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/43
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 43
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 43
+INFO     testing         output code: 0
+INFO     testing         running test '44' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/44
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/44
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 44
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 44
+INFO     testing         output code: 0
+INFO     testing         running test '45' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/45
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/45
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 45
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 45
+INFO     testing         output code: 0
+INFO     testing         running test '46' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/46
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/46
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 46
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 46
+INFO     testing         output code: 0
+INFO     testing         running test '47' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/47
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/47
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 47
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 47
+INFO     testing         output code: 0
+INFO     testing         running test '48' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/48
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/48
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 48
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 48
+INFO     testing         output code: 0
+INFO     testing         running test '50' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/50
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/50
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 50
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 50
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+DEBUG    repair          remove 50 from repair test suite (not instrumented)
+INFO     testing         running test '51' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/51
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/51
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 51
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 51
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 51
+DEBUG    repair          remove 51 from repair test suite (not instrumented)
+INFO     testing         running test '52' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/52
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/52
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 52
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 52
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 52
+DEBUG    repair          remove 52 from repair test suite (not instrumented)
+INFO     testing         running test '53' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/53
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/53
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 53
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 53
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 53
+DEBUG    repair          remove 53 from repair test suite (not instrumented)
+INFO     testing         running test '54' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/54
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/54
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 54
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 54
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 54
+DEBUG    repair          remove 54 from repair test suite (not instrumented)
+INFO     testing         running test '55' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/55
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/55
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 55
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 55
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 55
+DEBUG    repair          remove 55 from repair test suite (not instrumented)
+INFO     testing         running test '56' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/56
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/56
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 56
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 56
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 56
+DEBUG    repair          remove 56 from repair test suite (not instrumented)
+INFO     testing         running test '57' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/57
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/57
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 57
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 57
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 57
+DEBUG    repair          remove 57 from repair test suite (not instrumented)
+INFO     testing         running test '58' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/58
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/58
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 58
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 58
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 58
+DEBUG    repair          remove 58 from repair test suite (not instrumented)
+INFO     testing         running test '59' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/59
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/59
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 59
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 59
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 59
+DEBUG    repair          remove 59 from repair test suite (not instrumented)
+INFO     testing         running test '60' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/60
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/60
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 60
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 60
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 60
+DEBUG    repair          remove 60 from repair test suite (not instrumented)
+INFO     testing         running test '61' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/61
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/61
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 61
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 61
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 61
+DEBUG    repair          remove 61 from repair test suite (not instrumented)
+INFO     testing         running test '62' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/62
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/62
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 62
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 62
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 62
+DEBUG    repair          remove 62 from repair test suite (not instrumented)
+INFO     testing         running test '63' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/63
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/63
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 63
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 63
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 63
+DEBUG    repair          remove 63 from repair test suite (not instrumented)
+INFO     testing         running test '64' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/64
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/64
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 64
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 64
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 64
+DEBUG    repair          remove 64 from repair test suite (not instrumented)
+INFO     testing         running test '65' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/65
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/65
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 65
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 65
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 65
+DEBUG    repair          remove 65 from repair test suite (not instrumented)
+INFO     testing         running test '66' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/66
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/66
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 66
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 66
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 66
+DEBUG    repair          remove 66 from repair test suite (not instrumented)
+INFO     testing         running test '67' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/67
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/67
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 67
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 67
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 67
+DEBUG    repair          remove 67 from repair test suite (not instrumented)
+INFO     testing         running test '68' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/68
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/68
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 68
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 68
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 68
+DEBUG    repair          remove 68 from repair test suite (not instrumented)
+INFO     testing         running test '69' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/69
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/69
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 69
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 69
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 69
+DEBUG    repair          remove 69 from repair test suite (not instrumented)
+INFO     testing         running test '70' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/70
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/70
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 70
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 70
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 70
+DEBUG    repair          remove 70 from repair test suite (not instrumented)
+INFO     testing         running test '71' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/71
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/71
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 71
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 71
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 71
+DEBUG    repair          remove 71 from repair test suite (not instrumented)
+INFO     testing         running test '72' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/72
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/72
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 72
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 72
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 72
+DEBUG    repair          remove 72 from repair test suite (not instrumented)
+INFO     testing         running test '73' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/73
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/73
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 73
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 73
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 73
+DEBUG    repair          remove 73 from repair test suite (not instrumented)
+INFO     testing         running test '74' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/74
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/74
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 74
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 74
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 74
+DEBUG    repair          remove 74 from repair test suite (not instrumented)
+INFO     testing         running test '75' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/75
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/75
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 75
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 75
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 75
+DEBUG    repair          remove 75 from repair test suite (not instrumented)
+INFO     testing         running test '76' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/76
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/76
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 76
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 76
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 76
+DEBUG    repair          remove 76 from repair test suite (not instrumented)
+INFO     testing         running test '77' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/77
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/77
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 77
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 77
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 77
+DEBUG    repair          remove 77 from repair test suite (not instrumented)
+INFO     testing         running test '78' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/78
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/78
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 78
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 78
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 78
+DEBUG    repair          remove 78 from repair test suite (not instrumented)
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '28' of frontend source
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/28
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+DEBUG    project         configure_cmd:                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile             
+INFO     project         building golden source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/libtiff/scripts/build-libtiff
+INFO     testing         running test '28' of golden source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/28
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 0
+INFO     repair          repair test suite: ['2', '3', '4', '9', '10', '11', '22', '23', '28', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48']
+INFO     repair          validation test suite: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78']
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/1
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/2
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/3
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/4
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/5
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/6
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/7
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/8
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/9
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/10
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/11
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/12
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/13
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/14
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/15
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/16
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/17
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/18
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/19
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/20
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/21
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/22
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/23
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/24
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/25
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/26
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/27
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/29
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/30
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/31
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/32
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/33
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/34
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/35
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/36
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/37
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/38
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/39
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/40
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/41
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/42
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/43
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/44
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/45
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/46
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/47
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/48
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/50
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/51
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/52
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/53
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/54
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/55
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/56
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/57
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/58
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/59
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/60
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/61
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/62
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/63
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/64
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/65
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/66
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/67
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/68
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/69
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/70
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/71
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/72
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/73
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/74
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/75
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/76
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/77
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/78
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/28
+DEBUG    localization    all: {('A', (1047, 6, 1047, 6)), ('A', (910, 21, 910, 21)), ('A', (774, 8, 774, 8)), ('A', (5164, 17, 5164, 22)), ('A', (5279, 47, 5279, 47)), ('A', (733, 23, 733, 23)), ('A', (5153, 45, 5153, 45)), ('A', (5150, 16, 5150, 16)), ('A', (1324, 25, 1324, 25)), ('A', (905, 24, 905, 24)), ('A', (1711, 35, 1711, 35)), ('A', (5171, 46, 5171, 46)), ('A', (349, 23, 349, 23)), ('A', (5181, 13, 5181, 13)), ('A', (2533, 23, 2533, 23)), ('A', (5175, 46, 5175, 46)), ('A', (5271, 14, 5271, 14)), ('A', (1201, 20, 1201, 20)), ('A', (2560, 12, 2560, 17)), ('A', (2284, 18, 2284, 18)), ('A', (399, 25, 399, 25)), ('A', (5159, 16, 5159, 21)), ('A', (1202, 33, 1202, 38)), ('A', (1749, 30, 1749, 30)), ('A', (904, 24, 904, 24)), ('A', (1756, 26, 1756, 26)), ('A', (5148, 21, 5148, 21)), ('A', (4028, 11, 4028, 11)), ('A', (4015, 9, 4015, 24)), ('A', (1121, 36, 1121, 36)), ('A', (1071, 55, 1071, 55)), ('A', (5151, 17, 5151, 17)), ('A', (5183, 13, 5183, 21)), ('A', (5186, 46, 5186, 46)), ('A', (4023, 10, 4023, 10)), ('A', (5276, 14, 5276, 22)), ('A', (1655, 26, 1655, 31)), ('A', (1618, 23, 1618, 23)), ('A', (5154, 19, 5154, 24)), ('A', (5149, 19, 5149, 19)), ('A', (5262, 47, 5262, 47)), ('A', (5158, 45, 5158, 45)), ('A', (5285, 23, 5285, 23)), ('A', (342, 23, 342, 23)), ('A', (1200, 23, 1200, 23)), ('A', (1085, 25, 1085, 25)), ('A', (5163, 45, 5163, 45))}
+DEBUG    localization    lines: None
+DEBUG    localization    filtered all: {('A', (1047, 6, 1047, 6)), ('A', (910, 21, 910, 21)), ('A', (774, 8, 774, 8)), ('A', (5164, 17, 5164, 22)), ('A', (5279, 47, 5279, 47)), ('A', (733, 23, 733, 23)), ('A', (5153, 45, 5153, 45)), ('A', (5150, 16, 5150, 16)), ('A', (1324, 25, 1324, 25)), ('A', (905, 24, 905, 24)), ('A', (1711, 35, 1711, 35)), ('A', (5171, 46, 5171, 46)), ('A', (349, 23, 349, 23)), ('A', (5181, 13, 5181, 13)), ('A', (2533, 23, 2533, 23)), ('A', (5175, 46, 5175, 46)), ('A', (5271, 14, 5271, 14)), ('A', (1201, 20, 1201, 20)), ('A', (2560, 12, 2560, 17)), ('A', (2284, 18, 2284, 18)), ('A', (399, 25, 399, 25)), ('A', (5159, 16, 5159, 21)), ('A', (1202, 33, 1202, 38)), ('A', (1749, 30, 1749, 30)), ('A', (904, 24, 904, 24)), ('A', (1756, 26, 1756, 26)), ('A', (5148, 21, 5148, 21)), ('A', (4028, 11, 4028, 11)), ('A', (4015, 9, 4015, 24)), ('A', (1121, 36, 1121, 36)), ('A', (1071, 55, 1071, 55)), ('A', (5151, 17, 5151, 17)), ('A', (5183, 13, 5183, 21)), ('A', (5186, 46, 5186, 46)), ('A', (4023, 10, 4023, 10)), ('A', (5276, 14, 5276, 22)), ('A', (1655, 26, 1655, 31)), ('A', (1618, 23, 1618, 23)), ('A', (5154, 19, 5154, 24)), ('A', (5149, 19, 5149, 19)), ('A', (5262, 47, 5262, 47)), ('A', (5158, 45, 5158, 45)), ('A', (5285, 23, 5285, 23)), ('A', (342, 23, 342, 23)), ('A', (1200, 23, 1200, 23)), ('A', (1085, 25, 1085, 25)), ('A', (5163, 45, 5163, 45))}
+DEBUG    localization    executed_positive: {('A', (1047, 6, 1047, 6)): 0, ('A', (910, 21, 910, 21)): 0, ('A', (774, 8, 774, 8)): 0, ('A', (5164, 17, 5164, 22)): 0, ('A', (5279, 47, 5279, 47)): 0, ('A', (733, 23, 733, 23)): 0, ('A', (5153, 45, 5153, 45)): 0, ('A', (5150, 16, 5150, 16)): 0, ('A', (1324, 25, 1324, 25)): 0, ('A', (905, 24, 905, 24)): 0, ('A', (1711, 35, 1711, 35)): 0, ('A', (5171, 46, 5171, 46)): 0, ('A', (349, 23, 349, 23)): 0, ('A', (5181, 13, 5181, 13)): 0, ('A', (2533, 23, 2533, 23)): 0, ('A', (5175, 46, 5175, 46)): 0, ('A', (5271, 14, 5271, 14)): 0, ('A', (1201, 20, 1201, 20)): 0, ('A', (2560, 12, 2560, 17)): 0, ('A', (2284, 18, 2284, 18)): 0, ('A', (399, 25, 399, 25)): 0, ('A', (5159, 16, 5159, 21)): 0, ('A', (1202, 33, 1202, 38)): 0, ('A', (1749, 30, 1749, 30)): 0, ('A', (904, 24, 904, 24)): 0, ('A', (1756, 26, 1756, 26)): 0, ('A', (5148, 21, 5148, 21)): 0, ('A', (4028, 11, 4028, 11)): 0, ('A', (4015, 9, 4015, 24)): 0, ('A', (1121, 36, 1121, 36)): 0, ('A', (1071, 55, 1071, 55)): 0, ('A', (5151, 17, 5151, 17)): 0, ('A', (5183, 13, 5183, 21)): 0, ('A', (5186, 46, 5186, 46)): 0, ('A', (4023, 10, 4023, 10)): 0, ('A', (5276, 14, 5276, 22)): 0, ('A', (1655, 26, 1655, 31)): 0, ('A', (1618, 23, 1618, 23)): 0, ('A', (5154, 19, 5154, 24)): 0, ('A', (5149, 19, 5149, 19)): 0, ('A', (5262, 47, 5262, 47)): 0, ('A', (5158, 45, 5158, 45)): 0, ('A', (5285, 23, 5285, 23)): 0, ('A', (342, 23, 342, 23)): 0, ('A', (1200, 23, 1200, 23)): 0, ('A', (1085, 25, 1085, 25)): 0, ('A', (5163, 45, 5163, 45)): 0}
+DEBUG    localization    executed_negative: {('A', (1047, 6, 1047, 6)): 1, ('A', (910, 21, 910, 21)): 1, ('A', (774, 8, 774, 8)): 1, ('A', (5164, 17, 5164, 22)): 1, ('A', (5279, 47, 5279, 47)): 1, ('A', (733, 23, 733, 23)): 1, ('A', (5153, 45, 5153, 45)): 1, ('A', (5150, 16, 5150, 16)): 1, ('A', (1324, 25, 1324, 25)): 1, ('A', (905, 24, 905, 24)): 1, ('A', (1711, 35, 1711, 35)): 1, ('A', (5171, 46, 5171, 46)): 1, ('A', (349, 23, 349, 23)): 1, ('A', (5181, 13, 5181, 13)): 1, ('A', (2533, 23, 2533, 23)): 1, ('A', (5175, 46, 5175, 46)): 1, ('A', (5271, 14, 5271, 14)): 1, ('A', (1201, 20, 1201, 20)): 1, ('A', (2560, 12, 2560, 17)): 1, ('A', (2284, 18, 2284, 18)): 1, ('A', (399, 25, 399, 25)): 1, ('A', (5159, 16, 5159, 21)): 1, ('A', (1202, 33, 1202, 38)): 1, ('A', (1749, 30, 1749, 30)): 1, ('A', (904, 24, 904, 24)): 1, ('A', (1756, 26, 1756, 26)): 1, ('A', (5148, 21, 5148, 21)): 1, ('A', (4028, 11, 4028, 11)): 1, ('A', (4015, 9, 4015, 24)): 1, ('A', (1121, 36, 1121, 36)): 1, ('A', (1071, 55, 1071, 55)): 1, ('A', (5151, 17, 5151, 17)): 1, ('A', (5183, 13, 5183, 21)): 1, ('A', (5186, 46, 5186, 46)): 1, ('A', (4023, 10, 4023, 10)): 1, ('A', (5276, 14, 5276, 22)): 1, ('A', (1655, 26, 1655, 31)): 1, ('A', (1618, 23, 1618, 23)): 1, ('A', (5154, 19, 5154, 24)): 1, ('A', (5149, 19, 5149, 19)): 1, ('A', (5262, 47, 5262, 47)): 1, ('A', (5158, 45, 5158, 45)): 1, ('A', (5285, 23, 5285, 23)): 1, ('A', (342, 23, 342, 23)): 1, ('A', (1200, 23, 1200, 23)): 1, ('A', (1085, 25, 1085, 25)): 1, ('A', (5163, 45, 5163, 45)): 1}
+DEBUG    localization    total_passing: 76
+DEBUG    localization    total_failing: 1
+DEBUG    localization    (loc, score) = (('A', (1047, 6, 1047, 6)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (910, 21, 910, 21)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (774, 8, 774, 8)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5164, 17, 5164, 22)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5279, 47, 5279, 47)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (733, 23, 733, 23)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5153, 45, 5153, 45)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5150, 16, 5150, 16)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1324, 25, 1324, 25)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (905, 24, 905, 24)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1711, 35, 1711, 35)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5171, 46, 5171, 46)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (349, 23, 349, 23)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5181, 13, 5181, 13)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (2533, 23, 2533, 23)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5175, 46, 5175, 46)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5271, 14, 5271, 14)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1201, 20, 1201, 20)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (2560, 12, 2560, 17)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (2284, 18, 2284, 18)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (399, 25, 399, 25)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5159, 16, 5159, 21)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1202, 33, 1202, 38)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1749, 30, 1749, 30)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (904, 24, 904, 24)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1756, 26, 1756, 26)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5148, 21, 5148, 21)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (4028, 11, 4028, 11)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (4015, 9, 4015, 24)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1121, 36, 1121, 36)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1071, 55, 1071, 55)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5151, 17, 5151, 17)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5183, 13, 5183, 21)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5186, 46, 5186, 46)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (4023, 10, 4023, 10)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5276, 14, 5276, 22)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1655, 26, 1655, 31)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1618, 23, 1618, 23)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5154, 19, 5154, 24)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5149, 19, 5149, 19)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5262, 47, 5262, 47)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5158, 45, 5158, 45)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5285, 23, 5285, 23)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (342, 23, 342, 23)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1200, 23, 1200, 23)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (1085, 25, 1085, 25)), 1.0)
+DEBUG    localization    (loc, score) = (('A', (5163, 45, 5163, 45)), 1.0)
+DEBUG    localization    ranking: [(('A', (1047, 6, 1047, 6)), 1.0), (('A', (910, 21, 910, 21)), 1.0), (('A', (774, 8, 774, 8)), 1.0), (('A', (5164, 17, 5164, 22)), 1.0), (('A', (5279, 47, 5279, 47)), 1.0), (('A', (733, 23, 733, 23)), 1.0), (('A', (5153, 45, 5153, 45)), 1.0), (('A', (5150, 16, 5150, 16)), 1.0), (('A', (1324, 25, 1324, 25)), 1.0), (('A', (905, 24, 905, 24)), 1.0), (('A', (1711, 35, 1711, 35)), 1.0), (('A', (5171, 46, 5171, 46)), 1.0), (('A', (349, 23, 349, 23)), 1.0), (('A', (5181, 13, 5181, 13)), 1.0), (('A', (2533, 23, 2533, 23)), 1.0), (('A', (5175, 46, 5175, 46)), 1.0), (('A', (5271, 14, 5271, 14)), 1.0), (('A', (1201, 20, 1201, 20)), 1.0), (('A', (2560, 12, 2560, 17)), 1.0), (('A', (2284, 18, 2284, 18)), 1.0), (('A', (399, 25, 399, 25)), 1.0), (('A', (5159, 16, 5159, 21)), 1.0), (('A', (1202, 33, 1202, 38)), 1.0), (('A', (1749, 30, 1749, 30)), 1.0), (('A', (904, 24, 904, 24)), 1.0), (('A', (1756, 26, 1756, 26)), 1.0), (('A', (5148, 21, 5148, 21)), 1.0), (('A', (4028, 11, 4028, 11)), 1.0), (('A', (4015, 9, 4015, 24)), 1.0), (('A', (1121, 36, 1121, 36)), 1.0), (('A', (1071, 55, 1071, 55)), 1.0), (('A', (5151, 17, 5151, 17)), 1.0), (('A', (5183, 13, 5183, 21)), 1.0), (('A', (5186, 46, 5186, 46)), 1.0), (('A', (4023, 10, 4023, 10)), 1.0), (('A', (5276, 14, 5276, 22)), 1.0), (('A', (1655, 26, 1655, 31)), 1.0), (('A', (1618, 23, 1618, 23)), 1.0), (('A', (5154, 19, 5154, 24)), 1.0), (('A', (5149, 19, 5149, 19)), 1.0), (('A', (5262, 47, 5262, 47)), 1.0), (('A', (5158, 45, 5158, 45)), 1.0), (('A', (5285, 23, 5285, 23)), 1.0), (('A', (342, 23, 342, 23)), 1.0), (('A', (1200, 23, 1200, 23)), 1.0), (('A', (1085, 25, 1085, 25)), 1.0), (('A', (5163, 45, 5163, 45)), 1.0)]
+INFO     localization    (loc, score) = (('A', (1047, 6, 1047, 6)), 1.0)
+INFO     localization    (loc, score) = (('A', (910, 21, 910, 21)), 1.0)
+INFO     localization    (loc, score) = (('A', (774, 8, 774, 8)), 1.0)
+INFO     localization    (loc, score) = (('A', (5164, 17, 5164, 22)), 1.0)
+INFO     localization    (loc, score) = (('A', (5279, 47, 5279, 47)), 1.0)
+INFO     localization    (loc, score) = (('A', (733, 23, 733, 23)), 1.0)
+INFO     localization    (loc, score) = (('A', (5153, 45, 5153, 45)), 1.0)
+INFO     localization    (loc, score) = (('A', (5150, 16, 5150, 16)), 1.0)
+INFO     localization    (loc, score) = (('A', (1324, 25, 1324, 25)), 1.0)
+INFO     localization    (loc, score) = (('A', (905, 24, 905, 24)), 1.0)
+INFO     localization    (loc, score) = (('A', (1711, 35, 1711, 35)), 1.0)
+INFO     localization    (loc, score) = (('A', (5171, 46, 5171, 46)), 1.0)
+INFO     localization    (loc, score) = (('A', (349, 23, 349, 23)), 1.0)
+INFO     localization    (loc, score) = (('A', (5181, 13, 5181, 13)), 1.0)
+INFO     localization    (loc, score) = (('A', (2533, 23, 2533, 23)), 1.0)
+INFO     localization    (loc, score) = (('A', (5175, 46, 5175, 46)), 1.0)
+INFO     localization    (loc, score) = (('A', (5271, 14, 5271, 14)), 1.0)
+INFO     localization    (loc, score) = (('A', (1201, 20, 1201, 20)), 1.0)
+INFO     localization    (loc, score) = (('A', (2560, 12, 2560, 17)), 1.0)
+INFO     localization    (loc, score) = (('A', (2284, 18, 2284, 18)), 1.0)
+INFO     localization    (loc, score) = (('A', (399, 25, 399, 25)), 1.0)
+INFO     localization    (loc, score) = (('A', (5159, 16, 5159, 21)), 1.0)
+INFO     localization    (loc, score) = (('A', (1202, 33, 1202, 38)), 1.0)
+INFO     localization    (loc, score) = (('A', (1749, 30, 1749, 30)), 1.0)
+INFO     localization    (loc, score) = (('A', (904, 24, 904, 24)), 1.0)
+INFO     localization    (loc, score) = (('A', (1756, 26, 1756, 26)), 1.0)
+INFO     localization    (loc, score) = (('A', (5148, 21, 5148, 21)), 1.0)
+INFO     localization    (loc, score) = (('A', (4028, 11, 4028, 11)), 1.0)
+INFO     localization    (loc, score) = (('A', (4015, 9, 4015, 24)), 1.0)
+INFO     localization    (loc, score) = (('A', (1121, 36, 1121, 36)), 1.0)
+INFO     localization    (loc, score) = (('A', (1071, 55, 1071, 55)), 1.0)
+INFO     localization    (loc, score) = (('A', (5151, 17, 5151, 17)), 1.0)
+INFO     localization    (loc, score) = (('A', (5183, 13, 5183, 21)), 1.0)
+INFO     localization    (loc, score) = (('A', (5186, 46, 5186, 46)), 1.0)
+INFO     localization    (loc, score) = (('A', (4023, 10, 4023, 10)), 1.0)
+INFO     localization    (loc, score) = (('A', (5276, 14, 5276, 22)), 1.0)
+INFO     localization    (loc, score) = (('A', (1655, 26, 1655, 31)), 1.0)
+INFO     localization    (loc, score) = (('A', (1618, 23, 1618, 23)), 1.0)
+INFO     localization    (loc, score) = (('A', (5154, 19, 5154, 24)), 1.0)
+INFO     localization    (loc, score) = (('A', (5149, 19, 5149, 19)), 1.0)
+INFO     localization    (loc, score) = (('A', (5262, 47, 5262, 47)), 1.0)
+INFO     localization    (loc, score) = (('A', (5158, 45, 5158, 45)), 1.0)
+INFO     localization    (loc, score) = (('A', (5285, 23, 5285, 23)), 1.0)
+INFO     localization    (loc, score) = (('A', (342, 23, 342, 23)), 1.0)
+INFO     localization    (loc, score) = (('A', (1200, 23, 1200, 23)), 1.0)
+INFO     localization    (loc, score) = (('A', (1085, 25, 1085, 25)), 1.0)
+INFO     localization    (loc, score) = (('A', (5163, 45, 5163, 45)), 1.0)
+DEBUG    localization    all_suspicious: True
+DEBUG    localization    suspicious: 47
+DEBUG    localization    top: [(('A', (342, 23, 342, 23)), 1.0), (('A', (349, 23, 349, 23)), 1.0), (('A', (399, 25, 399, 25)), 1.0), (('A', (733, 23, 733, 23)), 1.0), (('A', (774, 8, 774, 8)), 1.0), (('A', (904, 24, 904, 24)), 1.0), (('A', (905, 24, 905, 24)), 1.0), (('A', (910, 21, 910, 21)), 1.0), (('A', (1047, 6, 1047, 6)), 1.0), (('A', (1071, 55, 1071, 55)), 1.0), (('A', (1085, 25, 1085, 25)), 1.0), (('A', (1121, 36, 1121, 36)), 1.0), (('A', (1200, 23, 1200, 23)), 1.0), (('A', (1201, 20, 1201, 20)), 1.0), (('A', (1202, 33, 1202, 38)), 1.0), (('A', (1324, 25, 1324, 25)), 1.0), (('A', (1618, 23, 1618, 23)), 1.0), (('A', (1655, 26, 1655, 31)), 1.0), (('A', (1711, 35, 1711, 35)), 1.0), (('A', (1749, 30, 1749, 30)), 1.0), (('A', (1756, 26, 1756, 26)), 1.0), (('A', (2284, 18, 2284, 18)), 1.0), (('A', (2533, 23, 2533, 23)), 1.0), (('A', (2560, 12, 2560, 17)), 1.0), (('A', (4015, 9, 4015, 24)), 1.0), (('A', (4023, 10, 4023, 10)), 1.0), (('A', (4028, 11, 4028, 11)), 1.0), (('A', (5148, 21, 5148, 21)), 1.0), (('A', (5149, 19, 5149, 19)), 1.0), (('A', (5150, 16, 5150, 16)), 1.0), (('A', (5151, 17, 5151, 17)), 1.0), (('A', (5153, 45, 5153, 45)), 1.0), (('A', (5154, 19, 5154, 24)), 1.0), (('A', (5158, 45, 5158, 45)), 1.0), (('A', (5159, 16, 5159, 21)), 1.0), (('A', (5163, 45, 5163, 45)), 1.0), (('A', (5164, 17, 5164, 22)), 1.0), (('A', (5171, 46, 5171, 46)), 1.0), (('A', (5175, 46, 5175, 46)), 1.0), (('A', (5181, 13, 5181, 13)), 1.0), (('A', (5183, 13, 5183, 21)), 1.0), (('A', (5186, 46, 5186, 46)), 1.0), (('A', (5262, 47, 5262, 47)), 1.0), (('A', (5271, 14, 5271, 14)), 1.0), (('A', (5276, 14, 5276, 22)), 1.0), (('A', (5279, 47, 5279, 47)), 1.0), (('A', (5285, 23, 5285, 23)), 1.0)]
+INFO     localization    group 1: [('A', (342, 23, 342, 23))] (1.0)
+INFO     localization    group 2: [('A', (349, 23, 349, 23))] (1.0)
+INFO     localization    group 3: [('A', (399, 25, 399, 25))] (1.0)
+INFO     localization    group 4: [('A', (733, 23, 733, 23))] (1.0)
+INFO     localization    group 5: [('A', (774, 8, 774, 8))] (1.0)
+INFO     localization    group 6: [('A', (904, 24, 904, 24))] (1.0)
+INFO     localization    group 7: [('A', (905, 24, 905, 24))] (1.0)
+INFO     localization    group 8: [('A', (910, 21, 910, 21))] (1.0)
+INFO     localization    group 9: [('A', (1047, 6, 1047, 6))] (1.0)
+INFO     localization    group 10: [('A', (1071, 55, 1071, 55))] (1.0)
+INFO     localization    group 11: [('A', (1085, 25, 1085, 25))] (1.0)
+INFO     localization    group 12: [('A', (1121, 36, 1121, 36))] (1.0)
+INFO     localization    group 13: [('A', (1200, 23, 1200, 23))] (1.0)
+INFO     localization    group 14: [('A', (1201, 20, 1201, 20))] (1.0)
+INFO     localization    group 15: [('A', (1202, 33, 1202, 38))] (1.0)
+INFO     localization    group 16: [('A', (1324, 25, 1324, 25))] (1.0)
+INFO     localization    group 17: [('A', (1618, 23, 1618, 23))] (1.0)
+INFO     localization    group 18: [('A', (1655, 26, 1655, 31))] (1.0)
+INFO     localization    group 19: [('A', (1711, 35, 1711, 35))] (1.0)
+INFO     localization    group 20: [('A', (1749, 30, 1749, 30))] (1.0)
+INFO     localization    group 21: [('A', (1756, 26, 1756, 26))] (1.0)
+INFO     localization    group 22: [('A', (2284, 18, 2284, 18))] (1.0)
+INFO     localization    group 23: [('A', (2533, 23, 2533, 23))] (1.0)
+INFO     localization    group 24: [('A', (2560, 12, 2560, 17))] (1.0)
+INFO     localization    group 25: [('A', (4015, 9, 4015, 24))] (1.0)
+INFO     localization    group 26: [('A', (4023, 10, 4023, 10))] (1.0)
+INFO     localization    group 27: [('A', (4028, 11, 4028, 11))] (1.0)
+INFO     localization    group 28: [('A', (5148, 21, 5148, 21))] (1.0)
+INFO     localization    group 29: [('A', (5149, 19, 5149, 19))] (1.0)
+INFO     localization    group 30: [('A', (5150, 16, 5150, 16))] (1.0)
+INFO     localization    group 31: [('A', (5151, 17, 5151, 17))] (1.0)
+INFO     localization    group 32: [('A', (5153, 45, 5153, 45))] (1.0)
+INFO     localization    group 33: [('A', (5154, 19, 5154, 24))] (1.0)
+INFO     localization    group 34: [('A', (5158, 45, 5158, 45))] (1.0)
+INFO     localization    group 35: [('A', (5159, 16, 5159, 21))] (1.0)
+INFO     localization    group 36: [('A', (5163, 45, 5163, 45))] (1.0)
+INFO     localization    group 37: [('A', (5164, 17, 5164, 22))] (1.0)
+INFO     localization    group 38: [('A', (5171, 46, 5171, 46))] (1.0)
+INFO     localization    group 39: [('A', (5175, 46, 5175, 46))] (1.0)
+INFO     localization    group 40: [('A', (5181, 13, 5181, 13))] (1.0)
+INFO     localization    group 41: [('A', (5183, 13, 5183, 21))] (1.0)
+INFO     localization    group 42: [('A', (5186, 46, 5186, 46))] (1.0)
+INFO     localization    group 43: [('A', (5262, 47, 5262, 47))] (1.0)
+INFO     localization    group 44: [('A', (5271, 14, 5271, 14))] (1.0)
+INFO     localization    group 45: [('A', (5276, 14, 5276, 22))] (1.0)
+INFO     localization    group 46: [('A', (5279, 47, 5279, 47))] (1.0)
+INFO     localization    group 47: [('A', (5285, 23, 5285, 23))] (1.0)
+INFO     localization    selected expressions [('A', (342, 23, 342, 23))] with group score 1.0 
+INFO     localization    selected expressions [('A', (349, 23, 349, 23))] with group score 1.0 
+INFO     localization    selected expressions [('A', (399, 25, 399, 25))] with group score 1.0 
+INFO     localization    selected expressions [('A', (733, 23, 733, 23))] with group score 1.0 
+INFO     localization    selected expressions [('A', (774, 8, 774, 8))] with group score 1.0 
+INFO     localization    selected expressions [('A', (904, 24, 904, 24))] with group score 1.0 
+INFO     localization    selected expressions [('A', (905, 24, 905, 24))] with group score 1.0 
+INFO     localization    selected expressions [('A', (910, 21, 910, 21))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1047, 6, 1047, 6))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1071, 55, 1071, 55))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1085, 25, 1085, 25))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1121, 36, 1121, 36))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1200, 23, 1200, 23))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1201, 20, 1201, 20))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1202, 33, 1202, 38))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1324, 25, 1324, 25))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1618, 23, 1618, 23))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1655, 26, 1655, 31))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1711, 35, 1711, 35))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1749, 30, 1749, 30))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1756, 26, 1756, 26))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2284, 18, 2284, 18))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2533, 23, 2533, 23))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2560, 12, 2560, 17))] with group score 1.0 
+INFO     localization    selected expressions [('A', (4015, 9, 4015, 24))] with group score 1.0 
+INFO     localization    selected expressions [('A', (4023, 10, 4023, 10))] with group score 1.0 
+INFO     localization    selected expressions [('A', (4028, 11, 4028, 11))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5148, 21, 5148, 21))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5149, 19, 5149, 19))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5150, 16, 5150, 16))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5151, 17, 5151, 17))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5153, 45, 5153, 45))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5154, 19, 5154, 24))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5158, 45, 5158, 45))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5159, 16, 5159, 21))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5163, 45, 5163, 45))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5164, 17, 5164, 22))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5171, 46, 5171, 46))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5175, 46, 5175, 46))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5181, 13, 5181, 13))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5183, 13, 5183, 21))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5186, 46, 5186, 46))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5262, 47, 5262, 47))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5271, 14, 5271, 14))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5276, 14, 5276, 22))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5279, 47, 5279, 47))] with group score 1.0 
+INFO     localization    selected expressions [('A', (5285, 23, 5285, 23))] with group score 1.0 
+DEBUG    localization    groups: [[('A', (342, 23, 342, 23))], [('A', (349, 23, 349, 23))], [('A', (399, 25, 399, 25))], [('A', (733, 23, 733, 23))], [('A', (774, 8, 774, 8))], [('A', (904, 24, 904, 24))], [('A', (905, 24, 905, 24))], [('A', (910, 21, 910, 21))], [('A', (1047, 6, 1047, 6))], [('A', (1071, 55, 1071, 55))], [('A', (1085, 25, 1085, 25))], [('A', (1121, 36, 1121, 36))], [('A', (1200, 23, 1200, 23))], [('A', (1201, 20, 1201, 20))], [('A', (1202, 33, 1202, 38))], [('A', (1324, 25, 1324, 25))], [('A', (1618, 23, 1618, 23))], [('A', (1655, 26, 1655, 31))], [('A', (1711, 35, 1711, 35))], [('A', (1749, 30, 1749, 30))], [('A', (1756, 26, 1756, 26))], [('A', (2284, 18, 2284, 18))], [('A', (2533, 23, 2533, 23))], [('A', (2560, 12, 2560, 17))], [('A', (4015, 9, 4015, 24))], [('A', (4023, 10, 4023, 10))], [('A', (4028, 11, 4028, 11))], [('A', (5148, 21, 5148, 21))], [('A', (5149, 19, 5149, 19))], [('A', (5150, 16, 5150, 16))], [('A', (5151, 17, 5151, 17))], [('A', (5153, 45, 5153, 45))], [('A', (5154, 19, 5154, 24))], [('A', (5158, 45, 5158, 45))], [('A', (5159, 16, 5159, 21))], [('A', (5163, 45, 5163, 45))], [('A', (5164, 17, 5164, 22))], [('A', (5171, 46, 5171, 46))], [('A', (5175, 46, 5175, 46))], [('A', (5181, 13, 5181, 13))], [('A', (5183, 13, 5183, 21))], [('A', (5186, 46, 5186, 46))], [('A', (5262, 47, 5262, 47))], [('A', (5271, 14, 5271, 14))], [('A', (5276, 14, 5276, 22))], [('A', (5279, 47, 5279, 47))], [('A', (5285, 23, 5285, 23))]]
+INFO     repair          considering suspicious locations [('A', (342, 23, 342, 23))]
+INFO     reduction       all failing tests: ['28']
+INFO     reduction       select 1 best tests from ['28']
+INFO     reduction       select 0 best tests from ['2', '3', '4', '9', '10', '11', '22', '23', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['28']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd:                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile             
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmp0wf55ea2/suspicious
+DEBUG    transformation  locations: [('A', (342, 23, 342, 23))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmp0wf55ea2/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious tools/tiff2pdf.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/libtiff/scripts/build-libtiff
+INFO     sym_infer       inferring specification for test '28' through KLEE
+INFO     testing         running test '28' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/28
+DEBUG    sym_infer       vars: ['ret', 'reachable']
+DEBUG    sym_infer       oracle: {'ret': ['0'], 'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       required_executions: 1
+DEBUG    sym_infer       actual_executions: 1
+DEBUG    sym_infer       solver result: unsat
+INFO     sym_infer       UNSAT
+INFO     sym_infer       found 0 angelic paths for test '28'
+INFO     repair          considering suspicious locations [('A', (349, 23, 349, 23))]
+INFO     reduction       all failing tests: ['28']
+INFO     reduction       select 1 best tests from ['28']
+INFO     reduction       select 0 best tests from ['2', '3', '4', '9', '10', '11', '22', '23', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['28']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd:                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile             
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpwv88koom/suspicious
+DEBUG    transformation  locations: [('A', (349, 23, 349, 23))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpwv88koom/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious tools/tiff2pdf.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/libtiff/scripts/build-libtiff
+INFO     sym_infer       inferring specification for test '28' through KLEE
+INFO     testing         running test '28' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000003.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/28
+DEBUG    sym_infer       vars: ['ret', 'reachable']
+DEBUG    sym_infer       oracle: {'ret': ['0'], 'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       choices: {(349, 23, 349, 23): ('int', 2, [])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       required_executions: 1
+DEBUG    sym_infer       actual_executions: 1
+DEBUG    sym_infer       solver result: unsat
+INFO     sym_infer       UNSAT
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       choices: {(349, 23, 349, 23): ('int', 2, [])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       required_executions: 1
+DEBUG    sym_infer       actual_executions: 1
+DEBUG    sym_infer       solver result: unsat
+INFO     sym_infer       UNSAT
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000003.smt2
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       choices: {(349, 23, 349, 23): ('int', 1, [])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       required_executions: 1
+DEBUG    sym_infer       actual_executions: 1
+DEBUG    sym_infer       solver result: unsat
+INFO     sym_infer       UNSAT
+INFO     sym_infer       found 0 angelic paths for test '28'
+INFO     repair          considering suspicious locations [('A', (399, 25, 399, 25))]
+INFO     reduction       all failing tests: ['28']
+INFO     reduction       select 1 best tests from ['28']
+INFO     reduction       select 0 best tests from ['2', '3', '4', '9', '10', '11', '22', '23', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['28']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd:                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile             
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmps0cymw55/suspicious
+DEBUG    transformation  locations: [('A', (399, 25, 399, 25))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmps0cymw55/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious tools/tiff2pdf.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/libtiff/scripts/build-libtiff
+INFO     sym_infer       inferring specification for test '28' through KLEE
+INFO     testing         running test '28' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/28
+DEBUG    sym_infer       vars: ['ret', 'reachable']
+DEBUG    sym_infer       oracle: {'ret': ['0'], 'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       choices: {}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       required_executions: 1
+DEBUG    sym_infer       actual_executions: 1
+DEBUG    sym_infer       solver result: unsat
+INFO     sym_infer       UNSAT
+INFO     sym_infer       found 0 angelic paths for test '28'
+INFO     repair          considering suspicious locations [('A', (733, 23, 733, 23))]
+INFO     reduction       all failing tests: ['28']
+INFO     reduction       select 1 best tests from ['28']
+INFO     reduction       select 0 best tests from ['2', '3', '4', '9', '10', '11', '22', '23', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['28']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd:                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile             
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpa4iqjllr/suspicious
+DEBUG    transformation  locations: [('A', (733, 23, 733, 23))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpa4iqjllr/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious tools/tiff2pdf.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/libtiff/scripts/build-libtiff
+INFO     sym_infer       inferring specification for test '28' through KLEE
+INFO     testing         running test '28' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/28
+DEBUG    sym_infer       vars: ['ret', 'reachable']
+DEBUG    sym_infer       oracle: {'ret': ['0'], 'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       choices: {(733, 23, 733, 23): ('int', 1, ['written'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       required_executions: 1
+DEBUG    sym_infer       actual_executions: 1
+DEBUG    sym_infer       solver result: unsat
+INFO     sym_infer       UNSAT
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       choices: {(733, 23, 733, 23): ('int', 1, ['written'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       required_executions: 1
+DEBUG    sym_infer       actual_executions: 1
+DEBUG    sym_infer       solver result: unsat
+INFO     sym_infer       UNSAT
+INFO     sym_infer       found 0 angelic paths for test '28'
+INFO     repair          considering suspicious locations [('A', (774, 8, 774, 8))]
+INFO     reduction       all failing tests: ['28']
+INFO     reduction       select 1 best tests from ['28']
+INFO     reduction       select 0 best tests from ['2', '3', '4', '9', '10', '11', '22', '23', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['28']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd:                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile             
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmp0jprp8b1/suspicious
+DEBUG    transformation  locations: [('A', (774, 8, 774, 8))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmp0jprp8b1/suspicious
+DEBUG    transformation  ANGELIX_ASSIGNMENTS_DEFECT_CLASS=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious tools/tiff2pdf.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/libtiff/scripts/build-libtiff
+INFO     sym_infer       inferring specification for test '28' through KLEE
+INFO     testing         running test '28' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/28
+DEBUG    sym_infer       vars: ['ret', 'reachable']
+DEBUG    sym_infer       oracle: {'ret': ['0'], 'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       choices: {(774, 8, 774, 8): ('int', 1, ['written'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+DEBUG    sym_infer       outputs: {'ret': ('int', 1)}
+DEBUG    sym_infer       required_executions: 1
+DEBUG    sym_infer       actual_executions: 1
+DEBUG    sym_infer       solver result: sat
+INFO     sym_infer       expression (774, 8, 774, 8)[0]: angelic = 0
+DEBUG    sym_infer       angelic_path: {(774, 8, 774, 8): [(0, None, {'written': 0})]}
+INFO     testing         running test '28' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/28
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 0
+INFO     sym_infer       found 1 angelic paths for test '28'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_1/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_1/patch', '/angelix-experiments/.angelix/syn/syn_1/config.json']
+DEBUG    synthesis       synthesis output: FAIL
+INFO     synthesis       synthesis failed
+INFO     synthesis       synthesizing patch with component level 'integer-constants'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_1/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_1/patch', '/angelix-experiments/.angelix/syn/syn_1/config.json']
+DEBUG    synthesis       synthesis output: SUCCESS
+INFO     synthesis       fixing expression (774, 8, 774, 8): 1 ---> 0
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/validation
+DEBUG    transformation  trans cmd: instrument-suspicious tools/tiff2pdf.c
+INFO     project         building validation source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/libtiff/scripts/build-libtiff
+INFO     testing         running test '1' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 1
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 2
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 2
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 4
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 5
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 6
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 7
+INFO     testing         output code: 0
+INFO     testing         running test '8' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 8
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 9
+INFO     testing         output code: 0
+INFO     testing         running test '10' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 10
+INFO     testing         output code: 0
+INFO     testing         running test '11' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 11
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 11
+INFO     testing         output code: 0
+INFO     testing         running test '12' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 12
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 12
+INFO     testing         output code: 0
+INFO     testing         running test '13' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 13
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 13
+INFO     testing         output code: 0
+INFO     testing         running test '14' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 14
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 14
+INFO     testing         output code: 0
+INFO     testing         running test '15' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 15
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 15
+INFO     testing         output code: 0
+INFO     testing         running test '16' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 16
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 16
+INFO     testing         output code: 0
+INFO     testing         running test '17' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 17
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 17
+INFO     testing         output code: 0
+INFO     testing         running test '18' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 18
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 18
+INFO     testing         output code: 0
+INFO     testing         running test '19' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 19
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 19
+INFO     testing         output code: 0
+INFO     testing         running test '20' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 20
+INFO     testing         output code: 0
+INFO     testing         running test '21' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 21
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 21
+INFO     testing         output code: 0
+INFO     testing         running test '22' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 22
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 22
+INFO     testing         output code: 0
+INFO     testing         running test '23' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 23
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 23
+INFO     testing         output code: 0
+INFO     testing         running test '24' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 24
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 24
+INFO     testing         output code: 0
+INFO     testing         running test '25' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 25
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 25
+INFO     testing         output code: 0
+INFO     testing         running test '26' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 26
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 26
+INFO     testing         output code: 0
+INFO     testing         running test '27' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 27
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 27
+INFO     testing         output code: 0
+INFO     testing         running test '28' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 28
+INFO     testing         output code: 0
+INFO     testing         running test '29' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 29
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 29
+INFO     testing         output code: 0
+INFO     testing         running test '30' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 30
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 30
+INFO     testing         output code: 0
+INFO     testing         running test '31' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 31
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 31
+INFO     testing         output code: 0
+INFO     testing         running test '32' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 32
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 32
+INFO     testing         output code: 0
+INFO     testing         running test '33' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 33
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 33
+INFO     testing         output code: 0
+INFO     testing         running test '34' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 34
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 34
+INFO     testing         output code: 0
+INFO     testing         running test '35' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 35
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 35
+INFO     testing         output code: 0
+INFO     testing         running test '36' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 36
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 36
+INFO     testing         output code: 0
+INFO     testing         running test '37' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 37
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 37
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 38
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 38
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 39
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 39
+INFO     testing         output code: 0
+INFO     testing         running test '40' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 40
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 40
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 41
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 41
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 42
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 42
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 43
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 43
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 44
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 44
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 45
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 45
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 46
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 46
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 47
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 47
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 48
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 48
+INFO     testing         output code: 0
+INFO     testing         running test '50' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 50
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 50
+INFO     testing         output code: 0
+INFO     testing         running test '51' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 51
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 51
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 52
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 52
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 53
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 53
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 54
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 54
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 55
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 55
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 56
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 56
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 57
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 57
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 58
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 58
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 59
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 59
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 60
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 60
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 61
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 61
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 62
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 62
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 63
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 63
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 64
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 64
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 65
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 65
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 66
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 66
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 67
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 67
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 68
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 68
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 69
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 69
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 70
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 70
+INFO     testing         output code: 0
+INFO     testing         running test '71' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 71
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 71
+INFO     testing         output code: 0
+INFO     testing         running test '72' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 72
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 72
+INFO     testing         output code: 0
+INFO     testing         running test '73' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 73
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 73
+INFO     testing         output code: 0
+INFO     testing         running test '74' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 74
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 74
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 75
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 75
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 76
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 76
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 77
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 77
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 78
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 78
+INFO     testing         output code: 0
+DEBUG    repair          is_repaired: True
+DEBUG    repair          pos: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78']
+DEBUG    repair          neg: []
+DEBUG    repair          last_level: integer-constants
+DEBUG    repair          original: 1
+DEBUG    repair          fix: {(774, 8, 774, 8): '0'}
+INFO     repair          patch successfully generated in 7m 56s (see libtiff-2021-Oct19-210103.patch)
+SUCCESS

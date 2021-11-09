@@ -1,0 +1,20 @@
+--- a/libtiff/tif_dirread.c
++++ b/libtiff/tif_dirread.c
+@@ -973,7 +973,7 @@
+ 	tsize_t cc = dir->tdir_count * w;
+ 
+ 	/* Check for overflow. */
+-	if ((dir->tdir_count == 0) || (w == 0) || dir->tdir_count / w != cc)
++	if ((((dir->tdir_count == 0) || (w == 0)) || ((dir->tdir_count / w) != (dir->tdir_count / w))))
+ 		goto bad;
+ 
+ 	if (!isMapped(tif)) {
+@@ -1023,7 +1023,7 @@
+ static tsize_t
+ TIFFFetchString(TIFF* tif, TIFFDirEntry* dir, char* cp)
+ {
+-	if (dir->tdir_count <= 4) {
++	if ((dir->tdir_count <= 4)) {
+ 		uint32 l = dir->tdir_offset;
+ 		if (tif->tif_flags & TIFF_SWAB)
+ 			TIFFSwabLong(&l);

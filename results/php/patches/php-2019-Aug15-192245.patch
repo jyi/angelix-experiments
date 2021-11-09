@@ -1,0 +1,11 @@
+--- a/ext/standard/url_scanner_ex.c
++++ b/ext/standard/url_scanner_ex.c
+@@ -1001,7 +1001,7 @@
+ 		*handled_output_len = len;
+ 	} else if (BG(url_adapt_state_ex).url_app.len == 0) {
+ 		url_adapt_state_ex_t *ctx = &BG(url_adapt_state_ex);
+-		if (!(ctx->buf.len == 0)) {
++		if ((ctx->buf.len == 0)) {
+ 			smart_str_appendl(&ctx->result, ctx->buf.c, ctx->buf.len);
+ 			smart_str_appendl(&ctx->result, output, output_len);
+ 

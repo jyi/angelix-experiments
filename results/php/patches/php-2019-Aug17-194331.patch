@@ -1,0 +1,11 @@
+--- a/Zend/zend_object_handlers.c
++++ b/Zend/zend_object_handlers.c
+@@ -429,7 +429,7 @@
+ 			if (rv) {
+ 				retval = &rv;
+ 				if (!Z_ISREF_P(rv) &&
+-				    (type == BP_VAR_W || type == BP_VAR_RW  || type == BP_VAR_UNSET)) {
++				    ((((type != 1) || (type == 2)) || (type == 6)))) {
+ 					if (Z_REFCOUNT_P(rv) > 0) {
+ 						zval *tmp = rv;
+ 

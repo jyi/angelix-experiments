@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+# modules enabled by default:
+#
+# selinux
+# fam
+# xattr
+# libelf
+# gtk-doc-html
+# man
+# dtrace
+# systemtap
+# coverage
+# Bsymbolic
+# znodelete
+
+my @disabled = qw/selinux fam xattr libelf gtk-doc-html man dtrace systemtap coverage Bsymbolic znodelete/;
+
+my @disabled_modules = map "--disable-" . $_, @disabled;
+
+# packages enabled by default
+#
+
+my @without = qw//;
+
+my @without_packages = map "--without-" . $_, @without;
+
+system("./configure --enable-static --disable-shared --with-pcre=internal @disabled_modules @without_packages");

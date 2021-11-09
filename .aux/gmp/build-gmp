@@ -1,0 +1,18 @@
+#!/bin/bash
+set -euo pipefail
+
+curr=$(pwd)
+echo "BUILDINGTEST"
+
+chmod +x libtool
+
+bash -c 'make -e -j 72 --trace VERBOSE=1' &> build.log
+
+echo
+cd tests/mpz
+for test in "t-powm" "reuse";
+do
+    echo "build $test"
+    touch $test.c && make -e $test
+done
+cd $curr

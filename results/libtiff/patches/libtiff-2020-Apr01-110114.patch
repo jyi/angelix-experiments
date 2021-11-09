@@ -1,0 +1,11 @@
+--- a/tools/tiff2pdf.c
++++ b/tools/tiff2pdf.c
+@@ -770,7 +770,7 @@
+ 	}
+ 
+ fail:
+-	ret = EXIT_FAILURE;
++	ret = 0;
+ success:
+ 	if(input != NULL)
+ 		TIFFClose(input);

@@ -1,0 +1,25 @@
+#!/bin/bash
+set -euo pipefail
+
+if [ ! -f INSTRUMENTED ]; then
+
+    for file in `grep -n 'FD_ZERO' . -r | cut -d : -f 1`; do
+        last_include=$(grep -n '#include' "$file" | tail -1 | cut -d : -f 1)
+        sed -i "$last_include"'s/$/\n#undef FD_ZERO\n#define FD_ZERO(p) memset((char *)(p), '\0', sizeof(*(p)))\n/' "$file"
+    done
+
+    sed -i 's/HAVE_MALLOC_H 1/HAVE_MALLOC_H 0/' config.h
+    sed -i 's/HAVE_MEMALIGN 1/HAVE_MEMALIGN 0/' config.h
+    sed -i 's/HAVE_VALLOC 1/HAVE_VALLOC 0/' config.h
+    sed -i 's/HAVE_POSIX_MEMALIGN 1/HAVE_POSIX_MEMALIGN 0/' config.h
+
+    last_include=$(grep -n '#include' glib/gslice.c | tail -1 | cut -d : -f 1)
+    sed -i "$last_include"'s/$/\n#undef HAVE_COMPLIANT_POSIX_MEMALIGN\n/' glib/gslice.c
+    sed -i 's/mem_assert (alignment == sys_page_size);//' glib/gslice.c
+
+    touch INSTRUMENTED
+fi
+
+(cd glib; make CC='angelix-compiler --klee' -j ${NUM_OF_CPU})
+(cd gmodule; make CC='angelix-compiler --klee' -j ${NUM_OF_CPU})
+(cd gthread; make CC='angelix-compiler --klee' -j ${NUM_OF_CPU})

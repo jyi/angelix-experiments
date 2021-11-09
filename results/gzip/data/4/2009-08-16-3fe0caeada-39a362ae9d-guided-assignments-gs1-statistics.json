@@ -1,0 +1,296 @@
+{
+  "file": "/angelix-experiments/.angelix/statistics.json",
+  "src": "UNKNOWN",
+  "buggy": "UNKNOWN",
+  "patch_found": false,
+  "patch_file": "UNKNOWN",
+  "config": {
+    "initial_tests": 1,
+    "all_tests": false,
+    "max_z3_trials": 2,
+    "defect": [
+      "assignments"
+    ],
+    "test_timeout": 60,
+    "single_group": false,
+    "group_size": 1,
+    "group_by_score": false,
+    "localize_from_bottom": false,
+    "suspicious": 20,
+    "localization": "jaccard",
+    "ignore_trivial": false,
+    "path_solving_timeout": 60000,
+    "timeout": 14400,
+    "max_angelic_paths": null,
+    "klee_max_forks": null,
+    "klee_max_depth": null,
+    "klee_search": null,
+    "klee_timeout": null,
+    "klee_out_dir_timeout": 60,
+    "klee_solver_timeout": 100,
+    "klee_debug": false,
+    "klee_ignore_errors": false,
+    "ignore_trans_errors": false,
+    "ignore_infer_errors": false,
+    "skip_validating_angelic_path": false,
+    "use_nsynth": false,
+    "use_osynth": false,
+    "use_gcc": false,
+    "synthesis_timeout": 30000,
+    "synthesis_levels": [
+      "alternatives",
+      "integer-constants",
+      "boolean-constants"
+    ],
+    "synthesis_global_vars": false,
+    "synthesis_func_params": false,
+    "synthesis_used_vars": true,
+    "synthesis_ptr_vars": false,
+    "synthesis_bool_only": false,
+    "empty_env_exps": false,
+    "exclude_member_exp": false,
+    "generate_all": false,
+    "init_uninit_vars": false,
+    "redundant_test": false,
+    "verbose": false,
+    "build_before_instr": false,
+    "instr_printf": null,
+    "mute_config_message": false,
+    "mute_build_message": false,
+    "mute_test_message": false,
+    "show_test_message": false,
+    "show_oracle_contents": false,
+    "show_syn_message": false,
+    "mute_warning": false,
+    "show_suspicious_locations": true,
+    "invalid_localization": false,
+    "angelic_search_strategy": "guided",
+    "step_method": "metropolis",
+    "compilation_db_file": null,
+    "keep_angelix_dir": false,
+    "skip_configure": false,
+    "skip_build": false,
+    "gobble_klee_message": true,
+    "lines": null,
+    "search_max_trials": 200,
+    "max_same_cost_iter": 20,
+    "mcmc_beta": 0.8,
+    "one_bit_flip_prob": 0.5,
+    "chunk_bits": 32,
+    "max_resample": 3,
+    "block_expand_factor": 2,
+    "inc_fix": false,
+    "default_max_cost": 300000000.0,
+    "error_cost": "10000000",
+    "warning_cost": "5000000",
+    "max_syn_attempts": 2,
+    "max_repair_attempts": 2,
+    "penalty1": "4",
+    "penalty2": "2",
+    "parallel_testing": false,
+    "all_suspicious": true,
+    "mutate": 0,
+    "epsilon": 1.0,
+    "always_accept": false,
+    "skip_dd": false,
+    "finish_after_fault_localize": false,
+    "default_susp_score": 0.5,
+    "additional_susp_locs": null,
+    "default_non_zero_cost": "300000000",
+    "timeout_cost": "1"
+  },
+  "time": {
+    "testing": 46.99342179298401,
+    "compilation": 85.34222435951233,
+    "klee": 2.683197498321533,
+    "synthesis": 14.829434156417847,
+    "solving": 0,
+    "inference": 2.683197498321533,
+    "dd": 0,
+    "total": 762.3371572494507
+  },
+  "iterations": {
+    "synthesis": [
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7123496532440186
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7843406200408936
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.6960999965667725
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7394654750823975
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7387170791625977
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7612860202789307
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.9306275844573975
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.9937877655029297
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.9519054889678955
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7336535453796387
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.799997091293335
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7138702869415283
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.8050026893615723
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7591900825500488
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7627120018005371
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7111279964447021
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7813899517059326
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7131023406982422
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7408084869384766
+      }
+    ],
+    "guided": [
+      {
+        "locations": [
+          "541-8-541-20"
+        ],
+        "test": "3",
+        "time": {
+          "klee": 12.913623332977295
+        }
+      },
+      {
+        "locations": [
+          "759-7-759-7"
+        ],
+        "test": "3",
+        "time": {
+          "klee": 2.631404399871826
+        }
+      },
+      {
+        "locations": [
+          "760-7-760-7"
+        ],
+        "test": "3",
+        "time": {
+          "klee": 6.19392204284668
+        }
+      },
+      {
+        "locations": [
+          "814-9-814-15"
+        ],
+        "test": "3",
+        "time": {
+          "klee": 25.000779151916504
+        }
+      },
+      {
+        "locations": [
+          "912-7-912-7"
+        ],
+        "test": "3",
+        "time": {
+          "klee": 2.5816497802734375
+        }
+      },
+      {
+        "locations": [
+          "930-8-930-8"
+        ],
+        "test": "3",
+        "time": {
+          "klee": 2.882519245147705
+        }
+      },
+      {
+        "locations": [
+          "931-8-931-8"
+        ],
+        "test": "3",
+        "time": {
+          "klee": 4.339235782623291
+        }
+      },
+      {
+        "locations": [
+          "959-8-959-8"
+        ],
+        "test": "3",
+        "time": {
+          "klee": 8.50073528289795
+        }
+      },
+      {
+        "locations": [
+          "960-8-960-8"
+        ],
+        "test": "3",
+        "time": {
+          "klee": 2.683197498321533
+        }
+      }
+    ],
+    "symbolic": [],
+    "random": []
+  }
+}

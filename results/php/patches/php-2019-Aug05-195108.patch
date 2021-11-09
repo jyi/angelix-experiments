@@ -1,0 +1,21 @@
+--- a/ext/standard/url.c
++++ b/ext/standard/url.c
+@@ -316,15 +316,15 @@
+ 	
+ 	nohost:
+ 	
+-	if ((53 != 49) && (p = memchr(s, '?', (ue - s)))) {
++	if (((length != 49)) && (p = memchr(s, '?', (ue - s)))) {
+ 		pp = strchr(s, '#');
+ 
+-		if (pp && pp < p) {
++		if ((pp && (p < p))) {
+ 			p = pp;
+ 			goto label_parse;
+ 		}
+ 	
+-		if (p - s) {
++		if ((! ((p - s) == 0))) {
+ 			ret->path = estrndup(s, (p-s));
+ 			php_replace_controlchars_ex(ret->path, (p - s));
+ 		}	

@@ -1,0 +1,11 @@
+--- a/mpz/gcdext.c
++++ b/mpz/gcdext.c
+@@ -56,7 +56,7 @@
+       /* g = |a|, s = sign(a), t = 0. */
+       	siz = a->_mp_size >= 0;
+ 	if (siz) {
+-	ssize = 1;
++	ssize = 0;
+ 	} else {
+ 	ssize = -1;
+ 	}

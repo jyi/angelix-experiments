@@ -1,0 +1,347 @@
+[repair] benchmark: manybugs
+[repair] subject: gzip
+[repair] version: 2009-09-26-a1d3d4019d-f17cbd13a1
+[repair] search: guided
+[repair] debug: 0
+[fetch] benchmark: manybugs
+[fetch] subject: gzip
+[fetch] version: 2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] archive: gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1.tar.gz
+[fetch] directory: gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] preparing source code
+[fetch] golden_directory: gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] clean-source gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] /angelix-experiments/gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/configure
+[fetch] make -j 72 clean
+[fetch] clean-source gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] restore-buggy gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] /angelix-experiments/gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: gzip.c
+[fetch] buggy_version: a1d3d4019d
+[fetch] buggy_preprocessed: gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/gzip.c
+[fetch] buggy_original: gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/diffs/gzip.c-a1d3d4019d
+[fetch] cp gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/diffs/gzip.c-a1d3d4019d gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/gzip.c
+[fetch] restore-correct gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] restore-correct entered
+[fetch] cp gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/diffs/gzip.c-f17cbd13a1 gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/gzip.c
+[fetch] restored gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/gzip.c with gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/diffs/gzip.c-f17cbd13a1
+[fetch] fetch done
+[repair] [repair] options: --guided --lines
+653
+--ignore-lines
+--use-nsynth
+--spec-from-only-negative
+--synthesis-levels
+alternatives
+integer-constants
+boolean-constants
+variables
+extended-arithmetic
+extended-logic
+mixed-conditional
+--gobble-klee-message
+--synthesis-level
+variables
+--synthesis-global-vars
+--test-timeout
+60
+--all-tests
+--ignore-trans-errors
+--angelic-search-strategy
+guided
+--search-max-trials
+200
+--max-same-cost-iter
+20
+--default-max-cost
+300000000
+--default-non-zero-cost
+300000000
+--error-cost
+10000000
+--warning-cost
+5000000
+--one-bit-flip-prob
+0.5
+--penalty1
+4
+--penalty2
+2
+--group-size
+1
+--all-suspicious
+--use-gcc  --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+[repair-gzip] options:  --lines 653 --ignore-lines --use-nsynth --spec-from-only-negative --synthesis-levels alternatives integer-constants boolean-constants variables extended-arithmetic extended-logic mixed-conditional --gobble-klee-message --synthesis-level variables --synthesis-global-vars --test-timeout 60 --all-tests --ignore-trans-errors --angelic-search-strategy guided --search-max-trials 200 --max-same-cost-iter 20 --default-max-cost 300000000 --default-non-zero-cost 300000000 --error-cost 10000000 --warning-cost 5000000 --one-bit-flip-prob 0.5 --penalty1 4 --penalty2 2 --group-size 1 --all-suspicious --use-gcc --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+[repair-gzip] cleaning gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/gzip ...
+[repair-gzip] cleaning gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/gzip ...
+INFO     repair          copy gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/gzip to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '1' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '2' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '7' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '9' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of golden source
+INFO     testing         output code: 1
+WARNING  repair          excluding test 1 because it fails in golden version
+WARNING  repair          excluding test 2 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 7 because it fails in golden version
+WARNING  repair          excluding test 9 because it fails in golden version
+WARNING  repair          excluding test 10 because it fails in golden version
+WARNING  repair          excluding test 11 because it fails in golden version
+WARNING  repair          excluding test 12 because it fails in golden version
+WARNING  repair          excluding test 13 because it fails in golden version
+INFO     repair          positive: ['3', '4', '6']
+INFO     repair          negative: ['8']
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+WARNING  transformation  transformation of .angelix/frontend failed
+INFO     project         building frontend source
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 4
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '8' of golden source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     repair          repair test suite: ['3', '6', '8']
+INFO     repair          validation test suite: ['3', '4', '6', '8']
+INFO     localization    (loc, score) = (('A', (1861, 8, 1861, 8)), 0.5)
+INFO     localization    (loc, score) = (('A', (1274, 12, 1274, 12)), 0.5)
+INFO     localization    (loc, score) = (('A', (797, 15, 797, 15)), 0.5)
+INFO     localization    (loc, score) = (('A', (1279, 19, 1279, 19)), 0.5)
+INFO     localization    (loc, score) = (('A', (653, 7, 653, 7)), 0.5)
+INFO     localization    (loc, score) = (('A', (829, 43, 829, 44)), 0.5)
+INFO     localization    (loc, score) = (('A', (657, 15, 657, 15)), 0.5)
+INFO     localization    (loc, score) = (('A', (1278, 20, 1278, 20)), 0.5)
+INFO     localization    (loc, score) = (('A', (656, 17, 656, 17)), 0.5)
+INFO     localization    (loc, score) = (('A', (539, 18, 539, 25)), 0.3333333333333333)
+INFO     localization    (loc, score) = (('A', (1809, 17, 1809, 17)), 0.3333333333333333)
+INFO     localization    (loc, score) = (('A', (1833, 15, 1833, 15)), 0.3333333333333333)
+INFO     localization    (loc, score) = (('A', (537, 32, 537, 32)), 0.3333333333333333)
+INFO     localization    (loc, score) = (('A', (1803, 18, 1803, 18)), 0.3333333333333333)
+INFO     localization    (loc, score) = (('A', (536, 32, 536, 32)), 0.3333333333333333)
+INFO     localization    group 1: [('A', (653, 7, 653, 7))] (0.5)
+INFO     localization    group 2: [('A', (656, 17, 656, 17))] (0.5)
+INFO     localization    group 3: [('A', (657, 15, 657, 15))] (0.5)
+INFO     localization    group 4: [('A', (797, 15, 797, 15))] (0.5)
+INFO     localization    group 5: [('A', (829, 43, 829, 44))] (0.5)
+INFO     localization    group 6: [('A', (1274, 12, 1274, 12))] (0.5)
+INFO     localization    group 7: [('A', (1278, 20, 1278, 20))] (0.5)
+INFO     localization    group 8: [('A', (1279, 19, 1279, 19))] (0.5)
+INFO     localization    group 9: [('A', (1861, 8, 1861, 8))] (0.5)
+INFO     localization    group 10: [('A', (536, 32, 536, 32))] (0.3333333333333333)
+INFO     localization    group 11: [('A', (537, 32, 537, 32))] (0.3333333333333333)
+INFO     localization    group 12: [('A', (539, 18, 539, 25))] (0.3333333333333333)
+INFO     localization    group 13: [('A', (1803, 18, 1803, 18))] (0.3333333333333333)
+INFO     localization    group 14: [('A', (1809, 17, 1809, 17))] (0.3333333333333333)
+INFO     localization    group 15: [('A', (1833, 15, 1833, 15))] (0.3333333333333333)
+INFO     localization    selected expressions [('A', (653, 7, 653, 7))] with group score 0.5 
+INFO     localization    selected expressions [('A', (656, 17, 656, 17))] with group score 0.5 
+INFO     localization    selected expressions [('A', (657, 15, 657, 15))] with group score 0.5 
+INFO     localization    selected expressions [('A', (797, 15, 797, 15))] with group score 0.5 
+INFO     localization    selected expressions [('A', (829, 43, 829, 44))] with group score 0.5 
+INFO     localization    selected expressions [('A', (1274, 12, 1274, 12))] with group score 0.5 
+INFO     localization    selected expressions [('A', (1278, 20, 1278, 20))] with group score 0.5 
+INFO     localization    selected expressions [('A', (1279, 19, 1279, 19))] with group score 0.5 
+INFO     localization    selected expressions [('A', (1861, 8, 1861, 8))] with group score 0.5 
+INFO     localization    selected expressions [('A', (536, 32, 536, 32))] with group score 0.33333 
+INFO     localization    selected expressions [('A', (537, 32, 537, 32))] with group score 0.33333 
+INFO     localization    selected expressions [('A', (539, 18, 539, 25))] with group score 0.33333 
+INFO     localization    selected expressions [('A', (1803, 18, 1803, 18))] with group score 0.33333 
+INFO     localization    selected expressions [('A', (1809, 17, 1809, 17))] with group score 0.33333 
+INFO     localization    selected expressions [('A', (1833, 15, 1833, 15))] with group score 0.33333 
+INFO     repair          considering suspicious locations [('A', (653, 7, 653, 7))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     testing         running test '8' of frontend source with KLEE_SP
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/frontend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/frontend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'exitcode' executed 0 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '8'
+INFO     klee_infer      init sample: [array([0, 1]), array([0, 1])]
+INFO     klee_infer      sample shape: (2, 2)
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     klee_infer      trial #1
+INFO     klee_infer      used 0.0% of sample space
+INFO     klee_infer      [accept_fun] q0s: [array([0, 1]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] qs: [array([0, 0]), array([0, 0])] / [1, 1] / (2, 2)
+INFO     testing         running test '8' of frontend source with KLEE_SP
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/frontend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/frontend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'exitcode' executed 0 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '8'
+INFO     testing         running test '8' of frontend source with KLEE_SP
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/frontend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/frontend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'exitcode' executed 0 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '8'
+INFO     klee_infer      [accept_fun] new qs: [array([0, 0]), array([0, 0])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] updated qs: [array([0, 0]), array([0, 0])] / [1, 1] / (2, 2)
+INFO     klee_infer      old cost: 139.0
+INFO     klee_infer      new cost: 139.0
+INFO     klee_infer      all costs: [139.0]
+INFO     klee_infer      accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     klee_infer      trial #2
+INFO     klee_infer      used 0.0% of sample space
+INFO     klee_infer      [accept_fun] q0s: [array([0, 0]), array([0, 0])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] qs: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      cached
+INFO     klee_infer      cached
+INFO     klee_infer      [accept_fun] new qs: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] updated qs: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      old cost: 139.0
+INFO     klee_infer      new cost: 139.0
+INFO     klee_infer      all costs: [139.0]
+INFO     klee_infer      accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     klee_infer      trial #3
+INFO     klee_infer      used 0.0% of sample space
+INFO     klee_infer      [accept_fun] q0s: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] qs: [array([0, 0]), array([0, 0])] / [1, 1] / (2, 2)
+INFO     klee_infer      cached
+INFO     klee_infer      cached
+INFO     klee_infer      [accept_fun] new qs: [array([0, 0]), array([0, 0])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] updated qs: [array([0, 0]), array([0, 0])] / [1, 1] / (2, 2)
+INFO     klee_infer      old cost: 139.0
+INFO     klee_infer      new cost: 139.0
+INFO     klee_infer      all costs: [139.0]
+INFO     klee_infer      accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     klee_infer      trial #4
+INFO     klee_infer      used 0.0% of sample space
+INFO     klee_infer      [accept_fun] q0s: [array([0, 0]), array([0, 0])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] qs: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      cached
+INFO     klee_infer      cached
+INFO     klee_infer      [accept_fun] new qs: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] updated qs: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      old cost: 139.0
+INFO     klee_infer      new cost: 139.0
+INFO     klee_infer      all costs: [139.0]
+INFO     klee_infer      accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     klee_infer      trial #5
+INFO     klee_infer      used 0.0% of sample space
+INFO     klee_infer      [accept_fun] q0s: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] qs: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      cached
+INFO     klee_infer      cached
+INFO     klee_infer      [accept_fun] new qs: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] updated qs: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      old cost: 139.0
+INFO     klee_infer      new cost: 139.0
+INFO     klee_infer      all costs: [139.0]
+INFO     klee_infer      accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     klee_infer      trial #6
+INFO     klee_infer      used 0.0% of sample space
+INFO     klee_infer      [accept_fun] q0s: [array([0, 0]), array([0, 1])] / [1, 1] / (2, 2)
+INFO     klee_infer      [accept_fun] qs: [array([0, 1]), array([0, 0])] / [1, 1] / (2, 2)
+INFO     klee_infer      cached
+INFO     testing         running test '8' of frontend source with KLEE_SP
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/frontend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/frontend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'exitcode' executed 0 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '8'
+INFO     klee_infer      [accept_fun] new qs: [array([0, 1]), array([0, 0]), array([0, 0])] / [1, 1, 1] / (3, 2)
+WARNING  klee_infer      Sample space dimesion is too small!!
+INFO     klee_infer      KleeLocsOverflow occured
+INFO     klee_infer      Restart sampling in a larger sample space
+INFO     klee_infer      new init sample: [array([0, 1]), array([0, 0]), array([0, 0])]
+INFO     klee_infer      new sample shape: (3, 2)
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     klee_infer      trial #7
+INFO     klee_infer      used 0.0% of sample space
+INFO     klee_infer      [accept_fun] q0s: [array([0, 1]), array([0, 0]), array([0, 0])] / [1, 1, 1] / (3, 2)
+INFO     klee_infer      [accept_fun] qs: [array([0, 0]), array([0, 1]), array([0, 1])] / [1, 1, 1] / (3, 2)
+INFO     klee_infer      cached (prefix)
+INFO     testing         running test '8' of frontend source with KLEE_SP
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/frontend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/frontend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (653, 7, 653, 7)[0]: angelic = 0
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 0
+INFO     sym_infer       found 1 angelic paths for test '8'
+INFO     klee_infer      found an angelic path for test '8'
+INFO     synthesis       synthesizing patch with component level 'variables'
+INFO     synthesis       use nsynth
+INFO     synthesis       fixing expression (653, 7, 653, 7): ifd ---> 0
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 0
+INFO     repair          patch successfully generated in 2m 19s (see gzip-2021-Sep24-155651.patch)
+SUCCESS

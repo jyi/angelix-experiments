@@ -1,0 +1,182 @@
+{
+  "22": [
+    [
+      {
+        "context": [
+          {
+            "name": "tif->tif_rawcc",
+            "value": 0
+          },
+          {
+            "name": "tif->tif_rawcc_1",
+            "value": 0
+          },
+          {
+            "name": "orig_rawcc",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "346-7-346-47",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "tif->tif_rawcc",
+            "value": 0
+          },
+          {
+            "name": "tif->tif_rawcc_1",
+            "value": 0
+          },
+          {
+            "name": "orig_rawcc",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "346-7-346-47",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "tif->tif_rawcc",
+            "value": 3020
+          },
+          {
+            "name": "tif->tif_rawcc_1",
+            "value": 3020
+          },
+          {
+            "name": "orig_rawcc",
+            "value": 3020
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "346-7-346-47",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "tif->tif_rawcc",
+            "value": 3020
+          },
+          {
+            "name": "tif->tif_rawcc_1",
+            "value": 3020
+          },
+          {
+            "name": "orig_rawcc",
+            "value": 3020
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "346-7-346-47",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "tif->tif_rawcc",
+            "value": 0
+          },
+          {
+            "name": "tif->tif_rawcc_1",
+            "value": 0
+          },
+          {
+            "name": "orig_rawcc",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "346-7-346-47",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "tif->tif_rawcc",
+            "value": 0
+          },
+          {
+            "name": "tif->tif_rawcc_1",
+            "value": 0
+          },
+          {
+            "name": "orig_rawcc",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "346-7-346-47",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "tif->tif_rawcc",
+            "value": 0
+          },
+          {
+            "name": "tif->tif_rawcc_1",
+            "value": 0
+          },
+          {
+            "name": "orig_rawcc",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "346-7-346-47",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "tif->tif_rawcc",
+            "value": 0
+          },
+          {
+            "name": "tif->tif_rawcc_1",
+            "value": 0
+          },
+          {
+            "name": "orig_rawcc",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "346-7-346-47",
+        "instId": 7
+      }
+    ]
+  ]
+}

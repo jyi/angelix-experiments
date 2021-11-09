@@ -1,0 +1,467 @@
+#!/bin/bash
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+CWD=$(pwd)
+
+usage="Usage: ./repair-libtiff VERSION"
+
+if [[ $# > 0 ]]; then
+    version="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+# parse options
+skip_instrument=0
+strat=""
+options=""
+while :; do
+    if [[ $# > 0 ]]; then
+        case $1 in
+            --skip-instrument)
+                skip_instrument=1
+                shift
+                ;;
+            --guided)
+                strat="guided"
+                shift
+                ;;
+            --symbolic)
+                strat="symbolic"
+                shift
+                ;;
+            --random)
+                strat="random"
+                shift
+                ;;
+            --*)
+                options="$options $1"
+                shift
+                ;;
+            *)
+                if [[ $1 =~ ^[a-zA-Z0-9.\-]+$ ]]; then
+                    options="$options $1"
+                    shift
+                else
+                    # Default case: No more options, so break out of the loop.
+                    break
+                fi
+        esac
+    else
+        break
+    fi
+done
+
+echo "[repair-libtiff] options: $options"
+
+# Common functions -------------------------------------------------------------
+
+debug () {
+    local msg=$1
+    echo "[repair-libtiff] $msg"
+}
+
+# replaces within "$3" lines starting from the only occurrence of symbol "$2" in file "$1"
+replace-in-range () {
+    local file="$1"
+    local symbol="$2"
+    local length="$3"
+    local original="$4"
+    local replacement="$5"
+
+    local begin=$(grep -n "$symbol" "$file" | cut -d : -f 1)
+    if [[ -z ${begin} ]]; then
+        debug "skip to instrument $file"
+    else
+        debug "instrument $file"
+        local end=$(( begin + length ))
+        sed -i "$begin,$end{s/$original/$replacement/;}" "$file"
+    fi
+}
+
+replace-all-in-range () {
+    local file="$1"
+    local symbol="$2"
+    local length="$3"
+    local original="$4"
+    local replacement="$5"
+
+    local begin=$(grep -n "$symbol" "$file" | cut -d : -f 1)
+    local end=$(( begin + length ))
+
+    sed -i "$begin,$end{s/$original/$replacement/g;}" "$file"
+}
+
+add-header () {
+    local file="$1"
+    sed -i '1s/^/#ifndef ANGELIX_OUTPUT\n/' "$file"
+    sed -i '2s/^/#define ANGELIX_OUTPUT(type, expr, id) expr\n/' "$file"
+    sed -i '3s/^/#define ANGELIX_REACHABLE(id)\n/' "$file"
+    sed -i '4s/^/#endif\n/' "$file"
+}
+
+restore_original () {
+    local src="$1"
+    echo "[repair-libtiff] restore $src"
+    if [ -e $src.org ]; then
+        # restore the original
+        cp $src.org $src
+    else
+        # prepare the org file
+        cp $src $src.org
+    fi
+}
+
+# Libtiff ----------------------------------------------------------------------
+
+add-angelix-runner () {
+
+    local script="$1"
+    local call="$2"
+    local occurrence="$3"
+    local lines=$(grep -n "$call" "$script" | cut -d : -f 1)
+    read -a arr <<<$lines #convert list into array
+    local line=${arr[$occurrence]}
+    restore_original $script
+    sed -i "$line"'s/^/export MEMCHECK=${ANGELIX_RUN:-eval}; /' "$script"
+    sed -i "$line"'s/$/&; unset MEMCHECK/' "$script"
+}
+
+instrument_test_script () {
+    local directory="$1"
+
+    local test9_script="$directory/libtiff/test/ppm2tiff_pbm.sh"
+    add-angelix-runner "$test9_script" TIFFCP 0
+
+    local test10_script="$directory/libtiff/test/ppm2tiff_pgm.sh"
+    add-angelix-runner "$test10_script" TIFFCP 0
+
+    local test11_script="$directory/libtiff/test/ppm2tiff_ppm.sh"
+    add-angelix-runner "$test11_script" TIFFCP 0
+
+    local test22_script="$directory/libtiff/test/tiffcp-split.sh"
+    add-angelix-runner "$test22_script" TIFFCP 0
+
+    local test23_script="$directory/libtiff/test/tiffcp-split-join.sh"
+    add-angelix-runner "$test23_script" TIFFCP 0
+
+    local test28_script="$directory/libtiff/test/tiff2pdf.sh"
+    add-angelix-runner "$test28_script" TIFF2PDF 0
+
+    local test39_script="$directory/libtiff/test/tiffcrop-extract-logluv-3c-16b.sh"
+    add-angelix-runner "$test39_script" TIFFCROP 0
+
+    local test40_script="$directory/libtiff/test/tiffcrop-extract-minisblack-1c-16b.sh"
+    add-angelix-runner "$test40_script" TIFFCROP 0
+
+    local test41_script="$directory/libtiff/test/tiffcrop-extract-minisblack-1c-8b.sh"
+    add-angelix-runner "$test41_script" TIFFCROP 0
+
+    local test42_script="$directory/libtiff/test/tiffcrop-extract-minisblack-2c-8b-alpha.sh"
+    add-angelix-runner "$test42_script" TIFFCROP 0
+
+    local test43_script="$directory/libtiff/test/tiffcrop-extract-miniswhite-1c-1b.sh"
+    add-angelix-runner "$test43_script" TIFFCROP 0
+
+    local test44_script="$directory/libtiff/test/tiffcrop-extract-palette-1c-1b.sh"
+    add-angelix-runner "$test44_script" TIFFCROP 0
+
+    local test45_script="$directory/libtiff/test/tiffcrop-extract-palette-1c-4b.sh"
+    add-angelix-runner "$test45_script" TIFFCROP 0
+
+    local test46_script="$directory/libtiff/test/tiffcrop-extract-palette-1c-8b.sh"
+    add-angelix-runner "$test46_script" TIFFCROP 0
+
+    local test47_script="$directory/libtiff/test/tiffcrop-extract-rgb-3c-16b.sh"
+    add-angelix-runner "$test47_script" TIFFCROP 0
+
+    local test48_script="$directory/libtiff/test/tiffcrop-extract-rgb-3c-8b.sh"
+    add-angelix-runner "$test48_script" TIFFCROP 0
+
+    local test49_script="$directory/libtiff/test/tiffcrop-extractz14-logluv-3c-16b.sh"
+    if [ "$version" == "d39db2b-4cd598c" ] || [ "$version" == "2009-08-28-e8a47d4-023b6df" ]; then
+        add-angelix-runner "$test49_script" tiffinfo 0
+    else
+        add-angelix-runner "$test49_script" TIFFCROP 0
+    fi
+}
+
+instrument () {
+    local directory="$1"
+
+    # transformation due to unsupported constructs:
+    local dirread_source="$directory/libtiff/libtiff/tif_dirread.c"
+    restore_original $dirread_source
+    sed -i 976's/(tsize_t)//' "$dirread_source"
+    sed -i 976's/!dir->tdir_count/(dir->tdir_count == 0)/' "$dirread_source"
+    sed -i 976's/!w/(w == 0)/' "$dirread_source"
+
+    local test2_source="$directory/libtiff/test/long_tag.c"
+    restore_original $test2_source
+    add-header "$test2_source"
+    sed -i 's/return 1/return ANGELIX_OUTPUT(int, 1, "longtagreturn")/g' "$test2_source"
+    sed -i 's/return 0/return ANGELIX_OUTPUT(int, 0, "longtagreturn")/g' "$test2_source"
+    sed -i 's/unlink(filename);/\/\/unlink(filename);/g' "$test2_source"
+
+    local test3_source="$directory/libtiff/test/short_tag.c"
+    restore_original $test3_source
+    add-header "$test3_source"
+    sed -i 's/return 1/return ANGELIX_OUTPUT(int, 1, "shorttagreturn")/g' "$test3_source"
+    sed -i 's/return 0/return ANGELIX_OUTPUT(int, 0, "shorttagreturn")/g' "$test3_source"
+    sed -i 's/unlink(filename);/\/\/unlink(filename);/g' "$test3_source"
+
+    # local test4_source="$directory/libtiff/test/strip_rw.c"
+    # restore_original $test4_source
+    # add-header "$test4_source"
+    # sed -i 's/return 1/return ANGELIX_OUTPUT(int, 1, "striprwreturn")/g' "$test4_source"
+    # sed -i 's/return 0/return ANGELIX_OUTPUT(int, 0, "striprwreturn")/g' "$test4_source"
+    # sed -i 's/unlink(filename);/\/\/unlink(filename);/g' "$test4_source"
+    # sed -i 's/const char	*filename = "strip_test.tiff";/char	*filename;/g' "$test4_source"
+    # sed -i 's/if (create_image_striped(filename, XSIZE * YSIZE, 1, rowsperstrip,/filename = "strip_test_1.tiff";\n	if (create_image_striped(filename, XSIZE * YSIZE, 1, rowsperstrip,/g' "$test4_source"
+    # sed -i 's/if (create_image_striped(filename, 1, XSIZE * YSIZE, rowsperstrip,/filename = "strip_test_2.tiff";\n	if (create_image_striped(filename, 1, XSIZE * YSIZE, rowsperstrip,/g' "$test4_source"
+    # sed -i '0,/if (create_image_striped(filename, XSIZE, YSIZE, rowsperstrip,/{s/if (create_image_striped(filename, XSIZE, YSIZE, rowsperstrip,/filename = "strip_test_3.tiff";\n        if (create_image_striped(filename, XSIZE, YSIZE, rowsperstrip,/}' "$test4_source"
+    # sed -i 's/rowsperstrip = YSIZE;/filename = "strip_test_4.tiff";\n        rowsperstrip = YSIZE;/g' "$test4_source"
+
+    local test5_source="$directory/libtiff/test/Makefile.in"
+    restore_original $test5_source
+    sed -i 's/^@am__EXEEXT_TRUE@/# @am__EXEEXT_TRUE@/g' "$test5_source"
+    sed -i 's/^am__check_pre = \\/am__check_pre = \\\nrm -f ls_of_tif.* ls_of_pdf.* *.info; \\\nls -1 *.tif* > ls_of_tif.pre 2> \/dev\/null; \\\nls -1 *.pdf > ls_of_pdf.pre 2> \/dev\/null;\\/g' "$test5_source"
+    replace-in-range "$test5_source" '^am__check_post =' 50 'rm -f \$@-t' 'rm -f $@-t; \\\nls -1 *.tif* > ls_of_tif.post 2> \/dev\/null; \\\nls -1 *.pdf > ls_of_pdf.post 2> \/dev\/null;'
+
+    local test6_source="$directory/libtiff/tools/tiff2pdf.c"
+    restore_original $test6_source
+    replace-in-range "$test6_source" \
+                     'if( (t2p->pdf_switchdecode != 0)$' \
+                     7 \
+                     '&& ! (t2p->pdf_colorspace == T2P_CS_BILEVEL' \
+                     'if(! (t2p->pdf_colorspace == T2P_CS_BILEVEL'
+    replace-in-range "$test6_source" \
+                     'if( (t2p->pdf_switchdecode != 0)$' \
+                     7 \
+                     '&& t2p->pdf_compression == T2P_COMPRESS_G4)$' \
+                     '      \&\&t2p->pdf_compression==T2P_COMPRESS_G4))'
+    replace-in-range "$test6_source" \
+                     'if( (t2p->pdf_switchdecode != 0)$' \
+                     7 \
+                     '		){' \
+                     '        {'
+    replace-in-range "$test6_source" \
+                     'if( (t2p->pdf_switchdecode != 0)$' \
+                     2 \
+                     'if( (t2p->pdf_switchdecode != 0)' \
+                     'if(t2p->pdf_switchdecode != 0)'
+
+    if [ "$version" == "90d136e4-4c66680f" ] || [ "$version" == "2010-06-30-1563270-1136bdf" ] || [ "$version" == "ee2ce5b7-b5691a5a" ] || [ "$version" == "2010-11-27-eb326f9-eec7ec0" ]; then
+        local tiff2pdf="$directory/libtiff/tools/tiff2pdf.c"
+        add-header "$tiff2pdf"
+        sed -i 's/return ret/return ANGELIX_OUTPUT(int, ret, "ret")/' "$tiff2pdf"
+    fi
+
+    if [ "$version" != "0860361d-1ba75257" ] && [ "$version" != "2006-03-03-eec4c06-ee65c74" ] && [ "$version" != "90d136e4-4c66680f" ] && [ "$version" != "2010-06-30-1563270-1136bdf" ] && [ "$version" != "ee2ce5b7-b5691a5a" ] && [ "$version" != "2010-11-27-eb326f9-eec7ec0" ] && [ "$version" != "d13be72c-ccadf48a" ] &&  [ "$version" != "2005-12-21-3b848a7-3edb9cd" ]; then
+        local tif_error="$directory/libtiff/libtiff/tif_error.c"
+        restore_original $tif_error
+        add-header "$tif_error"
+        replace-in-range "$tif_error" 'TIFFError('    5 '{' '{ANGELIX_REACHABLE("TIFFError");'
+        replace-in-range "$tif_error" 'TIFFErrorExt(' 5 '{' '{ANGELIX_REACHABLE("TIFFErrorExt");'
+    fi
+
+    if [ "$version" == "d39db2b-4cd598c" ] || [ "$version" == "2009-08-28-e8a47d4-023b6df" ]; then
+        local tiffinfo="$directory/libtiff/tools/tiffinfo.c"
+        restore_original $tiffinfo
+        add-header "$tiffinfo"
+        sed -i 's/return (status)/return ANGELIX_OUTPUT(int, status, "status")/' "$tiffinfo"
+        sed -i 's/return (0)/return ANGELIX_OUTPUT(int, 0, "status")/' "$tiffinfo"
+    fi
+
+    if [ "$version" == "4a24508-cc79c2b" ] || [ "$version" == "2007-07-19-ce4b7af-7d6e298" ]; then
+        local dirinfo="$directory/libtiff/libtiff/tif_dirinfo.c"
+        restore_original $dirinfo
+        add-header $dirinfo
+        sed -i 's/tif->tif_fields = NULL/tif->tif_fields = 0/' $dirinfo
+        sed -i 's/tif->tif_fields = (TIFFField\*\*)/ANGELIX_REACHABLE("realloc"); tif->tif_fields = (TIFFField**)/' $dirinfo
+        sed -i 's/_TIFFfree(tif->tif_fields);/if (1) _TIFFfree(tif->tif_fields);/g' $dirinfo
+        sed -i 's/tif->tif_fields = 0;/if (1) tif->tif_fields = 0;/g' $dirinfo
+        sed -i 's/tif->tif_nfields = 0;/if (1) tif->tif_nfields = 0;/g' $dirinfo
+    fi
+
+    if [ "$version" == "0661f81-ac6a583" ] || [ "$version" == "2007-11-02-371336d-865f7b2" ]; then
+        local tif_write="$directory/libtiff/libtiff/tif_write.c"
+        restore_original $tif_write
+        add-header "$tif_write"
+        replace-in-range "$tif_write" TIFFFlushData1 15 'return (0)' 'return ANGELIX_OUTPUT(int, 0, "flush")'
+        replace-in-range "$tif_write" TIFFFlushData1 15 'return (1)' 'return ANGELIX_OUTPUT(int, 1, "flush")'
+    fi
+
+    if [ "$version" == "d13be72c-ccadf48a" ] || [ "$version" == "2005-12-21-3b848a7-3edb9cd" ]; then
+        local src1="$directory/libtiff/libtiff/tif_warning.c"
+        restore_original $src1
+        add-header $src1
+
+        replace-in-range "$src1" \
+            '^TIFFWarning(' \
+            1 \
+            '{' \
+            '{\
+\tANGELIX_OUTPUT(int, strlen(fmt), \"TIFFWarning\");'
+
+        local src2="$directory/libtiff/tools/tiffcp.c"
+        restore_original $src2
+        add-header $src2
+
+        replace-in-range "$src2" \
+            '^main(' \
+            150 \
+            'return (-2);' \
+            '{ANGELIX_OUTPUT(int, 0, \"TIFFWarning\");\
+\t\tANGELIX_OUTPUT(int, -2, \"tiffcp_out\");\
+\t\treturn (-2);}'
+
+        replace-in-range "$src2" \
+            '^main(' \
+            150 \
+            'return (-3);' \
+            '{ANGELIX_OUTPUT(int, 0, \"TIFFWarning\");\
+\t\t\tANGELIX_OUTPUT(int, -3, \"tiffcp_out\");\
+\t\t\treturn (-3);}'
+
+        replace-all-in-range "$src2" \
+            '^main(' \
+            150 \
+            'return (1);' \
+            'ANGELIX_OUTPUT(int, 0, \"TIFFWarning\");\
+\t\t\tANGELIX_OUTPUT(int, 1, \"tiffcp_out\");\
+\t\t\treturn (1);'
+
+        replace-in-range "$src2" \
+            '^main(' \
+            160 \
+            'return (0);' \
+            'ANGELIX_OUTPUT(int, 0, \"TIFFWarning\");\
+\tANGELIX_OUTPUT(int, 0, \"tiffcp_out\");\
+\treturn (0);'
+
+        local src3="$directory/libtiff/libtiff/tif_dirread.c"
+        restore_original $src3
+
+        # sed -i "s/} else if (td->td_nstrips > 1/} else if (td->td_stripbytecount[0] != td->td_stripbytecount[1]/" $src3
+        # sed -i "s/\&\& td->td_stripbytecount\[0\] \!= td->td_stripbytecount\[1\]/\&\& td->td_nstrips > 1/" $src3
+    fi
+
+    # copy tests
+    if [ -d $(pwd)/.aux/libtiff/test ]; then
+        for file in $(ls -1 $(pwd)/.aux/libtiff/test); do
+            restore_original $directory/libtiff/test/$file
+            cp $(pwd)/.aux/libtiff/test/$file $directory/libtiff/test/$file
+        done
+    fi
+
+    if [ -d $(pwd)/.aux/libtiff/$version/test ]; then
+        for file in $(ls -1 $(pwd)/.aux/libtiff/$version/test); do
+            restore_original $directory/libtiff/test/$file
+            cp $(pwd)/.aux/libtiff/$version/test/$file $directory/libtiff/test/$file
+        done
+    fi
+
+    # input
+    if [ -d $(pwd)/.aux/libtiff/$version/input ]; then
+        for file in $(ls -1 $(pwd)/.aux/libtiff/$version/input); do
+            restore_original $directory/libtiff/input/$file
+            mkdir -p $directory/libtiff/input
+            cp $(pwd)/.aux/libtiff/$version/input/$file $directory/libtiff/input/$file
+        done
+    fi
+}
+
+libtiff_configure="                                                   \
+./configure --config-cache --cache-file=$CWD/.angelix/config.cache    \
+            --disable-nls                                             \
+            --disable-shared                                          \
+            --disable-cxx                                             \
+            --disable-jpeg                                            \
+            --disable-zlib                                            \
+            --disable-pixarlog                                        \
+            --disable-jbig;                                           \
+echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile             \
+"
+
+libtiff_test_suite=$(seq 1 78)
+# libtiff_test_suite="2 3 4 22 23 28 39 40 41 43 44 45 46 47 48 49"
+# libtiff_test_suite="28"
+# libtiff_test_suite="42"
+
+build_file="$(pwd)/.aux/libtiff/scripts/build-libtiff"
+
+repair-libtiff () {
+    local directory="$1"
+    local golden_directory="$2"
+    local src="$directory/libtiff"
+    for file in $(cat "$directory/bugged-program.txt")
+    do
+        local buggy=$file
+        break
+    done
+    if [[ $strat == "guided" || $strat == "random" ]]; then
+        local run_tests_script=$(readlink -f ".aux/libtiff/scripts/libtiff-run-tests.pl")
+    else
+        local run_tests_script=$(readlink -f "$directory/libtiff-run-tests.pl")
+    fi
+    if [ ! -f $run_tests_script ]; then
+        echo "[repair-libtiff] $run_tests_script does not exist"
+        exit 1
+    fi
+
+    if [[ $strat == "guided" || $strat == "random" ]]; then
+        oracle_file="$(pwd)/.aux/libtiff/scripts/oracle-libtiff-guided"
+    else
+        oracle_file="$(pwd)/.aux/libtiff/scripts/oracle-libtiff-sym"
+    fi
+
+    local golden="$golden_directory/libtiff"
+    if [ "$version" == "4a24508-cc79c2b" ] || [ "$version" == "2007-07-19-ce4b7af-7d6e298" ]; then
+        debug "the assert option used"
+        angelix "$src" "$buggy" ${oracle_file} $libtiff_test_suite \
+            --assert .aux/libtiff/assert.json \
+            --golden "$golden" \
+            --configure "$libtiff_configure" \
+            --build "$build_file" \
+            $options
+    else
+        debug "the assert option not used"
+        echo "[repair-libtiff] angelix $src $buggy ${oracle_file} $libtiff_test_suite --golden $golden --configure $libtiff_configure --build $build_file $options"
+        angelix "$src" "$buggy" ${oracle_file} $libtiff_test_suite \
+            --golden "$golden" \
+            --configure "$libtiff_configure" \
+            --build "$build_file" \
+            $options
+    fi
+}
+
+# Main -------------------------------------------------------------------------
+
+directory="libtiff-bug-${version}"
+golden_directory="libtiff-fix-${version}"
+
+if [[ ${skip_instrument} == 0 ]]; then
+    if [ ! -f "$directory/INSTRUMENTED" ]; then
+        instrument_test_script "$directory"
+        touch "$directory/INSTRUMENTED"
+    fi
+    instrument "$directory"
+
+    cp -r $CWD/.aux/libtiff/scripts $CWD/$directory/
+
+    if [ ! -f "$golden_directory/INSTRUMENTED" ]; then
+        instrument_test_script "$golden_directory"
+        if [ $version == "2007-11-23-82e378c-cf05a83" ]; then
+            tif_dir_c="$golden_directory/libtiff/libtiff/tif_dir.c"
+            restore_original $tif_dir_c
+            cp $CWD/.aux/libtiff/$version/fixed/libtiff/tif_dir.c $tif_dir_c
+        fi
+        touch "$golden_directory/INSTRUMENTED"
+    fi
+    instrument "$golden_directory"
+fi
+
+repair-libtiff "$directory" "$golden_directory"

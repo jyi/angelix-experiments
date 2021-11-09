@@ -1,0 +1,1022 @@
+[repair] benchmark: manybugs
+[repair] subject: php
+[repair] version: 2011-03-22-0de2e61cab-991ba13174
+[repair] search: symbolic
+[repair] ./fetch php manybugs 2011-03-22-0de2e61cab-991ba13174
+[fetch] benchmark: manybugs
+[fetch] subject: php
+[fetch] version: 2011-03-22-0de2e61cab-991ba13174
+[fetch] archive: php-bug-2011-03-22-0de2e61cab-991ba13174.tar.gz
+[fetch] directory: php-bug-2011-03-22-0de2e61cab-991ba13174
+[fetch] preparing source code
+[fetch] golden_directory: php-fix-2011-03-22-0de2e61cab-991ba13174
+[fetch] clean-source php-bug-2011-03-22-0de2e61cab-991ba13174
+[fetch] /angelix-experiments/php-bug-2011-03-22-0de2e61cab-991ba13174/php/configure
+[fetch] make -j 72 clean
+[fetch] clean-source php-fix-2011-03-22-0de2e61cab-991ba13174
+[fetch] restore-buggy php-bug-2011-03-22-0de2e61cab-991ba13174
+[fetch] /angelix-experiments/php-fix-2011-03-22-0de2e61cab-991ba13174/php/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: ext/date/php_date.c
+[fetch] buggy_version: 0de2e61cab
+[fetch] buggy_preprocessed: php-bug-2011-03-22-0de2e61cab-991ba13174/php/ext/date/php_date.c
+[fetch] buggy_original: php-bug-2011-03-22-0de2e61cab-991ba13174/diffs/ext/date/php_date.c-0de2e61cab34ac6e97f2411143df933626de92cc
+[fetch] cp php-bug-2011-03-22-0de2e61cab-991ba13174/diffs/ext/date/php_date.c-0de2e61cab34ac6e97f2411143df933626de92cc php-bug-2011-03-22-0de2e61cab-991ba13174/php/ext/date/php_date.c
+[fetch] restore-correct php-fix-2011-03-22-0de2e61cab-991ba13174
+[fetch] restore-correct entered
+[fetch] cp php-fix-2011-03-22-0de2e61cab-991ba13174/diffs/ext/date/php_date.c-991ba13174bb95a6a0c4849bdcd4883e335bf493 php-fix-2011-03-22-0de2e61cab-991ba13174/php/ext/date/php_date.c
+[fetch] restored php-fix-2011-03-22-0de2e61cab-991ba13174/php/ext/date/php_date.c with php-fix-2011-03-22-0de2e61cab-991ba13174/diffs/ext/date/php_date.c-991ba13174bb95a6a0c4849bdcd4883e335bf493
+[fetch] fetch done
+[repair] [repair] options: --angelic-search-strategy
+symbolic
+--klee-max-forks
+100
+--klee-solver-timeout
+100
+--test-timeout
+60
+--klee-timeout
+7200
+--all-suspicious
+--use-gcc  --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+[repair-php] restore .aux/php/php-run-tests.c
+[repair-php] restore php-bug-2011-03-22-0de2e61cab-991ba13174/php/main/main.c
+[repair-php] restore php-bug-2011-03-22-0de2e61cab-991ba13174/php/sapi/cli/php_cli.c
+[repair-php] restore php-bug-2011-03-22-0de2e61cab-991ba13174/php/Zend/zend.c
+[repair-php] restore php-bug-2011-03-22-0de2e61cab-991ba13174/php/main/output.c
+[repair-php] restore php-bug-2011-03-22-0de2e61cab-991ba13174/php/ext/standard/url_scanner_ex.c
+[repair-php] restore php-bug-2011-03-22-0de2e61cab-991ba13174/php/Zend/zend_object_handlers.c
+[repair-php] restore php-fix-2011-03-22-0de2e61cab-991ba13174/php/main/main.c
+[repair-php] restore php-fix-2011-03-22-0de2e61cab-991ba13174/php/sapi/cli/php_cli.c
+[repair-php] restore php-fix-2011-03-22-0de2e61cab-991ba13174/php/Zend/zend.c
+[repair-php] restore php-fix-2011-03-22-0de2e61cab-991ba13174/php/main/output.c
+[repair-php] restore php-fix-2011-03-22-0de2e61cab-991ba13174/php/ext/standard/url_scanner_ex.c
+[repair-php] restore php-fix-2011-03-22-0de2e61cab-991ba13174/php/Zend/zend_object_handlers.c
+[repair-php] restore php-bug-2011-03-22-0de2e61cab-991ba13174/php/ext/date/php_date.c
+[repair-php] options:  --angelic-search-strategy symbolic --klee-max-forks 100 --klee-solver-timeout 100 --test-timeout 60 --klee-timeout 7200 --all-suspicious --use-gcc --timeout 14400 --show-suspicious-locations --group-size 1 --defect assignments
+INFO     repair          copy php-bug-2011-03-22-0de2e61cab-991ba13174/php to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '14' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '15' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '16' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '32' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '33' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '34' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '35' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '36' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '37' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '49' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '51' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '71' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '72' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '73' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of validation source
+INFO     testing         output code: 0
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '2' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '4' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '7' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '14' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '15' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '16' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '31' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '49' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '71' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '72' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '73' of golden source
+INFO     testing         output code: 1
+WARNING  repair          excluding test 2 because it fails in golden version
+WARNING  repair          excluding test 4 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 7 because it fails in golden version
+WARNING  repair          excluding test 8 because it fails in golden version
+WARNING  repair          excluding test 9 because it fails in golden version
+WARNING  repair          excluding test 10 because it fails in golden version
+WARNING  repair          excluding test 11 because it fails in golden version
+WARNING  repair          excluding test 12 because it fails in golden version
+WARNING  repair          excluding test 13 because it fails in golden version
+WARNING  repair          excluding test 14 because it fails in golden version
+WARNING  repair          excluding test 15 because it fails in golden version
+WARNING  repair          excluding test 16 because it fails in golden version
+WARNING  repair          excluding test 17 because it fails in golden version
+WARNING  repair          excluding test 18 because it fails in golden version
+WARNING  repair          excluding test 19 because it fails in golden version
+WARNING  repair          excluding test 20 because it fails in golden version
+WARNING  repair          excluding test 21 because it fails in golden version
+WARNING  repair          excluding test 22 because it fails in golden version
+WARNING  repair          excluding test 23 because it fails in golden version
+WARNING  repair          excluding test 24 because it fails in golden version
+WARNING  repair          excluding test 25 because it fails in golden version
+WARNING  repair          excluding test 26 because it fails in golden version
+WARNING  repair          excluding test 27 because it fails in golden version
+WARNING  repair          excluding test 28 because it fails in golden version
+WARNING  repair          excluding test 29 because it fails in golden version
+WARNING  repair          excluding test 31 because it fails in golden version
+WARNING  repair          excluding test 49 because it fails in golden version
+WARNING  repair          excluding test 50 because it fails in golden version
+WARNING  repair          excluding test 71 because it fails in golden version
+WARNING  repair          excluding test 72 because it fails in golden version
+WARNING  repair          excluding test 73 because it fails in golden version
+INFO     repair          positive: ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     repair          negative: ['30']
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+INFO     project         building frontend source
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '1' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '32' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '33' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '34' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '35' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '36' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '37' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '38' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '39' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '40' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '51' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of frontend source
+INFO     testing         output code: 0
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '30' of frontend source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '30' of golden source
+INFO     testing         output code: 0
+INFO     repair          repair test suite: ['1', '3', '6', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     repair          validation test suite: ['1', '3', '6', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     localization    (loc, score) = (('A', (2866, 31, 2866, 49)), 1.0)
+INFO     localization    (loc, score) = (('A', (2867, 31, 2867, 49)), 1.0)
+INFO     localization    (loc, score) = (('A', (2874, 33, 2874, 33)), 1.0)
+INFO     localization    (loc, score) = (('A', (2920, 50, 2920, 50)), 1.0)
+INFO     localization    (loc, score) = (('A', (2870, 31, 2870, 49)), 1.0)
+INFO     localization    (loc, score) = (('A', (1154, 63, 1154, 63)), 1.0)
+INFO     localization    (loc, score) = (('A', (3469, 13, 3469, 13)), 1.0)
+INFO     localization    (loc, score) = (('A', (2455, 33, 2455, 33)), 1.0)
+INFO     localization    (loc, score) = (('A', (2875, 32, 2875, 32)), 1.0)
+INFO     localization    (loc, score) = (('A', (2915, 30, 2915, 57)), 1.0)
+INFO     localization    (loc, score) = (('A', (2921, 32, 2921, 32)), 1.0)
+INFO     localization    (loc, score) = (('A', (2865, 31, 2865, 49)), 1.0)
+INFO     localization    (loc, score) = (('A', (1051, 15, 1051, 15)), 1.0)
+INFO     localization    (loc, score) = (('A', (1154, 48, 1154, 48)), 1.0)
+INFO     localization    (loc, score) = (('A', (2872, 51, 2872, 51)), 1.0)
+INFO     localization    (loc, score) = (('A', (2869, 31, 2869, 49)), 1.0)
+INFO     localization    (loc, score) = (('A', (2918, 33, 2918, 33)), 1.0)
+INFO     localization    (loc, score) = (('A', (2879, 33, 2879, 33)), 1.0)
+INFO     localization    (loc, score) = (('A', (2914, 30, 2914, 57)), 1.0)
+INFO     localization    (loc, score) = (('A', (787, 40, 787, 40)), 1.0)
+INFO     localization    (loc, score) = (('A', (2871, 37, 2871, 37)), 1.0)
+INFO     localization    (loc, score) = (('A', (2919, 36, 2919, 36)), 1.0)
+INFO     localization    (loc, score) = (('A', (2912, 30, 2912, 57)), 1.0)
+INFO     localization    (loc, score) = (('A', (2926, 33, 2926, 33)), 1.0)
+INFO     localization    (loc, score) = (('A', (2436, 19, 2436, 19)), 1.0)
+INFO     localization    (loc, score) = (('A', (2916, 30, 2916, 57)), 1.0)
+INFO     localization    (loc, score) = (('A', (2917, 30, 2917, 57)), 1.0)
+INFO     localization    (loc, score) = (('A', (3604, 25, 3604, 25)), 1.0)
+INFO     localization    (loc, score) = (('A', (2868, 31, 2868, 49)), 1.0)
+INFO     localization    (loc, score) = (('A', (2913, 30, 2913, 57)), 1.0)
+INFO     localization    group 1: [('A', (787, 40, 787, 40))] (1.0)
+INFO     localization    group 2: [('A', (1051, 15, 1051, 15))] (1.0)
+INFO     localization    group 3: [('A', (1154, 63, 1154, 63))] (1.0)
+INFO     localization    group 4: [('A', (1154, 48, 1154, 48))] (1.0)
+INFO     localization    group 5: [('A', (2436, 19, 2436, 19))] (1.0)
+INFO     localization    group 6: [('A', (2455, 33, 2455, 33))] (1.0)
+INFO     localization    group 7: [('A', (2865, 31, 2865, 49))] (1.0)
+INFO     localization    group 8: [('A', (2866, 31, 2866, 49))] (1.0)
+INFO     localization    group 9: [('A', (2867, 31, 2867, 49))] (1.0)
+INFO     localization    group 10: [('A', (2868, 31, 2868, 49))] (1.0)
+INFO     localization    group 11: [('A', (2869, 31, 2869, 49))] (1.0)
+INFO     localization    group 12: [('A', (2870, 31, 2870, 49))] (1.0)
+INFO     localization    group 13: [('A', (2871, 37, 2871, 37))] (1.0)
+INFO     localization    group 14: [('A', (2872, 51, 2872, 51))] (1.0)
+INFO     localization    group 15: [('A', (2874, 33, 2874, 33))] (1.0)
+INFO     localization    group 16: [('A', (2875, 32, 2875, 32))] (1.0)
+INFO     localization    group 17: [('A', (2879, 33, 2879, 33))] (1.0)
+INFO     localization    group 18: [('A', (2912, 30, 2912, 57))] (1.0)
+INFO     localization    group 19: [('A', (2913, 30, 2913, 57))] (1.0)
+INFO     localization    group 20: [('A', (2914, 30, 2914, 57))] (1.0)
+INFO     localization    group 21: [('A', (2915, 30, 2915, 57))] (1.0)
+INFO     localization    group 22: [('A', (2916, 30, 2916, 57))] (1.0)
+INFO     localization    group 23: [('A', (2917, 30, 2917, 57))] (1.0)
+INFO     localization    group 24: [('A', (2918, 33, 2918, 33))] (1.0)
+INFO     localization    group 25: [('A', (2919, 36, 2919, 36))] (1.0)
+INFO     localization    group 26: [('A', (2920, 50, 2920, 50))] (1.0)
+INFO     localization    group 27: [('A', (2921, 32, 2921, 32))] (1.0)
+INFO     localization    group 28: [('A', (2926, 33, 2926, 33))] (1.0)
+INFO     localization    group 29: [('A', (3469, 13, 3469, 13))] (1.0)
+INFO     localization    group 30: [('A', (3604, 25, 3604, 25))] (1.0)
+INFO     localization    selected expressions [('A', (787, 40, 787, 40))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1051, 15, 1051, 15))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1154, 63, 1154, 63))] with group score 1.0 
+INFO     localization    selected expressions [('A', (1154, 48, 1154, 48))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2436, 19, 2436, 19))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2455, 33, 2455, 33))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2865, 31, 2865, 49))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2866, 31, 2866, 49))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2867, 31, 2867, 49))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2868, 31, 2868, 49))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2869, 31, 2869, 49))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2870, 31, 2870, 49))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2871, 37, 2871, 37))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2872, 51, 2872, 51))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2874, 33, 2874, 33))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2875, 32, 2875, 32))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2879, 33, 2879, 33))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2912, 30, 2912, 57))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2913, 30, 2913, 57))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2914, 30, 2914, 57))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2915, 30, 2915, 57))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2916, 30, 2916, 57))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2917, 30, 2917, 57))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2918, 33, 2918, 33))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2919, 36, 2919, 36))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2920, 50, 2920, 50))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2921, 32, 2921, 32))] with group score 1.0 
+INFO     localization    selected expressions [('A', (2926, 33, 2926, 33))] with group score 1.0 
+INFO     localization    selected expressions [('A', (3469, 13, 3469, 13))] with group score 1.0 
+INFO     localization    selected expressions [('A', (3604, 25, 3604, 25))] with group score 1.0 
+INFO     repair          considering suspicious locations [('A', (787, 40, 787, 40))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (1051, 15, 1051, 15))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (1154, 63, 1154, 63))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (1154, 48, 1154, 48))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2436, 19, 2436, 19))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2455, 33, 2455, 33))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2865, 31, 2865, 49))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2866, 31, 2866, 49))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2867, 31, 2867, 49))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2868, 31, 2868, 49))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2869, 31, 2869, 49))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2870, 31, 2870, 49))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2871, 37, 2871, 37))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2872, 51, 2872, 51))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2874, 33, 2874, 33))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2875, 32, 2875, 32))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2879, 33, 2879, 33))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2912, 30, 2912, 57))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2913, 30, 2913, 57))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2914, 30, 2914, 57))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2915, 30, 2915, 57))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2916, 30, 2916, 57))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2917, 30, 2917, 57))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2918, 33, 2918, 33))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2919, 36, 2919, 36))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2920, 50, 2920, 50))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2921, 32, 2921, 32))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (2926, 33, 2926, 33))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (3469, 13, 3469, 13))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          considering suspicious locations [('A', (3604, 25, 3604, 25))]
+INFO     reduction       all failing tests: ['30']
+INFO     reduction       select 1 best tests from ['30']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['30']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '30' through KLEE
+INFO     testing         running test '30' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 30
+INFO     repair          no patch generated in 3h 4m 45s
+FAIL

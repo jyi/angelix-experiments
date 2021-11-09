@@ -1,0 +1,11 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -4248,7 +4248,7 @@
+     }
+   else
+     {
+-    if (((image->xres == 0) || (image->yres == 0)) &&
++    if ((((image->yres == crop) || (image->yres == crop))) &&
+ 	((crop->crop_mode & CROP_REGIONS) || (crop->crop_mode & CROP_MARGINS) ||
+  	 (crop->crop_mode & CROP_LENGTH)  || (crop->crop_mode & CROP_WIDTH)))
+       {

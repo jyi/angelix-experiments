@@ -1,0 +1,52 @@
+{
+  "3": [
+    [
+      {
+        "context": [
+          {
+            "name": "bb",
+            "value": 7
+          },
+          {
+            "name": "e",
+            "value": 43
+          },
+          {
+            "name": "outcnt",
+            "value": 0
+          },
+          {
+            "name": "ml",
+            "value": 1
+          },
+          {
+            "name": "bk",
+            "value": 5
+          },
+          {
+            "name": "k",
+            "value": 5
+          },
+          {
+            "name": "w",
+            "value": 0
+          },
+          {
+            "name": "b",
+            "value": 7
+          },
+          {
+            "name": "md",
+            "value": 1
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "548-13-548-18",
+        "instId": 0
+      }
+    ]
+  ]
+}

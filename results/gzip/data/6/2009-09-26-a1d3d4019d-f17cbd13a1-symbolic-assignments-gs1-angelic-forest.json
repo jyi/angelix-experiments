@@ -1,0 +1,274 @@
+{
+  "8": [
+    [
+      {
+        "context": [
+          {
+            "name": "method_1",
+            "value": 8
+          },
+          {
+            "name": "block_mode",
+            "value": 128
+          },
+          {
+            "name": "ofd",
+            "value": 1
+          },
+          {
+            "name": "ascii",
+            "value": 0
+          },
+          {
+            "name": "quiet_1",
+            "value": 0
+          },
+          {
+            "name": "inptr",
+            "value": 21
+          },
+          {
+            "name": "part_nb",
+            "value": 1
+          },
+          {
+            "name": "header_bytes",
+            "value": 26
+          },
+          {
+            "name": "quiet",
+            "value": 0
+          },
+          {
+            "name": "verbose_1",
+            "value": 0
+          },
+          {
+            "name": "ifile_size",
+            "value": 21
+          },
+          {
+            "name": "exiting_signal",
+            "value": 0
+          },
+          {
+            "name": "insize",
+            "value": 21
+          },
+          {
+            "name": "to_stdout_1",
+            "value": 1
+          },
+          {
+            "name": "ifd",
+            "value": 3
+          },
+          {
+            "name": "insize_1",
+            "value": 21
+          },
+          {
+            "name": "ofd_1",
+            "value": 1
+          },
+          {
+            "name": "save_orig_name_1",
+            "value": 0
+          },
+          {
+            "name": "ifd_1",
+            "value": 3
+          },
+          {
+            "name": "outcnt",
+            "value": 0
+          },
+          {
+            "name": "force",
+            "value": 0
+          },
+          {
+            "name": "no_time",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          },
+          {
+            "name": "no_name",
+            "value": 1
+          },
+          {
+            "name": "to_stdout",
+            "value": 1
+          },
+          {
+            "name": "optopt",
+            "value": 0
+          },
+          {
+            "name": "__daylight",
+            "value": 0
+          },
+          {
+            "name": "bytes_out",
+            "value": 1
+          },
+          {
+            "name": "do_lzw",
+            "value": 0
+          },
+          {
+            "name": "timezone",
+            "value": 0
+          },
+          {
+            "name": "recursive",
+            "value": 0
+          },
+          {
+            "name": "test_1",
+            "value": 0
+          },
+          {
+            "name": "level_1",
+            "value": 6
+          },
+          {
+            "name": "bytes_out_1",
+            "value": 1
+          },
+          {
+            "name": "save_orig_name",
+            "value": 0
+          },
+          {
+            "name": "_sys_nerr",
+            "value": 135
+          },
+          {
+            "name": "ifile_size_1",
+            "value": 21
+          },
+          {
+            "name": "decrypt",
+            "value": 0
+          },
+          {
+            "name": "exit_code_1",
+            "value": 0
+          },
+          {
+            "name": "daylight",
+            "value": 0
+          },
+          {
+            "name": "last_member",
+            "value": 0
+          },
+          {
+            "name": "total_in",
+            "value": 0
+          },
+          {
+            "name": "__timezone",
+            "value": -32400
+          },
+          {
+            "name": "exit_code",
+            "value": 0
+          },
+          {
+            "name": "bytes_in",
+            "value": 21
+          },
+          {
+            "name": "outcnt_1",
+            "value": 0
+          },
+          {
+            "name": "optind",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "test",
+            "value": 0
+          },
+          {
+            "name": "sys_nerr",
+            "value": 135
+          },
+          {
+            "name": "method",
+            "value": 8
+          },
+          {
+            "name": "maxbits",
+            "value": 16
+          },
+          {
+            "name": "inptr_1",
+            "value": 21
+          },
+          {
+            "name": "verbose",
+            "value": 0
+          },
+          {
+            "name": "maxbits_1",
+            "value": 16
+          },
+          {
+            "name": "getdate_err",
+            "value": 0
+          },
+          {
+            "name": "opterr",
+            "value": 1
+          },
+          {
+            "name": "bytes_in_1",
+            "value": 21
+          },
+          {
+            "name": "foreground",
+            "value": 1
+          },
+          {
+            "name": "list",
+            "value": 0
+          },
+          {
+            "name": "level",
+            "value": 6
+          },
+          {
+            "name": "total_out",
+            "value": 0
+          },
+          {
+            "name": "remove_ofname_fd",
+            "value": -1
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": 0
+        },
+        "expression": "653-7-653-7",
+        "instId": 0
+      }
+    ]
+  ],
+  "3": [
+    []
+  ],
+  "6": [
+    []
+  ]
+}

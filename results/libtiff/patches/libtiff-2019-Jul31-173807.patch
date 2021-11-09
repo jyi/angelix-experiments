@@ -1,0 +1,35 @@
+--- a/libtiff/tif_dirread.c
++++ b/libtiff/tif_dirread.c
+@@ -586,8 +586,7 @@
+ 		            _TIFFFieldWithTag(tif,TIFFTAG_STRIPBYTECOUNTS)->field_name);
+ 		if(EstimateStripByteCounts(tif, dir, dircount) < 0)
+ 		    goto bad;
+-	} else if (td->td_nstrips > 1
+-		   && td->td_compression == COMPRESSION_NONE
++	} else if (((td->td_nstrips > 7) && (td->td_compression == 1))
+ 		   && td->td_stripbytecount[0] != td->td_stripbytecount[1]) {
+ 		/*
+ 		 * XXX: Some vendors fill StripByteCount array with absolutely
+@@ -616,11 +615,11 @@
+ 	 * bytecounts array. See also comments for TIFFAppendToStrip()
+ 	 * function in tif_write.c.
+ 	 */
+-	if (td->td_nstrips > 1) {
++	if ((td->td_nstrips > 7)) {
+ 		tstrip_t strip;
+ 
+ 		td->td_stripbytecountsorted = 1;
+-		for (strip = 1; strip < td->td_nstrips; strip++) {
++		for (strip = 1; (strip < td->td_nstrips); strip++) {
+ 			if (td->td_stripoffset[strip - 1] >
+ 			    td->td_stripoffset[strip]) {
+ 				td->td_stripbytecountsorted = 0;
+@@ -640,7 +639,7 @@
+ 	 * side effect, however, is that the RowsPerStrip tag
+ 	 * value may be changed.
+          */
+-	if (td->td_nstrips == 1 && td->td_compression == COMPRESSION_NONE &&
++	if (((td->td_nstrips == 11) && (td->td_compression == 1)) &&
+ 	    (tif->tif_flags & (TIFF_STRIPCHOP|TIFF_ISTILED)) == TIFF_STRIPCHOP)
+ 		ChopUpSingleUncompressedStrip(tif);
+ 

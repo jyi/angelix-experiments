@@ -1,0 +1,1165 @@
+{
+  "file": "/angelix-experiments/.angelix/statistics.json",
+  "src": "gzip-bug-2009-08-16-3fe0caeada-39a362ae9d/gzip",
+  "buggy": "inflate.c",
+  "patch_found": true,
+  "patch_file": "gzip-2020-Apr11-104400.patch",
+  "config": {
+    "initial_tests": 1,
+    "all_tests": false,
+    "max_z3_trials": 2,
+    "defect": [
+      "if-conditions",
+      "loop-conditions"
+    ],
+    "test_timeout": null,
+    "single_group": false,
+    "group_size": 1,
+    "group_by_score": false,
+    "localize_from_bottom": false,
+    "suspicious": 20,
+    "localization": "jaccard",
+    "ignore_trivial": false,
+    "path_solving_timeout": 60000,
+    "timeout": 14400,
+    "max_angelic_paths": null,
+    "klee_max_forks": null,
+    "klee_max_depth": null,
+    "klee_search": null,
+    "klee_timeout": null,
+    "klee_out_dir_timeout": 60,
+    "klee_solver_timeout": null,
+    "klee_debug": false,
+    "klee_ignore_errors": false,
+    "ignore_trans_errors": false,
+    "ignore_infer_errors": false,
+    "skip_validating_angelic_path": false,
+    "use_nsynth": false,
+    "use_osynth": false,
+    "use_gcc": false,
+    "synthesis_timeout": 30000,
+    "synthesis_levels": [
+      "alternatives",
+      "integer-constants",
+      "boolean-constants"
+    ],
+    "synthesis_global_vars": false,
+    "synthesis_func_params": false,
+    "synthesis_used_vars": true,
+    "synthesis_ptr_vars": false,
+    "synthesis_bool_only": false,
+    "empty_env_exps": false,
+    "exclude_member_exp": false,
+    "generate_all": false,
+    "init_uninit_vars": false,
+    "redundant_test": false,
+    "verbose": false,
+    "build_before_instr": false,
+    "instr_printf": null,
+    "mute_config_message": false,
+    "mute_build_message": false,
+    "mute_test_message": false,
+    "show_test_message": false,
+    "show_oracle_contents": false,
+    "show_syn_message": false,
+    "mute_warning": false,
+    "show_suspicious_locations": true,
+    "invalid_localization": false,
+    "angelic_search_strategy": "guided",
+    "step_method": "metropolis",
+    "compilation_db_file": null,
+    "keep_angelix_dir": false,
+    "skip_configure": false,
+    "skip_build": false,
+    "gobble_klee_message": false,
+    "lines": null,
+    "search_max_trials": 30,
+    "max_same_cost_iter": 20,
+    "mcmc_beta": 0.3,
+    "one_bit_flip_prob": 0.5,
+    "chunk_bits": 32,
+    "max_resample": 3,
+    "block_expand_factor": 2,
+    "inc_fix": false,
+    "default_max_cost": 2,
+    "error_cost": "0",
+    "warning_cost": "0",
+    "max_syn_attempts": 2,
+    "max_repair_attempts": 2,
+    "penalty1": "1",
+    "penalty2": "1",
+    "parallel_testing": false,
+    "all_suspicious": false,
+    "mutate": 0,
+    "epsilon": 1.0,
+    "always_accept": false,
+    "skip_dd": false,
+    "finish_after_fault_localize": false,
+    "default_susp_score": 0.5,
+    "additional_susp_locs": null,
+    "default_non_zero_cost": "1",
+    "timeout_cost": "1"
+  },
+  "time": {
+    "testing": 49.21438407897949,
+    "compilation": 93.28230381011963,
+    "klee": 0,
+    "synthesis": 17.559700965881348,
+    "solving": 0,
+    "inference": 652.1377203464508,
+    "dd": 5.60179877281189,
+    "total": 791.4685831069946
+  },
+  "iterations": {
+    "synthesis": [
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7453553676605225
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.68550705909729
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.6968035697937012
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.7398228645324707
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7178816795349121
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7145922183990479
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.7566370964050293
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7696919441223145
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7684483528137207
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.7390720844268799
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7351655960083008
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7351095676422119
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.7764229774475098
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7823376655578613
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7958047389984131
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.9071829319000244
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.9348986148834229
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 2.941114902496338
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.8145802021026611
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.8032715320587158
+      }
+    ],
+    "guided": [
+      {
+        "locations": [
+          [
+            "I",
+            [
+              336,
+              7,
+              336,
+              15
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 8.852030754089355,
+          "dd": 0.682945728302002
+        },
+        "paths": {
+          "explored": 14,
+          "sampled": 7,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0
+          ],
+          "ratio": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              339,
+              9,
+              339,
+              10
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 21.440630435943604,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 60,
+          "sampled": 30,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": true,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ratio": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              353,
+              15,
+              353,
+              20
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 22.453230142593384,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 60,
+          "sampled": 30,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": true,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ratio": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              354,
+              9,
+              354,
+              12
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 0.8009312152862549,
+          "dd": 0.6700758934020996
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              359,
+              18,
+              359,
+              18
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 0.783653974533081,
+          "dd": 0.6956243515014648
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              360,
+              9,
+              360,
+              12
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 0.7999207973480225,
+          "dd": 0.7126874923706055
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              369,
+              20,
+              369,
+              24
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 22.412347316741943,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 60,
+          "sampled": 30,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": true,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ratio": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              404,
+              10,
+              404,
+              15
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 3.9445767402648926,
+          "dd": 0.6913695335388184
+        },
+        "paths": {
+          "explored": 10,
+          "sampled": 5,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            null,
+            null,
+            null,
+            null,
+            0
+          ],
+          "ratio": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              411,
+              14,
+              411,
+              22
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 0.7808544635772705,
+          "dd": 0.6983647346496582
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              446,
+              13,
+              446,
+              13
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 540.6723327636719,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 60,
+          "sampled": 30,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": true,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ratio": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              459,
+              11,
+              459,
+              20
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 22.059593677520752,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 60,
+          "sampled": 30,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": true,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "ratio": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              475,
+              24,
+              475,
+              28
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 0.7541191577911377,
+          "dd": 0.7377204895019531
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              548,
+              13,
+              548,
+              18
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 0.7817001342773438,
+          "dd": 0.7130105495452881
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      }
+    ],
+    "symbolic": [],
+    "random": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "20": [
+    [
+      {
+        "context": [
+          {
+            "name": "offset",
+            "value": 0
+          },
+          {
+            "name": "cs",
+            "value": 0
+          },
+          {
+            "name": "s1_len",
+            "value": 1
+          },
+          {
+            "name": "len",
+            "value": 4
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "5262-6-5262-21",
+        "instId": 0
+      }
+    ]
+  ]
+}

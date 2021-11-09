@@ -1,0 +1,3 @@
+346-7-346-47
+((tif->tif_rawcc > 0) && (tif->tif_rawcc != orig_rawcc))
+(tif->tif_rawcc > 0)

@@ -1,0 +1,724 @@
+[repair] benchmark: manybugs
+[repair] subject: php
+[repair] version: 2011-03-23-63673a533f-2adf58cfcf
+[repair] search: symbolic
+[repair] ./fetch php manybugs 2011-03-23-63673a533f-2adf58cfcf
+[fetch] benchmark: manybugs
+[fetch] subject: php
+[fetch] version: 2011-03-23-63673a533f-2adf58cfcf
+[fetch] archive: php-bug-2011-03-23-63673a533f-2adf58cfcf.tar.gz
+[fetch] directory: php-bug-2011-03-23-63673a533f-2adf58cfcf
+[fetch] preparing source code
+[fetch] golden_directory: php-fix-2011-03-23-63673a533f-2adf58cfcf
+[fetch] clean-source php-bug-2011-03-23-63673a533f-2adf58cfcf
+[fetch] /angelix-experiments/php-bug-2011-03-23-63673a533f-2adf58cfcf/php/configure
+[fetch] make -j 72 clean
+[fetch] clean-source php-fix-2011-03-23-63673a533f-2adf58cfcf
+[fetch] restore-buggy php-bug-2011-03-23-63673a533f-2adf58cfcf
+[fetch] /angelix-experiments/php-fix-2011-03-23-63673a533f-2adf58cfcf/php/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: ext/date/php_date.c
+[fetch] buggy_version: 63673a533f
+[fetch] buggy_preprocessed: php-bug-2011-03-23-63673a533f-2adf58cfcf/php/ext/date/php_date.c
+[fetch] buggy_original: php-bug-2011-03-23-63673a533f-2adf58cfcf/diffs/ext/date/php_date.c-63673a533f49e090172e2fac7e303fc755df23b4
+[fetch] cp php-bug-2011-03-23-63673a533f-2adf58cfcf/diffs/ext/date/php_date.c-63673a533f49e090172e2fac7e303fc755df23b4 php-bug-2011-03-23-63673a533f-2adf58cfcf/php/ext/date/php_date.c
+[fetch] restore-correct php-fix-2011-03-23-63673a533f-2adf58cfcf
+[fetch] restore-correct entered
+[fetch] cp php-fix-2011-03-23-63673a533f-2adf58cfcf/diffs/ext/date/php_date.c-2adf58cfcf9a2e4b55a775fcbd3ccc5dd16ec979 php-fix-2011-03-23-63673a533f-2adf58cfcf/php/ext/date/php_date.c
+[fetch] restored php-fix-2011-03-23-63673a533f-2adf58cfcf/php/ext/date/php_date.c with php-fix-2011-03-23-63673a533f-2adf58cfcf/diffs/ext/date/php_date.c-2adf58cfcf9a2e4b55a775fcbd3ccc5dd16ec979
+[fetch] fetch done
+[repair] [repair] options: --angelic-search-strategy
+symbolic
+--defect
+if-conditions
+loop-conditions
+--synthesis-ptr-vars
+--klee-max-forks
+100
+--use-gcc
+--initial-tests
+2
+--synthesis-levels
+variables
+--lines
+3774
+--ignore-lines  --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-php] restore .aux/php/php-run-tests.c
+[repair-php] restore php-bug-2011-03-23-63673a533f-2adf58cfcf/php/main/main.c
+[repair-php] restore php-bug-2011-03-23-63673a533f-2adf58cfcf/php/sapi/cli/php_cli.c
+[repair-php] restore php-bug-2011-03-23-63673a533f-2adf58cfcf/php/Zend/zend.c
+[repair-php] restore php-bug-2011-03-23-63673a533f-2adf58cfcf/php/main/output.c
+[repair-php] restore php-bug-2011-03-23-63673a533f-2adf58cfcf/php/ext/standard/url_scanner_ex.c
+[repair-php] restore php-bug-2011-03-23-63673a533f-2adf58cfcf/php/Zend/zend_object_handlers.c
+[repair-php] restore php-bug-2011-03-23-63673a533f-2adf58cfcf/php/ext/date/php_date.c
+[repair-php] restore php-fix-2011-03-23-63673a533f-2adf58cfcf/php/main/main.c
+[repair-php] restore php-fix-2011-03-23-63673a533f-2adf58cfcf/php/sapi/cli/php_cli.c
+[repair-php] restore php-fix-2011-03-23-63673a533f-2adf58cfcf/php/Zend/zend.c
+[repair-php] restore php-fix-2011-03-23-63673a533f-2adf58cfcf/php/main/output.c
+[repair-php] restore php-fix-2011-03-23-63673a533f-2adf58cfcf/php/ext/standard/url_scanner_ex.c
+[repair-php] restore php-fix-2011-03-23-63673a533f-2adf58cfcf/php/Zend/zend_object_handlers.c
+[repair-php] restore php-fix-2011-03-23-63673a533f-2adf58cfcf/php/ext/date/php_date.c
+[repair-php] options:  --angelic-search-strategy symbolic --defect if-conditions loop-conditions --synthesis-ptr-vars --klee-max-forks 100 --use-gcc --initial-tests 2 --synthesis-levels variables --lines 3774 --ignore-lines --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+INFO     repair          copy php-bug-2011-03-23-63673a533f-2adf58cfcf/php to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '14' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '15' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '16' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '32' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '33' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '34' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '35' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '36' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '37' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '49' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '51' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '71' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '72' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '73' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of validation source
+INFO     testing         output code: 0
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '2' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '4' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '7' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '14' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '15' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '16' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '31' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '49' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '71' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '72' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '73' of golden source
+INFO     testing         output code: 1
+WARNING  repair          excluding test 2 because it fails in golden version
+WARNING  repair          excluding test 4 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 7 because it fails in golden version
+WARNING  repair          excluding test 8 because it fails in golden version
+WARNING  repair          excluding test 9 because it fails in golden version
+WARNING  repair          excluding test 10 because it fails in golden version
+WARNING  repair          excluding test 11 because it fails in golden version
+WARNING  repair          excluding test 12 because it fails in golden version
+WARNING  repair          excluding test 13 because it fails in golden version
+WARNING  repair          excluding test 14 because it fails in golden version
+WARNING  repair          excluding test 15 because it fails in golden version
+WARNING  repair          excluding test 16 because it fails in golden version
+WARNING  repair          excluding test 17 because it fails in golden version
+WARNING  repair          excluding test 18 because it fails in golden version
+WARNING  repair          excluding test 19 because it fails in golden version
+WARNING  repair          excluding test 20 because it fails in golden version
+WARNING  repair          excluding test 21 because it fails in golden version
+WARNING  repair          excluding test 22 because it fails in golden version
+WARNING  repair          excluding test 23 because it fails in golden version
+WARNING  repair          excluding test 24 because it fails in golden version
+WARNING  repair          excluding test 25 because it fails in golden version
+WARNING  repair          excluding test 26 because it fails in golden version
+WARNING  repair          excluding test 27 because it fails in golden version
+WARNING  repair          excluding test 28 because it fails in golden version
+WARNING  repair          excluding test 31 because it fails in golden version
+WARNING  repair          excluding test 49 because it fails in golden version
+WARNING  repair          excluding test 50 because it fails in golden version
+WARNING  repair          excluding test 71 because it fails in golden version
+WARNING  repair          excluding test 72 because it fails in golden version
+WARNING  repair          excluding test 73 because it fails in golden version
+INFO     repair          positive: ['1', '3', '6', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     repair          negative: ['29']
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+INFO     project         building frontend source
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '1' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '30' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '32' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '33' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '34' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '35' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '36' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '37' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '38' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '39' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '40' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '51' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of frontend source
+INFO     testing         output code: 0
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '29' of frontend source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '29' of golden source
+INFO     testing         output code: 0
+INFO     repair          repair test suite: ['1', '3', '6', '29', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     repair          validation test suite: ['1', '3', '6', '29', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     localization    (loc, score) = (('I', (2288, 6, 2288, 6)), 1.0)
+INFO     localization    (loc, score) = (('I', (3784, 6, 3784, 20)), 1.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-1641390976'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-2071924416'), 0.0)
+INFO     localization    (loc, score) = (('I', (3477, 6, 3477, 6), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (3556, 7, 3556, 23), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1009, 6, 1009, 20), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (3504, 7, 3504, 23), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2404, 6, 2404, 6), '-1554117752'), 0.0)
+INFO     localization    (loc, score) = (('I', (2123, 6, 2123, 21), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (2441, 13, 2441, 28), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (3477, 6, 3477, 6), '831254256'), 0.0)
+INFO     localization    (loc, score) = (('I', (1442, 6, 1442, 7), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (3481, 7, 3481, 12), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1457, 6, 1457, 16), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (839, 5, 839, 19), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (2113, 6, 2113, 38), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2871, 6, 2871, 59), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '1366612240'), 0.0)
+INFO     localization    (loc, score) = (('L', (1062, 14, 1062, 18), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-126771984'), 0.0)
+INFO     localization    (loc, score) = (('I', (849, 6, 849, 6), '-1855013824'), 0.0)
+INFO     localization    (loc, score) = (('I', (3473, 6, 3473, 28), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (3477, 6, 3477, 6), '1275178560'), 0.0)
+INFO     localization    (loc, score) = (('I', (849, 6, 849, 6), '-2071935840'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-2071927568'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '831260992'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '831254496'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-2071922464'), 0.0)
+INFO     localization    (loc, score) = (('I', (849, 6, 849, 6), '1366604032'), 0.0)
+INFO     localization    (loc, score) = (('I', (2996, 6, 2996, 21), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2414, 6, 2414, 26), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-240776064'), 0.0)
+INFO     localization    (loc, score) = (('I', (2419, 6, 2419, 18), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2404, 6, 2404, 6), '-1554117920'), 0.0)
+INFO     localization    (loc, score) = (('I', (2334, 6, 2334, 22), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (849, 6, 849, 6), '-1641390560'), 0.0)
+INFO     localization    (loc, score) = (('I', (849, 6, 849, 6), '-126771600'), 0.0)
+INFO     localization    (loc, score) = (('I', (2401, 6, 2401, 15), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1164, 19, 1164, 23), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '1366618448'), 0.0)
+INFO     localization    (loc, score) = (('I', (1035, 6, 1035, 7), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1039, 6, 1039, 6), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1173, 6, 1173, 6), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1040, 7, 1040, 23), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2162, 6, 2162, 6), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2254, 6, 2254, 49), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (3473, 6, 3473, 28), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-1855012560'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-126769312'), 0.0)
+INFO     localization    (loc, score) = (('I', (867, 6, 867, 6), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-2071936384'), 0.0)
+INFO     localization    (loc, score) = (('I', (839, 5, 839, 19), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-240774848'), 0.0)
+INFO     localization    (loc, score) = (('I', (849, 6, 849, 6), '-240775648'), 0.0)
+INFO     localization    (loc, score) = (('I', (849, 6, 849, 6), '831254912'), 0.0)
+INFO     localization    (loc, score) = (('I', (2423, 6, 2423, 6), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2919, 6, 2919, 20), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '-1641388304'), 0.0)
+INFO     localization    (loc, score) = (('I', (2914, 6, 2914, 20), '0'), 0.0)
+INFO     localization    (loc, score) = (('L', (1062, 14, 1062, 18), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '1366603488'), 0.0)
+INFO     localization    (loc, score) = (('I', (2404, 6, 2404, 6), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '1366616496'), 0.0)
+INFO     localization    (loc, score) = (('I', (2042, 6, 2042, 6), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (961, 6, 961, 8), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2213, 6, 2213, 6), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1046, 14, 1046, 30), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2322, 6, 2322, 14), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (2874, 7, 2874, 21), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (3481, 7, 3481, 12), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (871, 6, 871, 29), '0'), 0.0)
+INFO     localization    group 1: [('I', (2288, 6, 2288, 6))] (1.0)
+INFO     localization    group 2: [('I', (3784, 6, 3784, 20))] (1.0)
+INFO     localization    group 3: [('I', (839, 5, 839, 19), '1')] (0.0)
+INFO     localization    group 4: [('I', (1009, 6, 1009, 20), '0')] (0.0)
+INFO     localization    group 5: [('L', (1062, 14, 1062, 18), '0')] (0.0)
+INFO     localization    group 6: [('I', (1442, 6, 1442, 7), '0')] (0.0)
+INFO     localization    group 7: [('I', (1457, 6, 1457, 16), '0')] (0.0)
+INFO     localization    group 8: [('I', (2113, 6, 2113, 38), '0')] (0.0)
+INFO     localization    group 9: [('I', (2123, 6, 2123, 21), '1')] (0.0)
+INFO     localization    group 10: [('I', (2322, 6, 2322, 14), '-1641390976')] (0.0)
+INFO     localization    group 11: [('I', (2322, 6, 2322, 14), '-2071924416')] (0.0)
+INFO     localization    group 12: [('I', (2322, 6, 2322, 14), '1366612240')] (0.0)
+INFO     localization    group 13: [('I', (2404, 6, 2404, 6), '-1554117752')] (0.0)
+INFO     localization    group 14: [('I', (2441, 13, 2441, 28), '0')] (0.0)
+INFO     localization    group 15: [('I', (2871, 6, 2871, 59), '0')] (0.0)
+INFO     localization    group 16: [('I', (3477, 6, 3477, 6), '0')] (0.0)
+INFO     localization    group 17: [('I', (3477, 6, 3477, 6), '831254256')] (0.0)
+INFO     localization    group 18: [('I', (3481, 7, 3481, 12), '0')] (0.0)
+INFO     localization    group 19: [('I', (3504, 7, 3504, 23), '0')] (0.0)
+INFO     localization    group 20: [('I', (3556, 7, 3556, 23), '0')] (0.0)
+INFO     localization    selected expressions [('I', (2288, 6, 2288, 6))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3784, 6, 3784, 20))] with group score 1.0 
+INFO     localization    selected expressions [('I', (839, 5, 839, 19), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1009, 6, 1009, 20), '0')] with group score 0.0 
+INFO     localization    selected expressions [('L', (1062, 14, 1062, 18), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1442, 6, 1442, 7), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1457, 6, 1457, 16), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (2113, 6, 2113, 38), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (2123, 6, 2123, 21), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (2322, 6, 2322, 14), '-1641390976')] with group score 0.0 
+INFO     localization    selected expressions [('I', (2322, 6, 2322, 14), '-2071924416')] with group score 0.0 
+INFO     localization    selected expressions [('I', (2322, 6, 2322, 14), '1366612240')] with group score 0.0 
+INFO     localization    selected expressions [('I', (2404, 6, 2404, 6), '-1554117752')] with group score 0.0 
+INFO     localization    selected expressions [('I', (2441, 13, 2441, 28), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (2871, 6, 2871, 59), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (3477, 6, 3477, 6), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (3477, 6, 3477, 6), '831254256')] with group score 0.0 
+INFO     localization    selected expressions [('I', (3481, 7, 3481, 12), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (3504, 7, 3504, 23), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (3556, 7, 3556, 23), '0')] with group score 0.0 
+INFO     repair          considering suspicious locations [('I', (2288, 6, 2288, 6))]
+INFO     reduction       all failing tests: ['29']
+INFO     reduction       select 1 best tests from ['29']
+INFO     reduction       select 1 best tests from ['1', '3', '6', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       add 1 tests at random
+INFO     reduction       selected 2 tests
+INFO     reduction       selected passing tests: ['38']
+INFO     reduction       selected failing tests: ['29']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '29' through KLEE
+INFO     testing         running test '29' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+WARNING  sym_infer       No non-error paths explored
+WARNING  repair          no smt file for test 29
+INFO     repair          considering suspicious locations [('I', (3784, 6, 3784, 20))]
+INFO     reduction       all failing tests: ['29']
+INFO     reduction       select 1 best tests from ['29']
+INFO     reduction       select 1 best tests from ['1', '3', '6', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       add 1 tests at random
+INFO     reduction       selected 2 tests
+INFO     reduction       selected passing tests: ['37']
+INFO     reduction       selected failing tests: ['29']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '29' through KLEE
+INFO     testing         running test '29' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3784, 6, 3784, 20)[0]: angelic = 16843009
+INFO     testing         running test '29' of frontend source
+INFO     testing         output code: 0
+INFO     sym_infer       found 1 angelic paths for test '29'
+INFO     sym_infer       inferring specification for test '37' through KLEE
+INFO     testing         running test '37' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       found 1 angelic paths for test '37'
+INFO     synthesis       synthesizing patch with component level 'variables'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3784, 6, 3784, 20): (isostr_len != 0) ---> (isostr != 0)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '29' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '30' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '32' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '33' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '34' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '35' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '36' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '37' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '51' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of validation source
+INFO     testing         output code: 0
+INFO     repair          patch successfully generated in 7m 31s (see php-2020-Apr22-183738.patch)
+SUCCESS

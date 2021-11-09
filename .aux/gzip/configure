@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -f tests/Makefile
+echo "\$CC" > /tmp/gzip-cc
+autoconf
+./configure

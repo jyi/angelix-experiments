@@ -1,0 +1,31 @@
+{
+  "29": [
+    [
+      {
+        "context": [
+          {
+            "name": "isostr_len",
+            "value": 0
+          },
+          {
+            "name": "isostr",
+            "value": 1681977176
+          },
+          {
+            "name": "dpobj",
+            "value": 1681978320
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "3784-6-3784-20",
+        "instId": 0
+      }
+    ]
+  ],
+  "65": [
+    []
+  ]
+}

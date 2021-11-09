@@ -1,0 +1,1136 @@
+[repair] benchmark: manybugs
+[repair] subject: libtiff
+[repair] version: 2006-02-23-b2ce5d8-207c78a
+[repair] search: symbolic
+[repair] ./fetch libtiff manybugs 2006-02-23-b2ce5d8-207c78a
+[fetch] benchmark: manybugs
+[fetch] subject: libtiff
+[fetch] version: 2006-02-23-b2ce5d8-207c78a
+[fetch] archive: libtiff-bug-2006-02-23-b2ce5d8-207c78a.tar.gz
+[fetch] directory: libtiff-bug-2006-02-23-b2ce5d8-207c78a
+[fetch] preparing source code
+[fetch] golden_directory: libtiff-fix-2006-02-23-b2ce5d8-207c78a
+[fetch] clean-source libtiff-bug-2006-02-23-b2ce5d8-207c78a
+[fetch] /angelix-experiments/libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/configure
+[fetch] make -j 72 clean
+[fetch] clean-source libtiff-fix-2006-02-23-b2ce5d8-207c78a
+[fetch] restore-buggy libtiff-bug-2006-02-23-b2ce5d8-207c78a
+[fetch] /angelix-experiments/libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: libtiff/tif_dirwrite.c
+[fetch] buggy_version: b2ce5d8
+[fetch] buggy_preprocessed: libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_dirwrite.c
+[fetch] buggy_original: libtiff-bug-2006-02-23-b2ce5d8-207c78a/diffs/libtiff/tif_dirwrite.c-b2ce5d8
+[fetch] cp libtiff-bug-2006-02-23-b2ce5d8-207c78a/diffs/libtiff/tif_dirwrite.c-b2ce5d8 libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_dirwrite.c
+[fetch] restore-correct libtiff-fix-2006-02-23-b2ce5d8-207c78a
+[fetch] restore-correct entered
+[fetch] cp libtiff-fix-2006-02-23-b2ce5d8-207c78a/diffs/libtiff/tif_dirwrite.c-207c78a libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_dirwrite.c
+[fetch] restored libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_dirwrite.c with libtiff-fix-2006-02-23-b2ce5d8-207c78a/diffs/libtiff/tif_dirwrite.c-207c78a
+[fetch] fetch done
+[repair] [repair] options: --symbolic --angelic-search-strategy
+symbolic
+--klee-max-forks
+100
+--klee-solver-timeout
+100
+--suspicious
+30  --all-suspicious --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-libtiff] options:  --angelic-search-strategy symbolic --klee-max-forks 100 --klee-solver-timeout 100 --suspicious 30 --all-suspicious --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcp-split.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcp-split-join.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiff2pdf.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-minisblack-1c-16b.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-minisblack-1c-8b.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-minisblack-2c-8b-alpha.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-miniswhite-1c-1b.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-palette-1c-1b.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-palette-1c-4b.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-palette-1c-8b.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-rgb-3c-16b.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-rgb-3c-8b.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extractz14-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_dirread.c
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/long_tag.c
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/Makefile.in
+[repair-libtiff] instrument libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/Makefile.in
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/tools/tiff2pdf.c
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_error.c
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/strip_rw.c
+[repair-libtiff] restore libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcp-split.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcp-split.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcp-split-join.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiff2pdf.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-minisblack-1c-16b.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-minisblack-1c-8b.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-minisblack-2c-8b-alpha.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-miniswhite-1c-1b.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-palette-1c-1b.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-palette-1c-4b.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-palette-1c-8b.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-rgb-3c-16b.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extract-rgb-3c-8b.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcrop-extractz14-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_dirread.c
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/long_tag.c
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/Makefile.in
+[repair-libtiff] instrument libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/Makefile.in
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/tools/tiff2pdf.c
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/libtiff/tif_error.c
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/strip_rw.c
+[repair-libtiff] restore libtiff-fix-2006-02-23-b2ce5d8-207c78a/libtiff/test/tiffcp-split.sh
+[repair-libtiff] the assert option not used
+INFO     repair          copy libtiff-bug-2006-02-23-b2ce5d8-207c78a/libtiff to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 139
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '14' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '15' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '16' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '17' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '18' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '20' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '21' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '22' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '23' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '24' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '25' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '26' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '27' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '28' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '29' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '32' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '33' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '34' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '35' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '36' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '37' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '43' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '49' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '51' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '52' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '53' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '54' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '55' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '56' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '57' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '58' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '59' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '60' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '61' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '71' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '72' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '73' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     repair          positive: ['2', '4', '6', '7', '8', '10', '11', '12', '13', '14', '15', '16', '17', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78']
+INFO     repair          negative: ['1', '3', '5', '9', '18', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68']
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+INFO     project         building frontend source
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '2' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 6
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 7
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 8
+INFO     testing         running test '10' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 10
+INFO     testing         running test '11' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 11
+INFO     testing         running test '12' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 12
+INFO     testing         running test '13' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+INFO     testing         running test '14' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 14
+INFO     testing         running test '15' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 15
+INFO     testing         running test '16' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 16
+INFO     testing         running test '17' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 17
+INFO     testing         running test '19' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 19
+INFO     testing         running test '20' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 20
+INFO     testing         running test '21' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 21
+INFO     testing         running test '22' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '23' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '24' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 24
+INFO     testing         running test '25' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 25
+INFO     testing         running test '26' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 26
+INFO     testing         running test '27' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 27
+INFO     testing         running test '28' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 69
+INFO     testing         running test '70' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 70
+INFO     testing         running test '71' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 71
+INFO     testing         running test '72' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 72
+INFO     testing         running test '73' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 73
+INFO     testing         running test '74' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 74
+INFO     testing         running test '75' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 75
+INFO     testing         running test '76' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 76
+INFO     testing         running test '77' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 77
+INFO     testing         running test '78' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 78
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '1' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '1' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 1
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 139
+INFO     testing         running test '3' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '5' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 5
+INFO     testing         running test '5' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 5
+INFO     testing         running test '9' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 9
+INFO     testing         running test '9' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 9
+INFO     testing         running test '18' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 18
+INFO     testing         running test '18' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 18
+INFO     testing         running test '29' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 29
+INFO     testing         running test '29' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 29
+INFO     testing         running test '30' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 30
+INFO     testing         running test '30' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 30
+INFO     testing         running test '31' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 31
+INFO     testing         running test '31' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 31
+INFO     testing         running test '32' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 32
+INFO     testing         running test '32' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 32
+INFO     testing         running test '33' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 33
+INFO     testing         running test '33' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 33
+INFO     testing         running test '34' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 34
+INFO     testing         running test '34' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 34
+INFO     testing         running test '35' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 35
+INFO     testing         running test '35' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 35
+INFO     testing         running test '36' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 36
+INFO     testing         running test '36' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 36
+INFO     testing         running test '37' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 37
+INFO     testing         running test '37' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 37
+INFO     testing         running test '38' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 38
+INFO     testing         running test '38' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 38
+INFO     testing         running test '39' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '39' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '40' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '40' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '41' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '41' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '42' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '42' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '43' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '43' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '44' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '44' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '45' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '45' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '46' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '46' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '47' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '47' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '48' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '48' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '49' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '49' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+INFO     testing         running test '50' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+INFO     testing         running test '51' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 51
+INFO     testing         running test '51' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 51
+INFO     testing         running test '52' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 52
+INFO     testing         running test '52' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 52
+INFO     testing         running test '53' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 53
+INFO     testing         running test '53' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 53
+INFO     testing         running test '54' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 54
+INFO     testing         running test '54' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 54
+INFO     testing         running test '55' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 55
+INFO     testing         running test '55' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 55
+INFO     testing         running test '56' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 56
+INFO     testing         running test '56' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 56
+INFO     testing         running test '57' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 57
+INFO     testing         running test '57' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 57
+INFO     testing         running test '58' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 58
+INFO     testing         running test '58' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 58
+INFO     testing         running test '59' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 59
+INFO     testing         running test '59' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 59
+INFO     testing         running test '60' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 60
+INFO     testing         running test '60' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 60
+INFO     testing         running test '61' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 61
+INFO     testing         running test '61' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 61
+INFO     testing         running test '62' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 62
+INFO     testing         running test '62' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 62
+INFO     testing         running test '63' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 63
+INFO     testing         running test '63' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 63
+INFO     testing         running test '64' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 64
+INFO     testing         running test '64' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 64
+INFO     testing         running test '65' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 65
+INFO     testing         running test '65' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 65
+INFO     testing         running test '66' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 66
+INFO     testing         running test '66' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 66
+INFO     testing         running test '67' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 67
+INFO     testing         running test '67' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 67
+INFO     testing         running test '68' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 68
+INFO     testing         running test '68' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 68
+WARNING  repair          excluding test 1 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 9 because it fails in golden version
+WARNING  repair          excluding test 18 because it fails in golden version
+WARNING  repair          excluding test 29 because it fails in golden version
+WARNING  repair          excluding test 30 because it fails in golden version
+WARNING  repair          excluding test 31 because it fails in golden version
+WARNING  repair          excluding test 32 because it fails in golden version
+WARNING  repair          excluding test 33 because it fails in golden version
+WARNING  repair          excluding test 34 because it fails in golden version
+WARNING  repair          excluding test 35 because it fails in golden version
+WARNING  repair          excluding test 36 because it fails in golden version
+WARNING  repair          excluding test 37 because it fails in golden version
+WARNING  repair          excluding test 38 because it fails in golden version
+WARNING  repair          excluding test 39 because it fails in golden version
+WARNING  repair          excluding test 40 because it fails in golden version
+WARNING  repair          excluding test 41 because it fails in golden version
+WARNING  repair          excluding test 42 because it fails in golden version
+WARNING  repair          excluding test 43 because it fails in golden version
+WARNING  repair          excluding test 44 because it fails in golden version
+WARNING  repair          excluding test 45 because it fails in golden version
+WARNING  repair          excluding test 46 because it fails in golden version
+WARNING  repair          excluding test 47 because it fails in golden version
+WARNING  repair          excluding test 48 because it fails in golden version
+WARNING  repair          excluding test 49 because it fails in golden version
+WARNING  repair          excluding test 50 because it fails in golden version
+WARNING  repair          excluding test 51 because it fails in golden version
+WARNING  repair          excluding test 52 because it fails in golden version
+WARNING  repair          excluding test 53 because it fails in golden version
+WARNING  repair          excluding test 54 because it fails in golden version
+WARNING  repair          excluding test 55 because it fails in golden version
+WARNING  repair          excluding test 56 because it fails in golden version
+WARNING  repair          excluding test 57 because it fails in golden version
+WARNING  repair          excluding test 58 because it fails in golden version
+WARNING  repair          excluding test 59 because it fails in golden version
+WARNING  repair          excluding test 60 because it fails in golden version
+WARNING  repair          excluding test 61 because it fails in golden version
+WARNING  repair          excluding test 62 because it fails in golden version
+WARNING  repair          excluding test 63 because it fails in golden version
+WARNING  repair          excluding test 64 because it fails in golden version
+WARNING  repair          excluding test 65 because it fails in golden version
+WARNING  repair          excluding test 66 because it fails in golden version
+WARNING  repair          excluding test 67 because it fails in golden version
+WARNING  repair          excluding test 68 because it fails in golden version
+INFO     repair          repair test suite: ['2', '3', '4', '22', '23', '28']
+INFO     repair          validation test suite: ['2', '3', '4', '6', '7', '8', '10', '11', '12', '13', '14', '15', '16', '17', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78']
+INFO     localization    (loc, score) = (('L', (176, 39, 176, 45)), 1.0)
+INFO     localization    (loc, score) = (('L', (693, 14, 693, 18)), 1.0)
+INFO     localization    (loc, score) = (('I', (444, 7, 444, 12)), 1.0)
+INFO     localization    (loc, score) = (('I', (821, 6, 821, 25)), 1.0)
+INFO     localization    (loc, score) = (('I', (184, 21, 184, 39)), 1.0)
+INFO     localization    (loc, score) = (('I', (344, 21, 344, 39)), 1.0)
+INFO     localization    (loc, score) = (('I', (94, 6, 94, 23)), 1.0)
+INFO     localization    (loc, score) = (('I', (800, 7, 800, 37)), 1.0)
+INFO     localization    (loc, score) = (('L', (137, 14, 137, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (213, 8, 213, 20)), 1.0)
+INFO     localization    (loc, score) = (('I', (153, 6, 153, 25)), 1.0)
+INFO     localization    (loc, score) = (('I', (1192, 6, 1192, 37)), 1.0)
+INFO     localization    (loc, score) = (('I', (799, 6, 799, 25)), 1.0)
+INFO     localization    (loc, score) = (('I', (647, 6, 647, 10)), 1.0)
+INFO     localization    (loc, score) = (('I', (191, 25, 191, 26)), 1.0)
+INFO     localization    (loc, score) = (('I', (143, 6, 143, 14)), 1.0)
+INFO     localization    (loc, score) = (('I', (700, 6, 700, 11)), 1.0)
+INFO     localization    (loc, score) = (('I', (101, 6, 101, 6)), 1.0)
+INFO     localization    (loc, score) = (('I', (806, 8, 806, 27)), 1.0)
+INFO     localization    (loc, score) = (('I', (138, 31, 138, 36)), 1.0)
+INFO     localization    (loc, score) = (('L', (188, 34, 188, 43)), 1.0)
+INFO     localization    (loc, score) = (('I', (456, 8, 456, 14)), 1.0)
+INFO     localization    (loc, score) = (('I', (231, 8, 231, 20)), 1.0)
+INFO     localization    (loc, score) = (('I', (116, 10, 116, 27)), 1.0)
+INFO     localization    group 1: [('I', (94, 6, 94, 23))] (1.0)
+INFO     localization    group 2: [('I', (101, 6, 101, 6))] (1.0)
+INFO     localization    group 3: [('I', (116, 10, 116, 27))] (1.0)
+INFO     localization    group 4: [('L', (137, 14, 137, 19))] (1.0)
+INFO     localization    group 5: [('I', (138, 31, 138, 36))] (1.0)
+INFO     localization    group 6: [('I', (143, 6, 143, 14))] (1.0)
+INFO     localization    group 7: [('I', (153, 6, 153, 25))] (1.0)
+INFO     localization    group 8: [('L', (176, 39, 176, 45))] (1.0)
+INFO     localization    group 9: [('I', (184, 21, 184, 39))] (1.0)
+INFO     localization    group 10: [('L', (188, 34, 188, 43))] (1.0)
+INFO     localization    group 11: [('I', (191, 25, 191, 26))] (1.0)
+INFO     localization    group 12: [('I', (213, 8, 213, 20))] (1.0)
+INFO     localization    group 13: [('I', (231, 8, 231, 20))] (1.0)
+INFO     localization    group 14: [('I', (344, 21, 344, 39))] (1.0)
+INFO     localization    group 15: [('I', (444, 7, 444, 12))] (1.0)
+INFO     localization    group 16: [('I', (456, 8, 456, 14))] (1.0)
+INFO     localization    group 17: [('I', (647, 6, 647, 10))] (1.0)
+INFO     localization    group 18: [('L', (693, 14, 693, 18))] (1.0)
+INFO     localization    group 19: [('I', (700, 6, 700, 11))] (1.0)
+INFO     localization    group 20: [('I', (799, 6, 799, 25))] (1.0)
+INFO     localization    group 21: [('I', (800, 7, 800, 37))] (1.0)
+INFO     localization    group 22: [('I', (806, 8, 806, 27))] (1.0)
+INFO     localization    group 23: [('I', (821, 6, 821, 25))] (1.0)
+INFO     localization    group 24: [('I', (1192, 6, 1192, 37))] (1.0)
+INFO     localization    selected expressions [('I', (94, 6, 94, 23))] with group score 1.0 
+INFO     localization    selected expressions [('I', (101, 6, 101, 6))] with group score 1.0 
+INFO     localization    selected expressions [('I', (116, 10, 116, 27))] with group score 1.0 
+INFO     localization    selected expressions [('L', (137, 14, 137, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (138, 31, 138, 36))] with group score 1.0 
+INFO     localization    selected expressions [('I', (143, 6, 143, 14))] with group score 1.0 
+INFO     localization    selected expressions [('I', (153, 6, 153, 25))] with group score 1.0 
+INFO     localization    selected expressions [('L', (176, 39, 176, 45))] with group score 1.0 
+INFO     localization    selected expressions [('I', (184, 21, 184, 39))] with group score 1.0 
+INFO     localization    selected expressions [('L', (188, 34, 188, 43))] with group score 1.0 
+INFO     localization    selected expressions [('I', (191, 25, 191, 26))] with group score 1.0 
+INFO     localization    selected expressions [('I', (213, 8, 213, 20))] with group score 1.0 
+INFO     localization    selected expressions [('I', (231, 8, 231, 20))] with group score 1.0 
+INFO     localization    selected expressions [('I', (344, 21, 344, 39))] with group score 1.0 
+INFO     localization    selected expressions [('I', (444, 7, 444, 12))] with group score 1.0 
+INFO     localization    selected expressions [('I', (456, 8, 456, 14))] with group score 1.0 
+INFO     localization    selected expressions [('I', (647, 6, 647, 10))] with group score 1.0 
+INFO     localization    selected expressions [('L', (693, 14, 693, 18))] with group score 1.0 
+INFO     localization    selected expressions [('I', (700, 6, 700, 11))] with group score 1.0 
+INFO     localization    selected expressions [('I', (799, 6, 799, 25))] with group score 1.0 
+INFO     localization    selected expressions [('I', (800, 7, 800, 37))] with group score 1.0 
+INFO     localization    selected expressions [('I', (806, 8, 806, 27))] with group score 1.0 
+INFO     localization    selected expressions [('I', (821, 6, 821, 25))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1192, 6, 1192, 37))] with group score 1.0 
+INFO     repair          considering suspicious locations [('I', (94, 6, 94, 23))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (101, 6, 101, 6))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (116, 10, 116, 27))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('L', (137, 14, 137, 19))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (138, 31, 138, 36))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (143, 6, 143, 14))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (153, 6, 153, 25))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('L', (176, 39, 176, 45))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (184, 21, 184, 39))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('L', (188, 34, 188, 43))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (191, 25, 191, 26))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (213, 8, 213, 20))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (231, 8, 231, 20))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (344, 21, 344, 39))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (444, 7, 444, 12))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (456, 8, 456, 14))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (647, 6, 647, 10))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('L', (693, 14, 693, 18))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (700, 6, 700, 11))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (799, 6, 799, 25))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (800, 7, 800, 37))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (806, 8, 806, 27))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (821, 6, 821, 25))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          considering suspicious locations [('I', (1192, 6, 1192, 37))]
+INFO     reduction       all failing tests: ['3']
+INFO     reduction       select 1 best tests from ['3']
+INFO     reduction       select 0 best tests from ['2', '4', '22', '23', '28']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['3']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 3
+INFO     repair          no patch generated in 11m 27s
+FAIL

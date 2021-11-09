@@ -1,0 +1,11 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -2003,7 +2003,7 @@
+       case 'Z': /* zones of an image X:Y read as zone X of Y */
+ 		crop_data->crop_mode |= CROP_ZONES;
+ 		for (i = 0, opt_ptr = strtok (optarg, ",");
+-                   ((opt_ptr != NULL) &&  (i < MAX_REGIONS));
++                   (((opt_ptr != 0) && (opt_ptr == 0)));
+                     (opt_ptr = strtok (NULL, ",")), i++)
+                     {
+ 		    crop_data->zones++;

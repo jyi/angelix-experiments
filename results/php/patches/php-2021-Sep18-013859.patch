@@ -1,0 +1,11 @@
+--- a/ext/phar/phar.c
++++ b/ext/phar/phar.c
+@@ -3404,7 +3404,7 @@
+ 		efree(name);
+ 	}
+ 
+-	if (failed) {
++	if (1) {
+ 		zend_bailout();
+ 	}
+ 

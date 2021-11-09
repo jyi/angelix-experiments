@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+make -e --trace VERBOSE=1 -j ${NUM_OF_CPU} &> build.log
+echo "Build succeeds"

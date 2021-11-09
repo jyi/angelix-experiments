@@ -1,0 +1,638 @@
+[repair] benchmark: manybugs
+[repair] subject: gzip
+[repair] version: 2010-02-19-3eb6091d69-884ef6d16c
+[repair] search: guided
+[fetch] benchmark: manybugs
+[fetch] subject: gzip
+[fetch] version: 2010-02-19-3eb6091d69-884ef6d16c
+[fetch] archive: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c.tar.gz
+[fetch] directory: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] preparing source code
+[fetch] golden_directory: gzip-fix-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] clean-source gzip-bug-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] /angelix-experiments/gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip/configure
+[fetch] make -j 72 clean
+[fetch] clean-source gzip-fix-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] restore-buggy gzip-bug-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] /angelix-experiments/gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: gzip.c
+[fetch] buggy_version: 3eb6091d69
+[fetch] buggy_preprocessed: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c
+[fetch] buggy_original: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-3eb6091d69
+[fetch] cp gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-3eb6091d69 gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c
+[fetch] restore-correct gzip-fix-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] restore-correct entered
+[fetch] cp gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-884ef6d16c gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c
+[fetch] restored gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c with gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-884ef6d16c
+[fetch] fetch done
+[repair] [repair] options: --guided --ignore-lines
+--lines
+550
+--test-timeout
+60
+--all-tests
+--defect
+if-conditions
+loop-conditions
+--angelic-search-strategy
+guided
+--search-max-trials
+200
+--max-same-cost-iter
+20
+--default-max-cost
+300000000
+--default-non-zero-cost
+300000000
+--error-cost
+10000000
+--warning-cost
+5000000
+--one-bit-flip-prob
+0.5
+--penalty1
+4
+--penalty2
+2
+--ignore-trivial
+--synthesis-level
+boolean-constants
+--group-size
+1  --all-suspicious --timeout 14400 --show-suspicious-locations --mcmc-beta 0.8 --group-size 1
+[repair-gzip] options:  --ignore-lines --lines 550 --test-timeout 60 --all-tests --defect if-conditions loop-conditions --angelic-search-strategy guided --search-max-trials 200 --max-same-cost-iter 20 --default-max-cost 300000000 --default-non-zero-cost 300000000 --error-cost 10000000 --warning-cost 5000000 --one-bit-flip-prob 0.5 --penalty1 4 --penalty2 2 --ignore-trivial --synthesis-level boolean-constants --group-size 1 --all-suspicious --timeout 14400 --show-suspicious-locations --mcmc-beta 0.8 --group-size 1
+[repair-gzip] cleaning gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip ...
+[repair-gzip] cleaning gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip ...
+INFO     repair          copy gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 0
+INFO     repair          positive: ['1', '2', '3', '4', '5', '6', '8', '9', '10', '12', '13']
+INFO     repair          negative: ['7', '11']
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+INFO     project         building frontend source
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '1' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 2
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 4
+INFO     testing         running test '5' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 5
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     testing         running test '9' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 9
+INFO     testing         running test '10' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 10
+INFO     testing         running test '12' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 12
+INFO     testing         running test '13' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '7' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '11' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 11
+INFO     testing         running test '11' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 11
+WARNING  repair          excluding test 11 because it fails in golden version
+INFO     repair          repair test suite: ['1', '2', '3', '5', '6', '7', '8', '9']
+INFO     repair          validation test suite: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '12', '13']
+INFO     localization    (loc, score) = (('L', (1805, 15, 1805, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (595, 7, 595, 22)), 1.0)
+INFO     localization    (loc, score) = (('I', (786, 9, 786, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (719, 9, 719, 15)), 1.0)
+INFO     localization    (loc, score) = (('I', (425, 9, 425, 13)), 1.0)
+INFO     localization    (loc, score) = (('I', (584, 9, 584, 40)), 1.0)
+INFO     localization    (loc, score) = (('I', (1391, 13, 1391, 24)), 1.0)
+INFO     localization    (loc, score) = (('L', (1816, 15, 1816, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (550, 9, 550, 48)), 1.0)
+INFO     localization    (loc, score) = (('I', (1676, 9, 1676, 39)), 1.0)
+INFO     localization    (loc, score) = (('I', (957, 7, 957, 25)), 1.0)
+INFO     localization    (loc, score) = (('I', (827, 13, 827, 59)), 1.0)
+INFO     localization    (loc, score) = (('I', (1298, 13, 1298, 23)), 1.0)
+INFO     localization    (loc, score) = (('I', (556, 9, 556, 20)), 1.0)
+INFO     localization    (loc, score) = (('I', (737, 9, 737, 11)), 1.0)
+INFO     localization    (loc, score) = (('I', (1003, 9, 1003, 28)), 1.0)
+INFO     localization    (loc, score) = (('I', (1713, 9, 1713, 14)), 1.0)
+INFO     localization    (loc, score) = (('I', (858, 9, 858, 10)), 1.0)
+INFO     localization    (loc, score) = (('I', (1819, 13, 1819, 18)), 1.0)
+INFO     localization    (loc, score) = (('I', (1179, 13, 1179, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (792, 9, 792, 32)), 1.0)
+INFO     localization    (loc, score) = (('I', (1031, 7, 1031, 22)), 1.0)
+INFO     localization    (loc, score) = (('I', (598, 7, 598, 16)), 1.0)
+INFO     localization    (loc, score) = (('I', (574, 9, 574, 23)), 1.0)
+INFO     localization    (loc, score) = (('I', (545, 9, 545, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (1050, 7, 1050, 12)), 1.0)
+INFO     localization    (loc, score) = (('L', (578, 16, 578, 25)), 1.0)
+INFO     localization    (loc, score) = (('I', (930, 11, 930, 16)), 1.0)
+INFO     localization    (loc, score) = (('I', (1431, 9, 1431, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (762, 13, 762, 15)), 1.0)
+INFO     localization    (loc, score) = (('I', (1012, 12, 1012, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (1333, 13, 1333, 28)), 1.0)
+INFO     localization    (loc, score) = (('I', (538, 9, 538, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (1094, 9, 1094, 14)), 1.0)
+INFO     localization    (loc, score) = (('I', (600, 11, 600, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (1271, 9, 1271, 18)), 1.0)
+INFO     localization    (loc, score) = (('I', (772, 17, 772, 28)), 1.0)
+INFO     localization    (loc, score) = (('I', (575, 13, 575, 66)), 1.0)
+INFO     localization    (loc, score) = (('I', (1280, 13, 1280, 20)), 1.0)
+INFO     localization    (loc, score) = (('I', (833, 9, 833, 10)), 1.0)
+INFO     localization    (loc, score) = (('I', (1639, 9, 1639, 10)), 1.0)
+INFO     localization    (loc, score) = (('I', (430, 9, 430, 16)), 1.0)
+INFO     localization    (loc, score) = (('I', (1647, 13, 1647, 14)), 1.0)
+INFO     localization    (loc, score) = (('I', (805, 13, 805, 22)), 1.0)
+INFO     localization    (loc, score) = (('I', (539, 9, 539, 19)), 1.0)
+INFO     localization    group 1: [('I', (425, 9, 425, 13))] (1.0)
+INFO     localization    group 2: [('I', (430, 9, 430, 16))] (1.0)
+INFO     localization    group 3: [('I', (538, 9, 538, 19))] (1.0)
+INFO     localization    group 4: [('I', (539, 9, 539, 19))] (1.0)
+INFO     localization    group 5: [('I', (545, 9, 545, 19))] (1.0)
+INFO     localization    group 6: [('I', (550, 9, 550, 48))] (1.0)
+INFO     localization    group 7: [('I', (556, 9, 556, 20))] (1.0)
+INFO     localization    group 8: [('I', (574, 9, 574, 23))] (1.0)
+INFO     localization    group 9: [('I', (575, 13, 575, 66))] (1.0)
+INFO     localization    group 10: [('L', (578, 16, 578, 25))] (1.0)
+INFO     localization    group 11: [('I', (584, 9, 584, 40))] (1.0)
+INFO     localization    group 12: [('I', (595, 7, 595, 22))] (1.0)
+INFO     localization    group 13: [('I', (598, 7, 598, 16))] (1.0)
+INFO     localization    group 14: [('I', (600, 11, 600, 21))] (1.0)
+INFO     localization    group 15: [('I', (719, 9, 719, 15))] (1.0)
+INFO     localization    group 16: [('I', (737, 9, 737, 11))] (1.0)
+INFO     localization    group 17: [('I', (762, 13, 762, 15))] (1.0)
+INFO     localization    group 18: [('I', (772, 17, 772, 28))] (1.0)
+INFO     localization    group 19: [('I', (786, 9, 786, 21))] (1.0)
+INFO     localization    group 20: [('I', (792, 9, 792, 32))] (1.0)
+INFO     localization    group 21: [('I', (805, 13, 805, 22))] (1.0)
+INFO     localization    group 22: [('I', (827, 13, 827, 59))] (1.0)
+INFO     localization    group 23: [('I', (833, 9, 833, 10))] (1.0)
+INFO     localization    group 24: [('I', (858, 9, 858, 10))] (1.0)
+INFO     localization    group 25: [('I', (930, 11, 930, 16))] (1.0)
+INFO     localization    group 26: [('I', (957, 7, 957, 25))] (1.0)
+INFO     localization    group 27: [('I', (1003, 9, 1003, 28))] (1.0)
+INFO     localization    group 28: [('I', (1012, 12, 1012, 19))] (1.0)
+INFO     localization    group 29: [('I', (1031, 7, 1031, 22))] (1.0)
+INFO     localization    group 30: [('I', (1050, 7, 1050, 12))] (1.0)
+INFO     localization    group 31: [('I', (1094, 9, 1094, 14))] (1.0)
+INFO     localization    group 32: [('I', (1179, 13, 1179, 21))] (1.0)
+INFO     localization    group 33: [('I', (1271, 9, 1271, 18))] (1.0)
+INFO     localization    group 34: [('I', (1280, 13, 1280, 20))] (1.0)
+INFO     localization    group 35: [('I', (1298, 13, 1298, 23))] (1.0)
+INFO     localization    group 36: [('I', (1333, 13, 1333, 28))] (1.0)
+INFO     localization    group 37: [('I', (1391, 13, 1391, 24))] (1.0)
+INFO     localization    group 38: [('I', (1431, 9, 1431, 19))] (1.0)
+INFO     localization    group 39: [('I', (1639, 9, 1639, 10))] (1.0)
+INFO     localization    group 40: [('I', (1647, 13, 1647, 14))] (1.0)
+INFO     localization    group 41: [('I', (1676, 9, 1676, 39))] (1.0)
+INFO     localization    group 42: [('I', (1713, 9, 1713, 14))] (1.0)
+INFO     localization    group 43: [('L', (1805, 15, 1805, 19))] (1.0)
+INFO     localization    group 44: [('L', (1816, 15, 1816, 19))] (1.0)
+INFO     localization    group 45: [('I', (1819, 13, 1819, 18))] (1.0)
+INFO     localization    selected expressions [('I', (425, 9, 425, 13))] with group score 1.0 
+INFO     localization    selected expressions [('I', (430, 9, 430, 16))] with group score 1.0 
+INFO     localization    selected expressions [('I', (538, 9, 538, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (539, 9, 539, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (545, 9, 545, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (550, 9, 550, 48))] with group score 1.0 
+INFO     localization    selected expressions [('I', (556, 9, 556, 20))] with group score 1.0 
+INFO     localization    selected expressions [('I', (574, 9, 574, 23))] with group score 1.0 
+INFO     localization    selected expressions [('I', (575, 13, 575, 66))] with group score 1.0 
+INFO     localization    selected expressions [('L', (578, 16, 578, 25))] with group score 1.0 
+INFO     localization    selected expressions [('I', (584, 9, 584, 40))] with group score 1.0 
+INFO     localization    selected expressions [('I', (595, 7, 595, 22))] with group score 1.0 
+INFO     localization    selected expressions [('I', (598, 7, 598, 16))] with group score 1.0 
+INFO     localization    selected expressions [('I', (600, 11, 600, 21))] with group score 1.0 
+INFO     localization    selected expressions [('I', (719, 9, 719, 15))] with group score 1.0 
+INFO     localization    selected expressions [('I', (737, 9, 737, 11))] with group score 1.0 
+INFO     localization    selected expressions [('I', (762, 13, 762, 15))] with group score 1.0 
+INFO     localization    selected expressions [('I', (772, 17, 772, 28))] with group score 1.0 
+INFO     localization    selected expressions [('I', (786, 9, 786, 21))] with group score 1.0 
+INFO     localization    selected expressions [('I', (792, 9, 792, 32))] with group score 1.0 
+INFO     localization    selected expressions [('I', (805, 13, 805, 22))] with group score 1.0 
+INFO     localization    selected expressions [('I', (827, 13, 827, 59))] with group score 1.0 
+INFO     localization    selected expressions [('I', (833, 9, 833, 10))] with group score 1.0 
+INFO     localization    selected expressions [('I', (858, 9, 858, 10))] with group score 1.0 
+INFO     localization    selected expressions [('I', (930, 11, 930, 16))] with group score 1.0 
+INFO     localization    selected expressions [('I', (957, 7, 957, 25))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1003, 9, 1003, 28))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1012, 12, 1012, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1031, 7, 1031, 22))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1050, 7, 1050, 12))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1094, 9, 1094, 14))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1179, 13, 1179, 21))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1271, 9, 1271, 18))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1280, 13, 1280, 20))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1298, 13, 1298, 23))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1333, 13, 1333, 28))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1391, 13, 1391, 24))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1431, 9, 1431, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1639, 9, 1639, 10))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1647, 13, 1647, 14))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1676, 9, 1676, 39))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1713, 9, 1713, 14))] with group score 1.0 
+INFO     localization    selected expressions [('L', (1805, 15, 1805, 19))] with group score 1.0 
+INFO     localization    selected expressions [('L', (1816, 15, 1816, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1819, 13, 1819, 18))] with group score 1.0 
+INFO     repair          considering suspicious locations [('I', (425, 9, 425, 13))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     guided_infer    inferring specification for test '7' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    search for the cost of ('0',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    search for the cost of ('1',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('1',)
+INFO     guided_infer    store the cost of ('1',)
+INFO     guided_infer    new qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    old cost: 49.0
+INFO     guided_infer    new cost: 49.0
+INFO     guided_infer    all costs: [49.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    [CustomProposal] q0: [0. 1.]
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (430, 9, 430, 16))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     guided_infer    inferring specification for test '7' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    search for the cost of ('0',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    search for the cost of ('1',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('1',)
+INFO     guided_infer    store the cost of ('1',)
+INFO     guided_infer    new qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    old cost: 49.0
+INFO     guided_infer    new cost: 49.0
+INFO     guided_infer    all costs: [49.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    [CustomProposal] q0: [0. 1.]
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (538, 9, 538, 19))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     guided_infer    inferring specification for test '7' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 1.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    search for the cost of ('1',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('1',)
+INFO     guided_infer    store the cost of ('1',)
+INFO     guided_infer    search for the cost of ('1',)
+INFO     guided_infer    ('1',) cached
+INFO     guided_infer    new qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    old cost: 49.0
+INFO     guided_infer    new cost: 49.0
+INFO     guided_infer    all costs: [49.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    [CustomProposal] q0: [0. 1.]
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 50.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    search for the cost of ('1',)
+INFO     guided_infer    ('1',) cached
+INFO     guided_infer    search for the cost of ('0',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    new qs: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    old cost: 49.0
+INFO     guided_infer    new cost: 49.0
+INFO     guided_infer    all costs: [49.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('I', (539, 9, 539, 19))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     guided_infer    inferring specification for test '7' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 1.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    search for the cost of ('1',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('1',)
+INFO     guided_infer    store the cost of ('1',)
+INFO     guided_infer    search for the cost of ('0',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    new qs: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    old cost: 49.0
+INFO     guided_infer    new cost: 49.0
+INFO     guided_infer    all costs: [49.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('I', (545, 9, 545, 19))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     guided_infer    inferring specification for test '7' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    search for the cost of ('0',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    search for the cost of ('1',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('1',)
+INFO     guided_infer    store the cost of ('1',)
+INFO     guided_infer    new qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    old cost: 49.0
+INFO     guided_infer    new cost: 88.0
+INFO     guided_infer    all costs: [49.0, 88.0]
+INFO     guided_infer    accept ratio: 2.8184618754713292e-14
+INFO     pymc3           accepted: False
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (550, 9, 550, 48))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     guided_infer    inferring specification for test '7' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    search for the cost of ('0',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    store the cost of ('0',)
+INFO     guided_infer    search for the cost of ('1',)
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 0
+INFO     guided_infer    found an angelic path for test '7'
+INFO     guided_infer    angelic: [(array([0, 1]), 1)]
+INFO     guided_infer    init: [(array([0, 0]), 1)]
+INFO     guided_infer    all_deltas (locs): [0]
+INFO     guided_infer    test([]) = FAIL
+INFO     guided_infer    deltas (locs): [0]
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 0
+INFO     guided_infer    test([0]) = PASS
+INFO     DD              dd done
+INFO     guided_infer    one_minimal (locs): [0]
+INFO     guided_infer    angelic (bits): (array([0, 1]), 1)
+INFO     guided_infer    init (bits): (array([0, 0]), 1)
+INFO     guided_infer    all_deltas (bits): [63]
+INFO     guided_infer    deltas (bit): [63]
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 0
+INFO     guided_infer    test([63]) = PASS
+INFO     DD              dd done
+INFO     guided_infer    one_minimal (bits): [63]
+INFO     guided_infer    inferring specification for test '1' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    search for the cost of ('0',)
+INFO     testing         running test '1' of frontend source
+INFO     testing         output code: 0
+INFO     guided_infer    found an angelic path for test '1'
+INFO     guided_infer    inferring specification for test '2' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [13] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([   0, 1024])] / [13] / (1, 2)
+INFO     guided_infer    search for the cost of ('0000000000000',)
+INFO     testing         running test '2' of frontend source
+INFO     testing         output code: 0
+INFO     guided_infer    found an angelic path for test '2'
+INFO     guided_infer    angelic: [(array([0, 0]), 41)]
+INFO     guided_infer    init: [(array([0, 0]), 13)]
+INFO     guided_infer    all_deltas (locs): [0]
+INFO     guided_infer    test([]) = FAIL
+INFO     guided_infer    deltas (locs): [0]
+WARNING  guided_infer    DD failed (locs): [Errno 2] No such file or directory: '/angelix-experiments/.angelix/DD/test_2/proposal'
+INFO     guided_infer    inferring specification for test '3' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 1])] / [1] / (1, 2)
+INFO     guided_infer    search for the cost of ('0',)
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 0
+INFO     guided_infer    found an angelic path for test '3'
+INFO     guided_infer    inferring specification for test '5' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [13] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([ 0, 16])] / [13] / (1, 2)
+INFO     guided_infer    search for the cost of ('0000000000000',)
+INFO     testing         running test '5' of frontend source
+INFO     testing         output code: 0
+INFO     guided_infer    found an angelic path for test '5'
+INFO     guided_infer    inferring specification for test '6' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 0])] / [1] / (1, 2)
+INFO     guided_infer    search for the cost of ('0',)
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+INFO     guided_infer    found an angelic path for test '6'
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [2] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([0, 1])] / [2] / (1, 2)
+INFO     guided_infer    search for the cost of ('00',)
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 0
+INFO     guided_infer    found an angelic path for test '8'
+INFO     guided_infer    inferring specification for test '9' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    [CustomProposal] q0: [0. 0.]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     guided_infer    [accept_fun] q0s: [array([0, 0])] / [6] / (1, 2)
+INFO     guided_infer    [accept_fun] qs: [array([ 0, 55])] / [6] / (1, 2)
+INFO     guided_infer    search for the cost of ('000000',)
+INFO     testing         running test '9' of frontend source
+INFO     testing         output code: 0
+INFO     guided_infer    found an angelic path for test '9'
+INFO     synthesis       synthesizing patch with component level 'boolean-constants'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (550, 9, 550, 48): (((z_len == 0) && (! decompress)) || (z_len > 30)) ---> ((z_len == 0) || (z_len > 30))
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 0
+INFO     repair          patch successfully generated in 2m 52s (see gzip-2020-Mar16-174403.patch)
+SUCCESS

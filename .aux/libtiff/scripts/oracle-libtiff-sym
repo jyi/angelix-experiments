@@ -1,0 +1,36 @@
+#!/bin/bash
+
+rst_log=$(pwd)/oracle.log
+
+rm -f $rst_log
+if [ "$1" == "2" ]; then
+    cd test
+    if ! [ -f long_tag ]; then
+        CC="angelix-compiler --klee" make -e -j ${NUM_OF_CPU} long_tag
+    fi
+    $ANGELIX_RUN ./long_tag
+    test_rst=$?
+elif [ "$1" == "3" ]; then
+    cd test
+    if ! [ -f short_tag ]; then
+        CC="angelix-compiler --klee" make -e -j ${NUM_OF_CPU} short_tag
+    fi
+    $ANGELIX_RUN ./short_tag
+    test_rst=$?
+elif [ "$1" == "4" ]; then
+    cd test
+    if ! [ -f strip_rw ]; then
+        CC="angelix-compiler --klee" make -e -j ${NUM_OF_CPU} strip_rw
+    fi
+    $ANGELIX_RUN ./strip_rw
+    test_rst=$?
+else
+    perl "/angelix-experiments/.aux/libtiff/scripts/libtiff-run-tests.pl" "$1" |& tee $rst_log
+    cat $rst_log | grep --quiet PASS
+    test_rst=$?
+fi
+
+for id in $(ps -ef | grep "lli -load" | awk '{print $2}'); do kill -9 $id; done &> /dev/null
+for id in $(ps -ef | grep "sh -c CC='angelix-compiler --klee'" | awk '{print $2}'); do kill -9 $id; done &> /dev/null
+
+exit $test_rst

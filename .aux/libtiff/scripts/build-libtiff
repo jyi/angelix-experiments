@@ -1,0 +1,42 @@
+#!/bin/bash
+
+cwd=$(pwd)
+build_log_file=$cwd/build.log
+
+rm -f $build_log_file
+make -e -j ${NUM_OF_CPU} --trace VERBOSE=1 &> $build_log_file
+cd test
+
+echo "[build-libtiff] build long_tag"
+name="long_tag"
+file="$cwd/build_$name.log"
+rm -f $name
+rm -f $file
+make -e -j ${NUM_OF_CPU} long_tag &> $cwd/build_long_tag.log
+grep "error:" $file > /dev/null
+if [[ $? == 0 ]]; then
+   exit 1
+fi
+
+echo "[build-libtiff] build short_tag"
+name="short_tag"
+file="$cwd/build_$name.log"
+rm -f $name
+rm -f $file
+make -e -j ${NUM_OF_CPU} short_tag &> $file
+grep "error:" $file > /dev/null
+if [[ $? == 0 ]]; then
+   exit 1
+fi
+
+echo "[build-libtiff] build strip_rw"
+name="strip_rw"
+file="$cwd/build_$name.log"
+rm -f $name
+rm -f $file
+make -e -j ${NUM_OF_CPU} strip_rw &> $file
+grep "error:" $file > /dev/null
+if [[ $? == 0 ]]; then
+   exit 1
+fi
+

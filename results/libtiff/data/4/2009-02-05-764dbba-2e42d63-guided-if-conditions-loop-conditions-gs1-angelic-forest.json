@@ -1,0 +1,32 @@
+{
+  "39": [
+    [
+      {
+        "context": [
+          {
+            "name": "off",
+            "value": -379651280
+          },
+          {
+            "name": "crop",
+            "value": -379631712
+          },
+          {
+            "name": "image",
+            "value": -379630968
+          },
+          {
+            "name": "image->res_unit",
+            "value": 2
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "4244-7-4244-61",
+        "instId": 0
+      }
+    ]
+  ]
+}

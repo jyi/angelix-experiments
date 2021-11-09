@@ -1,0 +1,55 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -1098,7 +1098,7 @@
+   tsize_t stripsize;
+ 
+   TIFFGetFieldDefaulted(out, TIFFTAG_ROWSPERSTRIP, &rowsperstrip);
+-  for (row = 0; row < imagelength; row += rowsperstrip)
++  for (row = 0; (row < imagelength); row += rowsperstrip)
+     {
+     nrows = (row + rowsperstrip > imagelength) ?
+ 	     imagelength - row : rowsperstrip;
+@@ -1430,13 +1430,13 @@
+ {
+ 	switch (type) {
+ 	case TIFF_SHORT:
+-		if (count == 1) {
++		if ((count == 1)) {
+ 			uint16 shortv;
+ 			CopyField(tag, shortv);
+-		} else if (count == 2) {
++		} else if ((count == 2)) {
+ 			uint16 shortv1, shortv2;
+ 			CopyField2(tag, shortv1, shortv2);
+-		} else if (count == 4) {
++		} else if ((count == 4)) {
+ 			uint16 *tr, *tg, *tb, *ta;
+ 			CopyField4(tag, tr, tg, tb, ta);
+ 		} else if (count == (uint16) -1) {
+@@ -1451,7 +1451,7 @@
+ 		}
+ 		break;
+ 	case TIFF_RATIONAL:
+-		if (count == 1) {
++		if ((count == 1)) {
+ 			float floatv;
+ 			CopyField(tag, floatv);
+ 		} else if (count == (uint16) -1) {
+@@ -1465,7 +1465,7 @@
+ 		}
+ 		break;
+ 	case TIFF_DOUBLE:
+-		if (count == 1) {
++		if ((count == 1)) {
+ 			double doublev;
+ 			CopyField(tag, doublev);
+ 		} else if (count == (uint16) -1) {
+@@ -2003,7 +2003,7 @@
+       case 'Z': /* zones of an image X:Y read as zone X of Y */
+ 		crop_data->crop_mode |= CROP_ZONES;
+ 		for (i = 0, opt_ptr = strtok (optarg, ",");
+-                   ((opt_ptr != NULL) &&  (i < MAX_REGIONS));
++                   (((opt_ptr == 0) && (i < 8)));
+                     (opt_ptr = strtok (NULL, ",")), i++)
+                     {
+ 		    crop_data->zones++;

@@ -1,0 +1,11 @@
+--- a/mpn/powm.c
++++ b/mpn/powm.c
+@@ -209,7 +209,7 @@
+   this_pp = pp;
+   redcify (this_pp, bp, bn, mp, n);
+ 
+-  b2p = tp + 2*n;
++  b2p = rp;
+ 
+   /* Store b^2 in b2.  */
+   mpn_sqr (tp, this_pp, n);

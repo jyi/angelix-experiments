@@ -1,0 +1,11 @@
+--- a/ext/standard/string.c
++++ b/ext/standard/string.c
+@@ -5269,7 +5269,7 @@
+ 		RETURN_FALSE;
+ 	}
+ 
+-	if (len > s1_len - offset) {
++	if ((len < (s1_len - offset))) {
+ 		len = s1_len - offset;
+ 	}
+ 

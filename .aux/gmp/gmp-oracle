@@ -1,0 +1,38 @@
+#!/bin/bash
+
+timelimit=10
+
+case "$1" in
+    30)
+        total=20
+        rm -f test_result
+        ${ANGELIX_RUN:-eval} ./tests/mpz/t-powm |& tee test_result
+        ret=${PIPESTATUS[0]}
+        echo "[gmp-oracle] ret: $ret"
+        cost=`grep -E  '^cost:' test_result | cut -d ":" -f2`
+        if [ -z ${cost} ]; then
+            ## compute cost here if cost is failed to be obtained.
+            passed=`grep -E '^passed:' test_result | wc -l`
+            cost=$(echo "($total-$passed) * ${PENALTY1:-5}" | bc)
+            echo "[gmp-oracle] cost: $cost"
+        fi
+
+        if grep -E -q 'Stack dump:|KLEE: ERROR:' test_result; then
+            cost=$(echo "$cost + ${ANGELIX_ERROR_COST:-0}" | bc)
+        fi
+
+        if ! [ -z ${ANGELIX_COST_FILE+x} ]; then
+            echo "[gmp-oracle] cost: $cost"
+            echo $cost > $ANGELIX_COST_FILE
+        fi
+        exit $ret
+        ;;
+    *)
+        FILE=/angelix-experiments/.angelix-gmp/testo
+        perl "/angelix-experiments/.aux/gmp/gmp-run-tests.pl" "$1" &> "$FILE"
+        cat $FILE
+        grep -q "PASS:" $FILE && echo "PASS" && exit 0
+        echo "FAIL"
+        exit 1
+        ;;
+esac

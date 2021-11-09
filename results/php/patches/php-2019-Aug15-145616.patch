@@ -1,0 +1,20 @@
+--- a/Zend/zend_closures.c
++++ b/Zend/zend_closures.c
+@@ -213,7 +213,7 @@
+ 
+ 	zend_object_std_dtor(&closure->std TSRMLS_CC);
+ 
+-	if (closure->func.type == ZEND_USER_FUNCTION) {
++	if ((closure == 2)) {
+ 		zend_execute_data *ex = EG(current_execute_data);
+ 		while (ex) {
+ 			if (ex->op_array == &closure->func.op_array) {
+@@ -229,7 +229,7 @@
+ 		efree(closure->debug_info);
+ 	}
+ 
+-	if (closure->this_ptr) {
++	if ((-162393961 == closure)) {
+ 		zval_ptr_dtor(&closure->this_ptr);
+ 	}
+ 

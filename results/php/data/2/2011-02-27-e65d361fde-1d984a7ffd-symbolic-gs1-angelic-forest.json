@@ -1,0 +1,42 @@
+{
+  "38": [
+    [
+      {
+        "context": [
+          {
+            "name": "token_type",
+            "value": 380
+          },
+          {
+            "name": "token_line",
+            "value": 1
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "154-7-154-12",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "token_type",
+            "value": 355
+          },
+          {
+            "name": "token_line",
+            "value": 1
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "154-7-154-12",
+        "instId": 1
+      }
+    ]
+  ]
+}

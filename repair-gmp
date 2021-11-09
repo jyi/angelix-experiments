@@ -1,0 +1,290 @@
+#!/bin/bash
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+testsarr=( "t-powm" "reuse" "t-gcd" )
+
+usage="Usage: ./repair-gmp"
+
+if [[ $# > 0 ]]; then
+    version="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+# parse options
+skip_instrument=0
+strat=""
+options=""
+while :; do
+    if [[ $# > 0 ]]; then
+        case $1 in
+            --skip-instrument)
+                skip_instrument=1
+                shift
+                ;;
+            --guided)
+                strat="guided"
+                shift
+                ;;
+            --symbolic)
+                strat="symbolic"
+                shift
+                ;;
+            --random)
+                strat="random"
+                shift
+                ;;
+            --*)
+                options="$options $1"
+                shift
+                ;;
+            *)
+                if [[ $1 =~ ^[a-zA-Z0-9.\-]+$ ]]; then
+                    options="$options $1"
+                    shift
+                else
+                    # Default case: No more options, so break out of the loop.
+                    break
+                fi
+        esac
+    else
+        break
+    fi
+done
+
+echo "[repair-gmp] options: $options"
+
+
+mdirectory="gmp-bug-${version}"
+mgolden_directory="gmp-fix-${version}"
+make="$PWD/.aux/gmp/build-gmp"
+configure="$PWD/.aux/gmp/$version/configure-gmp"
+
+gmp_test_suite=$(seq 1 146)
+# gmp_test_suite="19"
+# gmp_test_suite="30"
+
+# Common functions -------------------------------------------------------------
+
+# replaces within "$3" lines starting from the only occurrence of symbol "$2" in file "$1"
+replace-in-range () {
+    local file="$1"
+    local symbol="$2"
+    local length="$3"
+    local original="$4"
+    local replacement="$5"
+
+    local begin=$(grep -n "$symbol" "$file" | cut -d : -f 1)
+    local end=$(( begin + length ))
+
+    sed -i "$begin,$end{s/$original/$replacement/;}" "$file"
+}
+
+add-header () {
+    local file="$1"
+    sed -i '1s/^/#ifndef ANGELIX_OUTPUT\n/' "$file"
+    sed -i '2s/^/#define ANGELIX_OUTPUT(type, expr, id) expr\n/' "$file"
+    sed -i '3s/^/#define ANGELIX_REACHABLE(id)\n/' "$file"
+    sed -i '4s/^/#endif\n/' "$file"
+}
+
+
+# gmp ----------------------------------------------------------------------
+
+add-angelix-runner-simple () {
+    local script="$1"
+    local call="$2"
+
+    local line=$(grep -n -v "^\s*[#;]" "$script" | grep -v "echo" | grep "$call" | cut -d: -f 1)
+    #echo "line:$line::script: $script"
+    sed -i "$line"'s/^\.\.\/gmp/\\\$\\\{ANGELIX_RUN:-eval\\\} \.\.\/gmp/' "$script"
+}
+
+add-angelix-runner () {
+    local script="$1"
+    sed -i 's/&> \/dev\/null \&\&/\&\& \\\$\\\{ANGELIX_RUN:-eval\\\}/' "$script"
+}
+
+prepare-angelix-runner () {
+    local script="$1"
+#    local line=$(grep -n "init" "$script")
+    sed -i 's/^\./#\./' "$script"
+    sed -i 's/gmp/\.\.\/gmp/' "$script"
+    sed -i 's/\.\.\/gmp:/gmp:/' "$script"
+    sed -i 's/^Exit/exit/' "$script"
+    sed -i 's/framework_failure_/exit 99/' "$script"
+
+    sed -i 's/^compare/diff/' "$script"
+
+    local kline=$(grep -n "gmp" "$script")
+    #echo "kline:$kline"
+}
+
+preinstrument_test() {
+   directory="$1"
+   for t in "${test_array[@]}"
+   do
+        local test_script="$directory/gmp/tests/$t"
+        prepare-angelix-runner "$test_script"
+   done
+}
+
+restore_original () {
+    local src="$1"
+    if [ -e $src.org ]; then
+        # restore the original
+        cp $src.org $src
+    elif [ -e $src ]; then
+        # prepare the org file
+        cp $src $src.org
+    fi
+}
+
+fix-header () {
+    local file="$1"
+    sed -i '/include \"fib_table/d' "$file"
+    sed -i '1s/^/#define FIB_TABLE_LIMIT\t93\n/' "$file"
+    sed -i '2s/^/#define FIB_TABLE_LUCNUM_LIMITlt92\n/' "$file"
+}
+
+instrument () {
+    local directory="$1"
+
+    # local gmp_error="$directory/gmp/mpn/generic/powm.c"
+    # #cp "$directory/sanity/mpn/generic/powm.c" "$gmp_error"
+    # local line=$(grep -n "(mp_bitcnt_t)0" $gmp_error | cut -d: -f 1)
+    # #sed -i 's/if WANT_REDC_2/if 1/g' "$gmp_error"
+    # #if tail -n +460 "$gmp_error" | grep -q "if WANT_REDC_2" "$gmp_error"; then
+    # #    sed -i '465d;466d;467d;468d;469d;470d;473d' "$gmp_error"
+    # #fi
+    # add-header "$gmp_error"
+    # sed -i '1s|^|#include "'"$KLEE_INCLUDE_PATH/klee/klee.h"'"\n|' "$gmp_error"
+    # sed -i 's/~(mp_bitcnt_t)0/0/g' "$gmp_error"
+    # sed -i 's/REDC_1_TO_REDC_N_THRESHOLD/70/g' "$gmp_error"
+    # sed -i 's/REDC_2_TO_REDC_N_THRESHOLD/79/g' "$gmp_error"
+    # sed -i 's/REDC_1_TO_REDC_2_THRESHOLD/12/g' "$gmp_error"
+    # #sed -i 's/\/\* WANT_REDC_2 \*\///g' "$gmp_error"
+
+    # sed -i 's/no-dependencies ansi2knr/no-dependencies/g' "$directory/gmp/configure.in"
+    # sed -i 's/no-dependencies ansi2knr/no-dependencies/g' "$directory/gmp/Makefile.am"
+    # for ctest in "t-powm" "reuse";
+    # do
+    #     add-header "$directory/gmp/tests/mpz/$ctest.c"
+    #     sed -i 's/int reps = 1000;/int reps = 7;/' "$directory/gmp/tests/mpz/$ctest.c"
+    #     sed -i '/mpz_powm (/i ANGELIX_REACHABLE("stderr1");' "$directory/gmp/tests/mpz/$ctest.c"
+    #     sed -i '/mpz_powm (/a ANGELIX_REACHABLE("stderr2");' "$directory/gmp/tests/mpz/$ctest.c"
+    # done
+
+    for file in "ltmain.sh";
+    do
+        if [ -e "$(pwd)/.aux/gmp/$file" ]; then
+            restore_original $directory/gmp/$file
+            rm -f $directory/gmp/$file
+            cp $(pwd)/.aux/gmp/$file $directory/gmp/$file
+        fi
+    done
+
+    for file in "Makefile.in" "configure" "gmp-impl.h" "longlong.h";
+    do
+        if [ -e "$(pwd)/.aux/gmp/$version/$file" ]; then
+            restore_original $directory/gmp/$file
+            cp $(pwd)/.aux/gmp/$version/$file $directory/gmp/$file
+        fi
+    done
+
+    for file in $(ls -1 $(pwd)/.aux/gmp/$version/tests/mpz);
+    do
+        if [ -e "$(pwd)/.aux/gmp/$version/tests/mpz/$file" ]; then
+            restore_original $directory/gmp/$version/tests/mpz/$file
+            cp $(pwd)/.aux/gmp/$version/tests/mpz/$file $directory/gmp/tests/mpz/$file
+        fi
+    done
+
+    if [ $version == "14166-14167" ]; then
+         local gcdext_c="$directory/gmp/mpz/gcdext.c"
+         restore_original $gcdext_c
+         sed -i 's/ssize = SIZ (a) >= 0 ? 1 : -1;/\tsiz = a->_mp_size >= 0;\
+\tif (siz) {\
+\tssize = 1;\
+\t} else {\
+\tssize = -1;\
+\t}/' $gcdext_c
+
+         replace-in-range $gcdext_c \
+                          '^mpz_gcdext (' \
+                          10 \
+                          '  __mpz_struct stmp, gtmp;' \
+                          '  __mpz_struct stmp, gtmp;\
+int siz;'
+
+        restore_original $directory/gmp/mpz/out_str.c
+        cp $(pwd)/.aux/gmp/$version/mpz/out_str.c $directory/gmp/mpz/out_str.c
+    fi
+}
+
+repair-gmp () {
+    local directory="$1"
+    local golden_directory="$2"
+    local src="$directory/gmp"
+    local buggy=$(cat "$directory/bugged-program.txt")
+
+    # overwrite buggy
+    if [[ $version == "13420-13421" ]]; then
+        buggy_org=$buggy
+        buggy="mpn/powm.c"
+        # prepare the buggy file because it initially does not exist,
+        # and this causes the crash of Angelix
+        cp $directory/gmp/$buggy_org $directory/gmp/$buggy
+        cp $golden_directory/gmp/$buggy_org $golden_directory/gmp/$buggy
+    fi
+
+    local run_tests_script=$(readlink -f ".aux/gmp/gmp-run-tests.pl")
+    local golden="$golden_directory/gmp"
+    export PATH="$(pwd)/.aux/gmp/frontend/:$PATH"
+
+    echo "[repair-gmp] buggy: $buggy"
+    angelix "$src" "$buggy" $(pwd)/.aux/gmp/gmp-oracle $gmp_test_suite \
+            --golden "$golden" \
+            --build $make \
+            --configure "$configure" \
+            $options
+
+}
+
+# Main -------------------------------------------------------------------------
+mkdir -p $mdirectory/gmp/tests/mpbsd
+echo >>  $mdirectory/gmp/tests/mpbsd/Makefile.in
+mkdir -p $mgolden_directory/gmp/tests/mpbsd
+echo >>  $mgolden_directory/gmp/tests/mpbsd/Makefile.in
+
+
+
+if [ ! -f "$mdirectory/INSTRUMENTED" ]; then
+    if [ $version == "14166-14167" ]; then
+        sed -i 's/AM_C_PROTOTYPES/dnl AM_C_PROTOTYPES/g' $mdirectory/gmp/configure.in
+    fi
+
+    sed -i 's/$(top_builddir)\/ansi2knr//g' $mdirectory/gmp/configure.in
+    sed -i 's/case $host in/host=none-0-0; case $host in/' $mdirectory/gmp/configure
+
+     instrument "$mdirectory"
+     touch "$mdirectory/INSTRUMENTED"
+fi
+
+
+if [ ! -f "$mgolden_directory/INSTRUMENTED" ]; then
+    if [ $version == "14166-14167" ]; then
+        sed -i 's/AM_C_PROTOTYPES/dnl AM_C_PROTOTYPES/g' $mgolden_directory/gmp/configure.in
+    fi
+
+    sed -i 's/$(top_builddir)\/ansi2knr//g' $mgolden_directory/gmp/configure.in
+    sed -i 's/case $host in/host=none-0-0; case $host in/' $mdirectory/gmp/configure
+
+    instrument "$mgolden_directory"
+    touch "$mgolden_directory/INSTRUMENTED"
+fi
+
+repair-gmp "$mdirectory" "$mgolden_directory"

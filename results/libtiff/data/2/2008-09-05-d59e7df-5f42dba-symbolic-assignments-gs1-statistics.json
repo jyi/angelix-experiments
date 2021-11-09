@@ -1,0 +1,279 @@
+{
+  "file": "/angelix-experiments/.angelix/statistics.json",
+  "src": "UNKNOWN",
+  "buggy": "UNKNOWN",
+  "patch_found": false,
+  "patch_file": "UNKNOWN",
+  "config": {
+    "initial_tests": 1,
+    "all_tests": false,
+    "max_z3_trials": 2,
+    "defect": [
+      "assignments"
+    ],
+    "test_timeout": null,
+    "single_group": false,
+    "group_size": 1,
+    "group_by_score": false,
+    "localize_from_bottom": false,
+    "suspicious": 20,
+    "localization": "jaccard",
+    "ignore_trivial": false,
+    "path_solving_timeout": 60000,
+    "timeout": 14400,
+    "max_angelic_paths": null,
+    "klee_max_forks": 100,
+    "klee_max_depth": null,
+    "klee_search": null,
+    "klee_timeout": 7200,
+    "klee_out_dir_timeout": 60,
+    "klee_solver_timeout": 100,
+    "klee_debug": false,
+    "klee_ignore_errors": false,
+    "ignore_trans_errors": false,
+    "ignore_infer_errors": false,
+    "skip_validating_angelic_path": false,
+    "use_nsynth": false,
+    "use_osynth": false,
+    "use_gcc": false,
+    "synthesis_timeout": 30000,
+    "synthesis_levels": [
+      "alternatives",
+      "integer-constants",
+      "boolean-constants"
+    ],
+    "synthesis_global_vars": false,
+    "synthesis_func_params": false,
+    "synthesis_used_vars": true,
+    "synthesis_ptr_vars": false,
+    "synthesis_bool_only": false,
+    "empty_env_exps": false,
+    "exclude_member_exp": false,
+    "generate_all": false,
+    "init_uninit_vars": false,
+    "redundant_test": false,
+    "verbose": false,
+    "build_before_instr": false,
+    "instr_printf": null,
+    "mute_config_message": false,
+    "mute_build_message": false,
+    "mute_test_message": false,
+    "show_test_message": false,
+    "show_oracle_contents": false,
+    "show_syn_message": false,
+    "mute_warning": false,
+    "show_suspicious_locations": true,
+    "invalid_localization": false,
+    "angelic_search_strategy": "symbolic",
+    "step_method": "metropolis",
+    "compilation_db_file": null,
+    "keep_angelix_dir": false,
+    "skip_configure": false,
+    "skip_build": false,
+    "gobble_klee_message": false,
+    "lines": null,
+    "search_max_trials": 30,
+    "max_same_cost_iter": 20,
+    "mcmc_beta": 0.3,
+    "one_bit_flip_prob": 0.5,
+    "chunk_bits": 32,
+    "max_resample": 3,
+    "block_expand_factor": 2,
+    "inc_fix": false,
+    "default_max_cost": 2,
+    "error_cost": "0",
+    "warning_cost": "0",
+    "max_syn_attempts": 2,
+    "max_repair_attempts": 2,
+    "penalty1": "1",
+    "penalty2": "1",
+    "parallel_testing": false,
+    "all_suspicious": true,
+    "mutate": 0,
+    "epsilon": 1.0,
+    "always_accept": false,
+    "skip_dd": false,
+    "finish_after_fault_localize": false,
+    "default_susp_score": 0.5,
+    "additional_susp_locs": null,
+    "default_non_zero_cost": "1",
+    "timeout_cost": "1"
+  },
+  "time": {
+    "testing": 168.09844851493835,
+    "compilation": 170.9123764038086,
+    "klee": 469.8853933811188,
+    "synthesis": 1.8161647319793701,
+    "solving": 9.507620334625244,
+    "inference": 479.41683983802795,
+    "dd": 0,
+    "total": 791.2077805995941
+  },
+  "iterations": {
+    "synthesis": [
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.6094272136688232
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.6070163249969482
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.5997211933135986
+      }
+    ],
+    "guided": [],
+    "symbolic": [
+      {
+        "locations": [
+          [
+            "A",
+            [
+              69,
+              30,
+              69,
+              30
+            ]
+          ]
+        ],
+        "test": "23",
+        "first_ap_found": 1,
+        "time": {
+          "klee": 70.80221724510193,
+          "solving": 0.02364826202392578
+        },
+        "paths": {
+          "explored": 1,
+          "angelic_found": true,
+          "angelic": 1
+        }
+      },
+      {
+        "locations": [
+          [
+            "A",
+            [
+              82,
+              25,
+              82,
+              25
+            ]
+          ]
+        ],
+        "test": "23",
+        "first_ap_found": 1,
+        "time": {
+          "klee": 70.799476146698,
+          "solving": 0.027594327926635742
+        },
+        "paths": {
+          "explored": 1,
+          "angelic_found": true,
+          "angelic": 1
+        }
+      },
+      {
+        "locations": [
+          [
+            "A",
+            [
+              110,
+              14,
+              110,
+              14
+            ]
+          ]
+        ],
+        "test": "23",
+        "first_ap_found": 1,
+        "time": {
+          "klee": 70.82594776153564,
+          "solving": 0.019522905349731445
+        },
+        "paths": {
+          "explored": 1,
+          "angelic_found": true,
+          "angelic": 1
+        }
+      },
+      {
+        "locations": [
+          [
+            "A",
+            [
+              116,
+              11,
+              116,
+              11
+            ]
+          ]
+        ],
+        "test": "23",
+        "first_ap_found": 2,
+        "time": {
+          "klee": 87.84074354171753,
+          "solving": 1.8427467346191406
+        },
+        "paths": {
+          "explored": 8,
+          "angelic_found": false,
+          "angelic": 0
+        }
+      },
+      {
+        "locations": [
+          [
+            "A",
+            [
+              138,
+              14,
+              138,
+              14
+            ]
+          ]
+        ],
+        "test": "23",
+        "first_ap_found": 2,
+        "time": {
+          "klee": 76.7832260131836,
+          "solving": 1.6869292259216309
+        },
+        "paths": {
+          "explored": 3,
+          "angelic_found": false,
+          "angelic": 0
+        }
+      },
+      {
+        "locations": [
+          [
+            "A",
+            [
+              143,
+              14,
+              143,
+              14
+            ]
+          ]
+        ],
+        "test": "23",
+        "first_ap_found": 1,
+        "time": {
+          "klee": 92.83378267288208,
+          "solving": 5.90717887878418
+        },
+        "paths": {
+          "explored": 9,
+          "angelic_found": false,
+          "angelic": 0
+        }
+      }
+    ],
+    "random": []
+  }
+}

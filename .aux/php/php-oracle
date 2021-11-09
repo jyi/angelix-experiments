@@ -1,0 +1,67 @@
+#!/bin/bash
+set -uo pipefail
+
+if [ "$#" -ne 1 ]
+then
+    echo "Usage: $0 <test-id>"
+    exit 1
+fi
+
+test_log_file="$(pwd)/php-oracle.log"
+
+if ! [ -f $test_log_file ]; then
+    touch $test_log_file
+fi
+echo "[php-oracle] test_log_file: $test_log_file"
+
+
+#################################################################
+
+CMD=$(basename $0 | sed 's/.\///' | sed 's/.sh//')
+
+function abort() {
+    local msg=$1
+    abort_msg="[$CMD] Abort: $msg"
+    echo "$abort_msg" |& tee -a ${test_log_file}
+    exit 1
+}
+
+#################################################################
+
+test_id="$1"
+
+run_tests_script="/angelix-experiments/.aux/php/php-run-tests"
+if ! [ -e $run_tests_script ]; then
+    abort "No such file: $run_tests_script"
+fi
+
+# the current dir is {validation, frontend, backend}.
+# export AF_WORK_DIR=$(readlink -f .)
+# export AF_SRC_ROOT_DIR=$(pwd)/php
+# export AF_USE_TEST_SCRIPT_ID=""
+
+if ! [ -e ../php-helper.php ]; then
+    cp /angelix-experiments/.aux/php/php-helper.php ..
+fi
+
+echo "[php-oracle] run_tests_script: $run_tests_script"
+test_abbrev="T"
+if [[ $test_abbrev == "T" ]]; then
+    echo "[php-oracle] ${run_tests_script} ${test_id} 'T'" |& tee ${test_log_file}
+    ${run_tests_script} ${test_id} 'T' |& tee -a ${test_log_file}
+    result=$?
+else
+    echo "[php-oracle] ${run_tests_script} ${test_id} 'F'" |& tee ${test_log_file}
+    ${run_tests_script} ${test_id} 'F' |& tee -a ${test_log_file}
+    result=$?
+fi
+
+echo "[php-oracle] test result: $result" |& tee -a ${test_log_file}
+
+if [[ $result -eq 0 ]]; then
+    echo "${test_id}: P" |& tee -a ${test_log_file}
+    exit 0
+else
+    echo "${test_id}: N" |& tee -a ${test_log_file}
+    exit 1
+fi

@@ -1,0 +1,139 @@
+#!/bin/bash
+case "$1" in
+6000)
+    export WIRESHARK60_SUBTEST=0
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6001)
+    export WIRESHARK60_SUBTEST=1
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6002)
+    export WIRESHARK60_SUBTEST=2
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6003)
+    export WIRESHARK60_SUBTEST=3
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6004)
+    export WIRESHARK60_SUBTEST=4
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6005)
+    export WIRESHARK60_SUBTEST=5
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6006)
+    export WIRESHARK60_SUBTEST=6
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6007)
+    export WIRESHARK60_SUBTEST=7
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6008)
+    # this test is flaky
+    # for id in $(seq 10)
+    # do
+    #     export WIRESHARK60_SUBTEST=8
+    #     rm -f out result
+    #     /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 > out 2> result
+    #     grep --quiet PASS result
+    #     ret_val=$?
+    #     cat out
+    #     if [ $ret_val -eq 0 ]; then
+    #         break
+    #     fi
+    # done
+
+    for id in $(seq 10)
+    do
+        export WIRESHARK60_SUBTEST=8
+        rm -f out result
+        /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 > out 2> result
+        grep --quiet PASS result
+        ret_val=$?
+        cat out
+        python3 /angelix-experiments/.aux/wireshark/cost-gen.py out "Starting test test_fragment_add_seq_check_1SUCCESS"
+        if [ $ret_val -ne 0 ]; then
+           exit $ret_val
+        fi
+    done
+    ;;
+6009)
+    export WIRESHARK60_SUBTEST=9
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6010)
+    export WIRESHARK60_SUBTEST=10
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6011)
+    export WIRESHARK60_SUBTEST=11
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6012)
+    export WIRESHARK60_SUBTEST=12
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6013)
+    export WIRESHARK60_SUBTEST=13
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+6014)
+    export WIRESHARK60_SUBTEST=14
+    rm -f out
+    /angelix-experiments/.aux/wireshark/wireshark-run-tests.sh 60 |& tee out
+    grep --quiet PASS out
+    ;;
+46)
+    export LD_LIBRARY_PATH=$PWD/wiretap/.libs/:$PWD/epan/.libs:$PWD/wsutil/.libs/:$LD_LIBRARY_PATH  # this is for testing
+    echo $LD_LIBRARY_PATH
+    export ANGELIX_KLEE_LOAD="-load $PWD/wiretap/.libs/libwiretap.so -load $PWD/wsutil/.libs/libwsutil.so -load $PWD/epan/.libs/libwireshark.so"  # this is for KLEE
+#cd test && $ANGELIX_RUN ../.libs/tshark -i invalid_interface -w testout.pcap |& grep -q 'The capture session could not be initiated'
+    > /tmp/wireshark-test46-output
+    $ANGELIX_RUN ./dumpcap -i invalid_interface -Z -B 1 |& tee /tmp/wireshark-test46-output
+    python3 /angelix-experiments/.aux/wireshark/cost-gen.py /tmp/wireshark-test46-output "The capture session could not be initiated" "^..:..:.. CaptureChild"
+    if grep -q 'The capture session could not be initiated' /tmp/wireshark-test46-output; then
+        if grep -q '^..:..:.. CaptureChild' /tmp/wireshark-test46-output; then
+            exit 1
+        else
+            exit 0
+        fi
+    else
+        exit 1
+    fi
+    ;;
+*)
+    rm -f out
+    "/angelix-experiments/.aux/wireshark/wireshark-run-tests.sh" "$1" |& tee out
+    grep --quiet PASS out
+    ;;
+esac

@@ -1,0 +1,3846 @@
+[repair] benchmark: manybugs
+[repair] subject: gzip
+[repair] version: 2009-09-26-a1d3d4019d-f17cbd13a1
+[repair] search: guided
+[fetch] benchmark: manybugs
+[fetch] subject: gzip
+[fetch] version: 2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] archive: gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1.tar.gz
+[fetch] directory: gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] preparing source code
+[fetch] golden_directory: gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] clean-source gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] /angelix-experiments/gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/configure
+[fetch] make -j 72 clean
+[fetch] clean-source gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] restore-buggy gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] /angelix-experiments/gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: gzip.c
+[fetch] buggy_version: a1d3d4019d
+[fetch] buggy_preprocessed: gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/gzip.c
+[fetch] buggy_original: gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/diffs/gzip.c-a1d3d4019d
+[fetch] cp gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/diffs/gzip.c-a1d3d4019d gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/gzip.c
+[fetch] restore-correct gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1
+[fetch] restore-correct entered
+[fetch] cp gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/diffs/gzip.c-f17cbd13a1 gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/gzip.c
+[fetch] restored gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/gzip/gzip.c with gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/diffs/gzip.c-f17cbd13a1
+[fetch] fetch done
+[repair] [repair] options: --guided --ignore-lines
+--lines
+653
+--use-nsynth
+--gobble-klee-message
+--synthesis-level
+variables
+--synthesis-global-vars
+--test-timeout
+60
+--all-tests
+--ignore-trans-errors
+--angelic-search-strategy
+guided
+--search-max-trials
+200
+--max-same-cost-iter
+20
+--default-max-cost
+300000000
+--default-non-zero-cost
+300000000
+--error-cost
+10000000
+--warning-cost
+5000000
+--one-bit-flip-prob
+0.5
+--penalty1
+4
+--penalty2
+2
+--group-size
+1  --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-gzip] options:  --ignore-lines --lines 653 --use-nsynth --gobble-klee-message --synthesis-level variables --synthesis-global-vars --test-timeout 60 --all-tests --ignore-trans-errors --angelic-search-strategy guided --search-max-trials 200 --max-same-cost-iter 20 --default-max-cost 300000000 --default-non-zero-cost 300000000 --error-cost 10000000 --warning-cost 5000000 --one-bit-flip-prob 0.5 --penalty1 4 --penalty2 2 --group-size 1 --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-gzip] cleaning gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/gzip ...
+[repair-gzip] cleaning gzip-fix-2009-09-26-a1d3d4019d-f17cbd13a1/gzip ...
+INFO     repair          copy gzip-bug-2009-09-26-a1d3d4019d-f17cbd13a1/gzip to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '1' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '2' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '7' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '9' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of golden source
+INFO     testing         output code: 1
+WARNING  repair          excluding test 1 because it fails in golden version
+WARNING  repair          excluding test 2 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 7 because it fails in golden version
+WARNING  repair          excluding test 9 because it fails in golden version
+WARNING  repair          excluding test 10 because it fails in golden version
+WARNING  repair          excluding test 11 because it fails in golden version
+WARNING  repair          excluding test 12 because it fails in golden version
+WARNING  repair          excluding test 13 because it fails in golden version
+INFO     repair          positive: ['3', '4', '6']
+INFO     repair          negative: ['8']
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+WARNING  transformation  transformation of .angelix/frontend failed
+INFO     project         building frontend source
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 4
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '8' of golden source
+INFO     testing         output code: 0
+INFO     repair          repair test suite: ['3', '6', '8']
+INFO     repair          validation test suite: ['3', '4', '6', '8']
+INFO     localization    (loc, score) = (('I', (659, 9, 659, 9)), 1.0)
+INFO     localization    (loc, score) = (('I', (548, 9, 548, 48)), 1.0)
+INFO     localization    (loc, score) = (('I', (1046, 7, 1046, 12)), 1.0)
+INFO     localization    (loc, score) = (('I', (788, 9, 788, 32)), 1.0)
+INFO     localization    (loc, score) = (('I', (1414, 9, 1414, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (799, 9, 799, 9)), 1.0)
+INFO     localization    (loc, score) = (('I', (817, 9, 817, 9)), 1.0)
+INFO     localization    (loc, score) = (('I', (651, 9, 651, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (1321, 6, 1321, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (1266, 9, 1266, 18)), 1.0)
+INFO     localization    (loc, score) = (('I', (543, 9, 543, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (1808, 6, 1808, 11)), 1.0)
+INFO     localization    (loc, score) = (('I', (592, 7, 592, 22)), 1.0)
+INFO     localization    (loc, score) = (('I', (430, 9, 430, 16)), 1.0)
+INFO     localization    (loc, score) = (('I', (537, 9, 537, 19)), 1.0)
+INFO     localization    (loc, score) = (('L', (575, 16, 575, 25)), 1.0)
+INFO     localization    (loc, score) = (('L', (1794, 15, 1794, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (571, 9, 571, 23)), 1.0)
+INFO     localization    (loc, score) = (('I', (536, 9, 536, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (831, 9, 831, 9)), 1.0)
+INFO     localization    (loc, score) = (('L', (1805, 15, 1805, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (634, 9, 634, 24)), 1.0)
+INFO     localization    (loc, score) = (('I', (806, 9, 806, 9)), 1.0)
+INFO     localization    (loc, score) = (('I', (1286, 6, 1286, 16)), 1.0)
+INFO     localization    (loc, score) = (('I', (1379, 6, 1379, 17)), 1.0)
+INFO     localization    (loc, score) = (('I', (829, 9, 829, 10)), 1.0)
+INFO     localization    (loc, score) = (('I', (425, 9, 425, 13)), 1.0)
+INFO     localization    (loc, score) = (('I', (595, 7, 595, 16)), 1.0)
+INFO     localization    (loc, score) = (('I', (1832, 9, 1832, 9)), 1.0)
+INFO     localization    (loc, score) = (('I', (715, 9, 715, 15)), 1.0)
+INFO     localization    (loc, score) = (('I', (597, 11, 597, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (572, 6, 572, 59)), 1.0)
+INFO     localization    (loc, score) = (('I', (733, 9, 733, 11)), 1.0)
+INFO     localization    (loc, score) = (('I', (854, 9, 854, 10)), 1.0)
+INFO     localization    (loc, score) = (('I', (637, 9, 637, 49)), 1.0)
+INFO     localization    (loc, score) = (('I', (1027, 7, 1027, 22)), 1.0)
+INFO     localization    (loc, score) = (('I', (886, 8, 886, 8)), 1.0)
+INFO     localization    (loc, score) = (('I', (553, 9, 553, 20)), 1.0)
+INFO     localization    (loc, score) = (('I', (801, 6, 801, 15)), 1.0)
+INFO     localization    (loc, score) = (('I', (612, 9, 612, 20)), 1.0)
+INFO     localization    (loc, score) = (('I', (782, 9, 782, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (1090, 9, 1090, 14)), 1.0)
+INFO     localization    (loc, score) = (('I', (1862, 7, 1862, 12)), 1.0)
+INFO     localization    (loc, score) = (('I', (637, 9, 637, 49), '1'), 0.0)
+INFO     localization    (loc, score) = (('L', (1794, 15, 1794, 19), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (612, 9, 612, 20), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1266, 9, 1266, 18), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (592, 7, 592, 22), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (799, 9, 799, 9), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (817, 9, 817, 9), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1090, 9, 1090, 14), '1'), 0.0)
+INFO     localization    (loc, score) = (('L', (1805, 15, 1805, 19), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (634, 9, 634, 24), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1808, 6, 1808, 11), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (831, 9, 831, 9), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (572, 6, 572, 59), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (683, 9, 683, 9), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (553, 9, 553, 20), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (801, 6, 801, 15), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (430, 9, 430, 16), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1286, 6, 1286, 16), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (806, 9, 806, 9), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (425, 9, 425, 13), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (543, 9, 543, 19), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1321, 6, 1321, 21), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1046, 7, 1046, 12), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (571, 9, 571, 23), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (548, 9, 548, 48), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1832, 9, 1832, 9), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (665, 9, 665, 9), '0'), 0.0)
+INFO     localization    (loc, score) = (('L', (575, 16, 575, 25), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (537, 9, 537, 19), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (651, 9, 651, 21), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (581, 9, 581, 40), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1350, 10, 1350, 55), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1808, 6, 1808, 11), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (571, 9, 571, 23), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1027, 7, 1027, 22), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (788, 9, 788, 32), '1'), 0.0)
+INFO     localization    (loc, score) = (('L', (1805, 15, 1805, 19), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (782, 9, 782, 21), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (659, 9, 659, 9), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1379, 6, 1379, 17), '1'), 0.0)
+INFO     localization    (loc, score) = (('L', (1794, 15, 1794, 19), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1862, 7, 1862, 12), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (733, 9, 733, 11), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (829, 9, 829, 10), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (536, 9, 536, 19), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (715, 9, 715, 15), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1414, 9, 1414, 19), '1'), 0.0)
+INFO     localization    group 1: [('I', (430, 9, 430, 16))] (1.0)
+INFO     localization    group 2: [('I', (536, 9, 536, 19))] (1.0)
+INFO     localization    group 3: [('I', (537, 9, 537, 19))] (1.0)
+INFO     localization    group 4: [('I', (543, 9, 543, 19))] (1.0)
+INFO     localization    group 5: [('I', (548, 9, 548, 48))] (1.0)
+INFO     localization    group 6: [('I', (571, 9, 571, 23))] (1.0)
+INFO     localization    group 7: [('L', (575, 16, 575, 25))] (1.0)
+INFO     localization    group 8: [('I', (592, 7, 592, 22))] (1.0)
+INFO     localization    group 9: [('I', (651, 9, 651, 21))] (1.0)
+INFO     localization    group 10: [('I', (659, 9, 659, 9))] (1.0)
+INFO     localization    group 11: [('I', (788, 9, 788, 32))] (1.0)
+INFO     localization    group 12: [('I', (799, 9, 799, 9))] (1.0)
+INFO     localization    group 13: [('I', (817, 9, 817, 9))] (1.0)
+INFO     localization    group 14: [('I', (831, 9, 831, 9))] (1.0)
+INFO     localization    group 15: [('I', (1046, 7, 1046, 12))] (1.0)
+INFO     localization    group 16: [('I', (1266, 9, 1266, 18))] (1.0)
+INFO     localization    group 17: [('I', (1321, 6, 1321, 21))] (1.0)
+INFO     localization    group 18: [('I', (1414, 9, 1414, 19))] (1.0)
+INFO     localization    group 19: [('L', (1794, 15, 1794, 19))] (1.0)
+INFO     localization    group 20: [('I', (1808, 6, 1808, 11))] (1.0)
+INFO     localization    selected expressions [('I', (430, 9, 430, 16))] with group score 1.0 
+INFO     localization    selected expressions [('I', (536, 9, 536, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (537, 9, 537, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (543, 9, 543, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (548, 9, 548, 48))] with group score 1.0 
+INFO     localization    selected expressions [('I', (571, 9, 571, 23))] with group score 1.0 
+INFO     localization    selected expressions [('L', (575, 16, 575, 25))] with group score 1.0 
+INFO     localization    selected expressions [('I', (592, 7, 592, 22))] with group score 1.0 
+INFO     localization    selected expressions [('I', (651, 9, 651, 21))] with group score 1.0 
+INFO     localization    selected expressions [('I', (659, 9, 659, 9))] with group score 1.0 
+INFO     localization    selected expressions [('I', (788, 9, 788, 32))] with group score 1.0 
+INFO     localization    selected expressions [('I', (799, 9, 799, 9))] with group score 1.0 
+INFO     localization    selected expressions [('I', (817, 9, 817, 9))] with group score 1.0 
+INFO     localization    selected expressions [('I', (831, 9, 831, 9))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1046, 7, 1046, 12))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1266, 9, 1266, 18))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1321, 6, 1321, 21))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1414, 9, 1414, 19))] with group score 1.0 
+INFO     localization    selected expressions [('L', (1794, 15, 1794, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1808, 6, 1808, 11))] with group score 1.0 
+INFO     repair          considering suspicious locations [('I', (430, 9, 430, 16))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (536, 9, 536, 19))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('I', (537, 9, 537, 19))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('I', (543, 9, 543, 19))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 50.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 77.0
+INFO     guided_infer    all costs: [34.0, 77.0]
+INFO     guided_infer    accept ratio: 2.498050325866635e-06
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (548, 9, 548, 48))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 31.0
+INFO     guided_infer    all costs: [31.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (571, 9, 571, 23))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 50.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('L', (575, 16, 575, 25))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 3])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 50.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 50.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.8898817709880238
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #4
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #5
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #6
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #7
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #8
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #9
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #10
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #11
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #12
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #13
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #14
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #15
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #16
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #17
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #18
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #19
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #20
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #21
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #22
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #23
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #24
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #25
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #26
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #27
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #28
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #29
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #30
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #31
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #32
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #33
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #34
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #35
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #36
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #37
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #38
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #39
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #40
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #41
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #42
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #43
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #44
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #45
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #46
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #47
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #48
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #49
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #50
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #51
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #52
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #53
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #54
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #55
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #56
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #57
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #58
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #59
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #60
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #61
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #62
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #63
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #64
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #65
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #66
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #67
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #68
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #69
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #70
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #71
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #72
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #73
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #74
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #75
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #76
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #77
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #78
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #79
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #80
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #81
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #82
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #83
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #84
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #85
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #86
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #87
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #88
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #89
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #90
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #91
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #92
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #93
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #94
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #95
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #96
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #97
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #98
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #99
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #100
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #101
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #102
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #103
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #104
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #105
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #106
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #107
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #108
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #109
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #110
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #111
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #112
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #113
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #114
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #115
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #116
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #117
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #118
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #119
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #120
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #121
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #122
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #123
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #124
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #125
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #126
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #127
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #128
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #129
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #130
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #131
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #132
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #133
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #134
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #135
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #136
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #137
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #138
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #139
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #140
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #141
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #142
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #143
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #144
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #145
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #146
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #147
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #148
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #149
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #150
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #151
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #152
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #153
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #154
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #155
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #156
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #157
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #158
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #159
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #160
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #161
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #162
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #163
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #164
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #165
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #166
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #167
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #168
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #169
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #170
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #171
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #172
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #173
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #174
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #175
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #176
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #177
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #178
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #179
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #180
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #181
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #182
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #183
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #184
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #185
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 6.77287364908539e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #186
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #187
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #188
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #189
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #190
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #191
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #192
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #193
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #194
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #195
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #196
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #197
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #198
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 9.142423147817343e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #199
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #200
+INFO     guided_infer    used 75.0% of sample space
+INFO     guided_infer    old cost: 3.0
+INFO     guided_infer    new cost: 3.0
+INFO     guided_infer    all costs: [2.0, 3.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    All 200 trials are exhausted
+INFO     repair          considering suspicious locations [('I', (592, 7, 592, 22))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (651, 9, 651, 21))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 50.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (659, 9, 659, 9))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 50.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 55.0
+INFO     guided_infer    all costs: [34.0, 55.0]
+INFO     guided_infer    accept ratio: 0.0018363047770289071
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('I', (788, 9, 788, 32))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 50.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 50.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 70.0
+INFO     guided_infer    all costs: [34.0, 70.0]
+INFO     guided_infer    accept ratio: 2.039950341117196e-05
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #4
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('I', (799, 9, 799, 9))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 32.0
+INFO     guided_infer    all costs: [32.0, 34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('I', (817, 9, 817, 9))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 35.0
+INFO     guided_infer    all costs: [34.0, 35.0]
+INFO     guided_infer    accept ratio: 0.7408182206817179
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('I', (831, 9, 831, 9))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 38.0
+INFO     guided_infer    all costs: [34.0, 38.0]
+INFO     guided_infer    accept ratio: 0.30119421191220214
+INFO     pymc3           accepted: False
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (1046, 7, 1046, 12))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('I', (1266, 9, 1266, 18))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 50.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 50.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #4
+INFO     guided_infer    used 75.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #5
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=4, samples=[('00',), ('10',), ('01',), ('11',)]
+INFO     repair          considering suspicious locations [('I', (1321, 6, 1321, 21))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (1414, 9, 1414, 19))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 63.0
+INFO     guided_infer    all costs: [34.0, 63.0]
+INFO     guided_infer    accept ratio: 0.00016658581098763354
+INFO     pymc3           accepted: False
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('1',), ('0',)]
+INFO     repair          considering suspicious locations [('L', (1794, 15, 1794, 19))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([  0, 126])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 1.5625% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 50.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 0.6592406302004438
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #4
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #5
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #6
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #7
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #8
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #9
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #10
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #11
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #12
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #13
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #14
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #15
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #16
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #17
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #18
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #19
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #20
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #21
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #22
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #23
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #24
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #25
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #26
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #27
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #28
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #29
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #30
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #31
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #32
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #33
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #34
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #35
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #36
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #37
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #38
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #39
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #40
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #41
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #42
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #43
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #44
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #45
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #46
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #47
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #48
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #49
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #50
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #51
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #52
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #53
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #54
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #55
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #56
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #57
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #58
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #59
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #60
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #61
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #62
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #63
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #64
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #65
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #66
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #67
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #68
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #69
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #70
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #71
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #72
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #73
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #74
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #75
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #76
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #77
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #78
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #79
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #80
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #81
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #82
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #83
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #84
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #85
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #86
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #87
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #88
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #89
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #90
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #91
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #92
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #93
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #94
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #95
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #96
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #97
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #98
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #99
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #100
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #101
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #102
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #103
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #104
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #105
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #106
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #107
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #108
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #109
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #110
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #111
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #112
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #113
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #114
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #115
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #116
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #117
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #118
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #119
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #120
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #121
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #122
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #123
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #124
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #125
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #126
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #127
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #128
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #129
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #130
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #131
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #132
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #133
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #134
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #135
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #136
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #137
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #138
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #139
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #140
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #141
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #142
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #143
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #144
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #145
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #146
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #147
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #148
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #149
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #150
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #151
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #152
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #153
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #154
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #155
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #156
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #157
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #158
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #159
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #160
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #161
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #162
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #163
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #164
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #165
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #166
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #167
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #168
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #169
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #170
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #171
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #172
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #173
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #174
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #175
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #176
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #177
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #178
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #179
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #180
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #181
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #182
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #183
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #184
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #185
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #186
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #187
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #188
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #189
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #190
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #191
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #192
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #193
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #194
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #195
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #196
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #197
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #198
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #199
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #200
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    All 200 trials are exhausted
+INFO     repair          considering suspicious locations [('I', (1808, 6, 1808, 11))]
+INFO     reduction       all failing tests: ['8']
+INFO     reduction       selected 3 tests
+INFO     reduction       selected passing tests: ['3', '6']
+INFO     reduction       selected failing tests: ['8']
+INFO     guided_infer    inferring specification for test '8' through guided search
+INFO     guided_infer    init sample: [array([ 0, 32])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 3.125% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 4.6875% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #4
+INFO     guided_infer    used 6.25% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #5
+INFO     guided_infer    used 7.8125% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #6
+INFO     guided_infer    used 9.375% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #7
+INFO     guided_infer    used 10.9375% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #8
+INFO     guided_infer    used 12.5% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #9
+INFO     guided_infer    used 14.0625% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #10
+INFO     guided_infer    used 15.625% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #11
+INFO     guided_infer    used 17.1875% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #12
+INFO     guided_infer    used 17.1875% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #13
+INFO     guided_infer    used 18.75% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #14
+INFO     guided_infer    used 20.3125% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #15
+INFO     guided_infer    used 21.875% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #16
+INFO     guided_infer    used 23.4375% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #17
+INFO     guided_infer    used 23.4375% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #18
+INFO     guided_infer    used 23.4375% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #19
+INFO     guided_infer    used 23.4375% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #20
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #21
+INFO     guided_infer    used 25.0% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #22
+INFO     guided_infer    used 25.0% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #23
+INFO     guided_infer    used 26.5625% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #24
+INFO     guided_infer    used 28.125% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #25
+INFO     guided_infer    used 28.125% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #26
+INFO     guided_infer    used 29.6875% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #27
+INFO     guided_infer    used 29.6875% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #28
+INFO     guided_infer    used 29.6875% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #29
+INFO     guided_infer    used 29.6875% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #30
+INFO     guided_infer    used 31.25% of sample space
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #31
+INFO     guided_infer    used 31.25% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    old cost: 34.0
+INFO     guided_infer    new cost: 34.0
+INFO     guided_infer    all costs: [34.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+INFO     guided_infer    trial #32
+INFO     guided_infer    used 32.8125% of sample space
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     guided_infer    Stuck in the same cost: 34.0
+INFO     repair          no patch generated in 2m 37s
+FAIL

@@ -1,0 +1,29 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -4241,7 +4241,7 @@
+   uint32 i, max_width, max_length, zwidth, zlength, buffsize;
+   uint32 x1, x2, y1, y2;
+ 
+-  if (image->res_unit != RESUNIT_INCH && image->res_unit != RESUNIT_CENTIMETER)
++  if (((image->res_unit != 2) && (image->res_unit != 3)))
+     {
+     xres = 1.0;
+     yres = 1.0;
+@@ -5011,7 +5011,7 @@
+          image->orientation = ORIENTATION_TOPLEFT;
+    }
+ 
+-  if ((bps == 0) || (spp == 0))
++  if (((bps == 0) || (spp == 0)))
+     {
+     TIFFError("loadImage", "Invalid samples per pixel (%d) or bits per sample (%d)",
+ 	       spp, bps);
+@@ -5036,7 +5036,7 @@
+     stsize = TIFFStripSize(in);
+     nstrips = TIFFNumberOfStrips(in);
+     buffsize = stsize * nstrips;
+-    if (dump->infile != NULL)
++    if ((image != 0))
+       dump_info (dump->infile, dump->format, "",
+                  "Stripsize: %u, Number of Strips: %u, Rows per Strip: %u, Scanline size: %u",
+ 		 stsize, nstrips, rowsperstrip, scanlinesize);

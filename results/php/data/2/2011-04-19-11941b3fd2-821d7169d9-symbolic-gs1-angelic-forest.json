@@ -1,0 +1,28 @@
+{
+  "12": [
+    [
+      {
+        "context": [
+          {
+            "name": "closure",
+            "value": -276523704
+          },
+          {
+            "name": "c_ptr",
+            "value": -276531928
+          },
+          {
+            "name": "closure->func.type",
+            "value": 2
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "216-6-216-28",
+        "instId": 0
+      }
+    ]
+  ]
+}

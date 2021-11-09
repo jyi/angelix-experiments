@@ -1,0 +1,11 @@
+--- a/gzip.c
++++ b/gzip.c
+@@ -547,7 +547,7 @@
+                 program_name);
+     }
+ #endif
+-    if ((z_len == 0 && !decompress) || z_len > MAX_SUFFIX) {
++    if ((((z_len == 0) && (! decompress)) || (z_len == 0))) {
+ ANGELIX_REACHABLE("incorrect_suffix");
+         fprintf(stderr, "%s: incorrect suffix '%s'\n",
+                 program_name, z_suffix);

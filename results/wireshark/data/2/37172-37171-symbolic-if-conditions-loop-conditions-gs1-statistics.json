@@ -1,0 +1,615 @@
+{
+  "file": "/angelix-experiments/.angelix/statistics.json",
+  "src": "UNKNOWN",
+  "buggy": "UNKNOWN",
+  "patch_found": false,
+  "patch_file": "UNKNOWN",
+  "config": {
+    "initial_tests": 1,
+    "all_tests": false,
+    "max_z3_trials": 2,
+    "defect": [
+      "if-conditions",
+      "loop-conditions"
+    ],
+    "test_timeout": 1,
+    "single_group": false,
+    "group_size": 1,
+    "group_by_score": false,
+    "localize_from_bottom": false,
+    "suspicious": 20,
+    "localization": "jaccard",
+    "ignore_trivial": false,
+    "path_solving_timeout": 60000,
+    "timeout": 14400,
+    "max_angelic_paths": null,
+    "klee_max_forks": 200,
+    "klee_max_depth": null,
+    "klee_search": "dfs",
+    "klee_timeout": 7200,
+    "klee_out_dir_timeout": 60,
+    "klee_solver_timeout": 100,
+    "klee_debug": false,
+    "klee_ignore_errors": false,
+    "ignore_trans_errors": true,
+    "ignore_infer_errors": true,
+    "ignore_instrument": false,
+    "ignore_unmatched_execution": true,
+    "ignore_z3_exception": false,
+    "skip_validating_angelic_path": true,
+    "use_nsynth": false,
+    "use_osynth": false,
+    "use_gcc": true,
+    "use_frontend_for_test": false,
+    "keep_positive_behavior": false,
+    "synthesis_timeout": 30000,
+    "synthesis_levels": [
+      "alternatives",
+      "integer-constants",
+      "boolean-constants"
+    ],
+    "synthesis_global_vars": false,
+    "synthesis_func_params": false,
+    "synthesis_used_vars": true,
+    "synthesis_ptr_vars": false,
+    "synthesis_bool_only": false,
+    "forced_to_use_bool": true,
+    "empty_env_exps": false,
+    "exclude_member_exp": false,
+    "generate_all": false,
+    "init_uninit_vars": false,
+    "verbose": false,
+    "build_before_instr": false,
+    "instr_printf": null,
+    "mute_config_message": false,
+    "mute_build_message": false,
+    "mute_test_message": false,
+    "show_test_message": false,
+    "show_oracle_contents": false,
+    "show_syn_message": false,
+    "mute_warning": true,
+    "show_suspicious_locations": true,
+    "invalid_localization": false,
+    "angelic_search_strategy": "symbolic",
+    "step_method": "metropolis",
+    "compilation_db_file": null,
+    "keep_angelix_dir": false,
+    "skip_configure": false,
+    "skip_build": false,
+    "gobble_klee_message": false,
+    "lines": [
+      4106
+    ],
+    "search_max_trials": 30,
+    "max_same_cost_iter": 20,
+    "mcmc_beta": 0.8,
+    "one_bit_flip_prob": 0.5,
+    "chunk_bits": 32,
+    "max_bits": 100,
+    "max_resample": 3,
+    "block_expand_factor": 2,
+    "inc_fix": false,
+    "fixed_bv_len": false,
+    "default_max_cost": 2,
+    "error_cost": "0",
+    "warning_cost": "0",
+    "max_syn_attempts": 2,
+    "max_repair_attempts": 2,
+    "penalty1": "1",
+    "penalty2": "1",
+    "parallel_testing": false,
+    "all_suspicious": false,
+    "mutate": 0,
+    "epsilon": 1.0,
+    "always_accept": false,
+    "random_cost": false,
+    "max_random_cost": 0.0,
+    "skip_dd": false,
+    "spec_from_only_negative": false,
+    "finish_after_fault_localize": false,
+    "default_susp_score": 0.5,
+    "additional_susp_locs": null,
+    "default_non_zero_cost": "1",
+    "timeout_cost": "1"
+  },
+  "time": {
+    "testing": 508.3439738750458,
+    "compilation": 6936.42626619339,
+    "klee": 76.06287932395935,
+    "synthesis": 253.99000930786133,
+    "solving": 6.786246299743652,
+    "inference": 82.91953253746033,
+    "dd": 0,
+    "total": 7603.075736284256
+  },
+  "iterations": {
+    "synthesis": [
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.962648868560791
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.9819138050079346
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.6932704448699951
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7332649230957031
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.8221879005432129
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7282593250274658
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.692678689956665
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.8331296443939209
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.8295583724975586
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7983312606811523
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.8430976867675781
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7936937808990479
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.8387939929962158
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.793536901473999
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.8116030693054199
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.6575448513031006
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7834410667419434
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.8123984336853027
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7991483211517334
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.8063802719116211
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7278745174407959
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7888896465301514
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7355704307556152
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7631981372833252
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.824941873550415
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7743275165557861
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.8601830005645752
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.813495397567749
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.5944759845733643
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 99.04259943962097
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 125.08796739578247
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 6.961604356765747
+      }
+    ],
+    "guided": [],
+    "symbolic": [
+      {
+        "locations": [
+          [
+            "L",
+            [
+              3570,
+              15,
+              3570,
+              17
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 7.140392303466797,
+          "solving": 0.6209414005279541
+        },
+        "paths": {
+          "explored": 7,
+          "angelic_found": true,
+          "angelic": 7
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3611,
+              9,
+              3611,
+              29
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 5.154702663421631,
+          "solving": 0.07522249221801758
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3799,
+              16,
+              3799,
+              26
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 4.140553951263428,
+          "solving": 0.07920694351196289
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3863,
+              9,
+              3863,
+              17
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 5.154067516326904,
+          "solving": 0.08493566513061523
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3870,
+              9,
+              3870,
+              17
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 4.142914772033691,
+          "solving": 0.08389472961425781
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3879,
+              9,
+              3879,
+              9
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 5.143371820449829,
+          "solving": 0.08266806602478027
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3884,
+              9,
+              3884,
+              25
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 4.146022796630859,
+          "solving": 0.08811211585998535
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3887,
+              16,
+              3887,
+              33
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 5.148909091949463,
+          "solving": 0.08981776237487793
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3897,
+              13,
+              3897,
+              33
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 5.145238876342773,
+          "solving": 0.0893254280090332
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3920,
+              9,
+              3920,
+              9
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 4.147753000259399,
+          "solving": 0.08304071426391602
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              3962,
+              9,
+              3962,
+              9
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 5.144472360610962,
+          "solving": 0.0828855037689209
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              3978,
+              17,
+              3978,
+              21
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 5.153770446777344,
+          "solving": 0.0863807201385498
+        },
+        "paths": {
+          "explored": 2,
+          "angelic_found": true,
+          "angelic": 2
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              4057,
+              9,
+              4057,
+              101
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 4.148468971252441,
+          "solving": 0.02053546905517578
+        },
+        "paths": {
+          "explored": 1,
+          "angelic_found": true,
+          "angelic": 1
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              4106,
+              9,
+              4106,
+              101
+            ]
+          ]
+        ],
+        "test": "46",
+        "time": {
+          "klee": 12.152240753173828,
+          "solving": 5.2192792892456055
+        },
+        "paths": {
+          "explored": 39,
+          "angelic_found": true,
+          "angelic": 39
+        }
+      }
+    ],
+    "random": []
+  }
+}

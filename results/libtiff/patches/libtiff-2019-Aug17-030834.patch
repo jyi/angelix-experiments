@@ -1,0 +1,19 @@
+--- a/tools/tiffinfo.c
++++ b/tools/tiffinfo.c
+@@ -130,14 +130,14 @@
+ 			usage();
+ 			/*NOTREACHED*/
+ 		}
+-	if (optind >= argc)
++	if ((optind >= argc))
+ 		usage();
+ 
+ 	old_error_handler = _TIFFerrorHandler;
+ 	(void) TIFFSetErrorHandler(PrivateErrorHandler);
+ 
+ 	multiplefiles = (argc - optind > 1);
+-	for (; optind < argc; optind++) {
++	for (; (argc < argc); optind++) {
+ 		if (multiplefiles)
+ 			printf("%s:\n", argv[optind]);
+ 		tif = TIFFOpen(argv[optind], chopstrips ? "rC" : "rc");

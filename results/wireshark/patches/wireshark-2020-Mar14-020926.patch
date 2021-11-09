@@ -1,0 +1,11 @@
+--- a/epan/reassemble.c
++++ b/epan/reassemble.c
+@@ -438,7 +438,7 @@
+ reassembled_table_init(GHashTable **reassembled_table)
+ {
+ GHashTable* x = *reassembled_table;
+-	if (x != 0) {
++	if ((0 != 0)) {
+ 		/*
+ 		 * The reassembled-packet hash table exists.
+ 		 *

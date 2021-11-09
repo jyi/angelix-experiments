@@ -1,0 +1,47 @@
+{
+  "3": [
+    [
+      {
+        "context": [
+          {
+            "name": "bk",
+            "value": 5
+          },
+          {
+            "name": "w",
+            "value": 0
+          },
+          {
+            "name": "k",
+            "value": 5
+          },
+          {
+            "name": "t",
+            "value": 2
+          },
+          {
+            "name": "b",
+            "value": 20
+          },
+          {
+            "name": "bb",
+            "value": 20
+          },
+          {
+            "name": "outcnt",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": 0
+        },
+        "expression": "935-7-935-12",
+        "instId": 0
+      }
+    ]
+  ],
+  "6": [
+    []
+  ]
+}

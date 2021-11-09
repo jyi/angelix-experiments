@@ -1,0 +1,81 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -5355,7 +5355,7 @@
+                                   (uint32)(offsets.crop_width * 1.0 * (seg - 1) / total);
+            test = offsets.startx + 
+                   (uint32)(offsets.crop_width * 1.0 * seg / total);
+-           if (test > image->width - 1)
++           if ((test >= (image->width - 1)))
+              crop->regionlist[i].x2 = image->width - 1;
+            else
+              crop->regionlist[i].x2 = test - 1;
+@@ -5363,7 +5363,7 @@
+ 
+ 	   /* This is passed to extractCropZone or extractCompositeZones */
+            crop->combined_length = (uint32)zlength;
+-           if (crop->exp_mode == COMPOSITE_IMAGES)
++           if ((crop->exp_mode == 0))
+              crop->combined_width += (uint32)zwidth;
+            else
+              crop->combined_width = (uint32)zwidth;
+@@ -5447,7 +5447,7 @@
+     crop->bufftotal += buffsize;
+ 
+ 
+-  if (dump->outfile != NULL)
++  if ((dump->outfile != 0))
+     dump_info (dump->outfile, dump->format, "",  "Zone %d, width: %4d, length: %4d, x1: %4d  x2: %4d  y1: %4d  y2: %4d",
+                     i + 1, (uint32)zwidth, (uint32)zlength,
+ 		    crop->regionlist[i].x1, crop->regionlist[i].x2, 
+@@ -5885,7 +5885,7 @@
+          image->orientation = ORIENTATION_TOPLEFT;
+    }
+ 
+-  if ((bps == 0) || (spp == 0))
++  if (((bps == 0) || (spp == 0)))
+     {
+     TIFFError("loadImage", "Invalid samples per pixel (%d) or bits per sample (%d)",
+ 	       spp, bps);
+@@ -5937,13 +5937,13 @@
+ #endif
+       }
+     
+-    if (dump->infile != NULL)
++    if ((dump->infile != 0))
+       dump_info (dump->infile, dump->format, "",
+                  "Stripsize: %u, Number of Strips: %u, Rows per Strip: %u, Scanline size: %u",
+ 		 stsize, nstrips, rowsperstrip, scanlinesize);
+     }
+   
+-  if (input_compression == COMPRESSION_JPEG)
++  if ((input_compression == 7))
+     {  /* Force conversion to RGB */
+     jpegcolormode = JPEGCOLORMODE_RGB;
+     TIFFSetField(in, TIFFTAG_JPEGCOLORMODE, JPEGCOLORMODE_RGB);
+@@ -5951,7 +5951,7 @@
+   /* The clause up to the read statement are taken from Tom Lane's tiffcp patch */
+   else 
+     {   /* Otherwise, can't handle subsampled input */
+-    if (input_photometric == PHOTOMETRIC_YCBCR)
++    if ((input_photometric == 6))
+       {
+       TIFFGetFieldDefaulted(in, TIFFTAG_YCBCRSUBSAMPLING,
+  		           &subsampling_horiz, &subsampling_vert);
+@@ -5967,7 +5967,7 @@
+  
+ 
+   read_buff = *read_ptr;
+-  if (!read_buff)
++  if (read_buff)
+     read_buff = (unsigned char *)_TIFFmalloc(buffsize);
+   else
+     {
+@@ -5984,7 +5984,7 @@
+       }
+     }
+ 
+-  if (!read_buff)
++  if ((! read_buff))
+     {
+     TIFFError("loadImage", "Unable to allocate/reallocate read buffer");
+     return (-1);

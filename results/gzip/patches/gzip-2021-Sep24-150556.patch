@@ -1,0 +1,11 @@
+--- a/gzip.c
++++ b/gzip.c
+@@ -650,7 +650,7 @@
+     time_stamp.tv_nsec = -1;
+     if (!no_time || list)
+       time_stamp = get_stat_mtime (&istat);
+-ifd = ifd;
++ifd = 0;
+ 
+     clear_bufs(); /* clear input and output buffers */
+     to_stdout = 1;

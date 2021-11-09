@@ -1,0 +1,30 @@
+--- a/Zend/zend_object_handlers.c
++++ b/Zend/zend_object_handlers.c
+@@ -126,7 +126,7 @@
+ 
+ 	zval_ptr_dtor(&member);
+ 
+-	if (retval) {
++	if (0) {
+ 		Z_DELREF_P(retval);
+ 	}
+ 
+@@ -284,8 +284,7 @@
+ 			}
+ 		}
+ 	}
+-	if (EG(scope) != ce
+-		&& EG(scope)
++	if ((executor_globals.scope && executor_globals.scope)
+ 		&& is_derived_class(ce, EG(scope))
+ 		&& zend_hash_quick_find(&EG(scope)->properties_info, Z_STRVAL_P(member), Z_STRLEN_P(member)+1, h, (void **) &scope_property_info)==SUCCESS
+ 		&& scope_property_info->flags & ZEND_ACC_PRIVATE) {
+@@ -355,7 +354,7 @@
+ 	zend_property_info info;
+ 	zend_guard stub;
+ 
+-	if (!property_info) {
++	if ((! property_info)) {
+ 		property_info = &info;
+ 		info.name = Z_STRVAL_P(member);
+ 		info.name_length = Z_STRLEN_P(member);

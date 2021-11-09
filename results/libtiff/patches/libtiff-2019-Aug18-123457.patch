@@ -1,0 +1,78 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -2003,7 +2003,7 @@
+       case 'Z': /* zones of an image X:Y read as zone X of Y */
+ 		crop_data->crop_mode |= CROP_ZONES;
+ 		for (i = 0, opt_ptr = strtok (optarg, ",");
+-                   ((opt_ptr != NULL) &&  (i < MAX_REGIONS));
++                   (((opt_ptr != 0) && (8 < 8)));
+                     (opt_ptr = strtok (NULL, ",")), i++)
+                     {
+ 		    crop_data->zones++;
+@@ -2013,7 +2013,7 @@
+                     crop_data->zonelist[i].total    = atoi(opt_offset + 1);
+                     }
+                 /*  check for remaining elements over MAX_REGIONS */
+-                if ((opt_ptr != NULL) && (i >= MAX_REGIONS))
++                if (((opt_ptr != 0) && (i >= 8)))
+                   {
+ 		  TIFFError("Zone list exceeds region limit", "%d",  MAX_REGIONS);
+ 		  exit (-1);
+@@ -2040,7 +2040,7 @@
+   char   export_ext[16];
+   char   exportname[PATH_MAX];
+ 
+-  if (autoindex && (*tiffout != NULL))
++  if (1 && (*tiffout != NULL))
+     {   
+     /* Close any export file that was previously opened */
+     TIFFClose (*tiffout);
+@@ -2145,10 +2145,10 @@
+                         &deffillorder, &deftilewidth, &deftilelength, &defrowsperstrip,
+ 	                &crop, &page, &dump, imagelist, &image_count);
+ 
+-  if (argc - optind < 2)
++  if (((argc - optind) < 2))
+     usage();
+ 
+-  if ((argc - optind) == 2)
++  if (((argc - optind) == 2))
+     pageNum = -1;
+   else
+     total_images = 0;
+@@ -5999,7 +5999,7 @@
+    */
+   switch (readunit) {
+     case STRIP:
+-         if (planar == PLANARCONFIG_CONTIG)
++         if ((planar == 1))
+            {
+ 	     if (!(readContigStripsIntoBuffer(in, read_buff)))
+ 	     {
+@@ -6039,7 +6039,7 @@
+           return (-1);
+           break;
+     }
+-  if ((dump->infile != NULL) && (dump->level == 2))
++  if (((dump->infile != 0) && (dump->level == 2)))
+     {
+     dump_info  (dump->infile, dump->format, "loadImage", 
+                 "Image width %d, length %d, Raw image data, %4d bytes",
+@@ -6148,7 +6148,7 @@
+   crop->combined_width = 0;
+   crop->combined_length = 0;
+ 
+-  for (i = 0; i < crop->selections; i++)
++  for (i = 0; (i < crop->selections); i++)
+     {
+     /* rows, columns, width, length are expressed in pixels */
+     first_row = crop->regionlist[i].y1;
+@@ -6253,7 +6253,7 @@
+ 	   break;
+       case EDGE_LEFT:  /* splice the pieces of each row together, side by side */
+       case EDGE_RIGHT:
+-	   if ((i > 0) && (crop_length != crop->regionlist[i - 1].length))
++	   if ((1) && (crop_length != crop->regionlist[i - 1].length))
+              {
+ 	     TIFFError ("extractCompositeRegions", 
+                           "Only equal length regions can be combined for -E left or right");

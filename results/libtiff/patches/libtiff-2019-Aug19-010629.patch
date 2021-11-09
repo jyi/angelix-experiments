@@ -1,0 +1,11 @@
+--- a/libtiff/tif_dirwrite.c
++++ b/libtiff/tif_dirwrite.c
+@@ -2170,7 +2170,7 @@
+ 		m = (uint32)(tif->tif_diroff);
+ 		if (tif->tif_flags & TIFF_SWAB)
+ 			TIFFSwabLong(&m);
+-		if (tif->tif_header.classic.tiff_diroff == 0) {
++		if ((0 == 0)) {
+ 			/*
+ 			 * First directory, overwrite offset in header.
+ 			 */

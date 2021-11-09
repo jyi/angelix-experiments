@@ -1,0 +1,2418 @@
+[repair] benchmark: manybugs
+[repair] subject: php
+[repair] version: 2011-04-02-70075bc84c-5a8c917c37
+[repair] search: guided
+[repair] debug: 0
+[repair] ./fetch php manybugs 2011-04-02-70075bc84c-5a8c917c37
+[fetch] benchmark: manybugs
+[fetch] subject: php
+[fetch] version: 2011-04-02-70075bc84c-5a8c917c37
+[fetch] archive: php-bug-2011-04-02-70075bc84c-5a8c917c37.tar.gz
+[fetch] directory: php-bug-2011-04-02-70075bc84c-5a8c917c37
+[fetch] preparing source code
+[fetch] golden_directory: php-fix-2011-04-02-70075bc84c-5a8c917c37
+[fetch] clean-source php-bug-2011-04-02-70075bc84c-5a8c917c37
+[fetch] /angelix-experiments/php-bug-2011-04-02-70075bc84c-5a8c917c37/php/configure
+[fetch] make -j 72 clean
+[fetch] clean-source php-fix-2011-04-02-70075bc84c-5a8c917c37
+[fetch] restore-buggy php-bug-2011-04-02-70075bc84c-5a8c917c37
+[fetch] /angelix-experiments/php-fix-2011-04-02-70075bc84c-5a8c917c37/php/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: ext/standard/string.c
+[fetch] buggy_version: 70075bc84c
+[fetch] buggy_preprocessed: php-bug-2011-04-02-70075bc84c-5a8c917c37/php/ext/standard/string.c
+[fetch] buggy_original: php-bug-2011-04-02-70075bc84c-5a8c917c37/diffs/ext/standard/string.c-70075bc84c
+[fetch] cp php-bug-2011-04-02-70075bc84c-5a8c917c37/diffs/ext/standard/string.c-70075bc84c php-bug-2011-04-02-70075bc84c-5a8c917c37/php/ext/standard/string.c
+[fetch] restore-correct php-fix-2011-04-02-70075bc84c-5a8c917c37
+[fetch] restore-correct entered
+[fetch] cp php-fix-2011-04-02-70075bc84c-5a8c917c37/diffs/ext/standard/string.c-5a8c917c37 php-fix-2011-04-02-70075bc84c-5a8c917c37/php/ext/standard/string.c
+[fetch] restored php-fix-2011-04-02-70075bc84c-5a8c917c37/php/ext/standard/string.c with php-fix-2011-04-02-70075bc84c-5a8c917c37/diffs/ext/standard/string.c-5a8c917c37
+[fetch] fetch done
+[repair] [repair] options: --log
+DEBUG
+--angelic-search-strategy
+guided
+--defect
+if-conditions
+loop-conditions
+--search-max-trials
+100
+--max-same-cost-iter
+20
+--default-max-cost
+300000000
+--default-non-zero-cost
+300000000
+--error-cost
+10000000
+--warning-cost
+5000000
+--one-bit-flip-prob
+0.5
+--penalty1
+4
+--penalty2
+2
+--test-timeout
+60
+--use-nsynth
+--synthesis-levels
+alternatives
+integer-constants
+boolean-constants
+variables
+extended-arithmetic
+extended-logic
+mixed-conditional
+--lines
+5262
+--ignore-lines
+--use-gcc  --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-php] debug: 0
+[repair-php] restore .aux/php/php-run-tests.c
+[repair-php] restore php-bug-2011-04-02-70075bc84c-5a8c917c37/php/main/main.c
+[repair-php] restore php-bug-2011-04-02-70075bc84c-5a8c917c37/php/sapi/cli/php_cli.c
+[repair-php] restore php-bug-2011-04-02-70075bc84c-5a8c917c37/php/Zend/zend.c
+[repair-php] restore php-bug-2011-04-02-70075bc84c-5a8c917c37/php/main/output.c
+[repair-php] restore php-bug-2011-04-02-70075bc84c-5a8c917c37/php/ext/standard/url_scanner_ex.c
+[repair-php] restore php-bug-2011-04-02-70075bc84c-5a8c917c37/php/Zend/zend_object_handlers.c
+[repair-php] restore php-bug-2011-04-02-70075bc84c-5a8c917c37/php/ext/standard/string.c
+[repair-php] restore php-fix-2011-04-02-70075bc84c-5a8c917c37/php/main/main.c
+[repair-php] restore php-fix-2011-04-02-70075bc84c-5a8c917c37/php/sapi/cli/php_cli.c
+[repair-php] restore php-fix-2011-04-02-70075bc84c-5a8c917c37/php/Zend/zend.c
+[repair-php] restore php-fix-2011-04-02-70075bc84c-5a8c917c37/php/main/output.c
+[repair-php] restore php-fix-2011-04-02-70075bc84c-5a8c917c37/php/ext/standard/url_scanner_ex.c
+[repair-php] restore php-fix-2011-04-02-70075bc84c-5a8c917c37/php/Zend/zend_object_handlers.c
+[repair-php] restore php-fix-2011-04-02-70075bc84c-5a8c917c37/php/ext/standard/string.c
+[repair-php] options:  --log DEBUG --angelic-search-strategy guided --defect if-conditions loop-conditions --search-max-trials 100 --max-same-cost-iter 20 --default-max-cost 300000000 --default-non-zero-cost 300000000 --error-cost 10000000 --warning-cost 5000000 --one-bit-flip-prob 0.5 --penalty1 4 --penalty2 2 --test-timeout 60 --use-nsynth --synthesis-levels alternatives integer-constants boolean-constants variables extended-arithmetic extended-logic mixed-conditional --lines 5262 --ignore-lines --use-gcc --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-php] angelix php-bug-2011-04-02-70075bc84c-5a8c917c37/php ext/standard/string.c /angelix-experiments/.aux/php/php-oracle 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85 --golden php-fix-2011-04-02-70075bc84c-5a8c917c37/php --configure /angelix-experiments/.aux/php/php-configure --build /angelix-experiments/.aux/php/php-build  --log DEBUG --angelic-search-strategy guided --defect if-conditions loop-conditions --search-max-trials 100 --max-same-cost-iter 20 --default-max-cost 300000000 --default-non-zero-cost 300000000 --error-cost 10000000 --warning-cost 5000000 --one-bit-flip-prob 0.5 --penalty1 4 --penalty2 2 --test-timeout 60 --use-nsynth --synthesis-levels alternatives integer-constants boolean-constants variables extended-arithmetic extended-logic mixed-conditional --lines 5262 --ignore-lines --use-gcc --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+DEBUG    repair          tests: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     repair          copy php-bug-2011-04-02-70075bc84c-5a8c917c37/php to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/php/php-configure
+INFO     project         building json compilation database from validation source
+DEBUG    project         CC: angelix-compiler --test
+DEBUG    project         cmd: bear /angelix-experiments/.aux/php/php-build
+DEBUG    repair          start to measure time
+INFO     testing         running test '1' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 1
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 2
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 2
+INFO     testing         output code: 1
+INFO     testing         running test '3' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 4
+INFO     testing         output code: 1
+INFO     testing         running test '5' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 5
+INFO     testing         output code: 1
+INFO     testing         running test '6' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 6
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 7
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 8
+INFO     testing         output code: 1
+INFO     testing         running test '9' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 9
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 10
+INFO     testing         output code: 1
+INFO     testing         running test '11' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 11
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 11
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 12
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 12
+INFO     testing         output code: 1
+INFO     testing         running test '13' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 13
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 13
+INFO     testing         output code: 1
+INFO     testing         running test '14' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 14
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 14
+INFO     testing         output code: 1
+INFO     testing         running test '15' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 15
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 15
+INFO     testing         output code: 1
+INFO     testing         running test '16' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 16
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 16
+INFO     testing         output code: 1
+INFO     testing         running test '17' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 17
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 17
+INFO     testing         output code: 1
+INFO     testing         running test '18' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 18
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 18
+INFO     testing         output code: 1
+INFO     testing         running test '19' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 19
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 19
+INFO     testing         output code: 1
+INFO     testing         running test '20' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 1
+INFO     testing         running test '21' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 21
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 21
+INFO     testing         output code: 0
+INFO     testing         running test '22' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 22
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 22
+INFO     testing         output code: 0
+INFO     testing         running test '23' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 23
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 23
+INFO     testing         output code: 0
+INFO     testing         running test '24' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 24
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 24
+INFO     testing         output code: 0
+INFO     testing         running test '25' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 25
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 25
+INFO     testing         output code: 0
+INFO     testing         running test '26' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 26
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 26
+INFO     testing         output code: 0
+INFO     testing         running test '27' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 27
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 27
+INFO     testing         output code: 0
+INFO     testing         running test '28' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 28
+INFO     testing         output code: 0
+INFO     testing         running test '29' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 29
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 29
+INFO     testing         output code: 0
+INFO     testing         running test '30' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 30
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 30
+INFO     testing         output code: 0
+INFO     testing         running test '31' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 31
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 31
+INFO     testing         output code: 1
+INFO     testing         running test '32' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 32
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 32
+INFO     testing         output code: 0
+INFO     testing         running test '33' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 33
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 33
+INFO     testing         output code: 0
+INFO     testing         running test '34' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 34
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 34
+INFO     testing         output code: 0
+INFO     testing         running test '35' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 35
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 35
+INFO     testing         output code: 0
+INFO     testing         running test '36' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 36
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 36
+INFO     testing         output code: 0
+INFO     testing         running test '37' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 37
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 37
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 38
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 38
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 39
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 39
+INFO     testing         output code: 0
+INFO     testing         running test '40' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 40
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 40
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 41
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 41
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 42
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 42
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 43
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 43
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 44
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 44
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 45
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 45
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 46
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 46
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 47
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 47
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 48
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 48
+INFO     testing         output code: 0
+INFO     testing         running test '49' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 49
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 49
+INFO     testing         output code: 1
+INFO     testing         running test '50' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 50
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 50
+INFO     testing         output code: 1
+INFO     testing         running test '51' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 51
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 51
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 52
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 52
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 53
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 53
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 54
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 54
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 55
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 55
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 56
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 56
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 57
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 57
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 58
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 58
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 59
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 59
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 60
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 60
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 61
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 61
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 62
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 62
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 63
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 63
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 64
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 64
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 65
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 65
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 66
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 66
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 67
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 67
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 68
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 68
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 69
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 69
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 70
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 70
+INFO     testing         output code: 0
+INFO     testing         running test '71' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 71
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 71
+INFO     testing         output code: 1
+INFO     testing         running test '72' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 72
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 72
+INFO     testing         output code: 1
+INFO     testing         running test '73' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 73
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 73
+INFO     testing         output code: 1
+INFO     testing         running test '74' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 74
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 74
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 75
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 75
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 76
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 76
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 77
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 77
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 78
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 78
+INFO     testing         output code: 0
+INFO     testing         running test '79' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 79
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 79
+INFO     testing         output code: 0
+INFO     testing         running test '80' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 80
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 80
+INFO     testing         output code: 0
+INFO     testing         running test '81' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 81
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 81
+INFO     testing         output code: 0
+INFO     testing         running test '82' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 82
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 82
+INFO     testing         output code: 0
+INFO     testing         running test '83' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 83
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 83
+INFO     testing         output code: 0
+INFO     testing         running test '84' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 84
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 84
+INFO     testing         output code: 0
+INFO     testing         running test '85' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 85
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 85
+INFO     testing         output code: 0
+INFO     project         configuring golden source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/php/php-configure
+INFO     project         building golden source
+DEBUG    project         CC: angelix-compiler --frontend
+DEBUG    project         cmd: /angelix-experiments/.aux/php/php-build
+INFO     testing         running test '2' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 2
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 2
+INFO     testing         output code: 1
+INFO     testing         running test '4' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 4
+INFO     testing         output code: 1
+INFO     testing         running test '5' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 5
+INFO     testing         output code: 1
+INFO     testing         running test '7' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 7
+INFO     testing         output code: 1
+INFO     testing         running test '8' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 8
+INFO     testing         output code: 1
+INFO     testing         running test '9' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 9
+INFO     testing         output code: 1
+INFO     testing         running test '10' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 10
+INFO     testing         output code: 1
+INFO     testing         running test '11' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 11
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 11
+INFO     testing         output code: 1
+INFO     testing         running test '12' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 12
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 12
+INFO     testing         output code: 1
+INFO     testing         running test '13' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 13
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 13
+INFO     testing         output code: 1
+INFO     testing         running test '14' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 14
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 14
+INFO     testing         output code: 1
+INFO     testing         running test '15' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 15
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 15
+INFO     testing         output code: 1
+INFO     testing         running test '16' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 16
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 16
+INFO     testing         output code: 1
+INFO     testing         running test '17' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 17
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 17
+INFO     testing         output code: 1
+INFO     testing         running test '18' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 18
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 18
+INFO     testing         output code: 1
+INFO     testing         running test '19' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 19
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 19
+INFO     testing         output code: 1
+INFO     testing         running test '20' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 0
+INFO     testing         running test '31' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 31
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 31
+INFO     testing         output code: 1
+INFO     testing         running test '49' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 49
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 49
+INFO     testing         output code: 1
+INFO     testing         running test '50' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 50
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 50
+INFO     testing         output code: 1
+INFO     testing         running test '71' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 71
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 71
+INFO     testing         output code: 1
+INFO     testing         running test '72' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 72
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 72
+INFO     testing         output code: 1
+INFO     testing         running test '73' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 73
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 73
+INFO     testing         output code: 1
+WARNING  repair          excluding test 2 because it fails in golden version
+WARNING  repair          excluding test 4 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 7 because it fails in golden version
+WARNING  repair          excluding test 8 because it fails in golden version
+WARNING  repair          excluding test 9 because it fails in golden version
+WARNING  repair          excluding test 10 because it fails in golden version
+WARNING  repair          excluding test 11 because it fails in golden version
+WARNING  repair          excluding test 12 because it fails in golden version
+WARNING  repair          excluding test 13 because it fails in golden version
+WARNING  repair          excluding test 14 because it fails in golden version
+WARNING  repair          excluding test 15 because it fails in golden version
+WARNING  repair          excluding test 16 because it fails in golden version
+WARNING  repair          excluding test 17 because it fails in golden version
+WARNING  repair          excluding test 18 because it fails in golden version
+WARNING  repair          excluding test 19 because it fails in golden version
+WARNING  repair          excluding test 31 because it fails in golden version
+WARNING  repair          excluding test 49 because it fails in golden version
+WARNING  repair          excluding test 50 because it fails in golden version
+WARNING  repair          excluding test 71 because it fails in golden version
+WARNING  repair          excluding test 72 because it fails in golden version
+WARNING  repair          excluding test 73 because it fails in golden version
+INFO     repair          positive: ['1', '3', '6', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     repair          negative: ['20']
+INFO     project         configuring frontend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/php/php-configure
+INFO     transformation  instrumenting repairable of frontend source
+DEBUG    transformation  ANGELIX_IF_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_LOOP_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_USED_VARIABLES=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/frontend
+DEBUG    transformation  trans cmd: instrument-repairable ext/standard/string.c
+INFO     project         building frontend source
+DEBUG    project         CC: angelix-compiler --frontend
+DEBUG    project         cmd: /angelix-experiments/.aux/php/php-build
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '1' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/1
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/1
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 1
+INFO     testing         output code: 0
+INFO     testing         running test '3' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/3
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/3
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 3
+INFO     testing         output code: 0
+INFO     testing         running test '6' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/6
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/6
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 6
+INFO     testing         output code: 0
+INFO     testing         running test '21' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/21
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/21
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 21
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 21
+INFO     testing         output code: 0
+INFO     testing         running test '22' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/22
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/22
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 22
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 22
+INFO     testing         output code: 0
+INFO     testing         running test '23' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/23
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/23
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 23
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 23
+INFO     testing         output code: 0
+INFO     testing         running test '24' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/24
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/24
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 24
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 24
+INFO     testing         output code: 0
+INFO     testing         running test '25' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/25
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/25
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 25
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 25
+INFO     testing         output code: 0
+INFO     testing         running test '26' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/26
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/26
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 26
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 26
+INFO     testing         output code: 0
+INFO     testing         running test '27' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/27
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/27
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 27
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 27
+INFO     testing         output code: 0
+INFO     testing         running test '28' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/28
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/28
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 28
+INFO     testing         output code: 0
+INFO     testing         running test '29' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/29
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/29
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 29
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 29
+INFO     testing         output code: 0
+INFO     testing         running test '30' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/30
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/30
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 30
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 30
+INFO     testing         output code: 0
+INFO     testing         running test '32' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/32
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/32
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 32
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 32
+INFO     testing         output code: 0
+INFO     testing         running test '33' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/33
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/33
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 33
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 33
+INFO     testing         output code: 0
+INFO     testing         running test '34' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/34
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/34
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 34
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 34
+INFO     testing         output code: 0
+INFO     testing         running test '35' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/35
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/35
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 35
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 35
+INFO     testing         output code: 0
+INFO     testing         running test '36' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/36
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/36
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 36
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 36
+INFO     testing         output code: 0
+INFO     testing         running test '37' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/37
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/37
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 37
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 37
+INFO     testing         output code: 0
+INFO     testing         running test '38' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/38
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/38
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 38
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 38
+INFO     testing         output code: 0
+INFO     testing         running test '39' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/39
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/39
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 39
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 39
+INFO     testing         output code: 0
+INFO     testing         running test '40' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/40
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/40
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 40
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 40
+INFO     testing         output code: 0
+INFO     testing         running test '41' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/41
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/41
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 41
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 41
+INFO     testing         output code: 0
+INFO     testing         running test '42' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/42
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/42
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 42
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 42
+INFO     testing         output code: 0
+INFO     testing         running test '43' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/43
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/43
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 43
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 43
+INFO     testing         output code: 0
+INFO     testing         running test '44' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/44
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/44
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 44
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 44
+INFO     testing         output code: 0
+INFO     testing         running test '45' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/45
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/45
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 45
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 45
+INFO     testing         output code: 0
+INFO     testing         running test '46' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/46
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/46
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 46
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 46
+INFO     testing         output code: 0
+INFO     testing         running test '47' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/47
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/47
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 47
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 47
+INFO     testing         output code: 0
+INFO     testing         running test '48' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/48
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/48
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 48
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 48
+INFO     testing         output code: 0
+INFO     testing         running test '51' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/51
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/51
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 51
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 51
+INFO     testing         output code: 0
+INFO     testing         running test '52' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/52
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/52
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 52
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 52
+INFO     testing         output code: 0
+INFO     testing         running test '53' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/53
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/53
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 53
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 53
+INFO     testing         output code: 0
+INFO     testing         running test '54' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/54
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/54
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 54
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 54
+INFO     testing         output code: 0
+INFO     testing         running test '55' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/55
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/55
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 55
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 55
+INFO     testing         output code: 0
+INFO     testing         running test '56' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/56
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/56
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 56
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 56
+INFO     testing         output code: 0
+INFO     testing         running test '57' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/57
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/57
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 57
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 57
+INFO     testing         output code: 0
+INFO     testing         running test '58' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/58
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/58
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 58
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 58
+INFO     testing         output code: 0
+INFO     testing         running test '59' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/59
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/59
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 59
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 59
+INFO     testing         output code: 0
+INFO     testing         running test '60' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/60
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/60
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 60
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 60
+INFO     testing         output code: 0
+INFO     testing         running test '61' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/61
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/61
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 61
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 61
+INFO     testing         output code: 0
+INFO     testing         running test '62' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/62
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/62
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 62
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 62
+INFO     testing         output code: 0
+INFO     testing         running test '63' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/63
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/63
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 63
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 63
+INFO     testing         output code: 0
+INFO     testing         running test '64' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/64
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/64
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 64
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 64
+INFO     testing         output code: 0
+INFO     testing         running test '65' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/65
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/65
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 65
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 65
+INFO     testing         output code: 0
+INFO     testing         running test '66' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/66
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/66
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 66
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 66
+INFO     testing         output code: 0
+INFO     testing         running test '67' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/67
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/67
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 67
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 67
+INFO     testing         output code: 0
+INFO     testing         running test '68' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/68
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/68
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 68
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 68
+INFO     testing         output code: 0
+INFO     testing         running test '69' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/69
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/69
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 69
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 69
+INFO     testing         output code: 0
+INFO     testing         running test '70' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/70
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/70
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 70
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 70
+INFO     testing         output code: 0
+INFO     testing         running test '74' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/74
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/74
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 74
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 74
+INFO     testing         output code: 0
+INFO     testing         running test '75' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/75
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/75
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 75
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 75
+INFO     testing         output code: 0
+INFO     testing         running test '76' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/76
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/76
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 76
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 76
+INFO     testing         output code: 0
+INFO     testing         running test '77' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/77
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/77
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 77
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 77
+INFO     testing         output code: 0
+INFO     testing         running test '78' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/78
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/78
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 78
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 78
+INFO     testing         output code: 0
+INFO     testing         running test '79' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/79
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/79
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 79
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 79
+INFO     testing         output code: 0
+INFO     testing         running test '80' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/80
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/80
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 80
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 80
+INFO     testing         output code: 0
+INFO     testing         running test '81' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/81
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/81
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 81
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 81
+INFO     testing         output code: 0
+INFO     testing         running test '82' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/82
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/82
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 82
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 82
+INFO     testing         output code: 0
+INFO     testing         running test '83' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/83
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/83
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 83
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 83
+INFO     testing         output code: 0
+INFO     testing         running test '84' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/84
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/84
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 84
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 84
+INFO     testing         output code: 0
+INFO     testing         running test '85' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/85
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/85
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 85
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 85
+INFO     testing         output code: 0
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/20
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/php/php-configure
+INFO     project         building golden source
+DEBUG    project         CC: angelix-compiler --frontend
+DEBUG    project         cmd: /angelix-experiments/.aux/php/php-build
+INFO     testing         running test '20' of golden source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/20
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 0
+INFO     repair          repair test suite: ['1', '3', '6', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     repair          validation test suite: ['1', '3', '6', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/1
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/3
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/6
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/21
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/22
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/23
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/24
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/25
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/26
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/27
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/28
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/29
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/30
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/32
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/33
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/34
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/35
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/36
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/37
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/38
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/39
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/40
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/41
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/42
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/43
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/44
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/45
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/46
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/47
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/48
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/51
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/52
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/53
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/54
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/55
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/56
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/57
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/58
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/59
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/60
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/61
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/62
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/63
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/64
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/65
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/66
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/67
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/68
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/69
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/70
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/74
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/75
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/76
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/77
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/78
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/79
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/80
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/81
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/82
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/83
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/84
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/85
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/20
+DEBUG    localization    all: {('I', (5272, 6, 5272, 21)), ('I', (5255, 6, 5255, 37)), ('L', (1328, 9, 1328, 13)), ('I', (4586, 6, 4586, 13)), ('I', (4593, 6, 4593, 32)), ('I', (5266, 6, 5266, 16)), ('I', (5261, 6, 5261, 15)), ('I', (5278, 6, 5278, 7)), ('I', (4601, 6, 4601, 19))}
+DEBUG    localization    lines: None
+DEBUG    localization    filtered all: {('I', (5272, 6, 5272, 21)), ('I', (5255, 6, 5255, 37)), ('L', (1328, 9, 1328, 13)), ('I', (4586, 6, 4586, 13)), ('I', (4593, 6, 4593, 32)), ('I', (5266, 6, 5266, 16)), ('I', (5261, 6, 5261, 15)), ('I', (5278, 6, 5278, 7)), ('I', (4601, 6, 4601, 19))}
+DEBUG    localization    executed_positive: {('I', (5272, 6, 5272, 21)): 0, ('I', (5255, 6, 5255, 37)): 0, ('L', (1328, 9, 1328, 13)): 5, ('I', (4586, 6, 4586, 13)): 2, ('I', (4593, 6, 4593, 32)): 2, ('I', (5266, 6, 5266, 16)): 0, ('I', (5261, 6, 5261, 15)): 0, ('I', (5278, 6, 5278, 7)): 0, ('I', (4601, 6, 4601, 19)): 1}
+DEBUG    localization    executed_negative: {('I', (5272, 6, 5272, 21)): 1, ('I', (5255, 6, 5255, 37)): 1, ('L', (1328, 9, 1328, 13)): 0, ('I', (4586, 6, 4586, 13)): 0, ('I', (4593, 6, 4593, 32)): 0, ('I', (5266, 6, 5266, 16)): 1, ('I', (5261, 6, 5261, 15)): 1, ('I', (5278, 6, 5278, 7)): 1, ('I', (4601, 6, 4601, 19)): 0}
+DEBUG    localization    total_passing: 62
+DEBUG    localization    total_failing: 1
+DEBUG    localization    (loc, score) = (('I', (5272, 6, 5272, 21)), 1.0)
+DEBUG    localization    (loc, score) = (('I', (5255, 6, 5255, 37)), 1.0)
+DEBUG    localization    (loc, score) = (('L', (1328, 9, 1328, 13)), 0.0)
+DEBUG    localization    (loc, score) = (('I', (4586, 6, 4586, 13)), 0.0)
+DEBUG    localization    (loc, score) = (('I', (4593, 6, 4593, 32)), 0.0)
+DEBUG    localization    (loc, score) = (('I', (5266, 6, 5266, 16)), 1.0)
+DEBUG    localization    (loc, score) = (('I', (5261, 6, 5261, 15)), 1.0)
+DEBUG    localization    (loc, score) = (('I', (5278, 6, 5278, 7)), 1.0)
+DEBUG    localization    (loc, score) = (('I', (4601, 6, 4601, 19)), 0.0)
+DEBUG    localization    ranking: [(('I', (5272, 6, 5272, 21)), 1.0), (('I', (5255, 6, 5255, 37)), 1.0), (('I', (5266, 6, 5266, 16)), 1.0), (('I', (5261, 6, 5261, 15)), 1.0), (('I', (5278, 6, 5278, 7)), 1.0), (('L', (1328, 9, 1328, 13)), 0.0), (('I', (4586, 6, 4586, 13)), 0.0), (('I', (4593, 6, 4593, 32)), 0.0), (('I', (4601, 6, 4601, 19)), 0.0)]
+INFO     localization    (loc, score) = (('I', (5272, 6, 5272, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (5255, 6, 5255, 37)), 1.0)
+INFO     localization    (loc, score) = (('I', (5266, 6, 5266, 16)), 1.0)
+INFO     localization    (loc, score) = (('I', (5261, 6, 5261, 15)), 1.0)
+INFO     localization    (loc, score) = (('I', (5278, 6, 5278, 7)), 1.0)
+INFO     localization    (loc, score) = (('L', (1328, 9, 1328, 13)), 0.0)
+INFO     localization    (loc, score) = (('I', (4586, 6, 4586, 13)), 0.0)
+INFO     localization    (loc, score) = (('I', (4593, 6, 4593, 32)), 0.0)
+INFO     localization    (loc, score) = (('I', (4601, 6, 4601, 19)), 0.0)
+DEBUG    localization    top: [(('L', (1328, 9, 1328, 13)), 0.0), (('I', (4586, 6, 4586, 13)), 0.0), (('I', (4593, 6, 4593, 32)), 0.0), (('I', (4601, 6, 4601, 19)), 0.0), (('I', (5255, 6, 5255, 37)), 1.0), (('I', (5261, 6, 5261, 15)), 1.0), (('I', (5266, 6, 5266, 16)), 1.0), (('I', (5272, 6, 5272, 21)), 1.0), (('I', (5278, 6, 5278, 7)), 1.0)]
+INFO     localization    group 1: [('I', (5255, 6, 5255, 37))] (1.0)
+INFO     localization    group 2: [('I', (5261, 6, 5261, 15))] (1.0)
+INFO     localization    group 3: [('I', (5266, 6, 5266, 16))] (1.0)
+INFO     localization    group 4: [('I', (5272, 6, 5272, 21))] (1.0)
+INFO     localization    group 5: [('I', (5278, 6, 5278, 7))] (1.0)
+INFO     localization    group 6: [('L', (1328, 9, 1328, 13))] (0.0)
+INFO     localization    group 7: [('I', (4586, 6, 4586, 13))] (0.0)
+INFO     localization    group 8: [('I', (4593, 6, 4593, 32))] (0.0)
+INFO     localization    group 9: [('I', (4601, 6, 4601, 19))] (0.0)
+INFO     localization    selected expressions [('I', (5255, 6, 5255, 37))] with group score 1.0 
+INFO     localization    selected expressions [('I', (5261, 6, 5261, 15))] with group score 1.0 
+INFO     localization    selected expressions [('I', (5266, 6, 5266, 16))] with group score 1.0 
+INFO     localization    selected expressions [('I', (5272, 6, 5272, 21))] with group score 1.0 
+INFO     localization    selected expressions [('I', (5278, 6, 5278, 7))] with group score 1.0 
+INFO     localization    selected expressions [('L', (1328, 9, 1328, 13))] with group score 0.0 
+INFO     localization    selected expressions [('I', (4586, 6, 4586, 13))] with group score 0.0 
+INFO     localization    selected expressions [('I', (4593, 6, 4593, 32))] with group score 0.0 
+INFO     localization    selected expressions [('I', (4601, 6, 4601, 19))] with group score 0.0 
+DEBUG    localization    groups: [[('I', (5255, 6, 5255, 37))], [('I', (5261, 6, 5261, 15))], [('I', (5266, 6, 5266, 16))], [('I', (5272, 6, 5272, 21))], [('I', (5278, 6, 5278, 7))], [('L', (1328, 9, 1328, 13))], [('I', (4586, 6, 4586, 13))], [('I', (4593, 6, 4593, 32))], [('I', (4601, 6, 4601, 19))]]
+INFO     repair          considering suspicious locations [('I', (5255, 6, 5255, 37))]
+INFO     reduction       all failing tests: ['20']
+INFO     reduction       select 1 best tests from ['20']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['20']
+INFO     guided_infer    inferring specification for test '20' through guided search
+DEBUG    guided_infer    seed: [('I', (5255, 6, 5255, 37), '0')]
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+DEBUG    guided_infer    flip 0 bits
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+DEBUG    guided_infer    search for the cost of ('0',)
+DEBUG    guided_infer    [new_cost] key: ('0',)
+DEBUG    guided_infer    proposal: [[0]]
+DEBUG    guided_infer    locations: [(5255, 6, 5255, 37)]
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         ANGELIX_LOAD_JSON: /angelix-experiments/.angelix/search/test_20/proposal/proposal1.json
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 1
+DEBUG    guided_infer    trace_file: /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    runtime         parse /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    guided_infer    cost file: /angelix-experiments/.angelix/search/test_20/cost/cost1
+DEBUG    guided_infer    extracted cost: 2.0
+DEBUG    guided_infer    store the cost of ('0',)
+DEBUG    guided_infer    store the cost of ('0',)
+DEBUG    guided_infer    search for the cost of ('0',)
+DEBUG    guided_infer    ('0',) cached
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 2.0
+INFO     guided_infer    all costs: [2.0]
+INFO     guided_infer    accept ratio: 1.0
+INFO     pymc3           accepted: True
+DEBUG    guided_infer    flip 1 bit
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 50.0% of sample space
+DEBUG    guided_infer    search for the cost of ('0',)
+DEBUG    guided_infer    ('0',) cached
+DEBUG    guided_infer    search for the cost of ('1',)
+DEBUG    guided_infer    [new_cost] key: ('1',)
+DEBUG    guided_infer    proposal: [[1]]
+DEBUG    guided_infer    locations: [(5255, 6, 5255, 37)]
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         ANGELIX_LOAD_JSON: /angelix-experiments/.angelix/search/test_20/proposal/proposal2.json
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 1
+DEBUG    guided_infer    trace_file: /angelix-experiments/.angelix/search/test_20/trace/trace2
+DEBUG    runtime         parse /angelix-experiments/.angelix/search/test_20/trace/trace2
+DEBUG    guided_infer    cost file: /angelix-experiments/.angelix/search/test_20/cost/cost2
+DEBUG    guided_infer    extracted cost: 161.0
+DEBUG    guided_infer    store the cost of ('1',)
+DEBUG    guided_infer    store the cost of ('1',)
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 161.0
+INFO     guided_infer    all costs: [2.0, 161.0]
+INFO     guided_infer    accept ratio: 5.724557235467611e-56
+INFO     pymc3           accepted: True
+DEBUG    guided_infer    flip 1 bits
+INFO     guided_infer    trial #3
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (5261, 6, 5261, 15))]
+INFO     reduction       all failing tests: ['20']
+INFO     reduction       select 1 best tests from ['20']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['20']
+INFO     guided_infer    inferring specification for test '20' through guided search
+DEBUG    guided_infer    seed: [('I', (5261, 6, 5261, 15), '0')]
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+DEBUG    guided_infer    flip 1 bits
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+DEBUG    guided_infer    search for the cost of ('0',)
+DEBUG    guided_infer    [new_cost] key: ('0',)
+DEBUG    guided_infer    proposal: [[0]]
+DEBUG    guided_infer    locations: [(5261, 6, 5261, 15)]
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         ANGELIX_LOAD_JSON: /angelix-experiments/.angelix/search/test_20/proposal/proposal1.json
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 1
+DEBUG    guided_infer    trace_file: /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    runtime         parse /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    guided_infer    cost file: /angelix-experiments/.angelix/search/test_20/cost/cost1
+DEBUG    guided_infer    extracted cost: 2.0
+DEBUG    guided_infer    store the cost of ('0',)
+DEBUG    guided_infer    store the cost of ('0',)
+DEBUG    guided_infer    search for the cost of ('1',)
+DEBUG    guided_infer    [new_cost] key: ('1',)
+DEBUG    guided_infer    proposal: [[1]]
+DEBUG    guided_infer    locations: [(5261, 6, 5261, 15)]
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         ANGELIX_LOAD_JSON: /angelix-experiments/.angelix/search/test_20/proposal/proposal1.json
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 1
+DEBUG    guided_infer    trace_file: /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    runtime         parse /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    guided_infer    cost file: /angelix-experiments/.angelix/search/test_20/cost/cost1
+DEBUG    guided_infer    extracted cost: 179.0
+DEBUG    guided_infer    store the cost of ('1',)
+DEBUG    guided_infer    store the cost of ('1',)
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 179.0
+INFO     guided_infer    all costs: [2.0, 179.0]
+INFO     guided_infer    accept ratio: 3.190813071381477e-62
+INFO     pymc3           accepted: False
+DEBUG    guided_infer    flip 1 bit
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (5266, 6, 5266, 16))]
+INFO     reduction       all failing tests: ['20']
+INFO     reduction       select 1 best tests from ['20']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['20']
+INFO     guided_infer    inferring specification for test '20' through guided search
+DEBUG    guided_infer    seed: [('I', (5266, 6, 5266, 16), '0')]
+INFO     guided_infer    init sample: [array([0, 0])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+DEBUG    guided_infer    flip 1 bit
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+DEBUG    guided_infer    search for the cost of ('0',)
+DEBUG    guided_infer    [new_cost] key: ('0',)
+DEBUG    guided_infer    proposal: [[0]]
+DEBUG    guided_infer    locations: [(5266, 6, 5266, 16)]
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         ANGELIX_LOAD_JSON: /angelix-experiments/.angelix/search/test_20/proposal/proposal1.json
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 1
+DEBUG    guided_infer    trace_file: /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    runtime         parse /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    guided_infer    cost file: /angelix-experiments/.angelix/search/test_20/cost/cost1
+DEBUG    guided_infer    extracted cost: 2.0
+DEBUG    guided_infer    store the cost of ('0',)
+DEBUG    guided_infer    store the cost of ('0',)
+DEBUG    guided_infer    search for the cost of ('1',)
+DEBUG    guided_infer    [new_cost] key: ('1',)
+DEBUG    guided_infer    proposal: [[1]]
+DEBUG    guided_infer    locations: [(5266, 6, 5266, 16)]
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         ANGELIX_LOAD_JSON: /angelix-experiments/.angelix/search/test_20/proposal/proposal1.json
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 1
+DEBUG    guided_infer    trace_file: /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    runtime         parse /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    guided_infer    cost file: /angelix-experiments/.angelix/search/test_20/cost/cost1
+DEBUG    guided_infer    extracted cost: 179.0
+DEBUG    guided_infer    store the cost of ('1',)
+DEBUG    guided_infer    store the cost of ('1',)
+INFO     guided_infer    old cost: 2.0
+INFO     guided_infer    new cost: 179.0
+INFO     guided_infer    all costs: [2.0, 179.0]
+INFO     guided_infer    accept ratio: 3.190813071381477e-62
+INFO     pymc3           accepted: False
+DEBUG    guided_infer    flip 1 bit
+INFO     guided_infer    trial #2
+INFO     guided_infer    used 100.0% of sample space
+INFO     guided_infer    Sample space exhausted: size=2, samples=[('0',), ('1',)]
+INFO     repair          considering suspicious locations [('I', (5272, 6, 5272, 21))]
+INFO     reduction       all failing tests: ['20']
+INFO     reduction       select 1 best tests from ['20']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['20']
+INFO     guided_infer    inferring specification for test '20' through guided search
+DEBUG    guided_infer    seed: [('I', (5272, 6, 5272, 21), '1')]
+INFO     guided_infer    init sample: [array([0, 1])]
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+DEBUG    guided_infer    flip 1 bits
+INFO     guided_infer    trial #1
+INFO     guided_infer    used 0.0% of sample space
+DEBUG    guided_infer    search for the cost of ('1',)
+DEBUG    guided_infer    [new_cost] key: ('1',)
+DEBUG    guided_infer    proposal: [[1]]
+DEBUG    guided_infer    locations: [(5272, 6, 5272, 21)]
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         ANGELIX_LOAD_JSON: /angelix-experiments/.angelix/search/test_20/proposal/proposal1.json
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 1
+DEBUG    guided_infer    trace_file: /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    runtime         parse /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    guided_infer    cost file: /angelix-experiments/.angelix/search/test_20/cost/cost1
+DEBUG    guided_infer    extracted cost: 2.0
+DEBUG    guided_infer    store the cost of ('1',)
+DEBUG    guided_infer    store the cost of ('1',)
+DEBUG    guided_infer    search for the cost of ('0',)
+DEBUG    guided_infer    [new_cost] key: ('0',)
+DEBUG    guided_infer    proposal: [[0]]
+DEBUG    guided_infer    locations: [(5272, 6, 5272, 21)]
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         ANGELIX_LOAD_JSON: /angelix-experiments/.angelix/search/test_20/proposal/proposal1.json
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 0
+INFO     guided_infer    found an angelic path for test '20'
+DEBUG    guided_infer    trace_file: /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    runtime         parse /angelix-experiments/.angelix/search/test_20/trace/trace1
+DEBUG    guided_infer    old chunks_in_block: 2
+DEBUG    guided_infer    new chunks_in_block: 2
+INFO     guided_infer    angelic: [(array([0, 0]), 1)]
+INFO     guided_infer    init: [(array([0, 1]), 1)]
+DEBUG    guided_infer    [compare_block_ebits] block_a: [0 0]
+DEBUG    guided_infer    [compare_block_ebits] block_b: [0 1]
+DEBUG    guided_infer    diffs: [False]
+DEBUG    guided_infer    all_deltas (locs): [0]
+DEBUG    DD              granularity: 2
+DEBUG    guided_infer    test([]) = FAIL
+DEBUG    guided_infer    deltas (locs): [0]
+DEBUG    guided_infer    init_copy (locs): [(array([0, 0]), 1)]
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         ANGELIX_LOAD_JSON: /angelix-experiments/.angelix/DD/test_20/proposal/proposal.json
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 0
+DEBUG    guided_infer    test([0]) = PASS
+INFO     DD              dd done
+DEBUG    guided_infer    one_minimal (locs): [0]
+DEBUG    guided_infer    angelic (bits): (array([0, 0]), 1)
+DEBUG    guided_infer    init (bits): (array([0, 1]), 1)
+DEBUG    guided_infer    block_a: [0 0]
+DEBUG    guided_infer    block_b: [0 1]
+DEBUG    guided_infer    chunk_bits: 32
+DEBUG    guided_infer    all_deltas (bits): [63]
+DEBUG    DD              granularity: 2
+DEBUG    guided_infer    deltas (bit): [63]
+DEBUG    guided_infer    init_copy (bit): [(array([0, 0]), 1)]
+INFO     testing         running test '20' of frontend source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         ANGELIX_LOAD_JSON: /angelix-experiments/.angelix/DD/test_20/proposal/proposal.json
+DEBUG    testing         CC: angelix-compiler --test
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 0
+DEBUG    guided_infer    test([63]) = PASS
+INFO     DD              dd done
+DEBUG    guided_infer    one_minimal (bits): [63]
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use nsynth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/nsynth/target/nsynth-1.0-jar-with-dependencies.jar ['/angelix-experiments/.angelix/syn/syn_1/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_1/patch', '/angelix-experiments/.angelix/syn/syn_1/config.json']
+DEBUG    synthesis       synthesis output: (error "Invalid token: '\''")
+(error "Invalid token: '\''")
+(error "Invalid token: '\\'")
+SUCCESS
+INFO     synthesis       fixing expression (5272, 6, 5272, 21): (len > (s1_len - offset)) ---> (len < (s1_len - offset))
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/validation
+DEBUG    transformation  trans cmd: instrument-suspicious ext/standard/string.c
+INFO     project         building validation source
+DEBUG    project         CC: angelix-compiler --test
+DEBUG    project         cmd: /angelix-experiments/.aux/php/php-build
+INFO     testing         running test '1' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 1
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 3
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 6
+INFO     testing         output code: 0
+INFO     testing         running test '20' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 20
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 20
+INFO     testing         output code: 0
+INFO     testing         running test '21' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 21
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 21
+INFO     testing         output code: 0
+INFO     testing         running test '22' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 22
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 22
+INFO     testing         output code: 0
+INFO     testing         running test '23' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 23
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 23
+INFO     testing         output code: 0
+INFO     testing         running test '24' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 24
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 24
+INFO     testing         output code: 0
+INFO     testing         running test '25' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 25
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 25
+INFO     testing         output code: 0
+INFO     testing         running test '26' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 26
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 26
+INFO     testing         output code: 0
+INFO     testing         running test '27' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 27
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 27
+INFO     testing         output code: 0
+INFO     testing         running test '28' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 28
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 28
+INFO     testing         output code: 0
+INFO     testing         running test '29' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 29
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 29
+INFO     testing         output code: 0
+INFO     testing         running test '30' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 30
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 30
+INFO     testing         output code: 0
+INFO     testing         running test '32' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 32
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 32
+INFO     testing         output code: 0
+INFO     testing         running test '33' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 33
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 33
+INFO     testing         output code: 0
+INFO     testing         running test '34' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 34
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 34
+INFO     testing         output code: 0
+INFO     testing         running test '35' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 35
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 35
+INFO     testing         output code: 0
+INFO     testing         running test '36' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 36
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 36
+INFO     testing         output code: 0
+INFO     testing         running test '37' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 37
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 37
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 38
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 38
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 39
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 39
+INFO     testing         output code: 0
+INFO     testing         running test '40' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 40
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 40
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 41
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 41
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 42
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 42
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 43
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 43
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 44
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 44
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 45
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 45
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 46
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 46
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 47
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 47
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 48
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 48
+INFO     testing         output code: 0
+INFO     testing         running test '51' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 51
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 51
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 52
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 52
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 53
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 53
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 54
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 54
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 55
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 55
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 56
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 56
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 57
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 57
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 58
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 58
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 59
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 59
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 60
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 60
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 61
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 61
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 62
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 62
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 63
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 63
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 64
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 64
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 65
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 65
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 66
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 66
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 67
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 67
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 68
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 68
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 69
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 69
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 70
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 70
+INFO     testing         output code: 0
+INFO     testing         running test '74' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 74
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 74
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 75
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 75
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 76
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 76
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 77
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 77
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 78
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 78
+INFO     testing         output code: 0
+INFO     testing         running test '79' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 79
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 79
+INFO     testing         output code: 0
+INFO     testing         running test '80' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 80
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 80
+INFO     testing         output code: 0
+INFO     testing         running test '81' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 81
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 81
+INFO     testing         output code: 0
+INFO     testing         running test '82' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 82
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 82
+INFO     testing         output code: 0
+INFO     testing         running test '83' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 83
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 83
+INFO     testing         output code: 0
+INFO     testing         running test '84' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 84
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 84
+INFO     testing         output code: 0
+INFO     testing         running test '85' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 85
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/php/php-oracle 85
+INFO     testing         output code: 0
+DEBUG    repair          is_repaired: True
+DEBUG    repair          pos: ['1', '3', '6', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+DEBUG    repair          neg: []
+DEBUG    repair          last_level: alternatives
+DEBUG    repair          original: (len > (s1_len - offset))
+DEBUG    repair          fix: {(5272, 6, 5272, 21): '(len < (s1_len - offset))'}
+INFO     repair          patch successfully generated in 3m 25s (see php-2021-Sep18-011604.patch)
+SUCCESS

@@ -1,0 +1,11 @@
+--- a/libtiff/tif_dirwrite.c
++++ b/libtiff/tif_dirwrite.c
+@@ -343,7 +343,7 @@
+                  * in the previous steps as the "rawcc" data may well be
+                  * a previously read tile/strip in mixed read/write mode.
+ 		 */
+-		if (tif->tif_rawcc > 0 && tif->tif_rawcc != orig_rawcc
++		if (((tif->tif_rawcc > 0) && (tif->tif_rawcc > 0))
+ 		    && (tif->tif_flags & TIFF_BEENWRITING) != 0
+ 		    && !TIFFFlushData1(tif))
+ 		{

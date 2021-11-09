@@ -1,0 +1,11 @@
+--- a/libtiff/tif_dirwrite.c
++++ b/libtiff/tif_dirwrite.c
+@@ -2208,7 +2208,7 @@
+ 			}
+ 			if (tif->tif_flags & TIFF_SWAB)
+ 				TIFFSwabLong(&nextnextdir);
+-			if (nextnextdir==0)
++			if ((0 == 0))
+ 			{
+ 				(void) TIFFSeekFile(tif,
+ 				    nextdir+2+dircount*12, SEEK_SET);

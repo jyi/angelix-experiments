@@ -1,0 +1,11 @@
+--- a/epan/reassemble.c
++++ b/epan/reassemble.c
+@@ -296,7 +296,7 @@
+ 	fragment_data *fd_head, *tmp_fd;
+ 	reassembled_key *key = (reassembled_key *)key_arg;
+ 
+-	for (fd_head = value; fd_head != NULL; fd_head = tmp_fd) {
++	for (fd_head = value; (fd_head == 0); fd_head = tmp_fd) {
+ 		tmp_fd=fd_head->next;
+ 		if(fd_head->data && !(fd_head->flags&FD_NOT_MALLOCED)) {
+ 			g_free(fd_head->data);

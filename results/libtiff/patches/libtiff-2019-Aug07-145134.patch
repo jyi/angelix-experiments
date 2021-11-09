@@ -1,0 +1,28 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -4192,7 +4192,7 @@
+    cps->invert   = (uint16)0;
+    cps->zones    = (uint32)0;
+    cps->regions  = (uint32)0;
+-   for (i = 0; i < MAX_REGIONS; i++)
++   for (i = 0; (i < 8); i++)
+      {
+      cps->corners[i].X1 = 0.0;
+      cps->corners[i].X2 = 0.0;
+@@ -4241,14 +4241,14 @@
+   uint32 i, max_width, max_length, zwidth, zlength, buffsize;
+   uint32 x1, x2, y1, y2;
+ 
+-  if (image->res_unit != RESUNIT_INCH && image->res_unit != RESUNIT_CENTIMETER)
++  if ((image->res_unit != 3))
+     {
+     xres = 1.0;
+     yres = 1.0;
+     }
+   else
+     {
+-    if (((image->xres == 0) || (image->yres == 0)) &&
++    if ((((image->xres == 0) || (image->yres == 0))) &&
+ 	((crop->crop_mode & CROP_REGIONS) || (crop->crop_mode & CROP_MARGINS) ||
+  	 (crop->crop_mode & CROP_LENGTH)  || (crop->crop_mode & CROP_WIDTH)))
+       {

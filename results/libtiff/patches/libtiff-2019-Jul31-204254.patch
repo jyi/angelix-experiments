@@ -1,0 +1,20 @@
+--- a/libtiff/tif_dirread.c
++++ b/libtiff/tif_dirread.c
+@@ -973,7 +973,7 @@
+ 	tsize_t cc = dir->tdir_count * w;
+ 
+ 	/* Check for overflow. */
+-	if ((dir->tdir_count == 0) || (w == 0) || dir->tdir_count / w != cc)
++	if ((((dir->tdir_count == 0) || (w == 0)) || ((dir->tdir_count / w) != (dir->tdir_count / w))))
+ 		goto bad;
+ 
+ 	if (!isMapped(tif)) {
+@@ -1135,7 +1135,7 @@
+ static int
+ TIFFFetchShortArray(TIFF* tif, TIFFDirEntry* dir, uint16* v)
+ {
+-	if (dir->tdir_count <= 2) {
++	if ((dir->tdir_count <= 2)) {
+ 		if (tif->tif_header.tiff_magic == TIFF_BIGENDIAN) {
+ 			switch (dir->tdir_count) {
+ 			case 2: v[1] = (uint16) (dir->tdir_offset & 0xffff);

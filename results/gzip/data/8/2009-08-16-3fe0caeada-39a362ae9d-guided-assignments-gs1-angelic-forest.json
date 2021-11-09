@@ -1,0 +1,24 @@
+{
+  "3": [
+    [
+      {
+        "context": [
+          {
+            "name": "outcnt",
+            "value": 0
+          },
+          {
+            "name": "bk",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": 1347440720
+        },
+        "expression": "960-8-960-8",
+        "instId": 0
+      }
+    ]
+  ]
+}

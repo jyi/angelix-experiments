@@ -1,0 +1,15 @@
+#!/bin/bash
+
+./configure --config-cache --cache-file=$pwd/.angelix/config.cache      \
+            --disable-xmlwriter                                         \
+            --disable-xmlreader                                         \
+            --disable-xml                                               \
+            --disable-simplexml                                         \
+            --disable-shared                                            \
+            --disable-dom                                               \
+            --disable-libxml                                            \
+            --without-pear                                              \
+            --without-pcre-dir > /dev/null
+
+/angelix-experiments/.aux/php/php-transform
+mkdir -p ../state_dump

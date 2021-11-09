@@ -1,0 +1,1426 @@
+[repair] benchmark: manybugs
+[repair] subject: php
+[repair] version: 2011-02-27-e65d361fde-1d984a7ffd
+[repair] search: symbolic
+[repair] ./fetch php manybugs 2011-02-27-e65d361fde-1d984a7ffd
+[fetch] benchmark: manybugs
+[fetch] subject: php
+[fetch] version: 2011-02-27-e65d361fde-1d984a7ffd
+[fetch] archive: php-bug-2011-02-27-e65d361fde-1d984a7ffd.tar.gz
+[fetch] directory: php-bug-2011-02-27-e65d361fde-1d984a7ffd
+[fetch] preparing source code
+[fetch] golden_directory: php-fix-2011-02-27-e65d361fde-1d984a7ffd
+[fetch] clean-source php-bug-2011-02-27-e65d361fde-1d984a7ffd
+[fetch] /angelix-experiments/php-bug-2011-02-27-e65d361fde-1d984a7ffd/php/configure
+[fetch] make clean
+[fetch] clean-source php-fix-2011-02-27-e65d361fde-1d984a7ffd
+[fetch] restore-buggy php-bug-2011-02-27-e65d361fde-1d984a7ffd
+[fetch] /angelix-experiments/php-fix-2011-02-27-e65d361fde-1d984a7ffd/php/configure
+[fetch] make clean
+[fetch] buggy: ext/tokenizer/tokenizer.c
+[fetch] buggy_preprocessed: php-bug-2011-02-27-e65d361fde-1d984a7ffd/php/ext/tokenizer/tokenizer.c
+[fetch] buggy_version: e65d361fde
+[fetch] buggy_original: php-bug-2011-02-27-e65d361fde-1d984a7ffd/diffs/ext/tokenizer/tokenizer.c-e65d361fde
+[fetch] cp php-bug-2011-02-27-e65d361fde-1d984a7ffd/diffs/ext/tokenizer/tokenizer.c-e65d361fde php-bug-2011-02-27-e65d361fde-1d984a7ffd/php/ext/tokenizer/tokenizer.c
+[fetch] restore-correct php-fix-2011-02-27-e65d361fde-1d984a7ffd
+[fetch] cp php-fix-2011-02-27-e65d361fde-1d984a7ffd/diffs/ext/tokenizer/tokenizer.c-1d984a7ffd php-fix-2011-02-27-e65d361fde-1d984a7ffd/php/ext/tokenizer/tokenizer.c
+[fetch] restored php-fix-2011-02-27-e65d361fde-1d984a7ffd/php/ext/tokenizer/tokenizer.c with php-fix-2011-02-27-e65d361fde-1d984a7ffd/diffs/ext/tokenizer/tokenizer.c-1d984a7ffd
+[fetch] fetch done
+[repair-php] options:  --defect if-conditions loop-conditions --ignore-lines --all-suspicious --group-size 1 --test-timeout 60 --klee-timeout 7200 --timeout 14400 --klee-solver-timeout 100 --synthesis-ptr-vars --use-nsynth --synthesis-levels alternatives integer-constants boolean-constants variables extended-arithmetic extended-logic mixed-conditional --mcmc-beta 0.8 --angelic-search-strategy symbolic --klee-search dfs --klee-max-forks 200 --lines 154
+INFO     repair          copy php-bug-2011-02-27-e65d361fde-1d984a7ffd/php to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '14' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '15' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '16' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '32' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '33' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '34' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '35' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '36' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '37' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '49' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '51' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '71' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '72' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '73' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of validation source
+INFO     testing         output code: 0
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+INFO     project         building frontend source
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '1' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '31' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '40' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '51' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of frontend source
+INFO     testing         output code: 0
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '2' of frontend source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '2' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '4' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '4' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '7' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 9
+INFO     testing         running test '9' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 9
+INFO     testing         running test '10' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+INFO     testing         running test '13' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+INFO     testing         running test '14' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '14' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '15' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 15
+INFO     testing         running test '15' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 15
+INFO     testing         running test '16' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '16' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '32' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '32' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '33' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '33' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '34' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '34' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '35' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '35' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '36' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '36' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '37' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '37' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '38' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '38' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '39' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '39' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '49' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '49' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+INFO     testing         running test '50' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+INFO     testing         running test '71' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 71
+INFO     testing         running test '71' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 71
+INFO     testing         running test '72' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 72
+INFO     testing         running test '72' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 72
+INFO     testing         running test '73' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 73
+INFO     testing         running test '73' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 73
+WARNING  repair          excluding test 2 because it fails in golden version
+WARNING  repair          excluding test 4 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 7 because it fails in golden version
+WARNING  repair          excluding test 8 because it fails in golden version
+WARNING  repair          excluding test 9 because it fails in golden version
+WARNING  repair          excluding test 10 because it fails in golden version
+WARNING  repair          excluding test 11 because it fails in golden version
+WARNING  repair          excluding test 12 because it fails in golden version
+WARNING  repair          excluding test 13 because it fails in golden version
+WARNING  repair          excluding test 14 because it fails in golden version
+WARNING  repair          excluding test 15 because it fails in golden version
+WARNING  repair          excluding test 16 because it fails in golden version
+WARNING  repair          excluding test 17 because it fails in golden version
+WARNING  repair          excluding test 18 because it fails in golden version
+WARNING  repair          excluding test 19 because it fails in golden version
+WARNING  repair          excluding test 20 because it fails in golden version
+WARNING  repair          excluding test 21 because it fails in golden version
+WARNING  repair          excluding test 22 because it fails in golden version
+WARNING  repair          excluding test 23 because it fails in golden version
+WARNING  repair          excluding test 24 because it fails in golden version
+WARNING  repair          excluding test 25 because it fails in golden version
+WARNING  repair          excluding test 26 because it fails in golden version
+WARNING  repair          excluding test 27 because it fails in golden version
+WARNING  repair          excluding test 28 because it fails in golden version
+WARNING  repair          excluding test 29 because it fails in golden version
+WARNING  repair          excluding test 30 because it fails in golden version
+WARNING  repair          excluding test 32 because it fails in golden version
+WARNING  repair          excluding test 33 because it fails in golden version
+WARNING  repair          excluding test 34 because it fails in golden version
+WARNING  repair          excluding test 35 because it fails in golden version
+WARNING  repair          excluding test 36 because it fails in golden version
+WARNING  repair          excluding test 37 because it fails in golden version
+WARNING  repair          excluding test 49 because it fails in golden version
+WARNING  repair          excluding test 50 because it fails in golden version
+WARNING  repair          excluding test 71 because it fails in golden version
+WARNING  repair          excluding test 72 because it fails in golden version
+WARNING  repair          excluding test 73 because it fails in golden version
+INFO     repair          repair test suite: ['1', '3', '6', '31', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     repair          validation test suite: ['1', '3', '6', '31', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     localization    selected expressions [(129, 7, 129, 21)] with group score 1.0 
+INFO     localization    selected expressions [(133, 8, 133, 22)] with group score 1.0 
+INFO     localization    selected expressions [(148, 7, 148, 35)] with group score 1.0 
+INFO     localization    selected expressions [(154, 7, 154, 12)] with group score 1.0 
+INFO     repair          considering suspicious expressions [(129, 7, 129, 21)]
+INFO     reduction       all failing tests: ['38', '39']
+INFO     reduction       select 1 best tests from ['38', '39']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['38']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '38' through KLEE
+INFO     testing         running test '38' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'php_out' executed 24 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 34 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000003.smt2
+INFO     sym_infer       value 'php_out' executed 34 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000004.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000005.smt2
+INFO     sym_infer       value 'php_out' executed 34 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000006.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000007.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000008.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000009.smt2
+INFO     sym_infer       value 'php_out' executed 34 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000010.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000011.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000012.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000013.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000014.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000015.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000016.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000017.smt2
+INFO     sym_infer       value 'php_out' executed 34 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000018.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000019.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000020.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000021.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000022.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000023.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000024.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000025.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000026.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000027.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000028.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000029.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000030.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000031.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000032.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000033.smt2
+INFO     sym_infer       value 'php_out' executed 34 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000034.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000035.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000036.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000037.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000038.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000039.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000040.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000041.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000042.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000043.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000044.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000045.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000046.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000047.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000048.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000049.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000050.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000051.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000052.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000053.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000054.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000055.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000056.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000057.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000058.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000059.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000060.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000061.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000062.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000063.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000064.smt2
+INFO     sym_infer       value 'php_out' executed 84 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000065.smt2
+INFO     sym_infer       value 'php_out' executed 34 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000066.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000067.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000068.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000069.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000070.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000071.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000072.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000073.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000074.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000075.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000076.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000077.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000078.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000079.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000080.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000081.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000082.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000083.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000084.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000085.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000086.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000087.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000088.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000089.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000090.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000091.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000092.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000093.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000094.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000095.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000096.smt2
+INFO     sym_infer       value 'php_out' executed 84 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000097.smt2
+INFO     sym_infer       value 'php_out' executed 44 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000098.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000099.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000100.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000101.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000102.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000103.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000104.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000105.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000106.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000107.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000108.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000109.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000110.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000111.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000112.smt2
+INFO     sym_infer       value 'php_out' executed 84 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000113.smt2
+INFO     sym_infer       value 'php_out' executed 54 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000114.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000115.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000116.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000117.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000118.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000119.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000120.smt2
+INFO     sym_infer       value 'php_out' executed 84 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000121.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000122.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000123.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000124.smt2
+INFO     sym_infer       value 'php_out' executed 84 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000125.smt2
+INFO     sym_infer       value 'php_out' executed 74 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000126.smt2
+INFO     sym_infer       value 'php_out' executed 84 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000127.smt2
+INFO     sym_infer       value 'php_out' executed 84 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000128.smt2
+INFO     sym_infer       value 'php_out' executed 94 times while 28 required
+INFO     sym_infer       found 0 angelic paths for test '38'
+INFO     repair          considering suspicious expressions [(133, 8, 133, 22)]
+INFO     reduction       all failing tests: ['38', '39']
+INFO     reduction       select 1 best tests from ['38', '39']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['38']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '38' through KLEE
+INFO     testing         running test '38' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000004.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000005.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000006.smt2
+INFO     sym_infer       value 'php_out' executed 37 times while 28 required
+INFO     sym_infer       found 0 angelic paths for test '38'
+INFO     repair          considering suspicious expressions [(148, 7, 148, 35)]
+INFO     reduction       all failing tests: ['38', '39']
+INFO     reduction       select 1 best tests from ['38', '39']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['38']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '38' through KLEE
+INFO     testing         running test '38' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000004.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000004.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000005.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000005.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000006.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000006.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000007.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000007.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000008.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000008.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000009.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000009.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000010.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000010.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000011.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000011.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000012.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000012.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000013.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000013.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000014.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000014.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000015.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000015.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000016.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000016.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000017.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000017.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000018.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000018.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000019.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000019.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000020.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000020.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000021.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000021.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000022.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000022.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000023.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000023.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000024.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000024.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000025.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000025.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000026.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000026.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000027.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000027.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000028.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000028.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000029.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000029.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000030.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000030.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000031.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000031.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000032.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000032.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000033.smt2
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 19 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 23 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 27 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 31 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 35 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 489 column 947: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000033.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000034.smt2
+(error "line 7 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 399 column 722: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000034.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000035.smt2
+(error "line 7 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 399 column 722: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000035.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000036.smt2
+(error "line 7 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 399 column 722: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000036.smt2
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000037.smt2
+(error "line 7 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 11 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 15 column 44: Parsing function declaration. Expecting sort list '(': unknown sort 'token'")
+(error "line 399 column 722: unknown constant int!choice!148!7!148!35!0!env!")
+WARNING  sym_infer       failed to parse /angelix-experiments/.angelix/backend/klee-out-0/test000037.smt2
+INFO     sym_infer       found 0 angelic paths for test '38'
+INFO     repair          considering suspicious expressions [(154, 7, 154, 12)]
+INFO     reduction       all failing tests: ['38', '39']
+INFO     reduction       select 1 best tests from ['38', '39']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '40', '41', '42', '43', '44', '45', '46', '47', '48', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['38']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '38' through KLEE
+INFO     testing         running test '38' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 64 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000003.smt2
+INFO     sym_infer       value 'php_out' executed 51 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000004.smt2
+INFO     sym_infer       value 'php_out' executed 37 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000005.smt2
+INFO     sym_infer       value 'php_out' executed 34 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000006.smt2
+INFO     sym_infer       value 'php_out' executed 31 times while 28 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000007.smt2
+INFO     sym_infer       expression (154, 7, 154, 12)[0]: angelic = False
+INFO     sym_infer       expression (154, 7, 154, 12)[1]: angelic = True
+INFO     testing         running test '38' of frontend source
+INFO     testing         output code: 0
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000008.smt2
+INFO     sym_infer       value 'php_out' executed 15 times while 28 required
+INFO     sym_infer       found 1 angelic paths for test '38'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use nsynth
+INFO     synthesis       synthesis failed
+INFO     synthesis       synthesizing patch with component level 'integer-constants'
+INFO     synthesis       use nsynth
+WARNING  synthesis       synthesis returned non-zero code
+INFO     synthesis       synthesizing patch with component level 'boolean-constants'
+INFO     synthesis       use nsynth
+WARNING  synthesis       synthesis returned non-zero code
+INFO     synthesis       synthesizing patch with component level 'variables'
+INFO     synthesis       use nsynth
+INFO     synthesis       fixing expression (154, 7, 154, 12): (0 == 1) ---> (destroy == 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '51' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of validation source
+INFO     testing         output code: 0
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use nsynth
+INFO     synthesis       synthesis failed
+INFO     synthesis       synthesizing patch with component level 'integer-constants'
+INFO     synthesis       use nsynth
+WARNING  synthesis       synthesis returned non-zero code
+INFO     synthesis       synthesizing patch with component level 'boolean-constants'
+INFO     synthesis       use nsynth
+WARNING  synthesis       synthesis returned non-zero code
+INFO     synthesis       synthesizing patch with component level 'variables'
+INFO     synthesis       use nsynth
+INFO     synthesis       fixing expression (154, 7, 154, 12): (0 == 1) ---> (355 == token_type)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '51' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of validation source
+INFO     testing         output code: 0
+INFO     repair          patch successfully generated in 18m 44s (see php-2019-Aug12-032344.patch)
+SUCCESS

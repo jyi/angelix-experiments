@@ -1,0 +1,20 @@
+--- a/ext/tokenizer/tokenizer.c
++++ b/ext/tokenizer/tokenizer.c
+@@ -130,7 +130,7 @@
+ 			MAKE_STD_ZVAL(keyword);
+ 			array_init(keyword);
+ 			add_next_index_long(keyword, token_type);
+-			if (token_type == T_END_HEREDOC) {
++			if (0) {
+ 				if (CG(increment_lineno)) {
+ 					token_line = ++CG(zend_lineno);
+ 					CG(increment_lineno) = 0;
+@@ -151,7 +151,7 @@
+ 		ZVAL_NULL(&token);
+ 
+ 		token_line = CG(zend_lineno);
+-		if (0 == 1) break;
++		if ((355 == token_type)) break;
+ 	}
+ }
+ 

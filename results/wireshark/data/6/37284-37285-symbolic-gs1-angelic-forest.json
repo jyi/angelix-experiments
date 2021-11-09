@@ -1,0 +1,56 @@
+{
+  "46": [
+    [
+      {
+        "context": [
+          {
+            "name": "list_interfaces",
+            "value": 0
+          },
+          {
+            "name": "machine_readable",
+            "value": 1
+          },
+          {
+            "name": "log_flags",
+            "value": 255
+          },
+          {
+            "name": "argc",
+            "value": 0
+          },
+          {
+            "name": "print_statistics",
+            "value": 0
+          },
+          {
+            "name": "list_link_layer_types",
+            "value": 0
+          },
+          {
+            "name": "print_bpf_code",
+            "value": 0
+          },
+          {
+            "name": "optind",
+            "value": 5
+          },
+          {
+            "name": "start_capture",
+            "value": 1
+          },
+          {
+            "name": "arg_error",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "4174-9-4174-9",
+        "instId": 0
+      }
+    ]
+  ]
+}

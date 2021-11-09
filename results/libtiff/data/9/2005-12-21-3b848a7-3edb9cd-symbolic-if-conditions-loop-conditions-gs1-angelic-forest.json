@@ -1,0 +1,3876 @@
+{
+  "22": [
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ],
+    [
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 6
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 1
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 2
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "589-13-590-31",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 3
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "td->td_nstrips",
+            "value": 9
+          },
+          {
+            "name": "td->td_compression",
+            "value": 1
+          },
+          {
+            "name": "fix",
+            "value": 70
+          },
+          {
+            "name": "diroutoforderwarning",
+            "value": 0
+          },
+          {
+            "name": "nextdiroff",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "589-13-590-31",
+        "instId": 7
+      }
+    ]
+  ]
+}

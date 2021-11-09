@@ -1,0 +1,1710 @@
+[repair] benchmark: manybugs
+[repair] subject: gzip
+[repair] version: 2010-02-19-3eb6091d69-884ef6d16c
+[repair] search: symbolic
+[fetch] benchmark: manybugs
+[fetch] subject: gzip
+[fetch] version: 2010-02-19-3eb6091d69-884ef6d16c
+[fetch] archive: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c.tar.gz
+[fetch] directory: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] preparing source code
+[fetch] golden_directory: gzip-fix-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] clean-source gzip-bug-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] /angelix-experiments/gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip/configure
+[fetch] make -j 72 clean
+[fetch] clean-source gzip-fix-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] restore-buggy gzip-bug-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] /angelix-experiments/gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: gzip.c
+[fetch] buggy_version: 3eb6091d69
+[fetch] buggy_preprocessed: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c
+[fetch] buggy_original: gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-3eb6091d69
+[fetch] cp gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-3eb6091d69 gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c
+[fetch] restore-correct gzip-fix-2010-02-19-3eb6091d69-884ef6d16c
+[fetch] restore-correct entered
+[fetch] cp gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-884ef6d16c gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c
+[fetch] restored gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip/gzip.c with gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/diffs/gzip.c-884ef6d16c
+[fetch] fetch done
+[repair] [repair] options: --symbolic --log
+DEBUG
+--ignore-lines
+--lines
+550
+--all-suspicious
+--group-size
+1
+--klee-max-forks
+200
+--ignore-trivial
+--synthesis-level
+boolean-constants
+--test-timeout
+60
+--klee-solver-timeout
+100
+--klee-search
+dfs
+--all-tests
+--synthesis-bool-only
+--angelic-search-strategy
+symbolic  --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-gzip] options:  --log DEBUG --ignore-lines --lines 550 --all-suspicious --group-size 1 --klee-max-forks 200 --ignore-trivial --synthesis-level boolean-constants --test-timeout 60 --klee-solver-timeout 100 --klee-search dfs --all-tests --synthesis-bool-only --angelic-search-strategy symbolic --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-gzip] cleaning gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip ...
+[repair-gzip] cleaning gzip-fix-2010-02-19-3eb6091d69-884ef6d16c/gzip ...
+DEBUG    repair          tests: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']
+INFO     repair          copy gzip-bug-2010-02-19-3eb6091d69-884ef6d16c/gzip to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     project         building json compilation database from validation source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: bear /angelix-experiments/.aux/gzip/build
+DEBUG    repair          start to measure time
+INFO     testing         running test '1' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 1
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 2
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 2
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 4
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 5
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 0
+INFO     testing         running test '10' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 10
+INFO     testing         output code: 0
+INFO     testing         running test '11' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 11
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 11
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 12
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 12
+INFO     testing         output code: 0
+INFO     testing         running test '13' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 13
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 13
+INFO     testing         output code: 0
+INFO     project         configuring golden source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     project         building golden source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     testing         running test '7' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 0
+INFO     testing         running test '11' of golden source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 11
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 11
+INFO     testing         output code: 1
+WARNING  repair          excluding test 11 because it fails in golden version
+INFO     repair          positive: ['1', '2', '3', '4', '5', '6', '8', '9', '10', '12', '13']
+INFO     repair          negative: ['7']
+INFO     project         configuring frontend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting repairable of frontend source
+DEBUG    transformation  ANGELIX_IF_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_LOOP_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_IGNORE_TRIVIAL=YES
+DEBUG    transformation  ANGELIX_USED_VARIABLES=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/frontend
+DEBUG    transformation  trans cmd: instrument-repairable gzip.c
+INFO     project         building frontend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '1' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/1
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/1
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 1
+INFO     testing         output code: 0
+INFO     testing         running test '2' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/2
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/2
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 2
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 2
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 2
+INFO     testing         running test '3' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/3
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/3
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/4
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/4
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 4
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 4
+DEBUG    repair          remove 4 from repair test suite (not instrumented)
+INFO     testing         running test '5' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/5
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/5
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 5
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 5
+INFO     testing         running test '6' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/6
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/6
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     testing         running test '8' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/8
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/8
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/9
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/9
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 9
+INFO     testing         running test '10' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/10
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/10
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 10
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 10
+DEBUG    repair          remove 10 from repair test suite (not instrumented)
+INFO     testing         running test '12' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/12
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/12
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 12
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 12
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 12
+DEBUG    repair          remove 12 from repair test suite (not instrumented)
+INFO     testing         running test '13' of frontend source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/13
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/13
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 13
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 13
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+DEBUG    repair          remove 13 from repair test suite (not instrumented)
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '7' of frontend source
+DEBUG    testing         ANGELIX_WITH_TRACING: /angelix-experiments/.angelix/trace/7
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     project         building golden source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     testing         running test '7' of golden source
+DEBUG    testing         ANGELIX_WITH_DUMPING: /angelix-experiments/.angelix/dump/7
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/golden
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 0
+INFO     repair          repair test suite: ['1', '2', '3', '5', '6', '7', '8', '9']
+INFO     repair          validation test suite: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '12', '13']
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/1
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/2
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/3
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/4
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/5
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/6
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/8
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/9
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/10
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/12
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/13
+DEBUG    runtime         parse /angelix-experiments/.angelix/trace/7
+DEBUG    localization    executed_positive: {('I', (833, 9, 833, 10), '1'): 4, ('I', (1433, 9, 1433, 20), '0'): 1, ('I', (957, 7, 957, 25)): 0, ('I', (827, 13, 827, 59)): 0, ('I', (538, 9, 538, 19)): 0, ('I', (600, 11, 600, 21)): 0, ('I', (1280, 13, 1280, 20), '1'): 1, ('I', (1420, 16, 1420, 39), '1'): 1, ('I', (1280, 13, 1280, 20), '31'): 4, ('I', (641, 9, 641, 49), '1'): 5, ('I', (665, 13, 665, 22), '0'): 2, ('I', (1713, 9, 1713, 14)): 0, ('I', (1819, 13, 1819, 18), '1'): 7, ('L', (578, 16, 578, 25)): 0, ('I', (1271, 9, 1271, 18), '1'): 1, ('I', (556, 9, 556, 20), '0'): 7, ('I', (595, 7, 595, 22), '1'): 6, ('I', (1439, 13, 1439, 25), '1'): 1, ('I', (737, 9, 737, 11)): 0, ('I', (598, 7, 598, 16), '1'): 2, ('I', (1391, 13, 1391, 24), '0'): 1, ('L', (1816, 15, 1816, 19), '1'): 7, ('I', (1031, 7, 1031, 22), '1'): 1, ('I', (550, 9, 550, 48), '0'): 7, ('I', (425, 9, 425, 13), '0'): 7, ('I', (792, 9, 792, 32), '0'): 1, ('I', (792, 9, 792, 32), '1'): 3, ('I', (1391, 13, 1391, 24)): 0, ('I', (772, 17, 772, 28)): 0, ('I', (430, 9, 430, 16), '0'): 7, ('I', (719, 9, 719, 15), '0'): 4, ('I', (545, 9, 545, 19)): 0, ('L', (578, 16, 578, 25), '1'): 4, ('I', (615, 9, 615, 20), '0'): 1, ('I', (1271, 9, 1271, 18), '0'): 4, ('I', (805, 13, 805, 22), '0'): 4, ('I', (595, 7, 595, 22)): 0, ('I', (1819, 13, 1819, 18), '0'): 7, ('I', (545, 9, 545, 19), '0'): 7, ('I', (1431, 9, 1431, 19)): 0, ('I', (1003, 9, 1003, 28)): 0, ('L', (578, 16, 578, 25), '0'): 3, ('I', (1031, 7, 1031, 22), '0'): 3, ('I', (615, 9, 615, 20), '1'): 5, ('L', (1816, 15, 1816, 19), '0'): 7, ('I', (598, 7, 598, 16), '0'): 2, ('I', (1003, 9, 1003, 28), '1'): 1, ('I', (425, 9, 425, 13)): 0, ('I', (595, 7, 595, 22), '0'): 3, ('I', (833, 9, 833, 10)): 0, ('I', (1050, 7, 1050, 12), '1'): 4, ('I', (1031, 7, 1031, 22)): 0, ('I', (598, 7, 598, 16)): 0, ('L', (1805, 15, 1805, 19)): 0, ('I', (1639, 9, 1639, 10)): 0, ('I', (1280, 13, 1280, 20), '0'): 1, ('I', (1391, 13, 1391, 24), '1'): 4, ('I', (430, 9, 430, 16)): 0, ('I', (1873, 7, 1873, 12), '1'): 1, ('I', (772, 17, 772, 28), '0'): 1, ('I', (1298, 13, 1298, 23)): 0, ('I', (1431, 9, 1431, 19), '0'): 1, ('I', (930, 11, 930, 16), '1'): 1, ('I', (1050, 7, 1050, 12)): 0, ('I', (1713, 9, 1713, 14), '0'): 1, ('I', (1012, 12, 1012, 19), '1'): 1, ('I', (575, 13, 575, 66)): 0, ('I', (1676, 9, 1676, 39), '0'): 1, ('L', (1442, 37, 1442, 47), '1'): 1, ('I', (858, 9, 858, 10)): 0, ('I', (1280, 13, 1280, 20)): 0, ('I', (1012, 12, 1012, 19)): 0, ('I', (574, 9, 574, 23), '1'): 4, ('I', (1333, 13, 1333, 28)): 0, ('I', (1420, 16, 1420, 39), '0'): 1, ('I', (575, 13, 575, 66), '0'): 1, ('L', (1816, 15, 1816, 19)): 0, ('I', (538, 9, 538, 19), '1'): 7, ('I', (1362, 17, 1362, 62), '1'): 1, ('I', (600, 11, 600, 21), '1'): 2, ('I', (1179, 13, 1179, 21)): 0, ('I', (1094, 9, 1094, 14)): 0, ('I', (1179, 13, 1179, 21), '0'): 1, ('I', (1676, 9, 1676, 39)): 0, ('I', (655, 9, 655, 21), '1'): 5, ('I', (574, 9, 574, 23)): 0, ('I', (858, 9, 858, 10), '0'): 2, ('I', (1647, 13, 1647, 14)): 0, ('I', (1094, 9, 1094, 14), '1'): 4, ('I', (655, 9, 655, 21), '0'): 2, ('L', (1805, 15, 1805, 19), '1'): 7, ('I', (737, 9, 737, 11), '0'): 3, ('I', (930, 11, 930, 16)): 0, ('I', (1271, 9, 1271, 18)): 0, ('I', (805, 13, 805, 22)): 0, ('I', (550, 9, 550, 48)): 0, ('I', (575, 13, 575, 66), '1'): 3, ('I', (1298, 13, 1298, 23), '0'): 4, ('I', (574, 9, 574, 23), '0'): 5, ('I', (584, 9, 584, 40), '0'): 6, ('I', (556, 9, 556, 20)): 0, ('I', (957, 7, 957, 25), '0'): 1, ('I', (827, 13, 827, 59), '0'): 1, ('I', (786, 9, 786, 21)): 0, ('I', (539, 9, 539, 19), '1'): 7, ('L', (1805, 15, 1805, 19), '0'): 7, ('I', (1873, 7, 1873, 12), '0'): 1, ('I', (683, 13, 683, 22), '0'): 1, ('I', (737, 9, 737, 11), '1'): 1, ('I', (719, 9, 719, 15)): 0, ('I', (762, 13, 762, 15), '1'): 1, ('I', (1819, 13, 1819, 18)): 0, ('I', (584, 9, 584, 40)): 0, ('I', (638, 9, 638, 24), '1'): 5, ('I', (786, 9, 786, 21), '0'): 4, ('I', (858, 9, 858, 10), '1'): 1, ('I', (539, 9, 539, 19)): 0, ('I', (792, 9, 792, 32)): 0, ('L', (1442, 37, 1442, 47), '0'): 1, ('I', (762, 13, 762, 15)): 0, ('I', (1333, 13, 1333, 28), '0'): 4, ('I', (851, 13, 851, 22), '1'): 1, ('I', (1431, 9, 1431, 19), '1'): 5}
+DEBUG    localization    executed_negative: {('I', (833, 9, 833, 10), '1'): 0, ('I', (1433, 9, 1433, 20), '0'): 0, ('I', (957, 7, 957, 25)): 1, ('I', (827, 13, 827, 59)): 1, ('I', (538, 9, 538, 19)): 1, ('I', (600, 11, 600, 21)): 1, ('I', (1280, 13, 1280, 20), '1'): 0, ('I', (1420, 16, 1420, 39), '1'): 0, ('I', (1280, 13, 1280, 20), '31'): 0, ('I', (641, 9, 641, 49), '1'): 0, ('I', (665, 13, 665, 22), '0'): 0, ('I', (1713, 9, 1713, 14)): 1, ('I', (1819, 13, 1819, 18), '1'): 0, ('L', (578, 16, 578, 25)): 1, ('I', (1271, 9, 1271, 18), '1'): 0, ('I', (556, 9, 556, 20), '0'): 0, ('I', (595, 7, 595, 22), '1'): 0, ('I', (1439, 13, 1439, 25), '1'): 0, ('I', (737, 9, 737, 11)): 1, ('I', (598, 7, 598, 16), '1'): 0, ('I', (1391, 13, 1391, 24), '0'): 0, ('L', (1816, 15, 1816, 19), '1'): 0, ('I', (1031, 7, 1031, 22), '1'): 0, ('I', (550, 9, 550, 48), '0'): 0, ('I', (425, 9, 425, 13), '0'): 0, ('I', (792, 9, 792, 32), '0'): 0, ('I', (792, 9, 792, 32), '1'): 0, ('I', (1391, 13, 1391, 24)): 1, ('I', (772, 17, 772, 28)): 1, ('I', (430, 9, 430, 16), '0'): 0, ('I', (719, 9, 719, 15), '0'): 0, ('I', (545, 9, 545, 19)): 1, ('L', (578, 16, 578, 25), '1'): 0, ('I', (615, 9, 615, 20), '0'): 0, ('I', (1271, 9, 1271, 18), '0'): 0, ('I', (805, 13, 805, 22), '0'): 0, ('I', (595, 7, 595, 22)): 1, ('I', (1819, 13, 1819, 18), '0'): 0, ('I', (545, 9, 545, 19), '0'): 0, ('I', (1431, 9, 1431, 19)): 1, ('I', (1003, 9, 1003, 28)): 1, ('L', (578, 16, 578, 25), '0'): 0, ('I', (1031, 7, 1031, 22), '0'): 0, ('I', (615, 9, 615, 20), '1'): 0, ('L', (1816, 15, 1816, 19), '0'): 0, ('I', (598, 7, 598, 16), '0'): 0, ('I', (1003, 9, 1003, 28), '1'): 0, ('I', (425, 9, 425, 13)): 1, ('I', (595, 7, 595, 22), '0'): 0, ('I', (833, 9, 833, 10)): 1, ('I', (1050, 7, 1050, 12), '1'): 0, ('I', (1031, 7, 1031, 22)): 1, ('I', (598, 7, 598, 16)): 1, ('L', (1805, 15, 1805, 19)): 1, ('I', (1639, 9, 1639, 10)): 1, ('I', (1280, 13, 1280, 20), '0'): 0, ('I', (1391, 13, 1391, 24), '1'): 0, ('I', (430, 9, 430, 16)): 1, ('I', (1873, 7, 1873, 12), '1'): 0, ('I', (772, 17, 772, 28), '0'): 0, ('I', (1298, 13, 1298, 23)): 1, ('I', (1431, 9, 1431, 19), '0'): 0, ('I', (930, 11, 930, 16), '1'): 0, ('I', (1050, 7, 1050, 12)): 1, ('I', (1713, 9, 1713, 14), '0'): 0, ('I', (1012, 12, 1012, 19), '1'): 0, ('I', (575, 13, 575, 66)): 1, ('I', (1676, 9, 1676, 39), '0'): 0, ('L', (1442, 37, 1442, 47), '1'): 0, ('I', (858, 9, 858, 10)): 1, ('I', (1280, 13, 1280, 20)): 1, ('I', (1012, 12, 1012, 19)): 1, ('I', (574, 9, 574, 23), '1'): 0, ('I', (1333, 13, 1333, 28)): 1, ('I', (1420, 16, 1420, 39), '0'): 0, ('I', (575, 13, 575, 66), '0'): 0, ('L', (1816, 15, 1816, 19)): 1, ('I', (538, 9, 538, 19), '1'): 0, ('I', (1362, 17, 1362, 62), '1'): 0, ('I', (600, 11, 600, 21), '1'): 0, ('I', (1179, 13, 1179, 21)): 1, ('I', (1094, 9, 1094, 14)): 1, ('I', (1179, 13, 1179, 21), '0'): 0, ('I', (1676, 9, 1676, 39)): 1, ('I', (655, 9, 655, 21), '1'): 0, ('I', (574, 9, 574, 23)): 1, ('I', (858, 9, 858, 10), '0'): 0, ('I', (1647, 13, 1647, 14)): 1, ('I', (1094, 9, 1094, 14), '1'): 0, ('I', (655, 9, 655, 21), '0'): 0, ('L', (1805, 15, 1805, 19), '1'): 0, ('I', (737, 9, 737, 11), '0'): 0, ('I', (930, 11, 930, 16)): 1, ('I', (1271, 9, 1271, 18)): 1, ('I', (805, 13, 805, 22)): 1, ('I', (550, 9, 550, 48)): 1, ('I', (575, 13, 575, 66), '1'): 0, ('I', (1298, 13, 1298, 23), '0'): 0, ('I', (574, 9, 574, 23), '0'): 0, ('I', (584, 9, 584, 40), '0'): 0, ('I', (556, 9, 556, 20)): 1, ('I', (957, 7, 957, 25), '0'): 0, ('I', (827, 13, 827, 59), '0'): 0, ('I', (786, 9, 786, 21)): 1, ('I', (539, 9, 539, 19), '1'): 0, ('L', (1805, 15, 1805, 19), '0'): 0, ('I', (1873, 7, 1873, 12), '0'): 0, ('I', (683, 13, 683, 22), '0'): 0, ('I', (737, 9, 737, 11), '1'): 0, ('I', (719, 9, 719, 15)): 1, ('I', (762, 13, 762, 15), '1'): 0, ('I', (1819, 13, 1819, 18)): 1, ('I', (584, 9, 584, 40)): 1, ('I', (638, 9, 638, 24), '1'): 0, ('I', (786, 9, 786, 21), '0'): 0, ('I', (858, 9, 858, 10), '1'): 0, ('I', (539, 9, 539, 19)): 1, ('I', (792, 9, 792, 32)): 1, ('L', (1442, 37, 1442, 47), '0'): 0, ('I', (762, 13, 762, 15)): 1, ('I', (1333, 13, 1333, 28), '0'): 0, ('I', (851, 13, 851, 22), '1'): 0, ('I', (1431, 9, 1431, 19), '1'): 0}
+DEBUG    localization    total_passing: 11
+DEBUG    localization    total_failing: 1
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (833, 9, 833, 10), '1'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1433, 9, 1433, 20), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (957, 7, 957, 25)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (827, 13, 827, 59)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (538, 9, 538, 19)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (600, 11, 600, 21)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1280, 13, 1280, 20), '1'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1420, 16, 1420, 39), '1'), 0.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1280, 13, 1280, 20), '31'), 0.0)
+DEBUG    localization    executed_positive: 5
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (641, 9, 641, 49), '1'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (665, 13, 665, 22), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1713, 9, 1713, 14)), 1.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1819, 13, 1819, 18), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('L', (578, 16, 578, 25)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1271, 9, 1271, 18), '1'), 0.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (556, 9, 556, 20), '0'), 0.0)
+DEBUG    localization    executed_positive: 6
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (595, 7, 595, 22), '1'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1439, 13, 1439, 25), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (737, 9, 737, 11)), 1.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (598, 7, 598, 16), '1'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1391, 13, 1391, 24), '0'), 0.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('L', (1816, 15, 1816, 19), '1'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1031, 7, 1031, 22), '1'), 0.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (550, 9, 550, 48), '0'), 0.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (425, 9, 425, 13), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (792, 9, 792, 32), '0'), 0.0)
+DEBUG    localization    executed_positive: 3
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (792, 9, 792, 32), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1391, 13, 1391, 24)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (772, 17, 772, 28)), 1.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (430, 9, 430, 16), '0'), 0.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (719, 9, 719, 15), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (545, 9, 545, 19)), 1.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('L', (578, 16, 578, 25), '1'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (615, 9, 615, 20), '0'), 0.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1271, 9, 1271, 18), '0'), 0.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (805, 13, 805, 22), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (595, 7, 595, 22)), 1.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1819, 13, 1819, 18), '0'), 0.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (545, 9, 545, 19), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1431, 9, 1431, 19)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1003, 9, 1003, 28)), 1.0)
+DEBUG    localization    executed_positive: 3
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('L', (578, 16, 578, 25), '0'), 0.0)
+DEBUG    localization    executed_positive: 3
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1031, 7, 1031, 22), '0'), 0.0)
+DEBUG    localization    executed_positive: 5
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (615, 9, 615, 20), '1'), 0.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('L', (1816, 15, 1816, 19), '0'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (598, 7, 598, 16), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1003, 9, 1003, 28), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (425, 9, 425, 13)), 1.0)
+DEBUG    localization    executed_positive: 3
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (595, 7, 595, 22), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (833, 9, 833, 10)), 1.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1050, 7, 1050, 12), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1031, 7, 1031, 22)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (598, 7, 598, 16)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('L', (1805, 15, 1805, 19)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1639, 9, 1639, 10)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1280, 13, 1280, 20), '0'), 0.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1391, 13, 1391, 24), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (430, 9, 430, 16)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1873, 7, 1873, 12), '1'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (772, 17, 772, 28), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1298, 13, 1298, 23)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1431, 9, 1431, 19), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (930, 11, 930, 16), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1050, 7, 1050, 12)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1713, 9, 1713, 14), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1012, 12, 1012, 19), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (575, 13, 575, 66)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1676, 9, 1676, 39), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('L', (1442, 37, 1442, 47), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (858, 9, 858, 10)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1280, 13, 1280, 20)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1012, 12, 1012, 19)), 1.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (574, 9, 574, 23), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1333, 13, 1333, 28)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1420, 16, 1420, 39), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (575, 13, 575, 66), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('L', (1816, 15, 1816, 19)), 1.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (538, 9, 538, 19), '1'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1362, 17, 1362, 62), '1'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (600, 11, 600, 21), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1179, 13, 1179, 21)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1094, 9, 1094, 14)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1179, 13, 1179, 21), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1676, 9, 1676, 39)), 1.0)
+DEBUG    localization    executed_positive: 5
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (655, 9, 655, 21), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (574, 9, 574, 23)), 1.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (858, 9, 858, 10), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1647, 13, 1647, 14)), 1.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1094, 9, 1094, 14), '1'), 0.0)
+DEBUG    localization    executed_positive: 2
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (655, 9, 655, 21), '0'), 0.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('L', (1805, 15, 1805, 19), '1'), 0.0)
+DEBUG    localization    executed_positive: 3
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (737, 9, 737, 11), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (930, 11, 930, 16)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1271, 9, 1271, 18)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (805, 13, 805, 22)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (550, 9, 550, 48)), 1.0)
+DEBUG    localization    executed_positive: 3
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (575, 13, 575, 66), '1'), 0.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1298, 13, 1298, 23), '0'), 0.0)
+DEBUG    localization    executed_positive: 5
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (574, 9, 574, 23), '0'), 0.0)
+DEBUG    localization    executed_positive: 6
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (584, 9, 584, 40), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (556, 9, 556, 20)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (957, 7, 957, 25), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (827, 13, 827, 59), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (786, 9, 786, 21)), 1.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (539, 9, 539, 19), '1'), 0.0)
+DEBUG    localization    executed_positive: 7
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('L', (1805, 15, 1805, 19), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1873, 7, 1873, 12), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (683, 13, 683, 22), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (737, 9, 737, 11), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (719, 9, 719, 15)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (762, 13, 762, 15), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (1819, 13, 1819, 18)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (584, 9, 584, 40)), 1.0)
+DEBUG    localization    executed_positive: 5
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (638, 9, 638, 24), '1'), 0.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (786, 9, 786, 21), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (858, 9, 858, 10), '1'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (539, 9, 539, 19)), 1.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (792, 9, 792, 32)), 1.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('L', (1442, 37, 1442, 47), '0'), 0.0)
+DEBUG    localization    executed_positive: 0
+DEBUG    localization    executed_negative: 1
+DEBUG    localization    (loc, score) = (('I', (762, 13, 762, 15)), 1.0)
+DEBUG    localization    executed_positive: 4
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1333, 13, 1333, 28), '0'), 0.0)
+DEBUG    localization    executed_positive: 1
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (851, 13, 851, 22), '1'), 0.0)
+DEBUG    localization    executed_positive: 5
+DEBUG    localization    executed_negative: 0
+DEBUG    localization    (loc, score) = (('I', (1431, 9, 1431, 19), '1'), 0.0)
+DEBUG    localization    ranking: [(('I', (957, 7, 957, 25)), 1.0), (('I', (827, 13, 827, 59)), 1.0), (('I', (538, 9, 538, 19)), 1.0), (('I', (600, 11, 600, 21)), 1.0), (('I', (1713, 9, 1713, 14)), 1.0), (('L', (578, 16, 578, 25)), 1.0), (('I', (737, 9, 737, 11)), 1.0), (('I', (1391, 13, 1391, 24)), 1.0), (('I', (772, 17, 772, 28)), 1.0), (('I', (545, 9, 545, 19)), 1.0), (('I', (595, 7, 595, 22)), 1.0), (('I', (1431, 9, 1431, 19)), 1.0), (('I', (1003, 9, 1003, 28)), 1.0), (('I', (425, 9, 425, 13)), 1.0), (('I', (833, 9, 833, 10)), 1.0), (('I', (1031, 7, 1031, 22)), 1.0), (('I', (598, 7, 598, 16)), 1.0), (('L', (1805, 15, 1805, 19)), 1.0), (('I', (1639, 9, 1639, 10)), 1.0), (('I', (430, 9, 430, 16)), 1.0), (('I', (1298, 13, 1298, 23)), 1.0), (('I', (1050, 7, 1050, 12)), 1.0), (('I', (575, 13, 575, 66)), 1.0), (('I', (858, 9, 858, 10)), 1.0), (('I', (1280, 13, 1280, 20)), 1.0), (('I', (1012, 12, 1012, 19)), 1.0), (('I', (1333, 13, 1333, 28)), 1.0), (('L', (1816, 15, 1816, 19)), 1.0), (('I', (1179, 13, 1179, 21)), 1.0), (('I', (1094, 9, 1094, 14)), 1.0), (('I', (1676, 9, 1676, 39)), 1.0), (('I', (574, 9, 574, 23)), 1.0), (('I', (1647, 13, 1647, 14)), 1.0), (('I', (930, 11, 930, 16)), 1.0), (('I', (1271, 9, 1271, 18)), 1.0), (('I', (805, 13, 805, 22)), 1.0), (('I', (550, 9, 550, 48)), 1.0), (('I', (556, 9, 556, 20)), 1.0), (('I', (786, 9, 786, 21)), 1.0), (('I', (719, 9, 719, 15)), 1.0), (('I', (1819, 13, 1819, 18)), 1.0), (('I', (584, 9, 584, 40)), 1.0), (('I', (539, 9, 539, 19)), 1.0), (('I', (792, 9, 792, 32)), 1.0), (('I', (762, 13, 762, 15)), 1.0), (('I', (833, 9, 833, 10), '1'), 0.0), (('I', (1433, 9, 1433, 20), '0'), 0.0), (('I', (1280, 13, 1280, 20), '1'), 0.0), (('I', (1420, 16, 1420, 39), '1'), 0.0), (('I', (1280, 13, 1280, 20), '31'), 0.0), (('I', (641, 9, 641, 49), '1'), 0.0), (('I', (665, 13, 665, 22), '0'), 0.0), (('I', (1819, 13, 1819, 18), '1'), 0.0), (('I', (1271, 9, 1271, 18), '1'), 0.0), (('I', (556, 9, 556, 20), '0'), 0.0), (('I', (595, 7, 595, 22), '1'), 0.0), (('I', (1439, 13, 1439, 25), '1'), 0.0), (('I', (598, 7, 598, 16), '1'), 0.0), (('I', (1391, 13, 1391, 24), '0'), 0.0), (('L', (1816, 15, 1816, 19), '1'), 0.0), (('I', (1031, 7, 1031, 22), '1'), 0.0), (('I', (550, 9, 550, 48), '0'), 0.0), (('I', (425, 9, 425, 13), '0'), 0.0), (('I', (792, 9, 792, 32), '0'), 0.0), (('I', (792, 9, 792, 32), '1'), 0.0), (('I', (430, 9, 430, 16), '0'), 0.0), (('I', (719, 9, 719, 15), '0'), 0.0), (('L', (578, 16, 578, 25), '1'), 0.0), (('I', (615, 9, 615, 20), '0'), 0.0), (('I', (1271, 9, 1271, 18), '0'), 0.0), (('I', (805, 13, 805, 22), '0'), 0.0), (('I', (1819, 13, 1819, 18), '0'), 0.0), (('I', (545, 9, 545, 19), '0'), 0.0), (('L', (578, 16, 578, 25), '0'), 0.0), (('I', (1031, 7, 1031, 22), '0'), 0.0), (('I', (615, 9, 615, 20), '1'), 0.0), (('L', (1816, 15, 1816, 19), '0'), 0.0), (('I', (598, 7, 598, 16), '0'), 0.0), (('I', (1003, 9, 1003, 28), '1'), 0.0), (('I', (595, 7, 595, 22), '0'), 0.0), (('I', (1050, 7, 1050, 12), '1'), 0.0), (('I', (1280, 13, 1280, 20), '0'), 0.0), (('I', (1391, 13, 1391, 24), '1'), 0.0), (('I', (1873, 7, 1873, 12), '1'), 0.0), (('I', (772, 17, 772, 28), '0'), 0.0), (('I', (1431, 9, 1431, 19), '0'), 0.0), (('I', (930, 11, 930, 16), '1'), 0.0), (('I', (1713, 9, 1713, 14), '0'), 0.0), (('I', (1012, 12, 1012, 19), '1'), 0.0), (('I', (1676, 9, 1676, 39), '0'), 0.0), (('L', (1442, 37, 1442, 47), '1'), 0.0), (('I', (574, 9, 574, 23), '1'), 0.0), (('I', (1420, 16, 1420, 39), '0'), 0.0), (('I', (575, 13, 575, 66), '0'), 0.0), (('I', (538, 9, 538, 19), '1'), 0.0), (('I', (1362, 17, 1362, 62), '1'), 0.0), (('I', (600, 11, 600, 21), '1'), 0.0), (('I', (1179, 13, 1179, 21), '0'), 0.0), (('I', (655, 9, 655, 21), '1'), 0.0), (('I', (858, 9, 858, 10), '0'), 0.0), (('I', (1094, 9, 1094, 14), '1'), 0.0), (('I', (655, 9, 655, 21), '0'), 0.0), (('L', (1805, 15, 1805, 19), '1'), 0.0), (('I', (737, 9, 737, 11), '0'), 0.0), (('I', (575, 13, 575, 66), '1'), 0.0), (('I', (1298, 13, 1298, 23), '0'), 0.0), (('I', (574, 9, 574, 23), '0'), 0.0), (('I', (584, 9, 584, 40), '0'), 0.0), (('I', (957, 7, 957, 25), '0'), 0.0), (('I', (827, 13, 827, 59), '0'), 0.0), (('I', (539, 9, 539, 19), '1'), 0.0), (('L', (1805, 15, 1805, 19), '0'), 0.0), (('I', (1873, 7, 1873, 12), '0'), 0.0), (('I', (683, 13, 683, 22), '0'), 0.0), (('I', (737, 9, 737, 11), '1'), 0.0), (('I', (762, 13, 762, 15), '1'), 0.0), (('I', (638, 9, 638, 24), '1'), 0.0), (('I', (786, 9, 786, 21), '0'), 0.0), (('I', (858, 9, 858, 10), '1'), 0.0), (('L', (1442, 37, 1442, 47), '0'), 0.0), (('I', (1333, 13, 1333, 28), '0'), 0.0), (('I', (851, 13, 851, 22), '1'), 0.0), (('I', (1431, 9, 1431, 19), '1'), 0.0)]
+INFO     localization    (loc, score) = (('I', (957, 7, 957, 25)), 1.0)
+INFO     localization    (loc, score) = (('I', (827, 13, 827, 59)), 1.0)
+INFO     localization    (loc, score) = (('I', (538, 9, 538, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (600, 11, 600, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (1713, 9, 1713, 14)), 1.0)
+INFO     localization    (loc, score) = (('L', (578, 16, 578, 25)), 1.0)
+INFO     localization    (loc, score) = (('I', (737, 9, 737, 11)), 1.0)
+INFO     localization    (loc, score) = (('I', (1391, 13, 1391, 24)), 1.0)
+INFO     localization    (loc, score) = (('I', (772, 17, 772, 28)), 1.0)
+INFO     localization    (loc, score) = (('I', (545, 9, 545, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (595, 7, 595, 22)), 1.0)
+INFO     localization    (loc, score) = (('I', (1431, 9, 1431, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (1003, 9, 1003, 28)), 1.0)
+INFO     localization    (loc, score) = (('I', (425, 9, 425, 13)), 1.0)
+INFO     localization    (loc, score) = (('I', (833, 9, 833, 10)), 1.0)
+INFO     localization    (loc, score) = (('I', (1031, 7, 1031, 22)), 1.0)
+INFO     localization    (loc, score) = (('I', (598, 7, 598, 16)), 1.0)
+INFO     localization    (loc, score) = (('L', (1805, 15, 1805, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (1639, 9, 1639, 10)), 1.0)
+INFO     localization    (loc, score) = (('I', (430, 9, 430, 16)), 1.0)
+INFO     localization    (loc, score) = (('I', (1298, 13, 1298, 23)), 1.0)
+INFO     localization    (loc, score) = (('I', (1050, 7, 1050, 12)), 1.0)
+INFO     localization    (loc, score) = (('I', (575, 13, 575, 66)), 1.0)
+INFO     localization    (loc, score) = (('I', (858, 9, 858, 10)), 1.0)
+INFO     localization    (loc, score) = (('I', (1280, 13, 1280, 20)), 1.0)
+INFO     localization    (loc, score) = (('I', (1012, 12, 1012, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (1333, 13, 1333, 28)), 1.0)
+INFO     localization    (loc, score) = (('L', (1816, 15, 1816, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (1179, 13, 1179, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (1094, 9, 1094, 14)), 1.0)
+INFO     localization    (loc, score) = (('I', (1676, 9, 1676, 39)), 1.0)
+INFO     localization    (loc, score) = (('I', (574, 9, 574, 23)), 1.0)
+INFO     localization    (loc, score) = (('I', (1647, 13, 1647, 14)), 1.0)
+INFO     localization    (loc, score) = (('I', (930, 11, 930, 16)), 1.0)
+INFO     localization    (loc, score) = (('I', (1271, 9, 1271, 18)), 1.0)
+INFO     localization    (loc, score) = (('I', (805, 13, 805, 22)), 1.0)
+INFO     localization    (loc, score) = (('I', (550, 9, 550, 48)), 1.0)
+INFO     localization    (loc, score) = (('I', (556, 9, 556, 20)), 1.0)
+INFO     localization    (loc, score) = (('I', (786, 9, 786, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (719, 9, 719, 15)), 1.0)
+INFO     localization    (loc, score) = (('I', (1819, 13, 1819, 18)), 1.0)
+INFO     localization    (loc, score) = (('I', (584, 9, 584, 40)), 1.0)
+INFO     localization    (loc, score) = (('I', (539, 9, 539, 19)), 1.0)
+INFO     localization    (loc, score) = (('I', (792, 9, 792, 32)), 1.0)
+INFO     localization    (loc, score) = (('I', (762, 13, 762, 15)), 1.0)
+INFO     localization    (loc, score) = (('I', (833, 9, 833, 10), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1433, 9, 1433, 20), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1280, 13, 1280, 20), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1420, 16, 1420, 39), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1280, 13, 1280, 20), '31'), 0.0)
+INFO     localization    (loc, score) = (('I', (641, 9, 641, 49), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (665, 13, 665, 22), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1819, 13, 1819, 18), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1271, 9, 1271, 18), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (556, 9, 556, 20), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (595, 7, 595, 22), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1439, 13, 1439, 25), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (598, 7, 598, 16), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1391, 13, 1391, 24), '0'), 0.0)
+INFO     localization    (loc, score) = (('L', (1816, 15, 1816, 19), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1031, 7, 1031, 22), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (550, 9, 550, 48), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (425, 9, 425, 13), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (792, 9, 792, 32), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (792, 9, 792, 32), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (430, 9, 430, 16), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (719, 9, 719, 15), '0'), 0.0)
+INFO     localization    (loc, score) = (('L', (578, 16, 578, 25), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (615, 9, 615, 20), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1271, 9, 1271, 18), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (805, 13, 805, 22), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1819, 13, 1819, 18), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (545, 9, 545, 19), '0'), 0.0)
+INFO     localization    (loc, score) = (('L', (578, 16, 578, 25), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1031, 7, 1031, 22), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (615, 9, 615, 20), '1'), 0.0)
+INFO     localization    (loc, score) = (('L', (1816, 15, 1816, 19), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (598, 7, 598, 16), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1003, 9, 1003, 28), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (595, 7, 595, 22), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1050, 7, 1050, 12), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1280, 13, 1280, 20), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1391, 13, 1391, 24), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1873, 7, 1873, 12), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (772, 17, 772, 28), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1431, 9, 1431, 19), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (930, 11, 930, 16), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1713, 9, 1713, 14), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1012, 12, 1012, 19), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1676, 9, 1676, 39), '0'), 0.0)
+INFO     localization    (loc, score) = (('L', (1442, 37, 1442, 47), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (574, 9, 574, 23), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1420, 16, 1420, 39), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (575, 13, 575, 66), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (538, 9, 538, 19), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1362, 17, 1362, 62), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (600, 11, 600, 21), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1179, 13, 1179, 21), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (655, 9, 655, 21), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (858, 9, 858, 10), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1094, 9, 1094, 14), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (655, 9, 655, 21), '0'), 0.0)
+INFO     localization    (loc, score) = (('L', (1805, 15, 1805, 19), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (737, 9, 737, 11), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (575, 13, 575, 66), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1298, 13, 1298, 23), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (574, 9, 574, 23), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (584, 9, 584, 40), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (957, 7, 957, 25), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (827, 13, 827, 59), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (539, 9, 539, 19), '1'), 0.0)
+INFO     localization    (loc, score) = (('L', (1805, 15, 1805, 19), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1873, 7, 1873, 12), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (683, 13, 683, 22), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (737, 9, 737, 11), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (762, 13, 762, 15), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (638, 9, 638, 24), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (786, 9, 786, 21), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (858, 9, 858, 10), '1'), 0.0)
+INFO     localization    (loc, score) = (('L', (1442, 37, 1442, 47), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (1333, 13, 1333, 28), '0'), 0.0)
+INFO     localization    (loc, score) = (('I', (851, 13, 851, 22), '1'), 0.0)
+INFO     localization    (loc, score) = (('I', (1431, 9, 1431, 19), '1'), 0.0)
+DEBUG    localization    top: [(('I', (425, 9, 425, 13)), 1.0), (('I', (425, 9, 425, 13), '0'), 0.0), (('I', (430, 9, 430, 16)), 1.0), (('I', (430, 9, 430, 16), '0'), 0.0), (('I', (538, 9, 538, 19)), 1.0), (('I', (538, 9, 538, 19), '1'), 0.0), (('I', (539, 9, 539, 19)), 1.0), (('I', (539, 9, 539, 19), '1'), 0.0), (('I', (545, 9, 545, 19)), 1.0), (('I', (545, 9, 545, 19), '0'), 0.0), (('I', (550, 9, 550, 48)), 1.0), (('I', (550, 9, 550, 48), '0'), 0.0), (('I', (556, 9, 556, 20)), 1.0), (('I', (556, 9, 556, 20), '0'), 0.0), (('I', (574, 9, 574, 23)), 1.0), (('I', (574, 9, 574, 23), '1'), 0.0), (('I', (574, 9, 574, 23), '0'), 0.0), (('I', (575, 13, 575, 66)), 1.0), (('I', (575, 13, 575, 66), '0'), 0.0), (('I', (575, 13, 575, 66), '1'), 0.0), (('L', (578, 16, 578, 25)), 1.0), (('L', (578, 16, 578, 25), '1'), 0.0), (('L', (578, 16, 578, 25), '0'), 0.0), (('I', (584, 9, 584, 40)), 1.0), (('I', (584, 9, 584, 40), '0'), 0.0), (('I', (595, 7, 595, 22)), 1.0), (('I', (595, 7, 595, 22), '1'), 0.0), (('I', (595, 7, 595, 22), '0'), 0.0), (('I', (598, 7, 598, 16)), 1.0), (('I', (598, 7, 598, 16), '1'), 0.0), (('I', (598, 7, 598, 16), '0'), 0.0), (('I', (600, 11, 600, 21)), 1.0), (('I', (600, 11, 600, 21), '1'), 0.0), (('I', (615, 9, 615, 20), '0'), 0.0), (('I', (615, 9, 615, 20), '1'), 0.0), (('I', (638, 9, 638, 24), '1'), 0.0), (('I', (641, 9, 641, 49), '1'), 0.0), (('I', (655, 9, 655, 21), '1'), 0.0), (('I', (655, 9, 655, 21), '0'), 0.0), (('I', (665, 13, 665, 22), '0'), 0.0), (('I', (683, 13, 683, 22), '0'), 0.0), (('I', (719, 9, 719, 15)), 1.0), (('I', (719, 9, 719, 15), '0'), 0.0), (('I', (737, 9, 737, 11)), 1.0), (('I', (737, 9, 737, 11), '0'), 0.0), (('I', (737, 9, 737, 11), '1'), 0.0), (('I', (762, 13, 762, 15)), 1.0), (('I', (762, 13, 762, 15), '1'), 0.0), (('I', (772, 17, 772, 28)), 1.0), (('I', (772, 17, 772, 28), '0'), 0.0), (('I', (786, 9, 786, 21)), 1.0), (('I', (786, 9, 786, 21), '0'), 0.0), (('I', (792, 9, 792, 32)), 1.0), (('I', (792, 9, 792, 32), '0'), 0.0), (('I', (792, 9, 792, 32), '1'), 0.0), (('I', (805, 13, 805, 22)), 1.0), (('I', (805, 13, 805, 22), '0'), 0.0), (('I', (827, 13, 827, 59)), 1.0), (('I', (827, 13, 827, 59), '0'), 0.0), (('I', (833, 9, 833, 10)), 1.0), (('I', (833, 9, 833, 10), '1'), 0.0), (('I', (851, 13, 851, 22), '1'), 0.0), (('I', (858, 9, 858, 10)), 1.0), (('I', (858, 9, 858, 10), '0'), 0.0), (('I', (858, 9, 858, 10), '1'), 0.0), (('I', (930, 11, 930, 16)), 1.0), (('I', (930, 11, 930, 16), '1'), 0.0), (('I', (957, 7, 957, 25)), 1.0), (('I', (957, 7, 957, 25), '0'), 0.0), (('I', (1003, 9, 1003, 28)), 1.0), (('I', (1003, 9, 1003, 28), '1'), 0.0), (('I', (1012, 12, 1012, 19)), 1.0), (('I', (1012, 12, 1012, 19), '1'), 0.0), (('I', (1031, 7, 1031, 22)), 1.0), (('I', (1031, 7, 1031, 22), '1'), 0.0), (('I', (1031, 7, 1031, 22), '0'), 0.0), (('I', (1050, 7, 1050, 12)), 1.0), (('I', (1050, 7, 1050, 12), '1'), 0.0), (('I', (1094, 9, 1094, 14)), 1.0), (('I', (1094, 9, 1094, 14), '1'), 0.0), (('I', (1179, 13, 1179, 21)), 1.0), (('I', (1179, 13, 1179, 21), '0'), 0.0), (('I', (1271, 9, 1271, 18)), 1.0), (('I', (1271, 9, 1271, 18), '1'), 0.0), (('I', (1271, 9, 1271, 18), '0'), 0.0), (('I', (1280, 13, 1280, 20)), 1.0), (('I', (1280, 13, 1280, 20), '1'), 0.0), (('I', (1280, 13, 1280, 20), '31'), 0.0), (('I', (1280, 13, 1280, 20), '0'), 0.0), (('I', (1298, 13, 1298, 23)), 1.0), (('I', (1298, 13, 1298, 23), '0'), 0.0), (('I', (1333, 13, 1333, 28)), 1.0), (('I', (1333, 13, 1333, 28), '0'), 0.0), (('I', (1362, 17, 1362, 62), '1'), 0.0), (('I', (1391, 13, 1391, 24)), 1.0), (('I', (1391, 13, 1391, 24), '0'), 0.0), (('I', (1391, 13, 1391, 24), '1'), 0.0), (('I', (1420, 16, 1420, 39), '1'), 0.0), (('I', (1420, 16, 1420, 39), '0'), 0.0), (('I', (1431, 9, 1431, 19)), 1.0), (('I', (1431, 9, 1431, 19), '0'), 0.0), (('I', (1431, 9, 1431, 19), '1'), 0.0), (('I', (1433, 9, 1433, 20), '0'), 0.0), (('I', (1439, 13, 1439, 25), '1'), 0.0), (('L', (1442, 37, 1442, 47), '1'), 0.0), (('L', (1442, 37, 1442, 47), '0'), 0.0), (('I', (1639, 9, 1639, 10)), 1.0), (('I', (1647, 13, 1647, 14)), 1.0), (('I', (1676, 9, 1676, 39)), 1.0), (('I', (1676, 9, 1676, 39), '0'), 0.0), (('I', (1713, 9, 1713, 14)), 1.0), (('I', (1713, 9, 1713, 14), '0'), 0.0), (('L', (1805, 15, 1805, 19)), 1.0), (('L', (1805, 15, 1805, 19), '1'), 0.0), (('L', (1805, 15, 1805, 19), '0'), 0.0), (('L', (1816, 15, 1816, 19)), 1.0), (('L', (1816, 15, 1816, 19), '1'), 0.0), (('L', (1816, 15, 1816, 19), '0'), 0.0), (('I', (1819, 13, 1819, 18)), 1.0), (('I', (1819, 13, 1819, 18), '1'), 0.0), (('I', (1819, 13, 1819, 18), '0'), 0.0), (('I', (1873, 7, 1873, 12), '1'), 0.0), (('I', (1873, 7, 1873, 12), '0'), 0.0)]
+INFO     localization    group 1: [('I', (425, 9, 425, 13))] (1.0)
+INFO     localization    group 2: [('I', (430, 9, 430, 16))] (1.0)
+INFO     localization    group 3: [('I', (538, 9, 538, 19))] (1.0)
+INFO     localization    group 4: [('I', (539, 9, 539, 19))] (1.0)
+INFO     localization    group 5: [('I', (545, 9, 545, 19))] (1.0)
+INFO     localization    group 6: [('I', (550, 9, 550, 48))] (1.0)
+INFO     localization    group 7: [('I', (556, 9, 556, 20))] (1.0)
+INFO     localization    group 8: [('I', (574, 9, 574, 23))] (1.0)
+INFO     localization    group 9: [('I', (575, 13, 575, 66))] (1.0)
+INFO     localization    group 10: [('L', (578, 16, 578, 25))] (1.0)
+INFO     localization    group 11: [('I', (584, 9, 584, 40))] (1.0)
+INFO     localization    group 12: [('I', (595, 7, 595, 22))] (1.0)
+INFO     localization    group 13: [('I', (598, 7, 598, 16))] (1.0)
+INFO     localization    group 14: [('I', (600, 11, 600, 21))] (1.0)
+INFO     localization    group 15: [('I', (719, 9, 719, 15))] (1.0)
+INFO     localization    group 16: [('I', (737, 9, 737, 11))] (1.0)
+INFO     localization    group 17: [('I', (762, 13, 762, 15))] (1.0)
+INFO     localization    group 18: [('I', (772, 17, 772, 28))] (1.0)
+INFO     localization    group 19: [('I', (786, 9, 786, 21))] (1.0)
+INFO     localization    group 20: [('I', (792, 9, 792, 32))] (1.0)
+INFO     localization    group 21: [('I', (805, 13, 805, 22))] (1.0)
+INFO     localization    group 22: [('I', (827, 13, 827, 59))] (1.0)
+INFO     localization    group 23: [('I', (833, 9, 833, 10))] (1.0)
+INFO     localization    group 24: [('I', (858, 9, 858, 10))] (1.0)
+INFO     localization    group 25: [('I', (930, 11, 930, 16))] (1.0)
+INFO     localization    group 26: [('I', (957, 7, 957, 25))] (1.0)
+INFO     localization    group 27: [('I', (1003, 9, 1003, 28))] (1.0)
+INFO     localization    group 28: [('I', (1012, 12, 1012, 19))] (1.0)
+INFO     localization    group 29: [('I', (1031, 7, 1031, 22))] (1.0)
+INFO     localization    group 30: [('I', (1050, 7, 1050, 12))] (1.0)
+INFO     localization    group 31: [('I', (1094, 9, 1094, 14))] (1.0)
+INFO     localization    group 32: [('I', (1179, 13, 1179, 21))] (1.0)
+INFO     localization    group 33: [('I', (1271, 9, 1271, 18))] (1.0)
+INFO     localization    group 34: [('I', (1280, 13, 1280, 20))] (1.0)
+INFO     localization    group 35: [('I', (1298, 13, 1298, 23))] (1.0)
+INFO     localization    group 36: [('I', (1333, 13, 1333, 28))] (1.0)
+INFO     localization    group 37: [('I', (1391, 13, 1391, 24))] (1.0)
+INFO     localization    group 38: [('I', (1431, 9, 1431, 19))] (1.0)
+INFO     localization    group 39: [('I', (1639, 9, 1639, 10))] (1.0)
+INFO     localization    group 40: [('I', (1647, 13, 1647, 14))] (1.0)
+INFO     localization    group 41: [('I', (1676, 9, 1676, 39))] (1.0)
+INFO     localization    group 42: [('I', (1713, 9, 1713, 14))] (1.0)
+INFO     localization    group 43: [('L', (1805, 15, 1805, 19))] (1.0)
+INFO     localization    group 44: [('L', (1816, 15, 1816, 19))] (1.0)
+INFO     localization    group 45: [('I', (1819, 13, 1819, 18))] (1.0)
+INFO     localization    group 46: [('I', (425, 9, 425, 13), '0')] (0.0)
+INFO     localization    group 47: [('I', (430, 9, 430, 16), '0')] (0.0)
+INFO     localization    group 48: [('I', (538, 9, 538, 19), '1')] (0.0)
+INFO     localization    group 49: [('I', (539, 9, 539, 19), '1')] (0.0)
+INFO     localization    group 50: [('I', (545, 9, 545, 19), '0')] (0.0)
+INFO     localization    group 51: [('I', (550, 9, 550, 48), '0')] (0.0)
+INFO     localization    group 52: [('I', (556, 9, 556, 20), '0')] (0.0)
+INFO     localization    group 53: [('I', (574, 9, 574, 23), '1')] (0.0)
+INFO     localization    group 54: [('I', (574, 9, 574, 23), '0')] (0.0)
+INFO     localization    group 55: [('I', (575, 13, 575, 66), '0')] (0.0)
+INFO     localization    group 56: [('I', (575, 13, 575, 66), '1')] (0.0)
+INFO     localization    group 57: [('L', (578, 16, 578, 25), '1')] (0.0)
+INFO     localization    group 58: [('L', (578, 16, 578, 25), '0')] (0.0)
+INFO     localization    group 59: [('I', (584, 9, 584, 40), '0')] (0.0)
+INFO     localization    group 60: [('I', (595, 7, 595, 22), '1')] (0.0)
+INFO     localization    group 61: [('I', (595, 7, 595, 22), '0')] (0.0)
+INFO     localization    group 62: [('I', (598, 7, 598, 16), '1')] (0.0)
+INFO     localization    group 63: [('I', (598, 7, 598, 16), '0')] (0.0)
+INFO     localization    group 64: [('I', (600, 11, 600, 21), '1')] (0.0)
+INFO     localization    group 65: [('I', (615, 9, 615, 20), '0')] (0.0)
+INFO     localization    group 66: [('I', (615, 9, 615, 20), '1')] (0.0)
+INFO     localization    group 67: [('I', (638, 9, 638, 24), '1')] (0.0)
+INFO     localization    group 68: [('I', (641, 9, 641, 49), '1')] (0.0)
+INFO     localization    group 69: [('I', (655, 9, 655, 21), '1')] (0.0)
+INFO     localization    group 70: [('I', (655, 9, 655, 21), '0')] (0.0)
+INFO     localization    group 71: [('I', (665, 13, 665, 22), '0')] (0.0)
+INFO     localization    group 72: [('I', (683, 13, 683, 22), '0')] (0.0)
+INFO     localization    group 73: [('I', (719, 9, 719, 15), '0')] (0.0)
+INFO     localization    group 74: [('I', (737, 9, 737, 11), '0')] (0.0)
+INFO     localization    group 75: [('I', (737, 9, 737, 11), '1')] (0.0)
+INFO     localization    group 76: [('I', (762, 13, 762, 15), '1')] (0.0)
+INFO     localization    group 77: [('I', (772, 17, 772, 28), '0')] (0.0)
+INFO     localization    group 78: [('I', (786, 9, 786, 21), '0')] (0.0)
+INFO     localization    group 79: [('I', (792, 9, 792, 32), '0')] (0.0)
+INFO     localization    group 80: [('I', (792, 9, 792, 32), '1')] (0.0)
+INFO     localization    group 81: [('I', (805, 13, 805, 22), '0')] (0.0)
+INFO     localization    group 82: [('I', (827, 13, 827, 59), '0')] (0.0)
+INFO     localization    group 83: [('I', (833, 9, 833, 10), '1')] (0.0)
+INFO     localization    group 84: [('I', (851, 13, 851, 22), '1')] (0.0)
+INFO     localization    group 85: [('I', (858, 9, 858, 10), '0')] (0.0)
+INFO     localization    group 86: [('I', (858, 9, 858, 10), '1')] (0.0)
+INFO     localization    group 87: [('I', (930, 11, 930, 16), '1')] (0.0)
+INFO     localization    group 88: [('I', (957, 7, 957, 25), '0')] (0.0)
+INFO     localization    group 89: [('I', (1003, 9, 1003, 28), '1')] (0.0)
+INFO     localization    group 90: [('I', (1012, 12, 1012, 19), '1')] (0.0)
+INFO     localization    group 91: [('I', (1031, 7, 1031, 22), '1')] (0.0)
+INFO     localization    group 92: [('I', (1031, 7, 1031, 22), '0')] (0.0)
+INFO     localization    group 93: [('I', (1050, 7, 1050, 12), '1')] (0.0)
+INFO     localization    group 94: [('I', (1094, 9, 1094, 14), '1')] (0.0)
+INFO     localization    group 95: [('I', (1179, 13, 1179, 21), '0')] (0.0)
+INFO     localization    group 96: [('I', (1271, 9, 1271, 18), '1')] (0.0)
+INFO     localization    group 97: [('I', (1271, 9, 1271, 18), '0')] (0.0)
+INFO     localization    group 98: [('I', (1280, 13, 1280, 20), '1')] (0.0)
+INFO     localization    group 99: [('I', (1280, 13, 1280, 20), '31')] (0.0)
+INFO     localization    group 100: [('I', (1280, 13, 1280, 20), '0')] (0.0)
+INFO     localization    group 101: [('I', (1298, 13, 1298, 23), '0')] (0.0)
+INFO     localization    group 102: [('I', (1333, 13, 1333, 28), '0')] (0.0)
+INFO     localization    group 103: [('I', (1362, 17, 1362, 62), '1')] (0.0)
+INFO     localization    group 104: [('I', (1391, 13, 1391, 24), '0')] (0.0)
+INFO     localization    group 105: [('I', (1391, 13, 1391, 24), '1')] (0.0)
+INFO     localization    group 106: [('I', (1420, 16, 1420, 39), '1')] (0.0)
+INFO     localization    group 107: [('I', (1420, 16, 1420, 39), '0')] (0.0)
+INFO     localization    group 108: [('I', (1431, 9, 1431, 19), '0')] (0.0)
+INFO     localization    group 109: [('I', (1431, 9, 1431, 19), '1')] (0.0)
+INFO     localization    group 110: [('I', (1433, 9, 1433, 20), '0')] (0.0)
+INFO     localization    group 111: [('I', (1439, 13, 1439, 25), '1')] (0.0)
+INFO     localization    group 112: [('L', (1442, 37, 1442, 47), '1')] (0.0)
+INFO     localization    group 113: [('L', (1442, 37, 1442, 47), '0')] (0.0)
+INFO     localization    group 114: [('I', (1676, 9, 1676, 39), '0')] (0.0)
+INFO     localization    group 115: [('I', (1713, 9, 1713, 14), '0')] (0.0)
+INFO     localization    group 116: [('L', (1805, 15, 1805, 19), '1')] (0.0)
+INFO     localization    group 117: [('L', (1805, 15, 1805, 19), '0')] (0.0)
+INFO     localization    group 118: [('L', (1816, 15, 1816, 19), '1')] (0.0)
+INFO     localization    group 119: [('L', (1816, 15, 1816, 19), '0')] (0.0)
+INFO     localization    group 120: [('I', (1819, 13, 1819, 18), '1')] (0.0)
+INFO     localization    group 121: [('I', (1819, 13, 1819, 18), '0')] (0.0)
+INFO     localization    group 122: [('I', (1873, 7, 1873, 12), '1')] (0.0)
+INFO     localization    group 123: [('I', (1873, 7, 1873, 12), '0')] (0.0)
+INFO     localization    selected expressions [('I', (425, 9, 425, 13))] with group score 1.0 
+INFO     localization    selected expressions [('I', (430, 9, 430, 16))] with group score 1.0 
+INFO     localization    selected expressions [('I', (538, 9, 538, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (539, 9, 539, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (545, 9, 545, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (550, 9, 550, 48))] with group score 1.0 
+INFO     localization    selected expressions [('I', (556, 9, 556, 20))] with group score 1.0 
+INFO     localization    selected expressions [('I', (574, 9, 574, 23))] with group score 1.0 
+INFO     localization    selected expressions [('I', (575, 13, 575, 66))] with group score 1.0 
+INFO     localization    selected expressions [('L', (578, 16, 578, 25))] with group score 1.0 
+INFO     localization    selected expressions [('I', (584, 9, 584, 40))] with group score 1.0 
+INFO     localization    selected expressions [('I', (595, 7, 595, 22))] with group score 1.0 
+INFO     localization    selected expressions [('I', (598, 7, 598, 16))] with group score 1.0 
+INFO     localization    selected expressions [('I', (600, 11, 600, 21))] with group score 1.0 
+INFO     localization    selected expressions [('I', (719, 9, 719, 15))] with group score 1.0 
+INFO     localization    selected expressions [('I', (737, 9, 737, 11))] with group score 1.0 
+INFO     localization    selected expressions [('I', (762, 13, 762, 15))] with group score 1.0 
+INFO     localization    selected expressions [('I', (772, 17, 772, 28))] with group score 1.0 
+INFO     localization    selected expressions [('I', (786, 9, 786, 21))] with group score 1.0 
+INFO     localization    selected expressions [('I', (792, 9, 792, 32))] with group score 1.0 
+INFO     localization    selected expressions [('I', (805, 13, 805, 22))] with group score 1.0 
+INFO     localization    selected expressions [('I', (827, 13, 827, 59))] with group score 1.0 
+INFO     localization    selected expressions [('I', (833, 9, 833, 10))] with group score 1.0 
+INFO     localization    selected expressions [('I', (858, 9, 858, 10))] with group score 1.0 
+INFO     localization    selected expressions [('I', (930, 11, 930, 16))] with group score 1.0 
+INFO     localization    selected expressions [('I', (957, 7, 957, 25))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1003, 9, 1003, 28))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1012, 12, 1012, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1031, 7, 1031, 22))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1050, 7, 1050, 12))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1094, 9, 1094, 14))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1179, 13, 1179, 21))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1271, 9, 1271, 18))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1280, 13, 1280, 20))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1298, 13, 1298, 23))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1333, 13, 1333, 28))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1391, 13, 1391, 24))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1431, 9, 1431, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1639, 9, 1639, 10))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1647, 13, 1647, 14))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1676, 9, 1676, 39))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1713, 9, 1713, 14))] with group score 1.0 
+INFO     localization    selected expressions [('L', (1805, 15, 1805, 19))] with group score 1.0 
+INFO     localization    selected expressions [('L', (1816, 15, 1816, 19))] with group score 1.0 
+INFO     localization    selected expressions [('I', (1819, 13, 1819, 18))] with group score 1.0 
+INFO     localization    selected expressions [('I', (425, 9, 425, 13), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (430, 9, 430, 16), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (538, 9, 538, 19), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (539, 9, 539, 19), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (545, 9, 545, 19), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (550, 9, 550, 48), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (556, 9, 556, 20), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (574, 9, 574, 23), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (574, 9, 574, 23), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (575, 13, 575, 66), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (575, 13, 575, 66), '1')] with group score 0.0 
+INFO     localization    selected expressions [('L', (578, 16, 578, 25), '1')] with group score 0.0 
+INFO     localization    selected expressions [('L', (578, 16, 578, 25), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (584, 9, 584, 40), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (595, 7, 595, 22), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (595, 7, 595, 22), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (598, 7, 598, 16), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (598, 7, 598, 16), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (600, 11, 600, 21), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (615, 9, 615, 20), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (615, 9, 615, 20), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (638, 9, 638, 24), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (641, 9, 641, 49), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (655, 9, 655, 21), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (655, 9, 655, 21), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (665, 13, 665, 22), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (683, 13, 683, 22), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (719, 9, 719, 15), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (737, 9, 737, 11), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (737, 9, 737, 11), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (762, 13, 762, 15), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (772, 17, 772, 28), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (786, 9, 786, 21), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (792, 9, 792, 32), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (792, 9, 792, 32), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (805, 13, 805, 22), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (827, 13, 827, 59), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (833, 9, 833, 10), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (851, 13, 851, 22), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (858, 9, 858, 10), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (858, 9, 858, 10), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (930, 11, 930, 16), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (957, 7, 957, 25), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1003, 9, 1003, 28), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1012, 12, 1012, 19), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1031, 7, 1031, 22), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1031, 7, 1031, 22), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1050, 7, 1050, 12), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1094, 9, 1094, 14), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1179, 13, 1179, 21), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1271, 9, 1271, 18), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1271, 9, 1271, 18), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1280, 13, 1280, 20), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1280, 13, 1280, 20), '31')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1280, 13, 1280, 20), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1298, 13, 1298, 23), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1333, 13, 1333, 28), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1362, 17, 1362, 62), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1391, 13, 1391, 24), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1391, 13, 1391, 24), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1420, 16, 1420, 39), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1420, 16, 1420, 39), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1431, 9, 1431, 19), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1431, 9, 1431, 19), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1433, 9, 1433, 20), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1439, 13, 1439, 25), '1')] with group score 0.0 
+INFO     localization    selected expressions [('L', (1442, 37, 1442, 47), '1')] with group score 0.0 
+INFO     localization    selected expressions [('L', (1442, 37, 1442, 47), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1676, 9, 1676, 39), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1713, 9, 1713, 14), '0')] with group score 0.0 
+INFO     localization    selected expressions [('L', (1805, 15, 1805, 19), '1')] with group score 0.0 
+INFO     localization    selected expressions [('L', (1805, 15, 1805, 19), '0')] with group score 0.0 
+INFO     localization    selected expressions [('L', (1816, 15, 1816, 19), '1')] with group score 0.0 
+INFO     localization    selected expressions [('L', (1816, 15, 1816, 19), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1819, 13, 1819, 18), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1819, 13, 1819, 18), '0')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1873, 7, 1873, 12), '1')] with group score 0.0 
+INFO     localization    selected expressions [('I', (1873, 7, 1873, 12), '0')] with group score 0.0 
+DEBUG    localization    groups: [[('I', (425, 9, 425, 13))], [('I', (430, 9, 430, 16))], [('I', (538, 9, 538, 19))], [('I', (539, 9, 539, 19))], [('I', (545, 9, 545, 19))], [('I', (550, 9, 550, 48))], [('I', (556, 9, 556, 20))], [('I', (574, 9, 574, 23))], [('I', (575, 13, 575, 66))], [('L', (578, 16, 578, 25))], [('I', (584, 9, 584, 40))], [('I', (595, 7, 595, 22))], [('I', (598, 7, 598, 16))], [('I', (600, 11, 600, 21))], [('I', (719, 9, 719, 15))], [('I', (737, 9, 737, 11))], [('I', (762, 13, 762, 15))], [('I', (772, 17, 772, 28))], [('I', (786, 9, 786, 21))], [('I', (792, 9, 792, 32))], [('I', (805, 13, 805, 22))], [('I', (827, 13, 827, 59))], [('I', (833, 9, 833, 10))], [('I', (858, 9, 858, 10))], [('I', (930, 11, 930, 16))], [('I', (957, 7, 957, 25))], [('I', (1003, 9, 1003, 28))], [('I', (1012, 12, 1012, 19))], [('I', (1031, 7, 1031, 22))], [('I', (1050, 7, 1050, 12))], [('I', (1094, 9, 1094, 14))], [('I', (1179, 13, 1179, 21))], [('I', (1271, 9, 1271, 18))], [('I', (1280, 13, 1280, 20))], [('I', (1298, 13, 1298, 23))], [('I', (1333, 13, 1333, 28))], [('I', (1391, 13, 1391, 24))], [('I', (1431, 9, 1431, 19))], [('I', (1639, 9, 1639, 10))], [('I', (1647, 13, 1647, 14))], [('I', (1676, 9, 1676, 39))], [('I', (1713, 9, 1713, 14))], [('L', (1805, 15, 1805, 19))], [('L', (1816, 15, 1816, 19))], [('I', (1819, 13, 1819, 18))], [('I', (425, 9, 425, 13), '0')], [('I', (430, 9, 430, 16), '0')], [('I', (538, 9, 538, 19), '1')], [('I', (539, 9, 539, 19), '1')], [('I', (545, 9, 545, 19), '0')], [('I', (550, 9, 550, 48), '0')], [('I', (556, 9, 556, 20), '0')], [('I', (574, 9, 574, 23), '1')], [('I', (574, 9, 574, 23), '0')], [('I', (575, 13, 575, 66), '0')], [('I', (575, 13, 575, 66), '1')], [('L', (578, 16, 578, 25), '1')], [('L', (578, 16, 578, 25), '0')], [('I', (584, 9, 584, 40), '0')], [('I', (595, 7, 595, 22), '1')], [('I', (595, 7, 595, 22), '0')], [('I', (598, 7, 598, 16), '1')], [('I', (598, 7, 598, 16), '0')], [('I', (600, 11, 600, 21), '1')], [('I', (615, 9, 615, 20), '0')], [('I', (615, 9, 615, 20), '1')], [('I', (638, 9, 638, 24), '1')], [('I', (641, 9, 641, 49), '1')], [('I', (655, 9, 655, 21), '1')], [('I', (655, 9, 655, 21), '0')], [('I', (665, 13, 665, 22), '0')], [('I', (683, 13, 683, 22), '0')], [('I', (719, 9, 719, 15), '0')], [('I', (737, 9, 737, 11), '0')], [('I', (737, 9, 737, 11), '1')], [('I', (762, 13, 762, 15), '1')], [('I', (772, 17, 772, 28), '0')], [('I', (786, 9, 786, 21), '0')], [('I', (792, 9, 792, 32), '0')], [('I', (792, 9, 792, 32), '1')], [('I', (805, 13, 805, 22), '0')], [('I', (827, 13, 827, 59), '0')], [('I', (833, 9, 833, 10), '1')], [('I', (851, 13, 851, 22), '1')], [('I', (858, 9, 858, 10), '0')], [('I', (858, 9, 858, 10), '1')], [('I', (930, 11, 930, 16), '1')], [('I', (957, 7, 957, 25), '0')], [('I', (1003, 9, 1003, 28), '1')], [('I', (1012, 12, 1012, 19), '1')], [('I', (1031, 7, 1031, 22), '1')], [('I', (1031, 7, 1031, 22), '0')], [('I', (1050, 7, 1050, 12), '1')], [('I', (1094, 9, 1094, 14), '1')], [('I', (1179, 13, 1179, 21), '0')], [('I', (1271, 9, 1271, 18), '1')], [('I', (1271, 9, 1271, 18), '0')], [('I', (1280, 13, 1280, 20), '1')], [('I', (1280, 13, 1280, 20), '31')], [('I', (1280, 13, 1280, 20), '0')], [('I', (1298, 13, 1298, 23), '0')], [('I', (1333, 13, 1333, 28), '0')], [('I', (1362, 17, 1362, 62), '1')], [('I', (1391, 13, 1391, 24), '0')], [('I', (1391, 13, 1391, 24), '1')], [('I', (1420, 16, 1420, 39), '1')], [('I', (1420, 16, 1420, 39), '0')], [('I', (1431, 9, 1431, 19), '0')], [('I', (1431, 9, 1431, 19), '1')], [('I', (1433, 9, 1433, 20), '0')], [('I', (1439, 13, 1439, 25), '1')], [('L', (1442, 37, 1442, 47), '1')], [('L', (1442, 37, 1442, 47), '0')], [('I', (1676, 9, 1676, 39), '0')], [('I', (1713, 9, 1713, 14), '0')], [('L', (1805, 15, 1805, 19), '1')], [('L', (1805, 15, 1805, 19), '0')], [('L', (1816, 15, 1816, 19), '1')], [('L', (1816, 15, 1816, 19), '0')], [('I', (1819, 13, 1819, 18), '1')], [('I', (1819, 13, 1819, 18), '0')], [('I', (1873, 7, 1873, 12), '1')], [('I', (1873, 7, 1873, 12), '0')]]
+INFO     repair          considering suspicious locations [('I', (425, 9, 425, 13))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmp3afyu66o/suspicious
+DEBUG    transformation  locations: [('I', (425, 9, 425, 13))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmp3afyu66o/suspicious
+DEBUG    transformation  ANGELIX_IF_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_LOOP_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_IGNORE_TRIVIAL=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/7
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': ['incorrect_suffix']}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(425, 9, 425, 13): ('int', 1, ['proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(425, 9, 425, 13): ('int', 1, ['proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          considering suspicious locations [('I', (430, 9, 430, 16))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmp63g_m7lj/suspicious
+DEBUG    transformation  locations: [('I', (430, 9, 430, 16))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmp63g_m7lj/suspicious
+DEBUG    transformation  ANGELIX_IF_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_LOOP_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_IGNORE_TRIVIAL=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/7
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': ['incorrect_suffix']}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(430, 9, 430, 16): ('int', 1, ['env', 'proglen'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          considering suspicious locations [('I', (538, 9, 538, 19))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpq9mrxfjy/suspicious
+DEBUG    transformation  locations: [('I', (538, 9, 538, 19))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpq9mrxfjy/suspicious
+DEBUG    transformation  ANGELIX_IF_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_LOOP_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_IGNORE_TRIVIAL=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/7
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': ['incorrect_suffix']}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(538, 9, 538, 19): ('int', 1, ['z_len', 'proglen', 'no_time'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(538, 9, 538, 19): ('int', 1, ['z_len', 'proglen', 'no_time'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          considering suspicious locations [('I', (539, 9, 539, 19))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpxj16nmpz/suspicious
+DEBUG    transformation  locations: [('I', (539, 9, 539, 19))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpxj16nmpz/suspicious
+DEBUG    transformation  ANGELIX_IF_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_LOOP_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_IGNORE_TRIVIAL=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/7
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': ['incorrect_suffix']}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(539, 9, 539, 19): ('int', 1, ['z_len', 'proglen', 'no_name'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(539, 9, 539, 19): ('int', 1, ['z_len', 'proglen', 'no_name'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          considering suspicious locations [('I', (545, 9, 545, 19))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpywivh251/suspicious
+DEBUG    transformation  locations: [('I', (545, 9, 545, 19))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpywivh251/suspicious
+DEBUG    transformation  ANGELIX_IF_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_LOOP_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_IGNORE_TRIVIAL=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/7
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': ['incorrect_suffix']}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(545, 9, 545, 19): ('int', 1, ['argc', 'ascii', 'quiet', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(545, 9, 545, 19): ('int', 1, ['argc', 'ascii', 'quiet', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       found 0 angelic paths for test '7'
+INFO     repair          considering suspicious locations [('I', (550, 9, 550, 48))]
+INFO     reduction       all failing tests: ['7']
+INFO     reduction       selected 8 tests
+INFO     reduction       selected passing tests: ['1', '2', '3', '5', '6', '8', '9']
+INFO     reduction       selected failing tests: ['7']
+INFO     project         configuring backend source
+DEBUG    project         configure_cmd: /angelix-experiments/.aux/gzip/configure
+INFO     transformation  instrumenting suspicious of backend source
+DEBUG    transformation  suspicious_file: /tmp/tmpoxxat1r8/suspicious
+DEBUG    transformation  locations: [('I', (550, 9, 550, 48))]
+DEBUG    transformation  ANGELIX_EXTRACTED=/angelix-experiments/.angelix/extracted
+DEBUG    transformation  ANGELIX_SUSPICIOUS=/tmp/tmpoxxat1r8/suspicious
+DEBUG    transformation  ANGELIX_IF_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_LOOP_CONDITIONS_DEFECT_CLASS=YES
+DEBUG    transformation  ANGELIX_IGNORE_TRIVIAL=YES
+DEBUG    transformation  trans dir: /angelix-experiments/.angelix/backend
+DEBUG    transformation  trans cmd: instrument-suspicious gzip.c
+INFO     project         building backend source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     sym_infer       inferring specification for test '7' through KLEE
+INFO     testing         running test '7' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/7
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': ['incorrect_suffix']}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '[]' executed while ['incorrect_suffix'] required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: {'incorrect_suffix'}
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (550, 9, 550, 48)[0]: angelic = 16843009
+DEBUG    sym_infer       angelic_path: {(550, 9, 550, 48): [(16843009, None, {'decompress': 1, 'argc': 6, 'z_len': 0, 'proglen': 15, 'file_count': 1, 'optind': 5})]}
+INFO     testing         running test '7' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/7
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 0
+INFO     sym_infer       found 1 angelic paths for test '7'
+INFO     sym_infer       inferring specification for test '1' through KLEE
+INFO     testing         running test '1' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 1
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       wait until klee out dir gets ready for 60s...
+WARNING  sym_infer       No paths explored
+WARNING  repair          no smt file for test 1
+INFO     sym_infer       inferring specification for test '3' through KLEE
+INFO     testing         running test '3' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/3
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (550, 9, 550, 48)[0]: angelic = 0
+DEBUG    sym_infer       angelic_path: {(550, 9, 550, 48): [(0, None, {'decompress': 1, 'argc': 3, 'z_len': 3, 'proglen': 15, 'file_count': 1, 'optind': 2})]}
+INFO     testing         running test '3' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/3
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 0
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: {'incorrect_suffix'}
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '['incorrect_suffix']' executed while [] required
+INFO     sym_infer       found 1 angelic paths for test '3'
+INFO     sym_infer       inferring specification for test '5' through KLEE
+INFO     testing         running test '5' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 5
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 5
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/5
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (550, 9, 550, 48)[0]: angelic = 0
+DEBUG    sym_infer       angelic_path: {(550, 9, 550, 48): [(0, None, {'decompress': 1, 'argc': 2, 'z_len': 3, 'proglen': 15, 'file_count': 0, 'optind': 2})]}
+INFO     testing         running test '5' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/5
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 5
+INFO     testing         output code: 0
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: {'incorrect_suffix'}
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '['incorrect_suffix']' executed while [] required
+INFO     sym_infer       found 1 angelic paths for test '5'
+INFO     sym_infer       inferring specification for test '6' through KLEE
+INFO     testing         running test '6' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/6
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (550, 9, 550, 48)[0]: angelic = 0
+DEBUG    sym_infer       angelic_path: {(550, 9, 550, 48): [(0, None, {'decompress': 0, 'argc': 1, 'z_len': 3, 'proglen': 15, 'file_count': 0, 'optind': 1})]}
+INFO     testing         running test '6' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/6
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: {'incorrect_suffix'}
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '['incorrect_suffix']' executed while [] required
+INFO     sym_infer       found 1 angelic paths for test '6'
+INFO     sym_infer       inferring specification for test '8' through KLEE
+INFO     testing         running test '8' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 8
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/8
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (550, 9, 550, 48)[0]: angelic = 0
+DEBUG    sym_infer       angelic_path: {(550, 9, 550, 48): [(0, None, {'decompress': 1, 'argc': 5, 'z_len': 3, 'proglen': 15, 'file_count': 3, 'optind': 2})]}
+INFO     testing         running test '8' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/8
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 0
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: {'incorrect_suffix'}
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '['incorrect_suffix']' executed while [] required
+INFO     sym_infer       found 1 angelic paths for test '8'
+INFO     sym_infer       inferring specification for test '9' through KLEE
+INFO     testing         running test '9' of backend source with KLEE
+DEBUG    testing         KLEE_RUN_MODE: KLEE
+DEBUG    testing         ANGELIX_RUN: angelix-run-klee
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         ANGELIX_SYMBOLIC_RUNTIME: ON
+DEBUG    testing         CC: angelix-compiler --klee
+DEBUG    testing         cwd: /angelix-experiments/.angelix/backend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 9
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+DEBUG    sym_infer       smt_files: ['/angelix-experiments/.angelix/backend/klee-out-0/test000001.smt2', '/angelix-experiments/.angelix/backend/klee-out-0/test000002.smt2']
+DEBUG    sym_infer       dump: /angelix-experiments/.angelix/dump/9
+DEBUG    sym_infer       vars: ['reachable']
+DEBUG    sym_infer       oracle: {'reachable': []}
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: set()
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       expression (550, 9, 550, 48)[0]: angelic = 0
+DEBUG    sym_infer       angelic_path: {(550, 9, 550, 48): [(0, None, {'decompress': 1, 'argc': 3, 'z_len': 3, 'proglen': 15, 'file_count': 1, 'optind': 2})]}
+INFO     testing         running test '9' of frontend source
+DEBUG    testing         ANGELIX_RUN: angelix-run-test
+DEBUG    testing         ANGELIX_WITH_LOADING: /angelix-experiments/.angelix/load/9
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/frontend
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 0
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+DEBUG    sym_infer       outputs: {}
+DEBUG    sym_infer       choices: {(550, 9, 550, 48): ('int', 1, ['decompress', 'argc', 'z_len', 'proglen', 'file_count', 'optind'])}
+DEBUG    sym_infer       constants: set()
+DEBUG    sym_infer       reachable: {'incorrect_suffix'}
+DEBUG    sym_infer       original_available: False
+INFO     sym_infer       labels '['incorrect_suffix']' executed while [] required
+INFO     sym_infer       found 1 angelic paths for test '9'
+INFO     synthesis       synthesizing patch with component level 'boolean-constants'
+INFO     synthesis       use old synth
+DEBUG    synthesis       call synthesizer: java -jar /angelix/src/synthesis/target/scala-2.10/repair-maxsat-assembly-1.0.jar ['/angelix-experiments/.angelix/syn/syn_1/angelic-forest.json', '/angelix-experiments/.angelix/extracted', '/angelix-experiments/.angelix/syn/syn_1/patch', '/angelix-experiments/.angelix/syn/syn_1/config.json']
+DEBUG    synthesis       synthesis output: SUCCESS
+INFO     synthesis       fixing expression (550, 9, 550, 48): (((z_len == 0) && (! decompress)) || (z_len > 30)) ---> (((z_len == 0) && (! decompress)) || (z_len == 0))
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+DEBUG    project         CC: angelix-compiler --klee
+DEBUG    project         cmd: /angelix-experiments/.aux/gzip/build
+INFO     testing         running test '1' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 1
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 1
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 2
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 2
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 3
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 3
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 4
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 4
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 5
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 5
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 6
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 6
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 7
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 7
+INFO     testing         output code: 0
+INFO     testing         running test '8' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 8
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 8
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 9
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 9
+INFO     testing         output code: 0
+INFO     testing         running test '10' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 10
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 10
+INFO     testing         output code: 0
+INFO     testing         running test '12' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 12
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 12
+INFO     testing         output code: 0
+INFO     testing         running test '13' of validation source
+DEBUG    testing         ANGELIX_WORKDIR: /angelix-experiments/.angelix
+DEBUG    testing         ANGELIX_TEST_ID: 13
+DEBUG    testing         cwd: /angelix-experiments/.angelix/validation
+DEBUG    testing         run: /angelix-experiments/.aux/gzip/oracle 13
+INFO     testing         output code: 0
+DEBUG    repair          is_repaired: True
+DEBUG    repair          pos: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '12', '13']
+DEBUG    repair          neg: []
+DEBUG    repair          last_level: boolean-constants
+DEBUG    repair          original: (((z_len == 0) && (! decompress)) || (z_len > 30))
+DEBUG    repair          fix: {(550, 9, 550, 48): '(((z_len == 0) && (! decompress)) || (z_len == 0))'}
+INFO     repair          patch successfully generated in 9m 39s (see gzip-2020-Apr23-011107.patch)
+SUCCESS

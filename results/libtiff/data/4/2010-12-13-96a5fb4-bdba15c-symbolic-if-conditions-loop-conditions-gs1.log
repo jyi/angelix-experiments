@@ -1,0 +1,1031 @@
+[repair] benchmark: manybugs
+[repair] subject: libtiff
+[repair] version: 2010-12-13-96a5fb4-bdba15c
+[repair] search: symbolic
+[repair] debug: 0
+[repair] ./fetch libtiff manybugs 2010-12-13-96a5fb4-bdba15c
+[fetch] benchmark: manybugs
+[fetch] subject: libtiff
+[fetch] version: 2010-12-13-96a5fb4-bdba15c
+[fetch] archive: libtiff-bug-2010-12-13-96a5fb4-bdba15c.tar.gz
+[fetch] directory: libtiff-bug-2010-12-13-96a5fb4-bdba15c
+[fetch] preparing source code
+[fetch] golden_directory: libtiff-fix-2010-12-13-96a5fb4-bdba15c
+[fetch] clean-source libtiff-bug-2010-12-13-96a5fb4-bdba15c
+[fetch] /angelix-experiments/libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/configure
+[fetch] make -j 72 clean
+[fetch] clean-source libtiff-fix-2010-12-13-96a5fb4-bdba15c
+[fetch] restore-buggy libtiff-bug-2010-12-13-96a5fb4-bdba15c
+[fetch] /angelix-experiments/libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/configure
+[fetch] make -j 72 clean
+[fetch] restore-buggy entered
+[fetch] buggy: tools/tiffcrop.c
+[fetch] buggy_version: 96a5fb4
+[fetch] buggy_preprocessed: libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiffcrop.c
+[fetch] buggy_original: libtiff-bug-2010-12-13-96a5fb4-bdba15c/diffs/tools/tiffcrop.c-96a5fb4
+[fetch] cp libtiff-bug-2010-12-13-96a5fb4-bdba15c/diffs/tools/tiffcrop.c-96a5fb4 libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiffcrop.c
+[fetch] restore-correct libtiff-fix-2010-12-13-96a5fb4-bdba15c
+[fetch] restore-correct entered
+[fetch] cp libtiff-fix-2010-12-13-96a5fb4-bdba15c/diffs/tools/tiffcrop.c-bdba15c libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiffcrop.c
+[fetch] restored libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiffcrop.c with libtiff-fix-2010-12-13-96a5fb4-bdba15c/diffs/tools/tiffcrop.c-bdba15c
+[fetch] fetch done
+[repair] [repair] options: --symbolic --angelic-search-strategy
+symbolic
+--defect
+if-conditions
+loop-conditions
+--test-timeout
+60
+--initial-tests
+1
+--klee-max-forks
+100
+--klee-solver-timeout
+100
+--klee-timeout
+7200
+--klee-search
+dfs
+--suspicious
+60  --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-libtiff] options:  --angelic-search-strategy symbolic --defect if-conditions loop-conditions --test-timeout 60 --initial-tests 1 --klee-max-forks 100 --klee-solver-timeout 100 --klee-timeout 7200 --klee-search dfs --suspicious 60 --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/ppm2tiff_pbm.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/ppm2tiff_pgm.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/ppm2tiff_ppm.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcp-split.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcp-split-join.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiff2pdf.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-minisblack-1c-16b.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-minisblack-1c-8b.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-minisblack-2c-8b-alpha.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-miniswhite-1c-1b.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-palette-1c-1b.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-palette-1c-4b.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-palette-1c-8b.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-rgb-3c-16b.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-rgb-3c-8b.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extractz14-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/libtiff/tif_dirread.c
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/long_tag.c
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/Makefile.in
+[repair-libtiff] instrument libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/Makefile.in
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/libtiff/tif_error.c
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/common.sh
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/strip_rw.c
+[repair-libtiff] restore libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcp-split.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/ppm2tiff_pbm.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/ppm2tiff_pgm.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/ppm2tiff_ppm.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcp-split.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcp-split-join.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiff2pdf.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-minisblack-1c-16b.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-minisblack-1c-8b.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-minisblack-2c-8b-alpha.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-miniswhite-1c-1b.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-palette-1c-1b.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-palette-1c-4b.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-palette-1c-8b.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-rgb-3c-16b.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extract-rgb-3c-8b.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcrop-extractz14-logluv-3c-16b.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/libtiff/tif_dirread.c
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/long_tag.c
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/Makefile.in
+[repair-libtiff] instrument libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/Makefile.in
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/tools/tiff2pdf.c
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/libtiff/tif_error.c
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/common.sh
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/short_tag.c
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/strip_rw.c
+[repair-libtiff] restore libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff/test/tiffcp-split.sh
+[repair-libtiff] the assert option not used
+[repair-libtiff] angelix libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff tools/tiffcrop.c /angelix-experiments/.aux/libtiff/scripts/oracle-libtiff-sym 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78 --golden libtiff-fix-2010-12-13-96a5fb4-bdba15c/libtiff --configure                                                    ./configure --config-cache --cache-file=/angelix-experiments/.angelix/config.cache                --disable-nls                                                         --disable-shared                                                      --disable-cxx                                                         --disable-jpeg                                                        --disable-zlib                                                        --disable-pixarlog                                                    --disable-jbig;                                           echo -ne 'all:\nclean:\ndistclean:\n' >> contrib/Makefile              --build /angelix-experiments/.aux/libtiff/scripts/build-libtiff  --angelic-search-strategy symbolic --defect if-conditions loop-conditions --test-timeout 60 --initial-tests 1 --klee-max-forks 100 --klee-solver-timeout 100 --klee-timeout 7200 --klee-search dfs --suspicious 60 --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+INFO     repair          copy libtiff-bug-2010-12-13-96a5fb4-bdba15c/libtiff to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '14' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '15' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '16' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '17' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '18' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '19' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '20' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '21' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '22' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '23' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '24' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '25' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '26' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '27' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '28' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '29' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '30' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '32' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '33' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '34' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '35' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '36' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '37' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '49' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '51' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '71' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '72' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '73' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '49' of golden source
+INFO     testing         output code: 0
+INFO     repair          positive: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78']
+INFO     repair          negative: ['49']
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+INFO     project         building frontend source
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '1' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 1
+INFO     testing         running test '2' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '5' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 5
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 6
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 7
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 8
+INFO     testing         running test '9' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 9
+INFO     testing         running test '10' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 10
+INFO     testing         running test '11' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is executed multiple times by test 11
+INFO     testing         running test '12' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 12
+INFO     testing         running test '13' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+INFO     testing         running test '14' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 14
+INFO     testing         running test '15' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 15
+INFO     testing         running test '16' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 16
+INFO     testing         running test '17' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 17
+INFO     testing         running test '18' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 18
+INFO     testing         running test '19' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 19
+INFO     testing         running test '20' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 20
+INFO     testing         running test '21' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 21
+INFO     testing         running test '22' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '23' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '24' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 24
+INFO     testing         running test '25' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 25
+INFO     testing         running test '26' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 26
+INFO     testing         running test '27' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 27
+INFO     testing         running test '28' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '29' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 29
+INFO     testing         running test '30' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 30
+INFO     testing         running test '31' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 31
+INFO     testing         running test '32' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 32
+INFO     testing         running test '33' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 33
+INFO     testing         running test '34' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 34
+INFO     testing         running test '35' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 35
+INFO     testing         running test '36' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 36
+INFO     testing         running test '37' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 37
+INFO     testing         running test '38' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 38
+INFO     testing         running test '39' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '40' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '50' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+INFO     testing         running test '51' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 51
+INFO     testing         running test '52' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 52
+INFO     testing         running test '53' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 53
+INFO     testing         running test '54' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 54
+INFO     testing         running test '55' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 55
+INFO     testing         running test '56' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 56
+INFO     testing         running test '57' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 57
+INFO     testing         running test '58' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 58
+INFO     testing         running test '59' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 59
+INFO     testing         running test '60' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 60
+INFO     testing         running test '61' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 61
+INFO     testing         running test '62' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 62
+INFO     testing         running test '63' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 63
+INFO     testing         running test '64' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 64
+INFO     testing         running test '65' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 65
+INFO     testing         running test '66' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 66
+INFO     testing         running test '67' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 67
+INFO     testing         running test '68' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 68
+INFO     testing         running test '69' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 69
+INFO     testing         running test '70' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 70
+INFO     testing         running test '71' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 71
+INFO     testing         running test '72' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 72
+INFO     testing         running test '73' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 73
+INFO     testing         running test '74' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 74
+INFO     testing         running test '75' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 75
+INFO     testing         running test '76' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 76
+INFO     testing         running test '77' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 77
+INFO     testing         running test '78' of frontend source
+INFO     testing         output code: 0
+WARNING  testing         ANGELIX_RUN is not executed by test 78
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '49' of frontend source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '49' of golden source
+INFO     testing         output code: 0
+INFO     repair          repair test suite: ['2', '3', '4', '9', '10', '11', '22', '23', '28', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49']
+INFO     repair          validation test suite: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78']
+INFO     localization    (loc, score) = (('L', (2006, 21, 2006, 59)), 1.0)
+INFO     localization    (loc, score) = (('I', (2016, 21, 2016, 59)), 1.0)
+INFO     localization    (loc, score) = (('I', (5366, 16, 5366, 34)), 1.0)
+INFO     localization    (loc, score) = (('I', (6336, 16, 6336, 37)), 1.0)
+INFO     localization    (loc, score) = (('I', (5358, 16, 5358, 38)), 1.0)
+INFO     localization    (loc, score) = (('I', (6256, 10, 6256, 14)), 1.0)
+INFO     localization    (loc, score) = (('L', (6266, 34, 6266, 41)), 1.0)
+INFO     localization    (loc, score) = (('I', (2649, 7, 2649, 32)), 0.125)
+INFO     localization    (loc, score) = (('I', (2637, 7, 2637, 36)), 0.125)
+INFO     localization    (loc, score) = (('I', (2660, 7, 2660, 16)), 0.125)
+INFO     localization    (loc, score) = (('I', (2643, 7, 2643, 37)), 0.125)
+INFO     localization    (loc, score) = (('L', (3595, 19, 3595, 27)), 0.1)
+INFO     localization    (loc, score) = (('I', (3599, 10, 3599, 30)), 0.1)
+INFO     localization    (loc, score) = (('I', (3603, 9, 3603, 28)), 0.1)
+INFO     localization    (loc, score) = (('L', (1101, 17, 1101, 23)), 0.1)
+INFO     localization    (loc, score) = (('I', (6341, 7, 6341, 31)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (5987, 7, 5987, 8)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('L', (4886, 16, 4886, 20)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7795, 9, 7795, 19)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (5946, 7, 5946, 28)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7193, 7, 7193, 25)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2187, 9, 2187, 31)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('L', (4931, 16, 4931, 20)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('L', (5342, 15, 5342, 25)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (1439, 14, 1439, 23)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2343, 11, 2343, 26)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2151, 7, 2151, 26)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('L', (2206, 12, 2206, 28)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2294, 11, 2294, 24)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (1433, 7, 1433, 16)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (5888, 7, 5888, 30)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7618, 7, 7621, 45)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (1468, 7, 1468, 16)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7649, 7, 7649, 7)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7780, 7, 7780, 7)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (6042, 7, 6042, 50)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7628, 7, 7628, 20)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2255, 11, 2255, 16)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2351, 11, 2351, 34)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('L', (6151, 15, 6151, 25)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (5450, 7, 5450, 24)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('L', (2156, 10, 2156, 26)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7692, 7, 7692, 14)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7197, 9, 7197, 10)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7581, 7, 7581, 22)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2375, 7, 2375, 22)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2278, 11, 2278, 29)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (1436, 14, 1436, 23)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2164, 9, 2164, 24)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2057, 9, 2057, 9)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7600, 9, 7600, 61)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2266, 11, 2266, 32)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2159, 9, 2159, 15)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('L', (4897, 16, 4897, 20)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2184, 9, 2184, 34)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (5970, 7, 5970, 8)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2296, 13, 2296, 31)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('L', (2372, 17, 2372, 28)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (5954, 9, 5954, 30)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (5940, 9, 5940, 25)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (5311, 7, 5311, 24)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2043, 7, 2043, 7)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2197, 9, 2197, 19)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7215, 9, 7215, 10)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (1454, 7, 1454, 16)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('L', (4942, 16, 4942, 20)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2148, 7, 2148, 23)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (2217, 11, 2217, 26)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (7571, 9, 7571, 30)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (6002, 14, 6002, 24)), 0.09090909090909091)
+INFO     localization    (loc, score) = (('I', (5234, 7, 5234, 27)), 0.0)
+INFO     localization    (loc, score) = (('I', (4761, 9, 4761, 15)), 0.0)
+INFO     localization    (loc, score) = (('I', (3501, 9, 3501, 53)), 0.0)
+INFO     localization    (loc, score) = (('L', (1153, 19, 1153, 25)), 0.0)
+INFO     localization    (loc, score) = (('I', (3457, 7, 3457, 51)), 0.0)
+INFO     localization    (loc, score) = (('I', (4696, 7, 4696, 46)), 0.0)
+INFO     localization    (loc, score) = (('I', (4835, 9, 4835, 17)), 0.0)
+INFO     localization    (loc, score) = (('L', (4832, 15, 4832, 44)), 0.0)
+INFO     localization    (loc, score) = (('I', (3194, 11, 3194, 46)), 0.0)
+INFO     localization    (loc, score) = (('I', (3150, 7, 3150, 36)), 0.0)
+INFO     localization    (loc, score) = (('I', (6175, 10, 6175, 14)), 0.0)
+INFO     localization    (loc, score) = (('I', (3069, 7, 3069, 36)), 0.0)
+INFO     localization    (loc, score) = (('I', (5214, 14, 5214, 59)), 0.0)
+INFO     localization    (loc, score) = (('I', (4998, 9, 4999, 41)), 0.0)
+INFO     localization    (loc, score) = (('I', (3189, 11, 3189, 11)), 0.0)
+INFO     localization    (loc, score) = (('I', (1148, 7, 1148, 15)), 0.0)
+INFO     localization    (loc, score) = (('I', (5144, 7, 5144, 59)), 0.0)
+INFO     localization    (loc, score) = (('L', (4723, 15, 4723, 44)), 0.0)
+INFO     localization    (loc, score) = (('I', (6202, 28, 6202, 35)), 0.0)
+INFO     localization    (loc, score) = (('L', (3094, 27, 3094, 71)), 0.0)
+INFO     localization    (loc, score) = (('L', (3091, 21, 3091, 27)), 0.0)
+INFO     localization    (loc, score) = (('I', (3110, 11, 3110, 46)), 0.0)
+INFO     localization    (loc, score) = (('L', (3215, 10, 3215, 23)), 0.0)
+INFO     localization    (loc, score) = (('I', (4747, 11, 4747, 30)), 0.0)
+INFO     localization    (loc, score) = (('I', (4691, 7, 4691, 13)), 0.0)
+INFO     localization    (loc, score) = (('I', (3156, 7, 3156, 37)), 0.0)
+INFO     localization    (loc, score) = (('L', (1151, 15, 1151, 19)), 0.0)
+INFO     localization    (loc, score) = (('I', (5427, 9, 5427, 32)), 0.0)
+INFO     localization    (loc, score) = (('L', (4741, 17, 4741, 46)), 0.0)
+INFO     localization    (loc, score) = (('I', (3663, 9, 3663, 42)), 0.0)
+INFO     localization    (loc, score) = (('L', (3174, 27, 3174, 71)), 0.0)
+INFO     localization    (loc, score) = (('I', (3176, 11, 3176, 21)), 0.0)
+INFO     localization    (loc, score) = (('L', (6185, 34, 6185, 41)), 0.0)
+INFO     localization    (loc, score) = (('L', (2683, 21, 2683, 25)), 0.0)
+INFO     localization    (loc, score) = (('I', (3162, 7, 3162, 32)), 0.0)
+INFO     localization    (loc, score) = (('I', (5434, 16, 5434, 34)), 0.0)
+INFO     localization    (loc, score) = (('I', (3628, 7, 3628, 36)), 0.0)
+INFO     localization    (loc, score) = (('I', (3075, 7, 3075, 37)), 0.0)
+INFO     localization    (loc, score) = (('L', (3171, 21, 3171, 27)), 0.0)
+INFO     localization    (loc, score) = (('L', (3650, 19, 3650, 25)), 0.0)
+INFO     localization    (loc, score) = (('I', (3640, 9, 3640, 42)), 0.0)
+INFO     localization    (loc, score) = (('I', (3081, 7, 3081, 32)), 0.0)
+INFO     localization    (loc, score) = (('L', (4739, 15, 4739, 54)), 0.0)
+INFO     localization    (loc, score) = (('I', (6136, 9, 6136, 48)), 0.0)
+INFO     localization    (loc, score) = (('I', (3199, 11, 3199, 24)), 0.0)
+INFO     localization    (loc, score) = (('L', (3653, 19, 3653, 48)), 0.0)
+INFO     localization    (loc, score) = (('I', (4681, 7, 4681, 15)), 0.0)
+INFO     localization    (loc, score) = (('L', (3656, 21, 3656, 25)), 0.0)
+INFO     localization    (loc, score) = (('I', (3096, 11, 3096, 21)), 0.0)
+INFO     localization    (loc, score) = (('L', (3462, 17, 3462, 23)), 0.0)
+INFO     localization    (loc, score) = (('L', (2669, 29, 2669, 73)), 0.0)
+INFO     localization    (loc, score) = (('I', (3114, 11, 3114, 25)), 0.0)
+INFO     localization    (loc, score) = (('I', (5228, 7, 5228, 21)), 0.0)
+INFO     localization    (loc, score) = (('I', (4991, 7, 4991, 61)), 0.0)
+INFO     localization    (loc, score) = (('I', (5208, 14, 5208, 57)), 0.0)
+INFO     localization    (loc, score) = (('I', (4705, 7, 4705, 50)), 0.0)
+INFO     localization    (loc, score) = (('L', (3126, 10, 3126, 23)), 0.0)
+INFO     localization    (loc, score) = (('I', (1166, 11, 1166, 55)), 0.0)
+INFO     localization    (loc, score) = (('I', (5243, 7, 5243, 28)), 0.0)
+INFO     localization    (loc, score) = (('L', (2667, 23, 2667, 29)), 0.0)
+INFO     localization    (loc, score) = (('I', (4820, 9, 4820, 34)), 0.0)
+INFO     localization    (loc, score) = (('L', (3638, 17, 3638, 23)), 0.0)
+INFO     localization    (loc, score) = (('I', (5321, 9, 5321, 22)), 0.0)
+INFO     localization    (loc, score) = (('I', (2672, 13, 2672, 23)), 0.0)
+INFO     localization    (loc, score) = (('I', (5237, 7, 5237, 22)), 0.0)
+INFO     localization    (loc, score) = (('I', (4727, 9, 4727, 10)), 0.0)
+INFO     localization    (loc, score) = (('I', (7607, 11, 7608, 32)), 0.0)
+INFO     localization    group 1: [('L', (2006, 21, 2006, 59))] (1.0)
+INFO     localization    group 2: [('I', (2016, 21, 2016, 59))] (1.0)
+INFO     localization    group 3: [('I', (5358, 16, 5358, 38))] (1.0)
+INFO     localization    group 4: [('I', (5366, 16, 5366, 34))] (1.0)
+INFO     localization    group 5: [('I', (6256, 10, 6256, 14))] (1.0)
+INFO     localization    group 6: [('L', (6266, 34, 6266, 41))] (1.0)
+INFO     localization    group 7: [('I', (6336, 16, 6336, 37))] (1.0)
+INFO     localization    group 8: [('I', (2637, 7, 2637, 36))] (0.125)
+INFO     localization    group 9: [('I', (2643, 7, 2643, 37))] (0.125)
+INFO     localization    group 10: [('I', (2649, 7, 2649, 32))] (0.125)
+INFO     localization    group 11: [('I', (2660, 7, 2660, 16))] (0.125)
+INFO     localization    group 12: [('L', (1101, 17, 1101, 23))] (0.1)
+INFO     localization    group 13: [('L', (3595, 19, 3595, 27))] (0.1)
+INFO     localization    group 14: [('I', (3599, 10, 3599, 30))] (0.1)
+INFO     localization    group 15: [('I', (3603, 9, 3603, 28))] (0.1)
+INFO     localization    group 16: [('I', (1433, 7, 1433, 16))] (0.09090909090909091)
+INFO     localization    group 17: [('I', (1436, 14, 1436, 23))] (0.09090909090909091)
+INFO     localization    group 18: [('I', (1439, 14, 1439, 23))] (0.09090909090909091)
+INFO     localization    group 19: [('I', (1468, 7, 1468, 16))] (0.09090909090909091)
+INFO     localization    group 20: [('I', (2057, 9, 2057, 9))] (0.09090909090909091)
+INFO     localization    group 21: [('I', (2151, 7, 2151, 26))] (0.09090909090909091)
+INFO     localization    group 22: [('L', (2156, 10, 2156, 26))] (0.09090909090909091)
+INFO     localization    group 23: [('I', (2159, 9, 2159, 15))] (0.09090909090909091)
+INFO     localization    group 24: [('I', (2164, 9, 2164, 24))] (0.09090909090909091)
+INFO     localization    group 25: [('I', (2184, 9, 2184, 34))] (0.09090909090909091)
+INFO     localization    group 26: [('I', (2187, 9, 2187, 31))] (0.09090909090909091)
+INFO     localization    group 27: [('L', (2206, 12, 2206, 28))] (0.09090909090909091)
+INFO     localization    group 28: [('I', (2255, 11, 2255, 16))] (0.09090909090909091)
+INFO     localization    group 29: [('I', (2266, 11, 2266, 32))] (0.09090909090909091)
+INFO     localization    group 30: [('I', (2278, 11, 2278, 29))] (0.09090909090909091)
+INFO     localization    group 31: [('I', (2294, 11, 2294, 24))] (0.09090909090909091)
+INFO     localization    group 32: [('I', (2296, 13, 2296, 31))] (0.09090909090909091)
+INFO     localization    group 33: [('I', (2343, 11, 2343, 26))] (0.09090909090909091)
+INFO     localization    group 34: [('I', (2351, 11, 2351, 34))] (0.09090909090909091)
+INFO     localization    group 35: [('L', (2372, 17, 2372, 28))] (0.09090909090909091)
+INFO     localization    group 36: [('I', (2375, 7, 2375, 22))] (0.09090909090909091)
+INFO     localization    group 37: [('L', (4886, 16, 4886, 20))] (0.09090909090909091)
+INFO     localization    group 38: [('L', (4897, 16, 4897, 20))] (0.09090909090909091)
+INFO     localization    group 39: [('L', (4931, 16, 4931, 20))] (0.09090909090909091)
+INFO     localization    group 40: [('L', (5342, 15, 5342, 25))] (0.09090909090909091)
+INFO     localization    group 41: [('I', (5450, 7, 5450, 24))] (0.09090909090909091)
+INFO     localization    group 42: [('I', (5888, 7, 5888, 30))] (0.09090909090909091)
+INFO     localization    group 43: [('I', (5940, 9, 5940, 25))] (0.09090909090909091)
+INFO     localization    group 44: [('I', (5946, 7, 5946, 28))] (0.09090909090909091)
+INFO     localization    group 45: [('I', (5954, 9, 5954, 30))] (0.09090909090909091)
+INFO     localization    group 46: [('I', (5970, 7, 5970, 8))] (0.09090909090909091)
+INFO     localization    group 47: [('I', (5987, 7, 5987, 8))] (0.09090909090909091)
+INFO     localization    group 48: [('I', (6042, 7, 6042, 50))] (0.09090909090909091)
+INFO     localization    group 49: [('L', (6151, 15, 6151, 25))] (0.09090909090909091)
+INFO     localization    group 50: [('I', (6341, 7, 6341, 31))] (0.09090909090909091)
+INFO     localization    group 51: [('I', (7193, 7, 7193, 25))] (0.09090909090909091)
+INFO     localization    group 52: [('I', (7197, 9, 7197, 10))] (0.09090909090909091)
+INFO     localization    group 53: [('I', (7581, 7, 7581, 22))] (0.09090909090909091)
+INFO     localization    group 54: [('I', (7600, 9, 7600, 61))] (0.09090909090909091)
+INFO     localization    group 55: [('I', (7618, 7, 7621, 45))] (0.09090909090909091)
+INFO     localization    group 56: [('I', (7628, 7, 7628, 20))] (0.09090909090909091)
+INFO     localization    group 57: [('I', (7649, 7, 7649, 7))] (0.09090909090909091)
+INFO     localization    group 58: [('I', (7692, 7, 7692, 14))] (0.09090909090909091)
+INFO     localization    group 59: [('I', (7780, 7, 7780, 7))] (0.09090909090909091)
+INFO     localization    group 60: [('I', (7795, 9, 7795, 19))] (0.09090909090909091)
+INFO     localization    selected expressions [('L', (2006, 21, 2006, 59))] with group score 1.0 
+INFO     localization    selected expressions [('I', (2016, 21, 2016, 59))] with group score 1.0 
+INFO     localization    selected expressions [('I', (5358, 16, 5358, 38))] with group score 1.0 
+INFO     localization    selected expressions [('I', (5366, 16, 5366, 34))] with group score 1.0 
+INFO     localization    selected expressions [('I', (6256, 10, 6256, 14))] with group score 1.0 
+INFO     localization    selected expressions [('L', (6266, 34, 6266, 41))] with group score 1.0 
+INFO     localization    selected expressions [('I', (6336, 16, 6336, 37))] with group score 1.0 
+INFO     localization    selected expressions [('I', (2637, 7, 2637, 36))] with group score 0.125 
+INFO     localization    selected expressions [('I', (2643, 7, 2643, 37))] with group score 0.125 
+INFO     localization    selected expressions [('I', (2649, 7, 2649, 32))] with group score 0.125 
+INFO     localization    selected expressions [('I', (2660, 7, 2660, 16))] with group score 0.125 
+INFO     localization    selected expressions [('L', (1101, 17, 1101, 23))] with group score 0.1 
+INFO     localization    selected expressions [('L', (3595, 19, 3595, 27))] with group score 0.1 
+INFO     localization    selected expressions [('I', (3599, 10, 3599, 30))] with group score 0.1 
+INFO     localization    selected expressions [('I', (3603, 9, 3603, 28))] with group score 0.1 
+INFO     localization    selected expressions [('I', (1433, 7, 1433, 16))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (1436, 14, 1436, 23))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (1439, 14, 1439, 23))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (1468, 7, 1468, 16))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2057, 9, 2057, 9))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2151, 7, 2151, 26))] with group score 0.090909 
+INFO     localization    selected expressions [('L', (2156, 10, 2156, 26))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2159, 9, 2159, 15))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2164, 9, 2164, 24))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2184, 9, 2184, 34))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2187, 9, 2187, 31))] with group score 0.090909 
+INFO     localization    selected expressions [('L', (2206, 12, 2206, 28))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2255, 11, 2255, 16))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2266, 11, 2266, 32))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2278, 11, 2278, 29))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2294, 11, 2294, 24))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2296, 13, 2296, 31))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2343, 11, 2343, 26))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2351, 11, 2351, 34))] with group score 0.090909 
+INFO     localization    selected expressions [('L', (2372, 17, 2372, 28))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (2375, 7, 2375, 22))] with group score 0.090909 
+INFO     localization    selected expressions [('L', (4886, 16, 4886, 20))] with group score 0.090909 
+INFO     localization    selected expressions [('L', (4897, 16, 4897, 20))] with group score 0.090909 
+INFO     localization    selected expressions [('L', (4931, 16, 4931, 20))] with group score 0.090909 
+INFO     localization    selected expressions [('L', (5342, 15, 5342, 25))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (5450, 7, 5450, 24))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (5888, 7, 5888, 30))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (5940, 9, 5940, 25))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (5946, 7, 5946, 28))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (5954, 9, 5954, 30))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (5970, 7, 5970, 8))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (5987, 7, 5987, 8))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (6042, 7, 6042, 50))] with group score 0.090909 
+INFO     localization    selected expressions [('L', (6151, 15, 6151, 25))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (6341, 7, 6341, 31))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (7193, 7, 7193, 25))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (7197, 9, 7197, 10))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (7581, 7, 7581, 22))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (7600, 9, 7600, 61))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (7618, 7, 7621, 45))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (7628, 7, 7628, 20))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (7649, 7, 7649, 7))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (7692, 7, 7692, 14))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (7780, 7, 7780, 7))] with group score 0.090909 
+INFO     localization    selected expressions [('I', (7795, 9, 7795, 19))] with group score 0.090909 
+INFO     repair          considering suspicious locations [('L', (2006, 21, 2006, 59))]
+INFO     reduction       all failing tests: ['49']
+INFO     reduction       select 1 best tests from ['49']
+INFO     reduction       select 0 best tests from ['2', '3', '4', '9', '10', '11', '22', '23', '28', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['49']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '49' through KLEE
+INFO     testing         running test '49' of backend source with KLEE
+INFO     testing         output code: 0
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (2006, 21, 2006, 59)[0]: angelic = False
+INFO     testing         running test '49' of frontend source
+INFO     testing         output code: 0
+INFO     sym_infer       found 1 angelic paths for test '49'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (2006, 21, 2006, 59): ((opt_ptr != 0) && (i < 8)) ---> ((opt_ptr != 0) && (opt_ptr == 0))
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '14' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '15' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '16' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '17' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '18' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '19' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '20' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '21' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '22' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '23' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '24' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '25' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '26' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '27' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '28' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '29' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '30' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '32' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '33' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '34' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '35' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '36' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '37' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '43' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '49' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '50' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '51' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '52' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '53' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '54' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '55' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '56' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '57' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '58' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '59' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '60' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '61' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '71' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '72' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '73' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     repair          patch successfully generated in 6m 45s (see libtiff-2021-Oct20-142622.patch)
+SUCCESS

@@ -1,0 +1,29 @@
+--- a/libtiff/tif_dirwrite.c
++++ b/libtiff/tif_dirwrite.c
+@@ -314,7 +314,7 @@
+ 	uint32 dirsize;
+ 	void* dirmem;
+ 	uint32 m;
+-	if (tif->tif_mode == O_RDONLY)
++	if ((tif->tif_mode == 0))
+ 		return (1);
+ 	/*
+ 	 * Clear write state so that subsequent images with
+@@ -343,7 +343,7 @@
+                  * in the previous steps as the "rawcc" data may well be
+                  * a previously read tile/strip in mixed read/write mode.
+ 		 */
+-		if (tif->tif_rawcc > 0 && tif->tif_rawcc != orig_rawcc
++		if ((tif->tif_rawcc >= 0)
+ 		    && (tif->tif_flags & TIFF_BEENWRITING) != 0
+ 		    && !TIFFFlushData1(tif))
+ 		{
+@@ -565,7 +565,7 @@
+ 			}
+ 			{
+ 				uint32 n;
+-				for (n=0; n<tif->tif_nfields; n++) {
++				for (n=0; (n < n); n++) {
+ 					const TIFFField* o;
+ 					o = tif->tif_fields[n];
+ 					if ((o->field_bit>=FIELD_CODEC)&&(TIFFFieldSet(tif,o->field_bit)))

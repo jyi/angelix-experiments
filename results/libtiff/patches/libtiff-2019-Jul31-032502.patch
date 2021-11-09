@@ -1,0 +1,29 @@
+--- a/tools/tiffcrop.c
++++ b/tools/tiffcrop.c
+@@ -1465,7 +1465,7 @@
+ 		}
+ 		break;
+ 	case TIFF_DOUBLE:
+-		if (count == 1) {
++		if ((count == 1)) {
+ 			double doublev;
+ 			CopyField(tag, doublev);
+ 		} else if (count == (uint16) -1) {
+@@ -2003,7 +2003,7 @@
+       case 'Z': /* zones of an image X:Y read as zone X of Y */
+ 		crop_data->crop_mode |= CROP_ZONES;
+ 		for (i = 0, opt_ptr = strtok (optarg, ",");
+-                   ((opt_ptr != NULL) &&  (i < MAX_REGIONS));
++                   ((opt_ptr == 0));
+                     (opt_ptr = strtok (NULL, ",")), i++)
+                     {
+ 		    crop_data->zones++;
+@@ -2013,7 +2013,7 @@
+                     crop_data->zonelist[i].total    = atoi(opt_offset + 1);
+                     }
+                 /*  check for remaining elements over MAX_REGIONS */
+-                if ((opt_ptr != NULL) && (i >= MAX_REGIONS))
++                if (((opt_ptr != 0) && (i >= 8)))
+                   {
+ 		  TIFFError("Zone list exceeds region limit", "%d",  MAX_REGIONS);
+ 		  exit (-1);

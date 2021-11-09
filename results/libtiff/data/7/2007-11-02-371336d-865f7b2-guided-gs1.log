@@ -1,0 +1,1011 @@
+[repair] benchmark: manybugs
+[repair] subject: libtiff
+[repair] version: 2007-11-02-371336d-865f7b2
+[repair] search: guided
+[fetch] benchmark: manybugs
+[fetch] subject: libtiff
+[fetch] version: 2007-11-02-371336d-865f7b2
+[fetch] archive: libtiff-bug-2007-11-02-371336d-865f7b2.tar.gz
+[fetch] directory: libtiff-bug-2007-11-02-371336d-865f7b2
+--2019-07-29 16:14:35--  https://repairbenchmarks.cs.umass.edu/ManyBugs/scenarios//libtiff-bug-2007-11-02-371336d-865f7b2.tar.gz
+Resolving repairbenchmarks.cs.umass.edu (repairbenchmarks.cs.umass.edu)... 128.119.240.19
+Connecting to repairbenchmarks.cs.umass.edu (repairbenchmarks.cs.umass.edu)|128.119.240.19|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 14904958 (14M) [application/x-gzip]
+Saving to: 'cache/libtiff-bug-2007-11-02-371336d-865f7b2.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  0%  120K 2m1s
+    50K .......... .......... .......... .......... ..........  0%  241K 90s
+   100K .......... .......... .......... .......... ..........  1% 17.6M 60s
+   150K .......... .......... .......... .......... ..........  1% 1.37M 47s
+   200K .......... .......... .......... .......... ..........  1%  285K 48s
+   250K .......... .......... .......... .......... ..........  2% 21.7M 40s
+   300K .......... .......... .......... .......... ..........  2%  241K 42s
+   350K .......... .......... .......... .......... ..........  2%  699K 40s
+   400K .......... .......... .......... .......... ..........  3%  374K 39s
+   450K .......... .......... .......... .......... ..........  3% 74.8M 35s
+   500K .......... .......... .......... .......... ..........  3% 86.9M 32s
+   550K .......... .......... .......... .......... ..........  4% 86.3M 29s
+   600K .......... .......... .......... .......... ..........  4% 79.7M 27s
+   650K .......... .......... .......... .......... ..........  4% 91.5M 25s
+   700K .......... .......... .......... .......... ..........  5% 90.1M 23s
+   750K .......... .......... .......... .......... ..........  5% 91.0M 22s
+   800K .......... .......... .......... .......... ..........  5%  247K 24s
+   850K .......... .......... .......... .......... ..........  6% 64.5M 22s
+   900K .......... .......... .......... .......... ..........  6% 85.6M 21s
+   950K .......... .......... .......... .......... ..........  6% 90.3M 20s
+  1000K .......... .......... .......... .......... ..........  7% 80.9M 19s
+  1050K .......... .......... .......... .......... ..........  7%  245K 20s
+  1100K .......... .......... .......... .......... ..........  7% 44.9M 19s
+  1150K .......... .......... .......... .......... ..........  8% 57.7M 19s
+  1200K .......... .......... .......... .......... ..........  8% 72.1M 18s
+  1250K .......... .......... .......... .......... ..........  8% 88.0M 17s
+  1300K .......... .......... .......... .......... ..........  9%  243K 18s
+  1350K .......... .......... .......... .......... ..........  9% 67.4M 18s
+  1400K .......... .......... .......... .......... ..........  9% 47.4M 17s
+  1450K .......... .......... .......... .......... .......... 10% 87.0M 16s
+  1500K .......... .......... .......... .......... .......... 10% 97.3M 16s
+  1550K .......... .......... .......... .......... .......... 10%  244K 17s
+  1600K .......... .......... .......... .......... .......... 11% 64.6M 16s
+  1650K .......... .......... .......... .......... .......... 11% 87.5M 16s
+  1700K .......... .......... .......... .......... .......... 12% 89.8M 15s
+  1750K .......... .......... .......... .......... .......... 12% 88.6M 15s
+  1800K .......... .......... .......... .......... .......... 12%  243K 16s
+  1850K .......... .......... .......... .......... .......... 13% 75.2M 15s
+  1900K .......... .......... .......... .......... .......... 13% 82.2M 15s
+  1950K .......... .......... .......... .......... .......... 13% 84.3M 14s
+  2000K .......... .......... .......... .......... .......... 14% 73.5M 14s
+  2050K .......... .......... .......... .......... .......... 14%  245K 15s
+  2100K .......... .......... .......... .......... .......... 14% 63.0M 14s
+  2150K .......... .......... .......... .......... .......... 15% 82.8M 14s
+  2200K .......... .......... .......... .......... .......... 15% 77.1M 14s
+  2250K .......... .......... .......... .......... .......... 15% 42.9M 13s
+  2300K .......... .......... .......... .......... .......... 16%  246K 14s
+  2350K .......... .......... .......... .......... .......... 16% 64.3M 14s
+  2400K .......... .......... .......... .......... .......... 16% 34.8M 13s
+  2450K .......... .......... .......... .......... .......... 17% 62.3M 13s
+  2500K .......... .......... .......... .......... .......... 17% 75.8M 13s
+  2550K .......... .......... .......... .......... .......... 17%  244K 13s
+  2600K .......... .......... .......... .......... .......... 18% 63.5M 13s
+  2650K .......... .......... .......... .......... .......... 18% 71.3M 13s
+  2700K .......... .......... .......... .......... .......... 18% 76.1M 13s
+  2750K .......... .......... .......... .......... .......... 19% 98.3M 12s
+  2800K .......... .......... .......... .......... .......... 19%  245K 13s
+  2850K .......... .......... .......... .......... .......... 19% 72.1M 13s
+  2900K .......... .......... .......... .......... .......... 20% 41.5M 12s
+  2950K .......... .......... .......... .......... .......... 20% 75.9M 12s
+  3000K .......... .......... .......... .......... .......... 20% 78.3M 12s
+  3050K .......... .......... .......... .......... .......... 21%  245K 12s
+  3100K .......... .......... .......... .......... .......... 21% 76.7M 12s
+  3150K .......... .......... .......... .......... .......... 21% 22.9M 12s
+  3200K .......... .......... .......... .......... .......... 22% 66.2M 12s
+  3250K .......... .......... .......... .......... .......... 22% 81.1M 11s
+  3300K .......... .......... .......... .......... .......... 23%  245K 12s
+  3350K .......... .......... .......... .......... .......... 23% 70.8M 12s
+  3400K .......... .......... .......... .......... .......... 23% 25.1M 11s
+  3450K .......... .......... .......... .......... .......... 24% 56.7M 11s
+  3500K .......... .......... .......... .......... .......... 24% 48.5M 11s
+  3550K .......... .......... .......... .......... .......... 24%  250K 11s
+  3600K .......... .......... .......... .......... .......... 25% 15.7M 11s
+  3650K .......... .......... .......... .......... .......... 25% 25.1M 11s
+  3700K .......... .......... .......... .......... .......... 25% 66.8M 11s
+  3750K .......... .......... .......... .......... .......... 26% 30.4M 11s
+  3800K .......... .......... .......... .......... .......... 26%  221K 11s
+  3850K .......... .......... .......... .......... .......... 26% 15.8M 11s
+  3900K .......... .......... .......... .......... .......... 27% 16.1M 11s
+  3950K .......... .......... .......... .......... .......... 27% 79.4M 10s
+  4000K .......... .......... .......... .......... .......... 27% 45.5M 10s
+  4050K .......... .......... .......... .......... .......... 28%  252K 11s
+  4100K .......... .......... .......... .......... .......... 28% 13.4M 10s
+  4150K .......... .......... .......... .......... .......... 28% 19.0M 10s
+  4200K .......... .......... .......... .......... .......... 29% 67.1M 10s
+  4250K .......... .......... .......... .......... .......... 29% 40.2M 10s
+  4300K .......... .......... .......... .......... .......... 29%  280K 10s
+  4350K .......... .......... .......... .......... .......... 30% 1.78M 10s
+  4400K .......... .......... .......... .......... .......... 30% 43.3M 10s
+  4450K .......... .......... .......... .......... .......... 30% 72.5M 10s
+  4500K .......... .......... .......... .......... .......... 31% 81.8M 10s
+  4550K .......... .......... .......... .......... .......... 31% 2.16M 10s
+  4600K .......... .......... .......... .......... .......... 31%  276K 10s
+  4650K .......... .......... .......... .......... .......... 32% 36.1M 10s
+  4700K .......... .......... .......... .......... .......... 32% 76.2M 9s
+  4750K .......... .......... .......... .......... .......... 32% 46.1M 9s
+  4800K .......... .......... .......... .......... .......... 33% 22.6M 9s
+  4850K .......... .......... .......... .......... .......... 33%  249K 9s
+  4900K .......... .......... .......... .......... .......... 34% 35.8M 9s
+  4950K .......... .......... .......... .......... .......... 34% 57.1M 9s
+  5000K .......... .......... .......... .......... .......... 34% 49.8M 9s
+  5050K .......... .......... .......... .......... .......... 35% 20.1M 9s
+  5100K .......... .......... .......... .......... .......... 35%  283K 9s
+  5150K .......... .......... .......... .......... .......... 35% 1.67M 9s
+  5200K .......... .......... .......... .......... .......... 36% 48.7M 9s
+  5250K .......... .......... .......... .......... .......... 36% 51.4M 9s
+  5300K .......... .......... .......... .......... .......... 36% 35.8M 9s
+  5350K .......... .......... .......... .......... .......... 37%  291K 9s
+  5400K .......... .......... .......... .......... .......... 37% 1.47M 9s
+  5450K .......... .......... .......... .......... .......... 37% 61.5M 9s
+  5500K .......... .......... .......... .......... .......... 38% 65.8M 8s
+  5550K .......... .......... .......... .......... .......... 38% 77.6M 8s
+  5600K .......... .......... .......... .......... .......... 38% 68.5M 8s
+  5650K .......... .......... .......... .......... .......... 39%  256K 8s
+  5700K .......... .......... .......... .......... .......... 39% 5.46M 8s
+  5750K .......... .......... .......... .......... .......... 39% 45.1M 8s
+  5800K .......... .......... .......... .......... .......... 40% 37.5M 8s
+  5850K .......... .......... .......... .......... .......... 40% 52.2M 8s
+  5900K .......... .......... .......... .......... .......... 40% 85.4M 8s
+  5950K .......... .......... .......... .......... .......... 41%  235K 8s
+  6000K .......... .......... .......... .......... .......... 41% 45.9M 8s
+  6050K .......... .......... .......... .......... .......... 41% 55.7M 8s
+  6100K .......... .......... .......... .......... .......... 42% 66.9M 8s
+  6150K .......... .......... .......... .......... .......... 42% 80.7M 8s
+  6200K .......... .......... .......... .......... .......... 42%  313K 8s
+  6250K .......... .......... .......... .......... .......... 43% 1.11M 8s
+  6300K .......... .......... .......... .......... .......... 43% 50.9M 8s
+  6350K .......... .......... .......... .......... .......... 43% 62.8M 7s
+  6400K .......... .......... .......... .......... .......... 44% 70.4M 7s
+  6450K .......... .......... .......... .......... .......... 44% 92.1M 7s
+  6500K .......... .......... .......... .......... .......... 44%  266K 7s
+  6550K .......... .......... .......... .......... .......... 45% 3.15M 7s
+  6600K .......... .......... .......... .......... .......... 45% 65.1M 7s
+  6650K .......... .......... .......... .......... .......... 46% 83.3M 7s
+  6700K .......... .......... .......... .......... .......... 46% 52.0M 7s
+  6750K .......... .......... .......... .......... .......... 46% 52.3M 7s
+  6800K .......... .......... .......... .......... .......... 47%  265K 7s
+  6850K .......... .......... .......... .......... .......... 47% 3.26M 7s
+  6900K .......... .......... .......... .......... .......... 47% 77.9M 7s
+  6950K .......... .......... .......... .......... .......... 48% 76.6M 7s
+  7000K .......... .......... .......... .......... .......... 48% 61.6M 7s
+  7050K .......... .......... .......... .......... .......... 48% 53.0M 7s
+  7100K .......... .......... .......... .......... .......... 49%  291K 7s
+  7150K .......... .......... .......... .......... .......... 49% 1.52M 7s
+  7200K .......... .......... .......... .......... .......... 49% 64.7M 7s
+  7250K .......... .......... .......... .......... .......... 50% 89.6M 6s
+  7300K .......... .......... .......... .......... .......... 50% 94.2M 6s
+  7350K .......... .......... .......... .......... .......... 50% 29.6M 6s
+  7400K .......... .......... .......... .......... .......... 51%  299K 6s
+  7450K .......... .......... .......... .......... .......... 51% 1.32M 6s
+  7500K .......... .......... .......... .......... .......... 51% 50.3M 6s
+  7550K .......... .......... .......... .......... .......... 52% 75.2M 6s
+  7600K .......... .......... .......... .......... .......... 52% 61.4M 6s
+  7650K .......... .......... .......... .......... .......... 52% 76.3M 6s
+  7700K .......... .......... .......... .......... .......... 53% 5.84M 6s
+  7750K .......... .......... .......... .......... .......... 53%  275K 6s
+  7800K .......... .......... .......... .......... .......... 53% 3.49M 6s
+  7850K .......... .......... .......... .......... .......... 54% 44.9M 6s
+  7900K .......... .......... .......... .......... .......... 54% 61.1M 6s
+  7950K .......... .......... .......... .......... .......... 54% 72.5M 6s
+  8000K .......... .......... .......... .......... .......... 55% 48.1M 6s
+  8050K .......... .......... .......... .......... .......... 55%  292K 6s
+  8100K .......... .......... .......... .......... .......... 55% 1.56M 6s
+  8150K .......... .......... .......... .......... .......... 56% 48.6M 6s
+  8200K .......... .......... .......... .......... .......... 56% 56.9M 5s
+  8250K .......... .......... .......... .......... .......... 57% 49.1M 5s
+  8300K .......... .......... .......... .......... .......... 57% 75.2M 5s
+  8350K .......... .......... .......... .......... .......... 57% 61.2M 5s
+  8400K .......... .......... .......... .......... .......... 58%  264K 5s
+  8450K .......... .......... .......... .......... .......... 58% 3.34M 5s
+  8500K .......... .......... .......... .......... .......... 58% 63.3M 5s
+  8550K .......... .......... .......... .......... .......... 59% 63.0M 5s
+  8600K .......... .......... .......... .......... .......... 59% 68.7M 5s
+  8650K .......... .......... .......... .......... .......... 59% 93.2M 5s
+  8700K .......... .......... .......... .......... .......... 60% 86.8M 5s
+  8750K .......... .......... .......... .......... .......... 60%  303K 5s
+  8800K .......... .......... .......... .......... .......... 60% 1.23M 5s
+  8850K .......... .......... .......... .......... .......... 61% 81.3M 5s
+  8900K .......... .......... .......... .......... .......... 61% 84.4M 5s
+  8950K .......... .......... .......... .......... .......... 61% 84.7M 5s
+  9000K .......... .......... .......... .......... .......... 62% 78.9M 5s
+  9050K .......... .......... .......... .......... .......... 62% 64.4M 5s
+  9100K .......... .......... .......... .......... .......... 62%  297K 5s
+  9150K .......... .......... .......... .......... .......... 63% 1.31M 4s
+  9200K .......... .......... .......... .......... .......... 63% 61.1M 4s
+  9250K .......... .......... .......... .......... .......... 63% 87.8M 4s
+  9300K .......... .......... .......... .......... .......... 64% 79.3M 4s
+  9350K .......... .......... .......... .......... .......... 64% 83.2M 4s
+  9400K .......... .......... .......... .......... .......... 64% 80.6M 4s
+  9450K .......... .......... .......... .......... .......... 65% 30.3M 4s
+  9500K .......... .......... .......... .......... .......... 65%  269K 4s
+  9550K .......... .......... .......... .......... .......... 65% 3.00M 4s
+  9600K .......... .......... .......... .......... .......... 66% 62.8M 4s
+  9650K .......... .......... .......... .......... .......... 66% 72.6M 4s
+  9700K .......... .......... .......... .......... .......... 66% 75.3M 4s
+  9750K .......... .......... .......... .......... .......... 67% 85.1M 4s
+  9800K .......... .......... .......... .......... .......... 67% 77.4M 4s
+  9850K .......... .......... .......... .......... .......... 68%  302K 4s
+  9900K .......... .......... .......... .......... .......... 68% 1.30M 4s
+  9950K .......... .......... .......... .......... .......... 68% 31.2M 4s
+ 10000K .......... .......... .......... .......... .......... 69% 66.6M 4s
+ 10050K .......... .......... .......... .......... .......... 69% 36.3M 4s
+ 10100K .......... .......... .......... .......... .......... 69% 82.7M 4s
+ 10150K .......... .......... .......... .......... .......... 70% 63.3M 3s
+ 10200K .......... .......... .......... .......... .......... 70% 78.6M 3s
+ 10250K .......... .......... .......... .......... .......... 70%  305K 3s
+ 10300K .......... .......... .......... .......... .......... 71% 1.31M 3s
+ 10350K .......... .......... .......... .......... .......... 71% 27.1M 3s
+ 10400K .......... .......... .......... .......... .......... 71% 55.0M 3s
+ 10450K .......... .......... .......... .......... .......... 72% 45.9M 3s
+ 10500K .......... .......... .......... .......... .......... 72% 54.5M 3s
+ 10550K .......... .......... .......... .......... .......... 72% 41.8M 3s
+ 10600K .......... .......... .......... .......... .......... 73% 49.4M 3s
+ 10650K .......... .......... .......... .......... .......... 73%  585K 3s
+ 10700K .......... .......... .......... .......... .......... 73%  498K 3s
+ 10750K .......... .......... .......... .......... .......... 74% 2.42M 3s
+ 10800K .......... .......... .......... .......... .......... 74% 56.4M 3s
+ 10850K .......... .......... .......... .......... .......... 74% 76.6M 3s
+ 10900K .......... .......... .......... .......... .......... 75% 60.7M 3s
+ 10950K .......... .......... .......... .......... .......... 75% 71.0M 3s
+ 11000K .......... .......... .......... .......... .......... 75% 64.1M 3s
+ 11050K .......... .......... .......... .......... .......... 76% 56.2M 3s
+ 11100K .......... .......... .......... .......... .......... 76%  315K 3s
+ 11150K .......... .......... .......... .......... .......... 76% 1.13M 3s
+ 11200K .......... .......... .......... .......... .......... 77% 44.2M 3s
+ 11250K .......... .......... .......... .......... .......... 77% 75.4M 3s
+ 11300K .......... .......... .......... .......... .......... 77% 73.1M 2s
+ 11350K .......... .......... .......... .......... .......... 78% 68.9M 2s
+ 11400K .......... .......... .......... .......... .......... 78% 66.0M 2s
+ 11450K .......... .......... .......... .......... .......... 79% 90.3M 2s
+ 11500K .......... .......... .......... .......... .......... 79% 90.8M 2s
+ 11550K .......... .......... .......... .......... .......... 79%  316K 2s
+ 11600K .......... .......... .......... .......... .......... 80% 1.08M 2s
+ 11650K .......... .......... .......... .......... .......... 80% 71.8M 2s
+ 11700K .......... .......... .......... .......... .......... 80% 79.8M 2s
+ 11750K .......... .......... .......... .......... .......... 81% 83.1M 2s
+ 11800K .......... .......... .......... .......... .......... 81% 75.9M 2s
+ 11850K .......... .......... .......... .......... .......... 81% 49.2M 2s
+ 11900K .......... .......... .......... .......... .......... 82% 48.8M 2s
+ 11950K .......... .......... .......... .......... .......... 82% 71.4M 2s
+ 12000K .......... .......... .......... .......... .......... 82%  319K 2s
+ 12050K .......... .......... .......... .......... .......... 83% 1.07M 2s
+ 12100K .......... .......... .......... .......... .......... 83% 26.5M 2s
+ 12150K .......... .......... .......... .......... .......... 83% 79.5M 2s
+ 12200K .......... .......... .......... .......... .......... 84% 53.1M 2s
+ 12250K .......... .......... .......... .......... .......... 84% 76.1M 2s
+ 12300K .......... .......... .......... .......... .......... 84% 32.5M 2s
+ 12350K .......... .......... .......... .......... .......... 85% 79.2M 2s
+ 12400K .......... .......... .......... .......... .......... 85% 76.7M 2s
+ 12450K .......... .......... .......... .......... .......... 85% 1.46M 2s
+ 12500K .......... .......... .......... .......... .......... 86%  348K 1s
+ 12550K .......... .......... .......... .......... .......... 86% 2.06M 1s
+ 12600K .......... .......... .......... .......... .......... 86% 48.1M 1s
+ 12650K .......... .......... .......... .......... .......... 87% 67.0M 1s
+ 12700K .......... .......... .......... .......... .......... 87% 48.8M 1s
+ 12750K .......... .......... .......... .......... .......... 87% 59.5M 1s
+ 12800K .......... .......... .......... .......... .......... 88% 39.5M 1s
+ 12850K .......... .......... .......... .......... .......... 88% 71.6M 1s
+ 12900K .......... .......... .......... .......... .......... 88% 72.4M 1s
+ 12950K .......... .......... .......... .......... .......... 89% 91.5M 1s
+ 13000K .......... .......... .......... .......... .......... 89%  283K 1s
+ 13050K .......... .......... .......... .......... .......... 89% 2.19M 1s
+ 13100K .......... .......... .......... .......... .......... 90% 31.2M 1s
+ 13150K .......... .......... .......... .......... .......... 90% 70.3M 1s
+ 13200K .......... .......... .......... .......... .......... 91% 46.6M 1s
+ 13250K .......... .......... .......... .......... .......... 91% 46.8M 1s
+ 13300K .......... .......... .......... .......... .......... 91% 54.9M 1s
+ 13350K .......... .......... .......... .......... .......... 92% 70.2M 1s
+ 13400K .......... .......... .......... .......... .......... 92% 61.5M 1s
+ 13450K .......... .......... .......... .......... .......... 92% 79.4M 1s
+ 13500K .......... .......... .......... .......... .......... 93%  325K 1s
+ 13550K .......... .......... .......... .......... .......... 93% 2.07M 1s
+ 13600K .......... .......... .......... .......... .......... 93% 2.12M 1s
+ 13650K .......... .......... .......... .......... .......... 94% 48.8M 1s
+ 13700K .......... .......... .......... .......... .......... 94% 26.8M 1s
+ 13750K .......... .......... .......... .......... .......... 94% 43.3M 1s
+ 13800K .......... .......... .......... .......... .......... 95% 64.5M 0s
+ 13850K .......... .......... .......... .......... .......... 95% 71.0M 0s
+ 13900K .......... .......... .......... .......... .......... 95% 72.9M 0s
+ 13950K .......... .......... .......... .......... .......... 96% 82.9M 0s
+ 14000K .......... .......... .......... .......... .......... 96% 74.8M 0s
+ 14050K .......... .......... .......... .......... .......... 96%  285K 0s
+ 14100K .......... .......... .......... .......... .......... 97% 2.23M 0s
+ 14150K .......... .......... .......... .......... .......... 97% 29.3M 0s
+ 14200K .......... .......... .......... .......... .......... 97% 18.9M 0s
+ 14250K .......... .......... .......... .......... .......... 98% 53.5M 0s
+ 14300K .......... .......... .......... .......... .......... 98% 52.4M 0s
+ 14350K .......... .......... .......... .......... .......... 98% 69.7M 0s
+ 14400K .......... .......... .......... .......... .......... 99% 58.9M 0s
+ 14450K .......... .......... .......... .......... .......... 99% 57.0M 0s
+ 14500K .......... .......... .......... .......... .......... 99% 80.7M 0s
+ 14550K .....                                                 100% 54.3M=10s
+
+2019-07-29 16:14:47 (1.42 MB/s) - 'cache/libtiff-bug-2007-11-02-371336d-865f7b2.tar.gz' saved [14904958/14904958]
+
+[fetch] preparing source code
+[fetch] golden_directory: libtiff-fix-2007-11-02-371336d-865f7b2
+[fetch] clean-source libtiff-bug-2007-11-02-371336d-865f7b2
+[fetch] /angelix-experiments/libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/configure
+[fetch] make clean
+[fetch] clean-source libtiff-fix-2007-11-02-371336d-865f7b2
+[fetch] restore-buggy libtiff-bug-2007-11-02-371336d-865f7b2
+[fetch] /angelix-experiments/libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/configure
+[fetch] make clean
+[fetch] buggy: libtiff/tif_dirwrite.c
+[fetch] buggy_preprocessed: libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/libtiff/tif_dirwrite.c
+[fetch] buggy_version: 371336d
+[fetch] buggy_original: libtiff-bug-2007-11-02-371336d-865f7b2/diffs/libtiff/tif_dirwrite.c-371336d
+[fetch] restore-correct libtiff-fix-2007-11-02-371336d-865f7b2
+[fetch] restored libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/libtiff/tif_dirwrite.c with libtiff-fix-2007-11-02-371336d-865f7b2/diffs/libtiff/tif_dirwrite.c-865f7b2
+[fetch] fetch done
+[repair] options: --defect
+if-conditions
+loop-conditions
+--angelic-search-strategy
+guided
+--search-max-trials
+100
+--max-same-cost-iter
+20
+--default-max-cost
+300000000
+--default-non-zero-cost
+300000000
+--one-bit-flip-prob
+0.5
+--mcmc-beta
+0.8
+--penalty1
+4
+--penalty2
+2
+--synthesis-levels
+alternatives
+--ignore-trivial
+--lines
+346  --ignore-lines --quiet --all-suspicious --group-size 1 --test-timeout 60
+[repair-libtiff] options:  --defect if-conditions loop-conditions --angelic-search-strategy guided --search-max-trials 100 --max-same-cost-iter 20 --default-max-cost 300000000 --default-non-zero-cost 300000000 --one-bit-flip-prob 0.5 --mcmc-beta 0.8 --penalty1 4 --penalty2 2 --synthesis-levels alternatives --ignore-trivial --lines 346 --ignore-lines --quiet --all-suspicious --group-size 1 --test-timeout 60
+[repair-libtiff] instrument libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/test/Makefile.in
+[repair-libtiff] instrument libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/libtiff/tif_write.c
+[repair-libtiff] instrument libtiff-bug-2007-11-02-371336d-865f7b2/libtiff/libtiff/tif_write.c
+[repair-libtiff] instrument libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/test/Makefile.in
+[repair-libtiff] instrument libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/tools/tiff2pdf.c
+[repair-libtiff] instrument libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/libtiff/tif_error.c
+[repair-libtiff] instrument libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/libtiff/tif_write.c
+[repair-libtiff] instrument libtiff-fix-2007-11-02-371336d-865f7b2/libtiff/libtiff/tif_write.c
+WARNING  testing         ANGELIX_RUN is not executed by test 1
+WARNING  testing         ANGELIX_RUN is not executed by test 2
+WARNING  testing         ANGELIX_RUN is not executed by test 4
+WARNING  testing         ANGELIX_RUN is not executed by test 6
+WARNING  testing         ANGELIX_RUN is not executed by test 7
+WARNING  testing         ANGELIX_RUN is not executed by test 8
+WARNING  testing         ANGELIX_RUN is not executed by test 9
+WARNING  testing         ANGELIX_RUN is not executed by test 10
+WARNING  testing         ANGELIX_RUN is not executed by test 11
+WARNING  testing         ANGELIX_RUN is not executed by test 12
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+WARNING  testing         ANGELIX_RUN is not executed by test 14
+WARNING  testing         ANGELIX_RUN is not executed by test 15
+WARNING  testing         ANGELIX_RUN is not executed by test 16
+WARNING  testing         ANGELIX_RUN is not executed by test 17
+WARNING  testing         ANGELIX_RUN is not executed by test 20
+WARNING  testing         ANGELIX_RUN is not executed by test 21
+WARNING  testing         ANGELIX_RUN is not executed by test 24
+WARNING  testing         ANGELIX_RUN is not executed by test 25
+WARNING  testing         ANGELIX_RUN is not executed by test 26
+WARNING  testing         ANGELIX_RUN is not executed by test 27
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+WARNING  testing         ANGELIX_RUN is not executed by test 51
+WARNING  testing         ANGELIX_RUN is not executed by test 53
+WARNING  testing         ANGELIX_RUN is not executed by test 54
+WARNING  testing         ANGELIX_RUN is not executed by test 55
+WARNING  testing         ANGELIX_RUN is not executed by test 56
+WARNING  testing         ANGELIX_RUN is not executed by test 57
+WARNING  testing         ANGELIX_RUN is not executed by test 58
+WARNING  testing         ANGELIX_RUN is not executed by test 59
+WARNING  testing         ANGELIX_RUN is not executed by test 60
+WARNING  testing         ANGELIX_RUN is not executed by test 61
+WARNING  testing         ANGELIX_RUN is not executed by test 63
+WARNING  testing         ANGELIX_RUN is not executed by test 64
+WARNING  testing         ANGELIX_RUN is not executed by test 65
+WARNING  testing         ANGELIX_RUN is not executed by test 66
+WARNING  testing         ANGELIX_RUN is not executed by test 67
+WARNING  testing         ANGELIX_RUN is not executed by test 68
+WARNING  testing         ANGELIX_RUN is not executed by test 69
+WARNING  testing         ANGELIX_RUN is not executed by test 70
+WARNING  testing         ANGELIX_RUN is not executed by test 71
+WARNING  testing         ANGELIX_RUN is not executed by test 72
+WARNING  testing         ANGELIX_RUN is not executed by test 73
+WARNING  testing         ANGELIX_RUN is not executed by test 74
+WARNING  testing         ANGELIX_RUN is not executed by test 75
+WARNING  testing         ANGELIX_RUN is not executed by test 76
+WARNING  testing         ANGELIX_RUN is not executed by test 77
+WARNING  testing         ANGELIX_RUN is not executed by test 78
+WARNING  testing         ANGELIX_RUN is not executed by test 3
+WARNING  testing         ANGELIX_RUN is not executed by test 3
+WARNING  testing         ANGELIX_RUN is not executed by test 5
+WARNING  testing         ANGELIX_RUN is not executed by test 5
+WARNING  testing         ANGELIX_RUN is not executed by test 18
+WARNING  testing         ANGELIX_RUN is not executed by test 18
+WARNING  testing         ANGELIX_RUN is not executed by test 19
+WARNING  testing         ANGELIX_RUN is not executed by test 19
+WARNING  testing         ANGELIX_RUN is not executed by test 29
+WARNING  testing         ANGELIX_RUN is not executed by test 29
+WARNING  testing         ANGELIX_RUN is not executed by test 30
+WARNING  testing         ANGELIX_RUN is not executed by test 30
+WARNING  testing         ANGELIX_RUN is not executed by test 31
+WARNING  testing         ANGELIX_RUN is not executed by test 31
+WARNING  testing         ANGELIX_RUN is not executed by test 32
+WARNING  testing         ANGELIX_RUN is not executed by test 32
+WARNING  testing         ANGELIX_RUN is not executed by test 33
+WARNING  testing         ANGELIX_RUN is not executed by test 33
+WARNING  testing         ANGELIX_RUN is not executed by test 34
+WARNING  testing         ANGELIX_RUN is not executed by test 34
+WARNING  testing         ANGELIX_RUN is not executed by test 35
+WARNING  testing         ANGELIX_RUN is not executed by test 35
+WARNING  testing         ANGELIX_RUN is not executed by test 36
+WARNING  testing         ANGELIX_RUN is not executed by test 36
+WARNING  testing         ANGELIX_RUN is not executed by test 37
+WARNING  testing         ANGELIX_RUN is not executed by test 37
+WARNING  testing         ANGELIX_RUN is not executed by test 38
+WARNING  testing         ANGELIX_RUN is not executed by test 38
+WARNING  testing         ANGELIX_RUN is not executed by test 42
+WARNING  testing         ANGELIX_RUN is not executed by test 42
+WARNING  testing         ANGELIX_RUN is not executed by test 52
+WARNING  testing         ANGELIX_RUN is not executed by test 52
+WARNING  testing         ANGELIX_RUN is not executed by test 62
+WARNING  testing         ANGELIX_RUN is not executed by test 62
+WARNING  repair          excluding test 3 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 18 because it fails in golden version
+WARNING  repair          excluding test 19 because it fails in golden version
+WARNING  repair          excluding test 23 because it fails in golden version
+WARNING  repair          excluding test 29 because it fails in golden version
+WARNING  repair          excluding test 30 because it fails in golden version
+WARNING  repair          excluding test 31 because it fails in golden version
+WARNING  repair          excluding test 32 because it fails in golden version
+WARNING  repair          excluding test 33 because it fails in golden version
+WARNING  repair          excluding test 34 because it fails in golden version
+WARNING  repair          excluding test 35 because it fails in golden version
+WARNING  repair          excluding test 36 because it fails in golden version
+WARNING  repair          excluding test 37 because it fails in golden version
+WARNING  repair          excluding test 38 because it fails in golden version
+WARNING  repair          excluding test 42 because it fails in golden version
+WARNING  repair          excluding test 52 because it fails in golden version
+WARNING  repair          excluding test 62 because it fails in golden version
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+WARNING  guided_infer    DD failed (ebits)
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           Sequential sampling (1 chains in 1 job)
+INFO     pymc3           Metropolis: [p]
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: True
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+INFO     pymc3           accepted: False
+SUCCESS

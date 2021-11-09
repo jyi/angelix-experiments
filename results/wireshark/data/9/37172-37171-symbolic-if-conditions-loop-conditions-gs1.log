@@ -1,0 +1,2594 @@
+[repair] benchmark: manybugs
+[repair] subject: wireshark
+[repair] version: 37172-37171
+[repair] search: symbolic
+[repair] debug: 0
+[fetch] benchmark: manybugs
+[fetch] subject: wireshark
+[fetch] version: 37172-37171
+[fetch] archive: wireshark-bug-37172-37171.tar.gz
+[fetch] directory: wireshark-bug-37172-37171
+[fetch] GLIB_DIR: glib-2.30.0
+[fetch] LIBCAP_DIR: libcap-1.9.1
+[fetch] mkdir -p cache
+[fetch] preparing source code
+[fetch] golden_directory: wireshark-fix-37172-37171
+[fetch] clean-source wireshark-bug-37172-37171
+[fetch] clean-source wireshark-fix-37172-37171
+[fetch] restore-buggy wireshark-bug-37172-37171
+[fetch] restore-buggy entered
+[fetch] buggy: dumpcap.c
+[fetch] buggy_version: 37172
+[fetch] buggy_preprocessed: wireshark-bug-37172-37171/wireshark/dumpcap.c
+[fetch] buggy_original: wireshark-bug-37172-37171/diffs/dumpcap.c-37172
+[fetch] cp wireshark-bug-37172-37171/diffs/dumpcap.c-37172 wireshark-bug-37172-37171/wireshark/dumpcap.c
+[fetch] restore-correct wireshark-fix-37172-37171
+[fetch] restore-correct entered
+[fetch] cp wireshark-fix-37172-37171/diffs/dumpcap.c-37171 wireshark-fix-37172-37171/wireshark/dumpcap.c
+[fetch] restored wireshark-fix-37172-37171/wireshark/dumpcap.c with wireshark-fix-37172-37171/diffs/dumpcap.c-37171
+[fetch] fetch done
+[repair] [repair] options: --symbolic --ignore-lines
+--lines
+4106
+--skip-validating-angelic-path
+--test-timeout
+1
+--angelic-search-strategy
+symbolic
+--defect
+if-conditions
+loop-conditions
+--ignore-trans-errors
+--ignore-infer-errors
+--klee-max-forks
+200
+--group-size
+1
+--initial-tests
+1
+--klee-solver-timeout
+100
+--klee-search
+dfs
+--klee-timeout
+7200
+--mute-warning
+--forced-to-use-bool
+--ignore-unmatched-execution
+--use-gcc  --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-wireshark] options:  --ignore-lines --lines 4106 --skip-validating-angelic-path --test-timeout 1 --angelic-search-strategy symbolic --defect if-conditions loop-conditions --ignore-trans-errors --ignore-infer-errors --klee-max-forks 200 --group-size 1 --initial-tests 1 --klee-solver-timeout 100 --klee-search dfs --klee-timeout 7200 --mute-warning --forced-to-use-bool --ignore-unmatched-execution --use-gcc --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+[repair-wireshark] strat: symbolic
+[repair-wireshark] cleaning wireshark-bug-37172-37171/wireshark ...
+[repair-wireshark] cleaning wireshark-fix-37172-37171/wireshark ...
+[repair-wireshark] wireshark_test_suite: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42 44
+45
+46
+47
+48
+49
+50 6000 6001 6002 6003 6004 6005 6006 6007 6008 6009 6011 6012 6013 6014
+[repair-wireshark] angelix wireshark-bug-37172-37171/wireshark dumpcap.c /angelix-experiments/.aux/wireshark/wireshark-oracle 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42 44
+45
+46
+47
+48
+49
+50 6000 6001 6002 6003 6004 6005 6006 6007 6008 6009 6011 6012 6013 6014 --golden wireshark-fix-37172-37171/wireshark --build /angelix-experiments/.aux/wireshark/wireshark-make --configure /angelix-experiments/.aux/wireshark/configure-37172-37171  --ignore-lines --lines 4106 --skip-validating-angelic-path --test-timeout 1 --angelic-search-strategy symbolic --defect if-conditions loop-conditions --ignore-trans-errors --ignore-infer-errors --klee-max-forks 200 --group-size 1 --initial-tests 1 --klee-solver-timeout 100 --klee-search dfs --klee-timeout 7200 --mute-warning --forced-to-use-bool --ignore-unmatched-execution --use-gcc --timeout 14400 --show-suspicious-locations --group-size 1 --defect if-conditions loop-conditions
+INFO     repair          copy wireshark-bug-37172-37171/wireshark to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '14' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '15' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '16' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '32' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '33' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '34' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '35' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '36' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '37' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '49' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '1' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '2' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '3' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '4' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '6' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '7' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '14' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '15' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '16' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '31' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '32' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '33' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '34' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '35' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '36' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '37' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '38' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '39' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '40' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '41' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '42' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '44' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '45' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '46' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '47' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '48' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '49' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of golden source
+INFO     testing         output code: 1
+WARNING  repair          excluding test 1 because it fails in golden version
+WARNING  repair          excluding test 2 because it fails in golden version
+WARNING  repair          excluding test 3 because it fails in golden version
+WARNING  repair          excluding test 4 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 6 because it fails in golden version
+WARNING  repair          excluding test 7 because it fails in golden version
+WARNING  repair          excluding test 8 because it fails in golden version
+WARNING  repair          excluding test 9 because it fails in golden version
+WARNING  repair          excluding test 10 because it fails in golden version
+WARNING  repair          excluding test 11 because it fails in golden version
+WARNING  repair          excluding test 12 because it fails in golden version
+WARNING  repair          excluding test 13 because it fails in golden version
+WARNING  repair          excluding test 14 because it fails in golden version
+WARNING  repair          excluding test 15 because it fails in golden version
+WARNING  repair          excluding test 16 because it fails in golden version
+WARNING  repair          excluding test 17 because it fails in golden version
+WARNING  repair          excluding test 18 because it fails in golden version
+WARNING  repair          excluding test 19 because it fails in golden version
+WARNING  repair          excluding test 20 because it fails in golden version
+WARNING  repair          excluding test 21 because it fails in golden version
+WARNING  repair          excluding test 22 because it fails in golden version
+WARNING  repair          excluding test 23 because it fails in golden version
+WARNING  repair          excluding test 24 because it fails in golden version
+WARNING  repair          excluding test 25 because it fails in golden version
+WARNING  repair          excluding test 26 because it fails in golden version
+WARNING  repair          excluding test 27 because it fails in golden version
+WARNING  repair          excluding test 28 because it fails in golden version
+WARNING  repair          excluding test 29 because it fails in golden version
+WARNING  repair          excluding test 30 because it fails in golden version
+WARNING  repair          excluding test 31 because it fails in golden version
+WARNING  repair          excluding test 32 because it fails in golden version
+WARNING  repair          excluding test 33 because it fails in golden version
+WARNING  repair          excluding test 34 because it fails in golden version
+WARNING  repair          excluding test 35 because it fails in golden version
+WARNING  repair          excluding test 36 because it fails in golden version
+WARNING  repair          excluding test 37 because it fails in golden version
+WARNING  repair          excluding test 38 because it fails in golden version
+WARNING  repair          excluding test 39 because it fails in golden version
+WARNING  repair          excluding test 40 because it fails in golden version
+WARNING  repair          excluding test 41 because it fails in golden version
+WARNING  repair          excluding test 42 because it fails in golden version
+WARNING  repair          excluding test 44 because it fails in golden version
+WARNING  repair          excluding test 45 because it fails in golden version
+WARNING  repair          excluding test 47 because it fails in golden version
+WARNING  repair          excluding test 48 because it fails in golden version
+WARNING  repair          excluding test 49 because it fails in golden version
+WARNING  repair          excluding test 50 because it fails in golden version
+INFO     repair          positive: []
+INFO     repair          negative: ['46']
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+INFO     project         building frontend source
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '46' of frontend source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '46' of golden source
+INFO     testing         output code: 0
+INFO     repair          repair test suite: ['46', '6000', '6001', '6002', '6003', '6004', '6005', '6006', '6007', '6008', '6009', '6011', '6012', '6013', '6014']
+INFO     repair          validation test suite: ['46', '6000', '6001', '6002', '6003', '6004', '6005', '6006', '6007', '6008', '6009', '6011', '6012', '6013', '6014']
+INFO     localization    (loc, score) = (('I', (3897, 13, 3897, 33)), 1.0)
+INFO     localization    (loc, score) = (('I', (3920, 9, 3920, 9)), 1.0)
+INFO     localization    (loc, score) = (('L', (3570, 15, 3570, 17)), 1.0)
+INFO     localization    (loc, score) = (('I', (3879, 9, 3879, 9)), 1.0)
+INFO     localization    (loc, score) = (('I', (3962, 9, 3962, 9)), 1.0)
+INFO     localization    (loc, score) = (('I', (4057, 9, 4057, 101)), 1.0)
+INFO     localization    (loc, score) = (('I', (3863, 9, 3863, 17)), 1.0)
+INFO     localization    (loc, score) = (('L', (3978, 17, 3978, 21)), 1.0)
+INFO     localization    (loc, score) = (('I', (4106, 9, 4106, 101)), 1.0)
+INFO     localization    (loc, score) = (('I', (3799, 16, 3799, 26)), 1.0)
+INFO     localization    (loc, score) = (('I', (3611, 9, 3611, 29)), 1.0)
+INFO     localization    (loc, score) = (('I', (3884, 9, 3884, 25)), 1.0)
+INFO     localization    (loc, score) = (('I', (3887, 16, 3887, 33)), 1.0)
+INFO     localization    (loc, score) = (('I', (3870, 9, 3870, 17)), 1.0)
+INFO     localization    group 1: [('L', (3570, 15, 3570, 17))] (1.0)
+INFO     localization    group 2: [('I', (3611, 9, 3611, 29))] (1.0)
+INFO     localization    group 3: [('I', (3799, 16, 3799, 26))] (1.0)
+INFO     localization    group 4: [('I', (3863, 9, 3863, 17))] (1.0)
+INFO     localization    group 5: [('I', (3870, 9, 3870, 17))] (1.0)
+INFO     localization    group 6: [('I', (3879, 9, 3879, 9))] (1.0)
+INFO     localization    group 7: [('I', (3884, 9, 3884, 25))] (1.0)
+INFO     localization    group 8: [('I', (3887, 16, 3887, 33))] (1.0)
+INFO     localization    group 9: [('I', (3897, 13, 3897, 33))] (1.0)
+INFO     localization    group 10: [('I', (3920, 9, 3920, 9))] (1.0)
+INFO     localization    group 11: [('I', (3962, 9, 3962, 9))] (1.0)
+INFO     localization    group 12: [('L', (3978, 17, 3978, 21))] (1.0)
+INFO     localization    group 13: [('I', (4057, 9, 4057, 101))] (1.0)
+INFO     localization    group 14: [('I', (4106, 9, 4106, 101))] (1.0)
+INFO     localization    selected expressions [('L', (3570, 15, 3570, 17))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3611, 9, 3611, 29))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3799, 16, 3799, 26))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3863, 9, 3863, 17))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3870, 9, 3870, 17))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3879, 9, 3879, 9))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3884, 9, 3884, 25))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3887, 16, 3887, 33))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3897, 13, 3897, 33))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3920, 9, 3920, 9))] with group score 1.0 
+INFO     localization    selected expressions [('I', (3962, 9, 3962, 9))] with group score 1.0 
+INFO     localization    selected expressions [('L', (3978, 17, 3978, 21))] with group score 1.0 
+INFO     localization    selected expressions [('I', (4057, 9, 4057, 101))] with group score 1.0 
+INFO     localization    selected expressions [('I', (4106, 9, 4106, 101))] with group score 1.0 
+INFO     repair          considering suspicious locations [('L', (3570, 15, 3570, 17))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3570, 15, 3570, 17)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3570, 15, 3570, 17)[0]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[1]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000003.smt2
+INFO     sym_infer       expression (3570, 15, 3570, 17)[0]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[1]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[2]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000004.smt2
+INFO     sym_infer       expression (3570, 15, 3570, 17)[0]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[1]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[2]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[3]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000005.smt2
+INFO     sym_infer       expression (3570, 15, 3570, 17)[0]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[1]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[2]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[3]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[4]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000006.smt2
+INFO     sym_infer       expression (3570, 15, 3570, 17)[0]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[1]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[2]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[3]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[4]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[5]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000007.smt2
+INFO     sym_infer       expression (3570, 15, 3570, 17)[0]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[1]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[2]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[3]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[4]: angelic = True
+INFO     sym_infer       expression (3570, 15, 3570, 17)[5]: angelic = True
+INFO     sym_infer       found 7 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3570, 15, 3570, 17): (i < argc) ---> (i < argc)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3570, 15, 3570, 17): (i < argc) ---> (i < argc)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (3611, 9, 3611, 29))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3611, 9, 3611, 29)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3611, 9, 3611, 29)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       synthesis failed
+INFO     synthesis       synthesizing patch with component level 'integer-constants'
+INFO     synthesis       use old synth
+INFO     synthesis       synthesis failed
+INFO     synthesis       synthesizing patch with component level 'boolean-constants'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3611, 9, 3611, 29): (! 1) ---> (! 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       synthesis failed
+INFO     synthesis       synthesizing patch with component level 'integer-constants'
+INFO     synthesis       use old synth
+INFO     synthesis       synthesis failed
+INFO     synthesis       synthesizing patch with component level 'boolean-constants'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3611, 9, 3611, 29): (! 1) ---> (! 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (3799, 16, 3799, 26))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3799, 16, 3799, 26)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3799, 16, 3799, 26)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3799, 16, 3799, 26): (status != 0) ---> (status != 0)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3799, 16, 3799, 26): (status != 0) ---> (status != 0)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (3863, 9, 3863, 17))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3863, 9, 3863, 17)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3863, 9, 3863, 17)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3863, 9, 3863, 17): (argc >= 1) ---> (argc >= 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3863, 9, 3863, 17): (argc >= 1) ---> (argc >= 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (3870, 9, 3870, 17))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3870, 9, 3870, 17)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3870, 9, 3870, 17)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3870, 9, 3870, 17): (argc != 0) ---> (argc != 0)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3870, 9, 3870, 17): (argc != 0) ---> (argc != 0)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (3879, 9, 3879, 9))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3879, 9, 3879, 9)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3879, 9, 3879, 9)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3879, 9, 3879, 9): arg_error ---> arg_error
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3879, 9, 3879, 9): arg_error ---> arg_error
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (3884, 9, 3884, 25))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3884, 9, 3884, 25)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3884, 9, 3884, 25)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3884, 9, 3884, 25): (run_once_args > 1) ---> (run_once_args > 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3884, 9, 3884, 25): (run_once_args > 1) ---> (run_once_args > 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (3887, 16, 3887, 33))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3887, 16, 3887, 33)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3887, 16, 3887, 33)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3887, 16, 3887, 33): (run_once_args == 1) ---> (run_once_args == 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+INFO     testing         output code: 1
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3887, 16, 3887, 33): (run_once_args == 1) ---> (run_once_args == 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (3897, 13, 3897, 33))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3897, 13, 3897, 33)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3897, 13, 3897, 33)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3897, 13, 3897, 33): global_capture_opts.multi_files_on ---> global_capture_opts.multi_files_on
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3897, 13, 3897, 33): global_capture_opts.multi_files_on ---> global_capture_opts.multi_files_on
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (3920, 9, 3920, 9))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3920, 9, 3920, 9)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3920, 9, 3920, 9)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3920, 9, 3920, 9): list_interfaces ---> list_interfaces
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3920, 9, 3920, 9): list_interfaces ---> list_interfaces
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (3962, 9, 3962, 9))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3962, 9, 3962, 9)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3962, 9, 3962, 9)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3962, 9, 3962, 9): print_statistics ---> print_statistics
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3962, 9, 3962, 9): print_statistics ---> print_statistics
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('L', (3978, 17, 3978, 21))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (3978, 17, 3978, 21)[0]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (3978, 17, 3978, 21)[0]: angelic = True
+INFO     sym_infer       found 2 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3978, 17, 3978, 21): (j < 1) ---> (j < 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (3978, 17, 3978, 21): (j < 1) ---> (j < 1)
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          considering suspicious locations [('I', (4057, 9, 4057, 101))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       found 1 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+WARNING  synthesis       patch contains no changes
+INFO     repair          cannot synthesize fix
+INFO     repair          considering suspicious locations [('I', (4106, 9, 4106, 101))]
+INFO     reduction       all failing tests: ['46']
+INFO     reduction       select 1 best tests from ['46']
+INFO     reduction       select 0 best tests from []
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['46']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '46' through KLEE
+INFO     testing         running test '46' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       checking whether /angelix-experiments/.angelix/backend/klee-out-0 exists...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[29]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[30]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[31]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[32]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[33]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[34]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[35]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[36]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[37]: angelic = False
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[29]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[30]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[31]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[32]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[33]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[34]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[35]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[36]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[37]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000003.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[29]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[30]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[31]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[32]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[33]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[34]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[35]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[36]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000004.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[29]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[30]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[31]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[32]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[33]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[34]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[35]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000005.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[29]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[30]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[31]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[32]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[33]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[34]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000006.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[29]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[30]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[31]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[32]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[33]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000007.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[29]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[30]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[31]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[32]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000008.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[29]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[30]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[31]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000009.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[29]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[30]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000010.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[29]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000011.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[28]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000012.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[27]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000013.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[26]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000014.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[25]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000015.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[24]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000016.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[23]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000017.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[22]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000018.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[21]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000019.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[20]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000020.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[19]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000021.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[18]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000022.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[17]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000023.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[16]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000024.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[15]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000025.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[14]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000026.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[13]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000027.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[12]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000028.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[11]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000029.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[10]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000030.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[9]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000031.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[8]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000032.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[7]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000033.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[6]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000034.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[5]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000035.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[4]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000036.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[3]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000037.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[2]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000038.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = False
+INFO     sym_infer       expression (4106, 9, 4106, 101)[1]: angelic = True
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000039.smt2
+INFO     sym_infer       expression (4106, 9, 4106, 101)[0]: angelic = True
+INFO     sym_infer       found 39 angelic paths for test '46'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+WARNING  synthesis       timeout when synthesizing fix
+INFO     synthesis       synthesizing patch with component level 'integer-constants'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (4106, 9, 4106, 101): (! ((log_level && ((- 4) != 0)) && (! ((128 != 0) || (64 != 0))))) ---> (! ((log_level && ((- 4) != 0)) && (! ((128 != 0) || (64 != 0)))))
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use old synth
+INFO     synthesis       fixing expression (4106, 9, 4106, 101): (! ((log_level && ((- 4) != 0)) && (! ((128 != 0) || (64 != 0))))) ---> (! ((log_level && ((- 4) != 0)) && (! ((128 != 0) || (64 != 0)))))
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6000' of validation source
+WARNING  testing         timeout in test 6000
+INFO     testing         running test '6001' of validation source
+WARNING  testing         timeout in test 6001
+INFO     testing         running test '6002' of validation source
+WARNING  testing         timeout in test 6002
+INFO     testing         running test '6003' of validation source
+WARNING  testing         timeout in test 6003
+INFO     testing         running test '6004' of validation source
+WARNING  testing         timeout in test 6004
+INFO     testing         running test '6005' of validation source
+WARNING  testing         timeout in test 6005
+INFO     testing         running test '6006' of validation source
+WARNING  testing         timeout in test 6006
+INFO     testing         running test '6007' of validation source
+WARNING  testing         timeout in test 6007
+INFO     testing         running test '6008' of validation source
+WARNING  testing         timeout in test 6008
+INFO     testing         running test '6009' of validation source
+WARNING  testing         timeout in test 6009
+INFO     testing         running test '6011' of validation source
+WARNING  testing         timeout in test 6011
+INFO     testing         running test '6012' of validation source
+WARNING  testing         timeout in test 6012
+INFO     testing         running test '6013' of validation source
+WARNING  testing         timeout in test 6013
+INFO     testing         running test '6014' of validation source
+WARNING  testing         timeout in test 6014
+WARNING  repair          generated invalid fix (tests ['46'] not repaired)
+WARNING  repair          max repair attempts (2) was exhausted
+INFO     repair          no patch generated in 2h 6m 40s
+FAIL

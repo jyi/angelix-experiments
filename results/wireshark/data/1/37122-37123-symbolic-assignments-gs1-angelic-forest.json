@@ -1,0 +1,24 @@
+{
+  "6008": [
+    [
+      {
+        "context": [
+          {
+            "name": "hash_val",
+            "value": 0
+          },
+          {
+            "name": "key->id",
+            "value": 12
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": 16843009
+        },
+        "expression": "147-14-147-19",
+        "instId": 0
+      }
+    ]
+  ]
+}

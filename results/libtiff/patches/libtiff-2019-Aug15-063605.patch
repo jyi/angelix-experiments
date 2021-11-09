@@ -1,0 +1,11 @@
+--- a/libtiff/tif_dirread.c
++++ b/libtiff/tif_dirread.c
+@@ -973,7 +973,7 @@
+ 	tsize_t cc = dir->tdir_count * w;
+ 
+ 	/* Check for overflow. */
+-	if ((dir->tdir_count == 0) || (w == 0) || dir->tdir_count / w != cc)
++	if (((dir->tdir_count == w) || (w == 0)))
+ 		goto bad;
+ 
+ 	if (!isMapped(tif)) {

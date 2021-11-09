@@ -1,0 +1,28 @@
+{
+  "19": [
+    [
+      {
+        "context": [
+          {
+            "name": "bsize",
+            "value": 0
+          },
+          {
+            "name": "siz",
+            "value": 1
+          },
+          {
+            "name": "asize",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "59-10-59-10",
+        "instId": 0
+      }
+    ]
+  ]
+}

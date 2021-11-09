@@ -1,0 +1,844 @@
+[repair] benchmark: manybugs
+[repair] subject: php
+[repair] version: 2011-02-01-01745fa657-1f49902999
+[repair] search: symbolic
+[repair] ./fetch php manybugs 2011-02-01-01745fa657-1f49902999
+[fetch] benchmark: manybugs
+[fetch] subject: php
+[fetch] version: 2011-02-01-01745fa657-1f49902999
+[fetch] archive: php-bug-2011-02-01-01745fa657-1f49902999.tar.gz
+[fetch] directory: php-bug-2011-02-01-01745fa657-1f49902999
+[fetch] preparing source code
+[fetch] golden_directory: php-fix-2011-02-01-01745fa657-1f49902999
+[fetch] clean-source php-bug-2011-02-01-01745fa657-1f49902999
+[fetch] /angelix-experiments/php-bug-2011-02-01-01745fa657-1f49902999/php/configure
+[fetch] make clean
+[fetch] clean-source php-fix-2011-02-01-01745fa657-1f49902999
+[fetch] restore-buggy php-bug-2011-02-01-01745fa657-1f49902999
+[fetch] /angelix-experiments/php-fix-2011-02-01-01745fa657-1f49902999/php/configure
+[fetch] make clean
+[fetch] buggy: main/streams/userspace.c
+[fetch] buggy_preprocessed: php-bug-2011-02-01-01745fa657-1f49902999/php/main/streams/userspace.c
+[fetch] buggy_version: 01745fa657
+[fetch] buggy_original: php-bug-2011-02-01-01745fa657-1f49902999/diffs/main/streams/userspace.c-01745fa657a9b3f8a8f79520a87c265ec3725792
+[fetch] cp php-bug-2011-02-01-01745fa657-1f49902999/diffs/main/streams/userspace.c-01745fa657a9b3f8a8f79520a87c265ec3725792 php-bug-2011-02-01-01745fa657-1f49902999/php/main/streams/userspace.c
+[fetch] restore-correct php-fix-2011-02-01-01745fa657-1f49902999
+[fetch] cp php-fix-2011-02-01-01745fa657-1f49902999/diffs/main/streams/userspace.c-1f4990299927a9fdf24676ebbd1c7f6729aa3838 php-fix-2011-02-01-01745fa657-1f49902999/php/main/streams/userspace.c
+[fetch] restored php-fix-2011-02-01-01745fa657-1f49902999/php/main/streams/userspace.c with php-fix-2011-02-01-01745fa657-1f49902999/diffs/main/streams/userspace.c-1f4990299927a9fdf24676ebbd1c7f6729aa3838
+[fetch] fetch done
+[repair-php] options:  --defect if-conditions loop-conditions --ignore-lines --all-suspicious --group-size 1 --test-timeout 60 --klee-timeout 7200 --timeout 14400 --klee-solver-timeout 100 --synthesis-ptr-vars --use-nsynth --synthesis-levels alternatives integer-constants boolean-constants variables extended-arithmetic extended-logic mixed-conditional --angelic-search-strategy symbolic --synthesis-ptr-vars --klee-max-forks 100 --lines 911
+INFO     repair          copy php-bug-2011-02-01-01745fa657-1f49902999/php to /angelix-experiments/.angelix/validation
+INFO     project         configuring validation source
+INFO     project         building json compilation database from validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '2' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '4' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '7' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '14' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '15' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '16' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '32' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '33' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '34' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '35' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '36' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '37' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '38' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '39' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '40' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '41' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '42' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '43' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '44' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '45' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '46' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '47' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '49' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '50' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '51' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '52' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '53' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '54' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '55' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '56' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '57' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '58' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '59' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '60' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '61' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '71' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '72' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '73' of validation source
+INFO     testing         output code: 1
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of validation source
+INFO     testing         output code: 0
+INFO     project         configuring frontend source
+INFO     transformation  instrumenting repairable of frontend source
+INFO     project         building frontend source
+INFO     repair          running positive tests for debugging
+INFO     testing         running test '1' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '31' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '49' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of frontend source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of frontend source
+INFO     testing         output code: 0
+INFO     repair          running negative tests for debugging
+INFO     testing         running test '2' of frontend source
+INFO     testing         output code: 1
+INFO     project         configuring golden source
+INFO     project         building golden source
+INFO     testing         running test '2' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '4' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '4' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '5' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '7' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '7' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '8' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '9' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 9
+INFO     testing         running test '9' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 9
+INFO     testing         running test '10' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '10' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '11' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '12' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '13' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+INFO     testing         running test '13' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 13
+INFO     testing         running test '14' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '14' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '15' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 15
+INFO     testing         running test '15' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 15
+INFO     testing         running test '16' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '16' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '17' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '18' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '19' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '20' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '21' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '22' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '23' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '24' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '25' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '26' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '27' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '28' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '29' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '30' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '32' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '32' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '33' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '33' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '34' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '34' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '35' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '35' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '36' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '36' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '37' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '37' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '38' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '38' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '39' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '39' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '40' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '40' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '41' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '41' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '42' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '42' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '43' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '43' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '44' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '44' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '45' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '45' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '46' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '46' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '47' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '47' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '50' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+INFO     testing         running test '50' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 50
+INFO     testing         running test '51' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '51' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '52' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '52' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '53' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '53' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '54' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '54' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '55' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '55' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '56' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '56' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '57' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '57' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '58' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '58' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '59' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '59' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '60' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '60' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '61' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '61' of golden source
+INFO     testing         output code: 1
+INFO     testing         running test '62' of frontend source
+INFO     testing         output code: 1
+INFO     testing         running test '62' of golden source
+INFO     testing         output code: 0
+INFO     testing         running test '71' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 71
+INFO     testing         running test '71' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 71
+INFO     testing         running test '72' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 72
+INFO     testing         running test '72' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 72
+INFO     testing         running test '73' of frontend source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 73
+INFO     testing         running test '73' of golden source
+INFO     testing         output code: 1
+WARNING  testing         ANGELIX_RUN is not executed by test 73
+WARNING  repair          excluding test 2 because it fails in golden version
+WARNING  repair          excluding test 4 because it fails in golden version
+WARNING  repair          excluding test 5 because it fails in golden version
+WARNING  repair          excluding test 7 because it fails in golden version
+WARNING  repair          excluding test 8 because it fails in golden version
+WARNING  repair          excluding test 9 because it fails in golden version
+WARNING  repair          excluding test 10 because it fails in golden version
+WARNING  repair          excluding test 11 because it fails in golden version
+WARNING  repair          excluding test 12 because it fails in golden version
+WARNING  repair          excluding test 13 because it fails in golden version
+WARNING  repair          excluding test 14 because it fails in golden version
+WARNING  repair          excluding test 15 because it fails in golden version
+WARNING  repair          excluding test 16 because it fails in golden version
+WARNING  repair          excluding test 17 because it fails in golden version
+WARNING  repair          excluding test 18 because it fails in golden version
+WARNING  repair          excluding test 19 because it fails in golden version
+WARNING  repair          excluding test 20 because it fails in golden version
+WARNING  repair          excluding test 21 because it fails in golden version
+WARNING  repair          excluding test 22 because it fails in golden version
+WARNING  repair          excluding test 23 because it fails in golden version
+WARNING  repair          excluding test 24 because it fails in golden version
+WARNING  repair          excluding test 25 because it fails in golden version
+WARNING  repair          excluding test 26 because it fails in golden version
+WARNING  repair          excluding test 27 because it fails in golden version
+WARNING  repair          excluding test 28 because it fails in golden version
+WARNING  repair          excluding test 29 because it fails in golden version
+WARNING  repair          excluding test 30 because it fails in golden version
+WARNING  repair          excluding test 32 because it fails in golden version
+WARNING  repair          excluding test 33 because it fails in golden version
+WARNING  repair          excluding test 34 because it fails in golden version
+WARNING  repair          excluding test 35 because it fails in golden version
+WARNING  repair          excluding test 36 because it fails in golden version
+WARNING  repair          excluding test 37 because it fails in golden version
+WARNING  repair          excluding test 38 because it fails in golden version
+WARNING  repair          excluding test 39 because it fails in golden version
+WARNING  repair          excluding test 40 because it fails in golden version
+WARNING  repair          excluding test 41 because it fails in golden version
+WARNING  repair          excluding test 42 because it fails in golden version
+WARNING  repair          excluding test 43 because it fails in golden version
+WARNING  repair          excluding test 44 because it fails in golden version
+WARNING  repair          excluding test 45 because it fails in golden version
+WARNING  repair          excluding test 46 because it fails in golden version
+WARNING  repair          excluding test 47 because it fails in golden version
+WARNING  repair          excluding test 50 because it fails in golden version
+WARNING  repair          excluding test 51 because it fails in golden version
+WARNING  repair          excluding test 52 because it fails in golden version
+WARNING  repair          excluding test 53 because it fails in golden version
+WARNING  repair          excluding test 54 because it fails in golden version
+WARNING  repair          excluding test 55 because it fails in golden version
+WARNING  repair          excluding test 56 because it fails in golden version
+WARNING  repair          excluding test 57 because it fails in golden version
+WARNING  repair          excluding test 58 because it fails in golden version
+WARNING  repair          excluding test 59 because it fails in golden version
+WARNING  repair          excluding test 60 because it fails in golden version
+WARNING  repair          excluding test 61 because it fails in golden version
+WARNING  repair          excluding test 71 because it fails in golden version
+WARNING  repair          excluding test 72 because it fails in golden version
+WARNING  repair          excluding test 73 because it fails in golden version
+INFO     repair          repair test suite: ['1', '3', '6', '31', '48', '49', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     repair          validation test suite: ['1', '3', '6', '31', '48', '49', '62', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     localization    selected expressions [(271, 6, 271, 42)] with group score 1.0 
+INFO     localization    selected expressions [(282, 5, 282, 30)] with group score 1.0 
+INFO     localization    selected expressions [(297, 6, 297, 17)] with group score 1.0 
+INFO     localization    selected expressions [(333, 6, 333, 6)] with group score 1.0 
+INFO     localization    selected expressions [(369, 6, 369, 43)] with group score 1.0 
+INFO     localization    selected expressions [(387, 6, 387, 16)] with group score 1.0 
+INFO     localization    selected expressions [(391, 6, 391, 6)] with group score 1.0 
+INFO     localization    selected expressions [(732, 6, 732, 6)] with group score 1.0 
+INFO     localization    selected expressions [(759, 6, 759, 42)] with group score 1.0 
+INFO     localization    selected expressions [(764, 6, 764, 6)] with group score 1.0 
+INFO     localization    selected expressions [(911, 6, 911, 42)] with group score 1.0 
+INFO     localization    selected expressions [(921, 6, 921, 6)] with group score 1.0 
+INFO     repair          considering suspicious expressions [(271, 6, 271, 42)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '62'
+INFO     repair          considering suspicious expressions [(282, 5, 282, 30)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '62'
+INFO     repair          considering suspicious expressions [(297, 6, 297, 17)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '62'
+INFO     repair          considering suspicious expressions [(333, 6, 333, 6)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '62'
+INFO     repair          considering suspicious expressions [(369, 6, 369, 43)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '62'
+INFO     repair          considering suspicious expressions [(387, 6, 387, 16)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '62'
+INFO     repair          considering suspicious expressions [(391, 6, 391, 6)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '62'
+INFO     repair          considering suspicious expressions [(732, 6, 732, 6)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '62'
+INFO     repair          considering suspicious expressions [(759, 6, 759, 42)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '62'
+INFO     repair          considering suspicious expressions [(764, 6, 764, 6)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 0 angelic paths for test '62'
+INFO     repair          considering suspicious expressions [(911, 6, 911, 42)]
+INFO     reduction       all failing tests: ['62']
+INFO     reduction       select 1 best tests from ['62']
+INFO     reduction       select 0 best tests from ['1', '3', '6', '31', '48', '49', '63', '64', '65', '66', '67', '68', '69', '70', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85']
+INFO     reduction       selected 1 tests
+INFO     reduction       selected passing tests: []
+INFO     reduction       selected failing tests: ['62']
+INFO     project         configuring backend source
+INFO     transformation  instrumenting suspicious of backend source
+INFO     project         building backend source
+INFO     sym_infer       inferring specification for test '62' through KLEE
+INFO     testing         running test '62' of backend source with KLEE
+INFO     testing         output code: 1
+INFO     sym_infer       sleeping for 1 second...
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000001.smt2
+INFO     sym_infer       expression (911, 6, 911, 42)[0]: angelic = False
+INFO     testing         running test '62' of frontend source
+INFO     testing         output code: 0
+INFO     sym_infer       solving path .angelix/backend/klee-out-0/test000002.smt2
+INFO     sym_infer       value 'php_out' executed 2 times while 1 required
+INFO     sym_infer       found 1 angelic paths for test '62'
+INFO     synthesis       synthesizing patch with component level 'alternatives'
+INFO     synthesis       use nsynth
+INFO     synthesis       fixing expression (911, 6, 911, 42): ((call_result == 0) && (retval != 0)) ---> ((call_result > 0) && (retval != 0))
+INFO     repair          candidate fix synthesized
+INFO     transformation  applying patch to validation source
+INFO     project         building validation source
+INFO     testing         running test '1' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '3' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '6' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '31' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '48' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '49' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '62' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '63' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '64' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '65' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '66' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '67' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '68' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '69' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '70' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '74' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '75' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '76' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '77' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '78' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '79' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '80' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '81' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '82' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '83' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '84' of validation source
+INFO     testing         output code: 0
+INFO     testing         running test '85' of validation source
+INFO     testing         output code: 0
+INFO     repair          patch successfully generated in 19m 5s (see php-2019-Aug06-013125.patch)
+SUCCESS

@@ -1,0 +1,11 @@
+--- a/dumpcap.c
++++ b/dumpcap.c
+@@ -4315,7 +4315,7 @@
+ 
+     /* DEBUG & INFO msgs (if we're debugging today)                 */
+ #if defined(DEBUG_DUMPCAP) || defined(DEBUG_CHILD_DUMPCAP)
+-    if( !(log_level && (G_LOG_LEVEL_MASK != 0) && !(G_LOG_LEVEL_DEBUG != 0 || G_LOG_LEVEL_INFO != 0))) {
++    if( (! ((- 4) != 0))) {
+ #ifdef DEBUG_DUMPCAP
+         fprintf(stderr, "%s", msg);
+         fflush(stderr);

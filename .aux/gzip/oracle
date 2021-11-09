@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "[oracle] /angelix-experiments/.aux/gzip/gzip-run-tests.pl $1"
+perl "/angelix-experiments/.aux/gzip/gzip-run-tests.pl" $1

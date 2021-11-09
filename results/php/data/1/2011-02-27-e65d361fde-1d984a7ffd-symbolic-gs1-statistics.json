@@ -1,0 +1,236 @@
+{
+  "file": "/angelix-experiments/.angelix/statistics.json",
+  "src": "php-bug-2011-02-27-e65d361fde-1d984a7ffd/php",
+  "buggy": "ext/tokenizer/tokenizer.c",
+  "patch_found": true,
+  "patch_file": "php-2019-Aug11-042508.patch",
+  "config": {
+    "initial_tests": 1,
+    "all_tests": false,
+    "max_z3_trials": 2,
+    "defect": [
+      "if-conditions",
+      "loop-conditions"
+    ],
+    "test_timeout": 60,
+    "group_size": 1,
+    "group_by_score": false,
+    "localize_from_bottom": false,
+    "suspicious": 20,
+    "localization": "jaccard",
+    "ignore_trivial": false,
+    "path_solving_timeout": 60000,
+    "max_angelic_paths": null,
+    "klee_max_forks": 200,
+    "klee_max_depth": null,
+    "klee_search": "dfs",
+    "klee_timeout": 7200,
+    "klee_solver_timeout": 100,
+    "klee_debug": false,
+    "klee_ignore_errors": false,
+    "ignore_trans_errors": false,
+    "ignore_infer_errors": false,
+    "use_nsynth": true,
+    "use_osynth": false,
+    "synthesis_timeout": 30000,
+    "synthesis_levels": [
+      "alternatives",
+      "integer-constants",
+      "boolean-constants",
+      "variables",
+      "extended-arithmetic",
+      "extended-logic",
+      "mixed-conditional"
+    ],
+    "synthesis_global_vars": false,
+    "synthesis_func_params": false,
+    "synthesis_used_vars": true,
+    "synthesis_ptr_vars": true,
+    "synthesis_bool_only": false,
+    "generate_all": false,
+    "init_uninit_vars": false,
+    "redundant_test": false,
+    "verbose": false,
+    "build_before_instr": false,
+    "instr_printf": null,
+    "mute_build_message": false,
+    "mute_test_message": false,
+    "show_test_message": false,
+    "show_syn_message": false,
+    "mute_warning": false,
+    "show_suspicious_locations": false,
+    "invalid_localization": false,
+    "angelic_search_strategy": "symbolic",
+    "compilation_db_file": null,
+    "keep_angelix_dir": false,
+    "skip_configure": false,
+    "skip_build": false,
+    "lines": [
+      154
+    ],
+    "search_max_trials": 30,
+    "max_same_cost_iter": 20,
+    "mcmc_beta": 0.8,
+    "one_bit_flip_prob": 0.5,
+    "chunk_bits": 32,
+    "max_resample": 3,
+    "block_expand_factor": 2,
+    "inc_fix": false,
+    "default_max_cost": 2,
+    "error_cost": "0",
+    "warning_cost": "0",
+    "max_syn_attempts": 2,
+    "max_repair_attempts": 2,
+    "penalty1": "1",
+    "penalty2": "1",
+    "parallel_testing": false,
+    "all_suspicious": true,
+    "mutate": 0,
+    "epsilon": 1.0,
+    "always_accept": false,
+    "default_susp_score": 0.5,
+    "additional_susp_locs": null,
+    "default_non_zero_cost": "1"
+  },
+  "time": {
+    "testing": 57.02276659011841,
+    "compilation": 426.7373740673065,
+    "klee": 847.0552232265472,
+    "synthesis": 2.242540121078491,
+    "solving": 15.65446662902832,
+    "inference": 866.7410216331482,
+    "dd": 0,
+    "total": 1116.7813942432404
+  },
+  "iterations": {
+    "synthesis": [
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.3008153438568115
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.24939203262329102
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.22979092597961426
+      },
+      {
+        "tests": 1,
+        "level": "variables",
+        "time": 0.3399808406829834
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.3260979652404785
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.22065949440002441
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.24619150161743164
+      },
+      {
+        "tests": 1,
+        "level": "variables",
+        "time": 0.32961201667785645
+      }
+    ],
+    "guided": [],
+    "symbolic": [
+      {
+        "locations": [
+          [
+            129,
+            7,
+            129,
+            21
+          ]
+        ],
+        "test": "38",
+        "first_ap_found": "UNKNOWN",
+        "time": {
+          "klee": 516.1566565036774,
+          "solving": 14.03606104850769
+        },
+        "paths": {
+          "explored": 128,
+          "angelic_found": false,
+          "angelic": 0
+        }
+      },
+      {
+        "locations": [
+          [
+            133,
+            8,
+            133,
+            22
+          ]
+        ],
+        "test": "38",
+        "first_ap_found": "UNKNOWN",
+        "time": {
+          "klee": 73.14704728126526,
+          "solving": 0.5257065296173096
+        },
+        "paths": {
+          "explored": 5,
+          "angelic_found": false,
+          "angelic": 0
+        }
+      },
+      {
+        "locations": [
+          [
+            148,
+            7,
+            148,
+            35
+          ]
+        ],
+        "test": "38",
+        "first_ap_found": "UNKNOWN",
+        "time": {
+          "klee": 180.32530570030212,
+          "solving": 0.37886667251586914
+        },
+        "paths": {
+          "explored": 36,
+          "angelic_found": false,
+          "angelic": 0
+        }
+      },
+      {
+        "locations": [
+          [
+            154,
+            7,
+            154,
+            12
+          ]
+        ],
+        "test": "38",
+        "first_ap_found": 7,
+        "time": {
+          "klee": 77.42621374130249,
+          "solving": 0.7138323783874512
+        },
+        "paths": {
+          "explored": 8,
+          "angelic_found": true,
+          "angelic": 1
+        }
+      }
+    ]
+  }
+}

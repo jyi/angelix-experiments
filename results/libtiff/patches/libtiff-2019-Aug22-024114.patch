@@ -1,0 +1,12 @@
+--- a/libtiff/tif_dirread.c
++++ b/libtiff/tif_dirread.c
+@@ -586,8 +586,7 @@
+ 		            _TIFFFieldWithTag(tif,TIFFTAG_STRIPBYTECOUNTS)->field_name);
+ 		if(EstimateStripByteCounts(tif, dir, dircount) < 0)
+ 		    goto bad;
+-	} else if (td->td_nstrips > 1
+-		   && td->td_compression == COMPRESSION_NONE
++	} else if (((td->td_nstrips > 2) && (td->td_compression == 1))
+ 		   && td->td_stripbytecount[0] != td->td_stripbytecount[1]) {
+ 		/*
+ 		 * XXX: Some vendors fill StripByteCount array with absolutely

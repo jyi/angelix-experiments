@@ -1,0 +1,11 @@
+--- a/tools/tiffinfo.c
++++ b/tools/tiffinfo.c
+@@ -64,7 +64,7 @@
+ {
+         if (old_error_handler)
+                 (*old_error_handler)(module,fmt,ap);
+-	status = 1;
++	status = 0;
+ }
+ 
+ int

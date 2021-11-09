@@ -1,0 +1,11 @@
+--- a/ext/standard/url_scanner_ex.c
++++ b/ext/standard/url_scanner_ex.c
+@@ -952,7 +952,7 @@
+ 		smart_str_appendl(&ctx->result, "", 0);
+ 	}
+ 	smart_str_0(&ctx->result);
+-	if (!(do_flush == 0)) {
++	if (!(do_flush != 0)) {
+ 		smart_str_appendl(&ctx->result, ctx->buf.c, ctx->buf.len);
+ 		*newlen += ctx->buf.len;
+ 		smart_str_free(&ctx->buf);

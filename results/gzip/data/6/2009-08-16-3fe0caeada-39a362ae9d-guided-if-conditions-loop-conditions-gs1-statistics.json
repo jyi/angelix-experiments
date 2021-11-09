@@ -1,0 +1,1335 @@
+{
+  "file": "/angelix-experiments/.angelix/statistics.json",
+  "src": "gzip-bug-2009-08-16-3fe0caeada-39a362ae9d/gzip",
+  "buggy": "inflate.c",
+  "patch_found": true,
+  "patch_file": "gzip-2020-Apr14-134123.patch",
+  "config": {
+    "initial_tests": 1,
+    "all_tests": false,
+    "max_z3_trials": 2,
+    "defect": [
+      "if-conditions",
+      "loop-conditions"
+    ],
+    "test_timeout": 60,
+    "single_group": false,
+    "group_size": 1,
+    "group_by_score": false,
+    "localize_from_bottom": false,
+    "suspicious": 20,
+    "localization": "jaccard",
+    "ignore_trivial": false,
+    "path_solving_timeout": 60000,
+    "timeout": 14400,
+    "max_angelic_paths": null,
+    "klee_max_forks": null,
+    "klee_max_depth": null,
+    "klee_search": null,
+    "klee_timeout": null,
+    "klee_out_dir_timeout": 60,
+    "klee_solver_timeout": null,
+    "klee_debug": false,
+    "klee_ignore_errors": false,
+    "ignore_trans_errors": false,
+    "ignore_infer_errors": false,
+    "skip_validating_angelic_path": false,
+    "use_nsynth": false,
+    "use_osynth": false,
+    "use_gcc": false,
+    "synthesis_timeout": 30000,
+    "synthesis_levels": [
+      "alternatives",
+      "integer-constants",
+      "boolean-constants"
+    ],
+    "synthesis_global_vars": false,
+    "synthesis_func_params": false,
+    "synthesis_used_vars": true,
+    "synthesis_ptr_vars": false,
+    "synthesis_bool_only": false,
+    "empty_env_exps": false,
+    "exclude_member_exp": false,
+    "generate_all": false,
+    "init_uninit_vars": false,
+    "redundant_test": false,
+    "verbose": false,
+    "build_before_instr": false,
+    "instr_printf": null,
+    "mute_config_message": false,
+    "mute_build_message": false,
+    "mute_test_message": false,
+    "show_test_message": false,
+    "show_oracle_contents": false,
+    "show_syn_message": false,
+    "mute_warning": false,
+    "show_suspicious_locations": true,
+    "invalid_localization": false,
+    "angelic_search_strategy": "guided",
+    "step_method": "metropolis",
+    "compilation_db_file": null,
+    "keep_angelix_dir": false,
+    "skip_configure": false,
+    "skip_build": false,
+    "gobble_klee_message": false,
+    "lines": null,
+    "search_max_trials": 200,
+    "max_same_cost_iter": 20,
+    "mcmc_beta": 0.8,
+    "one_bit_flip_prob": 0.5,
+    "chunk_bits": 32,
+    "max_resample": 3,
+    "block_expand_factor": 2,
+    "inc_fix": false,
+    "default_max_cost": 300000000.0,
+    "error_cost": "10000000",
+    "warning_cost": "5000000",
+    "max_syn_attempts": 2,
+    "max_repair_attempts": 2,
+    "penalty1": "4",
+    "penalty2": "2",
+    "parallel_testing": false,
+    "all_suspicious": true,
+    "mutate": 0,
+    "epsilon": 1.0,
+    "always_accept": false,
+    "skip_dd": false,
+    "finish_after_fault_localize": false,
+    "default_susp_score": 0.5,
+    "additional_susp_locs": null,
+    "default_non_zero_cost": "300000000",
+    "timeout_cost": "1"
+  },
+  "time": {
+    "testing": 48.24330544471741,
+    "compilation": 90.01591849327087,
+    "klee": 0,
+    "synthesis": 15.662700176239014,
+    "solving": 0,
+    "inference": 23.645002365112305,
+    "dd": 5.409134149551392,
+    "total": 155.55196118354797
+  },
+  "iterations": {
+    "synthesis": [
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.805016040802002
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.6878855228424072
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.715796947479248
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.7638108730316162
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.6977715492248535
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7245445251464844
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.7829434871673584
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7662076950073242
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.760878324508667
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.7833881378173828
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7117762565612793
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.7873232364654541
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.7895023822784424
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.790562629699707
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.8858447074890137
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.9667973518371582
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.853950023651123
+      },
+      {
+        "tests": 1,
+        "level": "integer-constants",
+        "time": 0.8119246959686279
+      },
+      {
+        "tests": 1,
+        "level": "boolean-constants",
+        "time": 0.7996234893798828
+      },
+      {
+        "tests": 1,
+        "level": "alternatives",
+        "time": 0.7771522998809814
+      }
+    ],
+    "guided": [
+      {
+        "locations": [
+          [
+            "I",
+            [
+              336,
+              7,
+              336,
+              15
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 2.9623684883117676,
+          "dd": 0.48549795150756836
+        },
+        "paths": {
+          "explored": 3,
+          "sampled": 3,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            10000294.0,
+            10000294.0,
+            0
+          ],
+          "ratio": [
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              339,
+              9,
+              339,
+              10
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 2.3279194831848145,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 4,
+          "sampled": 200,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": true,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            10000294.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            10000294.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            10000294.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            10000294.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            10000294.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            10000294.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            10000294.0,
+            10000294.0,
+            42.0,
+            42.0,
+            10000294.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0,
+            42.0
+          ],
+          "ratio": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              353,
+              15,
+              353,
+              20
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 1.0513691902160645,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            10000294.0
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              354,
+              9,
+              354,
+              12
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 1.0489954948425293,
+          "dd": 0.8655850887298584
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            10000294.0,
+            0
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              359,
+              18,
+              359,
+              18
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 0.9442837238311768,
+          "dd": 0.9654600620269775
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              360,
+              9,
+              360,
+              12
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 1.0445497035980225,
+          "dd": 0.43699169158935547
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              369,
+              20,
+              369,
+              24
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 1.0691487789154053,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            10000294.0
+          ],
+          "ratio": [
+            0.6592406302004438
+          ],
+          "accepted": [
+            false
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              404,
+              10,
+              404,
+              15
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 1.5521435737609863,
+          "dd": 0.43735718727111816
+        },
+        "paths": {
+          "explored": 3,
+          "sampled": 7,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            10000294.0,
+            10000294.0,
+            10000294.0,
+            10000294.0,
+            10000294.0,
+            10000294.0,
+            0
+          ],
+          "ratio": [
+            0.8824969025845955,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              411,
+              14,
+              411,
+              22
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 0.9989087581634521,
+          "dd": 0.8662967681884766
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              446,
+              13,
+              446,
+              13
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 1.0685529708862305,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 2,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            10000157.0
+          ],
+          "ratio": [
+            1.0
+          ],
+          "accepted": [
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              459,
+              11,
+              459,
+              20
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 2.0711092948913574,
+          "dd": 0
+        },
+        "paths": {
+          "explored": 4,
+          "sampled": 5,
+          "angelic_found": false,
+          "angelic": 0,
+          "sample_space_exhausted": true,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            10000294.0,
+            10000294.0,
+            10000294.0,
+            10000294.0
+          ],
+          "ratio": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "accepted": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "locations": [
+          [
+            "L",
+            [
+              475,
+              24,
+              475,
+              28
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 1.0470290184020996,
+          "dd": 0.4346141815185547
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": true,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      },
+      {
+        "locations": [
+          [
+            "I",
+            [
+              548,
+              13,
+              548,
+              18
+            ]
+          ]
+        ],
+        "test": "3",
+        "time": {
+          "mcmc": 1.0494897365570068,
+          "dd": 0.9173312187194824
+        },
+        "paths": {
+          "explored": 2,
+          "sampled": 1,
+          "angelic_found": true,
+          "angelic": 1,
+          "sample_space_exhausted": false,
+          "trials_exhuasted": false,
+          "ebits_overflown": false,
+          "loc_dd_failed": false,
+          "ebits_dd_failed": false,
+          "stuck": false,
+          "cost": [
+            0
+          ],
+          "ratio": [],
+          "accepted": []
+        }
+      }
+    ],
+    "symbolic": [],
+    "random": []
+  }
+}

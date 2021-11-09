@@ -1,0 +1,32 @@
+{
+  "62": [
+    [
+      {
+        "context": [
+          {
+            "name": "us",
+            "value": 1764992768
+          },
+          {
+            "name": "retval",
+            "value": 1764988808
+          },
+          {
+            "name": "ret",
+            "value": -1
+          },
+          {
+            "name": "call_result",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "911-6-911-42",
+        "instId": 0
+      }
+    ]
+  ]
+}

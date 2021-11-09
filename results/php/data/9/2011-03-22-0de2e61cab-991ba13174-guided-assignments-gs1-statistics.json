@@ -1,0 +1,389 @@
+{
+  "file": "/angelix-experiments/.angelix/statistics.json",
+  "src": "UNKNOWN",
+  "buggy": "UNKNOWN",
+  "patch_found": false,
+  "patch_file": "UNKNOWN",
+  "config": {
+    "initial_tests": 1,
+    "all_tests": false,
+    "max_z3_trials": 2,
+    "defect": [
+      "assignments"
+    ],
+    "test_timeout": 60,
+    "single_group": false,
+    "group_size": 1,
+    "group_by_score": false,
+    "localize_from_bottom": false,
+    "suspicious": 20,
+    "localization": "jaccard",
+    "ignore_trivial": false,
+    "path_solving_timeout": 60000,
+    "timeout": 14400,
+    "max_angelic_paths": null,
+    "klee_max_forks": null,
+    "klee_max_depth": null,
+    "klee_search": null,
+    "klee_timeout": 7200,
+    "klee_out_dir_timeout": 1,
+    "klee_solver_timeout": 100,
+    "klee_debug": false,
+    "klee_ignore_errors": false,
+    "ignore_trans_errors": false,
+    "ignore_infer_errors": false,
+    "skip_validating_angelic_path": false,
+    "use_nsynth": false,
+    "use_osynth": false,
+    "use_gcc": true,
+    "synthesis_timeout": 30000,
+    "synthesis_levels": [
+      "alternatives",
+      "integer-constants",
+      "boolean-constants"
+    ],
+    "synthesis_global_vars": false,
+    "synthesis_func_params": false,
+    "synthesis_used_vars": true,
+    "synthesis_ptr_vars": false,
+    "synthesis_bool_only": false,
+    "empty_env_exps": false,
+    "exclude_member_exp": false,
+    "generate_all": false,
+    "init_uninit_vars": false,
+    "redundant_test": false,
+    "verbose": false,
+    "build_before_instr": false,
+    "instr_printf": null,
+    "mute_config_message": false,
+    "mute_build_message": false,
+    "mute_test_message": false,
+    "show_test_message": false,
+    "show_oracle_contents": false,
+    "show_syn_message": false,
+    "mute_warning": false,
+    "show_suspicious_locations": true,
+    "invalid_localization": false,
+    "angelic_search_strategy": "guided",
+    "step_method": "metropolis",
+    "compilation_db_file": null,
+    "keep_angelix_dir": false,
+    "skip_configure": false,
+    "skip_build": false,
+    "gobble_klee_message": false,
+    "lines": null,
+    "search_max_trials": 100,
+    "max_same_cost_iter": 20,
+    "mcmc_beta": 0.8,
+    "one_bit_flip_prob": 0.5,
+    "chunk_bits": 32,
+    "max_resample": 3,
+    "block_expand_factor": 2,
+    "inc_fix": false,
+    "default_max_cost": 300000000.0,
+    "error_cost": "10000000",
+    "warning_cost": "5000000",
+    "max_syn_attempts": 2,
+    "max_repair_attempts": 2,
+    "penalty1": "4",
+    "penalty2": "2",
+    "parallel_testing": false,
+    "all_suspicious": true,
+    "mutate": 0,
+    "epsilon": 1.0,
+    "always_accept": false,
+    "skip_dd": false,
+    "finish_after_fault_localize": false,
+    "default_susp_score": 0.5,
+    "additional_susp_locs": null,
+    "default_non_zero_cost": "300000000",
+    "timeout_cost": "1"
+  },
+  "time": {
+    "testing": 327.2857542037964,
+    "compilation": 255.04827737808228,
+    "klee": 37.187469720840454,
+    "synthesis": 0,
+    "solving": 0,
+    "inference": 37.187469720840454,
+    "dd": 0,
+    "total": 1702.1034967899323
+  },
+  "iterations": {
+    "synthesis": [],
+    "guided": [
+      {
+        "locations": [
+          "787-40-787-40"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 37.1406569480896
+        }
+      },
+      {
+        "locations": [
+          "1051-15-1051-15"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.184627532958984
+        }
+      },
+      {
+        "locations": [
+          "1154-63-1154-63"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 35.19631838798523
+        }
+      },
+      {
+        "locations": [
+          "1154-48-1154-48"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 37.19307327270508
+        }
+      },
+      {
+        "locations": [
+          "2436-19-2436-19"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 37.248639822006226
+        }
+      },
+      {
+        "locations": [
+          "2455-33-2455-33"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 35.20044136047363
+        }
+      },
+      {
+        "locations": [
+          "2865-31-2865-49"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.183635234832764
+        }
+      },
+      {
+        "locations": [
+          "2866-31-2866-49"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.2062463760376
+        }
+      },
+      {
+        "locations": [
+          "2867-31-2867-49"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 35.19222593307495
+        }
+      },
+      {
+        "locations": [
+          "2868-31-2868-49"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.205718994140625
+        }
+      },
+      {
+        "locations": [
+          "2869-31-2869-49"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.187366247177124
+        }
+      },
+      {
+        "locations": [
+          "2870-31-2870-49"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.18637537956238
+        }
+      },
+      {
+        "locations": [
+          "2871-37-2871-37"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 37.22004818916321
+        }
+      },
+      {
+        "locations": [
+          "2872-51-2872-51"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.187283515930176
+        }
+      },
+      {
+        "locations": [
+          "2874-33-2874-33"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 35.19153165817261
+        }
+      },
+      {
+        "locations": [
+          "2875-32-2875-32"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 34.1798141002655
+        }
+      },
+      {
+        "locations": [
+          "2879-33-2879-33"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.188530683517456
+        }
+      },
+      {
+        "locations": [
+          "2912-30-2912-57"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.195595264434814
+        }
+      },
+      {
+        "locations": [
+          "2913-30-2913-57"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.648176193237305
+        }
+      },
+      {
+        "locations": [
+          "2914-30-2914-57"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.1997971534729
+        }
+      },
+      {
+        "locations": [
+          "2915-30-2915-57"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 35.189242124557495
+        }
+      },
+      {
+        "locations": [
+          "2916-30-2916-57"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.22851634025574
+        }
+      },
+      {
+        "locations": [
+          "2917-30-2917-57"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.18977499008179
+        }
+      },
+      {
+        "locations": [
+          "2918-33-2918-33"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 35.18426775932312
+        }
+      },
+      {
+        "locations": [
+          "2919-36-2919-36"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 35.191046476364136
+        }
+      },
+      {
+        "locations": [
+          "2920-50-2920-50"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 37.18573451042175
+        }
+      },
+      {
+        "locations": [
+          "2921-32-2921-32"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 35.22807598114014
+        }
+      },
+      {
+        "locations": [
+          "2926-33-2926-33"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.18549132347107
+        }
+      },
+      {
+        "locations": [
+          "3469-13-3469-13"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 36.20249795913696
+        }
+      },
+      {
+        "locations": [
+          "3604-25-3604-25"
+        ],
+        "test": "30",
+        "time": {
+          "klee": 37.187469720840454
+        }
+      }
+    ],
+    "symbolic": [],
+    "random": []
+  }
+}

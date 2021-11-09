@@ -1,0 +1,42 @@
+{
+  "1": {
+    "reachable": [],
+    "return_value": [0],
+    "actual_payload_len": [39]
+  },
+  "2": {
+    "reachable": [],
+    "return_value": [0],
+    "actual_payload_len": [0]
+  },
+  "3": {
+    "reachable": [],
+    "return_value": [0],
+    "actual_payload_len": [0]
+  },
+  "4": {
+    "reachable": [],
+    "return_value": [0],
+    "actual_payload_len": [0]
+  },
+  "5": {
+    "reachable": [],
+    "return_value": [0],
+    "actual_payload_len": [0]
+  },
+  "6": {
+    "reachable": [],
+    "return_value": [0],
+    "actual_payload_len": [42]
+  },
+  "7": {
+    "reachable": [],
+    "return_value": [0],
+    "actual_payload_len": [0]
+  },
+  "8": {
+    "reachable": [],
+    "return_value": [0],
+    "actual_payload_len": [0]
+  }
+}

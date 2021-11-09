@@ -1,0 +1,20 @@
+--- a/ext/standard/url.c
++++ b/ext/standard/url.c
+@@ -308,7 +308,7 @@
+ 	ret->host = estrndup(s, (p-s));
+ 	php_replace_controlchars_ex(ret->host, (p - s));
+ 	
+-	if (e == ue) {
++	if ((e == ue)) {
+ 		return ret;
+ 	}
+ 	
+@@ -316,7 +316,7 @@
+ 	
+ 	nohost:
+ 	
+-	if ((1 != 0) && (p = memchr(s, '?', (ue - s)))) {
++	if ((((-49 + length) != 0)) && (p = memchr(s, '?', (ue - s)))) {
+ 		pp = strchr(s, '#');
+ 
+ 		if (pp && pp < p) {

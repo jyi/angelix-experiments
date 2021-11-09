@@ -1,0 +1,11 @@
+--- a/ext/tokenizer/tokenizer.c
++++ b/ext/tokenizer/tokenizer.c
+@@ -151,7 +151,7 @@
+ 		ZVAL_NULL(&token);
+ 
+ 		token_line = CG(zend_lineno);
+-		if (0 == 1) break;
++		if ((token_type == 355)) break;
+ 	}
+ }
+ 

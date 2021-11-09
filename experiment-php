@@ -1,0 +1,131 @@
+#!/bin/bash
+
+usage="Usage: ./expriment-php id"
+
+if [[ $# > 0 ]]; then
+    id="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+no_skip=0
+
+versions=( "2011-03-25-8138f7de40-3acdca4703" )
+
+strategies=( "guided" )
+# strategies=( "symbolic" )
+
+defects=( "if-conditions" "loop-conditions" )
+# defects=( "assignments" )
+
+group_sizes=( 1 )
+
+target_root="/angelix-experiments/php/data/$id"
+patches_dir="/angelix-experiments/php/patches"
+
+mkdir -p $target_root
+mkdir -p $patches_dir
+
+debug () {
+    local msg="$1"
+    echo "[experiment] $msg"
+}
+
+mkdir -p .experiment
+
+for group_size in "${group_sizes[@]}"
+do
+    for strategy in "${strategies[@]}"
+    do
+        for version in "${versions[@]}"
+        do
+            if [[ ${#defects[@]} > 0 ]]; then
+                stat_file="$target_root/$version-$strategy"
+                exp_file=".experiment/$version-$strategy"
+                af_file="$target_root/$version-$strategy"
+                for defect in "${defects[@]}"
+                do
+                    stat_file="$stat_file-$defect"
+                    exp_file="$exp_file-$defect"
+                    af_file="$af_file-$defect"
+                done
+                stat_file="$stat_file-gs${group_size}-statistics.json"
+                exp_file="$exp_file-gs${group_size}.log"
+                af_file="$af_file-gs${group_size}-angelic-forest.json"
+            else
+                stat_file="$target_root/$version-$strategy-gs${group_size}-statistics.json"
+                exp_file=".experiment/$version-$strategy-gs${group_size}.log"
+                af_file="$target_root/$version-$strategy-gs${group_size}-angelic-forest.json"
+            fi
+
+            if [[ -f $stat_file && $no_skip == 0 ]]; then
+                echo "File exists: $stat_file"
+                echo "Skip ..."
+                echo "experiment id: $id"
+                echo "strategy: $strategy"
+                echo "version: $version"
+                echo "group size: $group_size"
+                continue
+            else
+                echo "Work on ..."
+                echo "experiment id: $id"
+                echo "strategy: $strategy"
+                echo "version: $version"
+                echo "group size: $group_size"
+                rm -rf *.patch
+                options="--$strategy --timeout 14400 --show-suspicious-locations"
+                if [[ $group_size == "all" ]]; then
+                    options="$options --single-group"
+                else
+                    options="$options --group-size $group_size"
+                fi
+                if [[ ${#defects[@]} > 0 ]]; then
+                    options="$options --defect ${defects[@]}"
+                    echo $options
+                fi
+                echo "options: $options"
+                ./repair manybugs php $version $options &> $exp_file
+                if [[ $? == 0 ]]; then
+                    echo "Finished normally"
+                else
+                    echo "Finished abnormally"
+                fi
+                patch_file_count=`ls -1 *.patch 2>/dev/null | wc -l`
+                if [[ $patch_file_count > 0 ]]; then
+                    echo "patch found"
+                fi
+                if [[ $no_skip == 0 ]]; then
+                    # copy patch
+                    if [[ $patch_file_count > 0 ]]; then
+                        echo "copy patch"
+                        mv *.patch $patches_dir &> /dev/null
+                    else
+                        echo "no patch file found"
+                    fi
+                    # copy stat file
+                    src_stat_file=".angelix/statistics.json"
+                    if [[ -f $src_stat_file ]]; then
+                        echo "copy stat file: $stat_file"
+                        cp $src_stat_file $stat_file
+                    fi
+                    # copy angelic forest
+                    src_af_file=".angelix/last-angelic-forest.json"
+                    if [[ -f $src_af_file ]]; then
+                        echo "copy angelic forest: $af_file"
+                        cp $src_af_file $af_file
+                    else
+                        echo "no angelic forest found"
+                    fi
+                    # copy log file
+                    mv $exp_file $target_root
+                    echo "log file: $target_root/$(basename $exp_file)"
+                fi
+
+                rm -rf /tmp/*
+                for id in $(ps -ef | grep "klee" | awk '{print $2}'); do kill -9 $id; done
+            fi
+        done
+    done
+done

@@ -1,0 +1,11 @@
+--- a/main/streams/userspace.c
++++ b/main/streams/userspace.c
+@@ -915,7 +915,7 @@
+ 			&retval,
+ 			0, NULL, 0, NULL TSRMLS_CC);
+ 
+-	if (call_result == SUCCESS && retval != NULL && Z_TYPE_P(retval) == IS_ARRAY) {
++	if (((call_result != 0) && (retval != 0)) && Z_TYPE_P(retval) == IS_ARRAY) {
+ 		if (SUCCESS == statbuf_from_array(retval, ssb TSRMLS_CC))
+ 			ret = 0;
+ 	} else {

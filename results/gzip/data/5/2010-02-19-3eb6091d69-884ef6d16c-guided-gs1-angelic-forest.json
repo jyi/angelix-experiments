@@ -1,0 +1,2278 @@
+{
+  "7": [
+    [
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 6
+          },
+          {
+            "name": "optind",
+            "value": 5
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 0
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": true
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      }
+    ]
+  ],
+  "1": [
+    [
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 7
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 8
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 9
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 10
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 11
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 12
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 13
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 14
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 15
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 16
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 17
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 18
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 19
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 20
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 4
+          },
+          {
+            "name": "optind",
+            "value": 3
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 21
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 4
+          },
+          {
+            "name": "optind",
+            "value": 3
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 22
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 23
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 4
+          },
+          {
+            "name": "optind",
+            "value": 3
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 24
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 4
+          },
+          {
+            "name": "optind",
+            "value": 3
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 25
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 26
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 4
+          },
+          {
+            "name": "optind",
+            "value": 3
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 27
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 28
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 4
+          },
+          {
+            "name": "optind",
+            "value": 3
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 29
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 30
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 31
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 4
+          },
+          {
+            "name": "optind",
+            "value": 3
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 32
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 33
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 4
+          },
+          {
+            "name": "optind",
+            "value": 3
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 34
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 35
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 4
+          },
+          {
+            "name": "optind",
+            "value": 3
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 36
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 37
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 38
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 39
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 40
+      }
+    ]
+  ],
+  "3": [
+    [
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      }
+    ]
+  ],
+  "5": [
+    [
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 5
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 6
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 7
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 8
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 9
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 10
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 11
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 2
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 12
+      }
+    ]
+  ],
+  "6": [
+    [
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      }
+    ]
+  ],
+  "8": [
+    [
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 5
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 3
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 1
+      }
+    ]
+  ],
+  "9": [
+    [
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 0
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 1
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 1
+          },
+          {
+            "name": "optind",
+            "value": 1
+          },
+          {
+            "name": "file_count",
+            "value": 0
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 0
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 2
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 3
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 4
+      },
+      {
+        "context": [
+          {
+            "name": "argc",
+            "value": 3
+          },
+          {
+            "name": "optind",
+            "value": 2
+          },
+          {
+            "name": "file_count",
+            "value": 1
+          },
+          {
+            "name": "proglen",
+            "value": 4
+          },
+          {
+            "name": "decompress",
+            "value": 1
+          },
+          {
+            "name": "z_len",
+            "value": 3
+          }
+        ],
+        "value": {
+          "name": "angelic",
+          "value": false
+        },
+        "expression": "550-9-550-48",
+        "instId": 5
+      }
+    ]
+  ]
+}

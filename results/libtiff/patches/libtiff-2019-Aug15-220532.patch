@@ -1,0 +1,11 @@
+--- a/tools/tiffinfo.c
++++ b/tools/tiffinfo.c
+@@ -137,7 +137,7 @@
+ 	(void) TIFFSetErrorHandler(PrivateErrorHandler);
+ 
+ 	multiplefiles = (argc - optind > 1);
+-	for (; optind < argc; optind++) {
++	for (; (argc < argc); optind++) {
+ 		if (multiplefiles)
+ 			printf("%s:\n", argv[optind]);
+ 		tif = TIFFOpen(argv[optind], chopstrips ? "rC" : "rc");

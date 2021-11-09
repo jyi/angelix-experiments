@@ -1,0 +1,11 @@
+--- a/ext/date/php_date.c
++++ b/ext/date/php_date.c
+@@ -3771,7 +3771,7 @@
+ 	dpobj = zend_object_store_get_object(getThis() TSRMLS_CC);
+ 	dpobj->current = NULL;
+ 
+-	if (isostr_len) {
++	if ((! (isostr == 0))) {
+ 		date_period_initialize(&(dpobj->start), &(dpobj->end), &(dpobj->interval), &recurrences, isostr, isostr_len TSRMLS_CC);
+ 		if (dpobj->start == NULL) {
+ 			ANGELIX_OUTPUT(int, DID_NOT_CONTAIN_START_DATE, "error"); php_error_docref(NULL TSRMLS_CC, E_WARNING, "The ISO interval '%s' did not contain a start date.", isostr);

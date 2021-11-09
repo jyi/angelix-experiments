@@ -1,0 +1,301 @@
+#!/bin/bash
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+pwd=$PWD
+
+usage="Usage: ./repair-gzip VERSION"
+#test_array=( "helin-segv" "help-version" "hufts" "memcpy-abuse" "mixed" "null-suffix-clobber" "stdin" "trailing-nul" )
+test_array=( "helin-segv" "help-version" "hufts" "mixed" "null-suffix-clobber" "null-suffix-clobber-part2" "stdin" "trailing-nul" )
+
+if [[ $# > 0 ]]; then
+    version="$1"
+    shift
+else
+    echo "$usage"
+    exit 1
+fi
+
+# parse options
+skip_instrument=0
+strat=""
+options=""
+while :; do
+    if [[ $# > 0 ]]; then
+        case $1 in
+            --skip-instrument)
+                skip_instrument=1
+                shift
+                ;;
+            --guided)
+                strat="guided"
+                shift
+                ;;
+            --symbolic)
+                strat="symbolic"
+                shift
+                ;;
+            --random)
+                strat="random"
+                shift
+                ;;
+            --*)
+                options="$options $1"
+                shift
+                ;;
+            *)
+                if [[ $1 =~ ^[a-zA-Z0-9.\-]+$ ]]; then
+                    options="$options $1"
+                    shift
+                else
+                    # Default case: No more options, so break out of the loop.
+                    break
+                fi
+        esac
+    else
+        break
+    fi
+done
+
+echo "[repair-gzip] options: $options"
+
+bug_dir="gzip-bug-${version}"
+fix_dir="gzip-fix-${version}"
+notgolden=0
+golden=1
+
+gzip_configure="$PWD/.aux/gzip/configure"
+oracle="$PWD/.aux/gzip/oracle"
+make="$PWD/.aux/gzip/build"
+
+# Common functions -------------------------------------------------------------
+
+# replaces within "$3" lines starting from the only occurrence of symbol "$2" in file "$1"
+replace-in-range () {
+    local file="$1"
+    local symbol="$2"
+    local length="$3"
+    local original="$4"
+    local replacement="$5"
+
+    local begin=$(grep -n "$symbol" "$file" | cut -d : -f 1)
+    local end=$(( begin + length ))
+
+    sed -i "$begin,$end{s/$original/$replacement/;}" "$file"
+}
+
+add-header () {
+    local file="$1"
+    sed -i '1s/^/#ifndef ANGELIX_OUTPUT\n/' "$file"
+    sed -i '2s/^/#define ANGELIX_OUTPUT(type, expr, id) expr\n/' "$file"
+    sed -i '3s/^/#define ANGELIX_REACHABLE(id)\n/' "$file"
+    sed -i '4s/^/#endif\n/' "$file"
+}
+
+restore_original () {
+    local src="$1"
+    if [ -e $src.org ]; then
+        # restore the original
+        cp $src.org $src
+    elif [ -e $src ]; then
+        # prepare the org file
+        cp $src $src.org
+    fi
+}
+
+# Gzip ----------------------------------------------------------------------
+
+add-angelix-runner-simple () {
+    local script="$1"
+    local call="$2"
+
+    local line=$(grep -n -v "^\s*[#;]" "$script" | grep -v "echo" | grep "$call" | cut -d: -f 1)
+    #echo "line:$line::script: $script"
+    sed -i "$line"'s/^\.\.\/gzip/${ANGELIX_RUN:-eval} \.\.\/gzip/' "$script"
+}
+
+add-angelix-runner () {
+    local script="$1"
+    local call="$2"
+
+    local line=$(grep -n -v "^\s*[#;]" "$script" | grep -v "echo" | grep "$call" | grep -e "-d" | cut -d: -f 1)
+    #echo "line:$line::script: $script"
+    sed -i "$line"'s/^\.\.\/gzip/exe() { "$@"; }; ${ANGELIX_RUN:-exe} \.\.\/gzip/' "$script"
+}
+
+gzip_test_suite=$(seq 1 13)
+
+
+repair-gzip () {
+    local directory="$1"
+    local golden_directory="$2"
+    local src="$directory/gzip"
+    for file in $(cat "$directory/bugged-program.txt")
+    do
+        local buggy=$file
+        break
+    done
+
+    local golden="$golden_directory/gzip"
+    angelix "$src" "$buggy" $oracle $gzip_test_suite \
+            --golden "$golden" \
+            --configure "$gzip_configure" \
+            --build $make \
+            $options
+}
+
+instrument_common () {
+    local directory="$1"
+
+    local experiments_dir="$pwd"
+    cp ${experiments_dir}/.aux/gzip/tests/* $directory/gzip/tests/
+
+    local src1="$directory/gzip/gnulib/lib/fpucw.h"
+    restore_original $src1
+    sed -i 's/^\#if (defined __i386__ || defined __x86_64__) \&\& defined __GNUC__/#if 0/' $src1
+
+    local src2="$directory/gzip/configure.ac"
+    restore_original $src2
+    sed -i 's/^AC_CONFIG_FILES(\[Makefile doc\/Makefile lib\/Makefile\])/AC_CONFIG_FILES(\[Makefile doc\/Makefile lib\/Makefile tests\/Makefile\])/' $src2
+}
+
+instrument_test () {
+    local directory="$1"
+    local version="$2"
+    local is_golden="$3"
+
+    for t in "${test_array[@]}"
+    do
+        local script="$directory/gzip/tests/$t"
+        local script_name=`basename $script`
+        restore_original $script
+
+        sed -i '/init/a rm -rf err && rm -rf out;' "$script"
+        sed -i 's/^Exit/exit/' "$script"
+        sed -i 's/framework_failure_/exit 99/' "$script"
+        sed -i 's/^compare/diff/' "$script"
+
+        if [ $script_name == "help-version" ]; then
+            sed -i 's/gzip/\${ANGELIX_RUN} ..\/..\/..\/gzip/' $script
+            #sed -i 's/^test "x\$v" = "x\$VERSION" \\/# test "x$v" = "x\$VERSION" \\/' $script
+            #sed -i 's/|| fail_ "--version-\\\$VERSION mismatch"/# || fail_ "--version-\\\$VERSION mismatch"/' $script
+        elif [ $script_name == "helin-segv" ] \
+                 || [ $script_name == "hufts" ]; then
+            sed -i 's/^gzip/\${ANGELIX_RUN} gzip/' $script
+        elif [ $script_name == "null-suffix-clobber" ]; then
+            sed -i 's/^gzip/\${ANGELIX_RUN} ..\/..\/gzip/g' $script
+            sed -i 's/gzip >/\${ANGELIX_RUN} ..\/..\/gzip >/g' $script
+        elif [ $script_name == "mixed" ]; then
+            sed -i 's/gzip \-cdf/\${ANGELIX_RUN} ..\/..\/gzip \-cdf/g' $script
+            sed -i 's/|gzip/|\${ANGELIX_RUN} ..\/..\/gzip/g' $script
+        elif [ $script_name == "stdin" ]; then
+            sed -i 's/gzip \-dc/\${ANGELIX_RUN} ..\/..\/gzip \-dc/g' $script
+            sed -i 's/gzip >/\${ANGELIX_RUN} ..\/..\/gzip >/g' $script
+        elif [ $script_name == "trailing-nul" ]; then
+            sed -i 's/gzip \-d/\${ANGELIX_RUN} ..\/..\/gzip \-d/g' $script
+            sed -i 's/gzip;/\${ANGELIX_RUN} ..\/..\/gzip;/g' $script
+        fi
+
+        case $version in
+            2010-02-19-3eb6091d69-884ef6d16c )
+                if [ $is_golden ==  $notgolden ]; then
+                    if [ $script_name == "null-suffix-clobber" ] \
+                       || [ $script_name == "null-suffix-clobber-part2" ] ; then
+                        sed -i "s/invalid suffix/incorrect suffix/" $script
+                    fi
+                fi
+                ;;
+        esac
+    done
+}
+
+instrument_src () {
+    local directory="$1"
+    local version="$2"
+    local is_golden="$3"
+
+    local src1="$directory/gzip/lib/stdio.in.h"
+    restore_original $src1
+    sed -i '/gets is/d' $src1
+
+    local src2="$directory/gzip/gzip.c"
+    restore_original $src2
+    sed -i 's/: O_BINARY/: 0/' $src2
+    sed -i 's/S_IRWXUGO/00777/' $src2
+
+    local src3="$directory/gzip/lib/vasnprintf.c"
+    sed -i 3324's/signbit (arg)/arg < 0.0L/' $src3
+
+    case $version in
+        2009-09-26-a1d3d4019d-f17cbd13a1 )
+            # local gzip_main="$directory/gzip/gzip.c"
+            # restore_original $gzip_main
+
+            # add-header "$gzip_main"
+            # sed -i 's/do_exit(exit_code)/do_exit(ANGELIX_OUTPUT(int, exit_code, "stdout"))/g' "$gzip_main"
+            # sed -i '653iifd = ifd;' "$gzip_main"
+            ;;
+        *)
+            local gzip_error="$directory/gzip/gzip.c"
+
+            add-header "$gzip_error"
+            # sed -i '/incorrect suffix/i ANGELIX_REACHABLE("stderr");' "$gzip_error"
+            sed -i '/incorrect suffix/i ANGELIX_REACHABLE("incorrect_suffix");' "$gzip_error"
+            # sed -i '/invalid suffix/i ANGELIX_REACHABLE("stderr");' "$gzip_error"
+            sed -i '/invalid suffix/i ANGELIX_REACHABLE("incorrect_suffix");' "$gzip_error"
+            #sed -i '/work = lzw/i ANGELIX_REACHABLE("stderr2");' "$gzip_error"
+            ;;
+    esac
+
+    touch "$directory/INSTRUMENTED"
+}
+
+clean () {
+    local dir=$1/gzip
+
+    echo "[repair-gzip] cleaning $dir ..."
+    pushd $dir &> /dev/null
+    $gzip_configure &> /dev/null
+    make -j $NUM_OF_CPU clean &> /dev/null
+    popd &> /dev/null
+}
+
+
+# Main -------------------------------------------------------------------------
+
+instrument_common "$bug_dir"
+instrument_common "$fix_dir"
+
+instrument_test "$bug_dir" $version $notgolden
+instrument_test "$fix_dir" $version $golden
+
+##################
+# check locale
+##################
+# export LC_ALL=en_US.UTF-8
+# perl -v |& grep --silent "warning" && echo "Type perl -v and check locale errors" && exit 1
+
+instrument_src $bug_dir $version $notgolden
+instrument_src $fix_dir $version $golden
+
+if [ -d $(pwd)/.aux/gzip/$version/tests ]; then
+    for file in $(ls -1 $(pwd)/.aux/gzip/$version/tests); do
+        restore_original $bug_dir/gzip/tests/$file
+        cp $(pwd)/.aux/gzip/$version/tests/$file $bug_dir/gzip/tests/
+    done
+fi
+
+if [ "$version" == "2009-09-26-a1d3d4019d-f17cbd13a1" ]; then
+    gzip_c="$bug_dir/gzip/gzip.c"
+    restore_original $gzip_c
+    cp $PWD/.aux/gzip/$version/buggy/gzip.c $gzip_c
+
+    gzip_c="$fix_dir/gzip/gzip.c"
+    restore_original $gzip_c
+    cp $PWD/.aux/gzip/$version/fixed/gzip.c $gzip_c
+fi
+
+clean "$bug_dir"
+clean "$fix_dir"
+
+repair-gzip "$bug_dir" "$fix_dir"

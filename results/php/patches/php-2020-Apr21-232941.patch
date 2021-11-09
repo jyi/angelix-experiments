@@ -1,0 +1,11 @@
+--- a/ext/standard/url.c
++++ b/ext/standard/url.c
+@@ -319,7 +319,7 @@
+ 	
+ 	nohost:
+ 	
+-	if ((53 != 49) && (p = memchr(s, '?', (ue - s)))) {
++	if ((((length + (- 0)) != 49)) && (p = memchr(s, '?', (ue - s)))) {
+ 		pp = strchr(s, '#');
+ 
+ 		if (pp && pp < p) {
